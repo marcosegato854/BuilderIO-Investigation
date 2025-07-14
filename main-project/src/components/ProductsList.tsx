@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import fetchProducts from '../api/products';
-import Typography from '@mui/material/Typography';
+import React, { useState, useEffect } from "react";
+import fetchProducts from "../api/products";
+import ProductCard from "./ProductCard";
+import "./ProductsList.css";
 
 // Definiamo un tipo per il prodotto
 interface Product {
@@ -23,7 +24,7 @@ const ProductsList: React.FC = () => {
         const data = await fetchProducts();
         setProducts(data);
       } catch (error) {
-        setError(error instanceof Error ? error.message : 'Errore sconosciuto');
+        setError(error instanceof Error ? error.message : "Errore sconosciuto");
       } finally {
         setLoading(false);
       }
@@ -32,17 +33,17 @@ const ProductsList: React.FC = () => {
     loadProducts();
   }, []); // Il vuoto array significa che questo effetto verrà eseguito solo una volta (all'inizio)
 
-  if (loading) return <div>Loading...</div>; // Mostra "Loading..." mentre carica
-  if (error) return <div>Error: {error}</div>; // Mostra l'errore
+  if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
+  if (error) return <div className="error">Error: {error}</div>; // Mostra l'errore
 
   return (
-    <div>
-      <h1>Lista Prodotti</h1>
-      {products.map((product) => (
-        <Typography key={product.id}>
-          {product.name} Prezzo: € {product.price} Categoria: {product.category}
-        </Typography>
-      ))}
+    <div className="products-container">
+      <h1 className="products-title">Lista Prodotti</h1>
+      <div className="products-grid">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };
