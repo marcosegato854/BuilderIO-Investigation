@@ -1,0 +1,77 @@
+.products-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-title {
+  font-family:
+    "Roboto",
+    -apple-system,
+    system-ui,
+    sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #242424;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-family:
+    "Roboto",
+    -apple-system,
+    system-ui,
+    sans-serif;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .products-container {
+    padding: 16px;
+  }
+
+  .products-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 12px;
+  }
+
+  .products-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
