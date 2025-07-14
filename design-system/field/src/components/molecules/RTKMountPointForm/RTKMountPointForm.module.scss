@@ -1,0 +1,23 @@
+@import 'styles/main';
+
+.container {
+  position: relative;
+  padding-top: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  @include testi('Body1');
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+}

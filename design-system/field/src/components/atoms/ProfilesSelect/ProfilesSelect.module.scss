@@ -1,0 +1,56 @@
+@import 'styles/main';
+
+.container {
+  display: flex;
+}
+
+.liMenuItem {
+  svg {
+    width: 24px;
+    @include applyThemes() {
+      path,
+      rect {
+        fill: t('primary-11');
+      }
+    }
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.jobTypeSelect > div {
+  width: 150px;
+  @include flexAlign(center, space-between);
+  @include applyThemes() {
+    path,
+    rect {
+      fill: t('primary-11');
+    }
+  }
+}
+
+.buttons {
+  width: 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  > * {
+    cursor: pointer;
+  }
+
+  svg {
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+  }
+}
+
+.label {
+  max-width: 100%;
+  display: inline-block;
+  margin-right: 4px;
+  @include ellipsis();
+}

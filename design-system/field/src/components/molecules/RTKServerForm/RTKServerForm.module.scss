@@ -1,0 +1,91 @@
+@import 'styles/main';
+
+.form {
+  position: relative;
+}
+
+.title {
+  padding: 8px 17px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include applyThemes() {
+    background-color: t(primary-4);
+    color: t(primary-11);
+  }
+  text-transform: uppercase;
+  @include testi('Body1');
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 17px;
+}
+
+.field {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  &Label {
+    @include testi('Body1');
+    @include applyThemes() {
+      color: t(primary-11);
+    }
+    white-space: nowrap;
+    @include ellipsis;
+  }
+
+  .icon {
+    height: 15px;
+    width: 14px;
+    // align-self: center;
+    path {
+      @include applyThemes() {
+        fill: t(primary-11);
+      }
+    }
+  }
+}
+
+.secondRow {
+  display: flex;
+  gap: 15px;
+
+  .urlField {
+    flex: 0.55;
+  }
+
+  .portField {
+    flex: 0.45;
+    label {
+      max-width: 50px;
+    }
+  }
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include testi('Caption');
+  line-height: 3em;
+  @include applyThemes() {
+    color: t(primary-11);
+    background-color: rgba(t(primary-1), 0.8);
+  }
+}
+
+.buttons {
+  justify-content: flex-end;
+}

@@ -1,0 +1,45 @@
+@import 'styles/main';
+
+.openSelectbox {
+  display: inline-block;
+
+  width: 100%;
+}
+
+.list {
+  // height and width of the list depend on the items
+  list-style-type: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px;
+
+  // color don't change between themes
+  background-color: map-deep-get($themes, 'dark', 'primary-3');
+  color: map-deep-get($themes, 'dark', 'primary-11');
+  @include testi('Caption');
+  font-weight: 400;
+  display: flex;
+  &Disabled {
+    pointer-events: none;
+  }
+}
+
+.item {
+  height: 26px;
+  width: 50%;
+  border-radius: 4px;
+  // text-transform: capitalize;
+  @include flexAlign();
+  // not working but avoids 2 lines of text
+  @include ellipsis;
+
+  &Selected {
+    // color don't change between themes
+    background-color: map-deep-get($themes, 'dark', 'primary-11');
+    color: map-deep-get($themes, 'dark', 'primary-1');
+  }
+
+  &Disabled {
+    opacity: 0.7;
+  }
+}

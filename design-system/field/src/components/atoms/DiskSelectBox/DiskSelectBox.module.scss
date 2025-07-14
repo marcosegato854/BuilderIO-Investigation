@@ -1,0 +1,69 @@
+@import 'styles/main';
+
+.openSelectbox {
+  display: inline-block;
+  width: 100%;
+}
+
+.list {
+  // height and width of the list depend on the items
+  list-style-type: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px;
+
+  // color don't change between themes
+  background-color: map-deep-get($themes, 'dark', 'primary-3');
+  color: map-deep-get($themes, 'dark', 'primary-11');
+  @include testi('Caption');
+  font-weight: 400;
+
+  @include flexAlign(flex-start, center);
+}
+
+.item {
+  height: 26px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  padding: 0 4px;
+  min-width: 0;
+  position: relative;
+
+  @include flexAlign(center, center);
+  flex: 1 1 0%;
+
+  span {
+    @include ellipsis;
+  }
+
+  &Selected {
+    // color don't change between themes
+    background-color: map-deep-get($themes, 'dark', 'primary-11');
+    color: map-deep-get($themes, 'dark', 'primary-1');
+  }
+
+  &Disabled {
+    pointer-events: none;
+    /* cursor: not-allowed; */
+    opacity: 0.8;
+  }
+
+  &Warning {
+    position: absolute;
+    right: 0px;
+    // top: 3px;
+    height: 16px;
+    //padding-top: 4px;
+  }
+
+  &Single {
+    span {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &Double {
+    padding: 0 12px;
+  }
+}

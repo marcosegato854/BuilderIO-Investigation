@@ -1,0 +1,17 @@
+@import 'styles/main';
+.systemState {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // @include testi('Caption');
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  padding: 0px 4px;
+  margin: 0;
+  @include applyThemes() {
+    color: t('primary-1');
+    background-color: rgba(t('primary-11'), 0.8);
+  }
+  z-index: 10000;
+}

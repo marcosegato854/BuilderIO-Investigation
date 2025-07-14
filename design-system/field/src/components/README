@@ -1,0 +1,5 @@
+Components goes here, you can generate with generate-react-cli, examples;
+$ npx generate-react-cli@7 component MyComponentName --type=atom
+$ npx generate-react-cli@7 component MyComponentName --type=molecule
+$ npx generate-react-cli@7 component MyComponentName --type=organism
+$ npx generate-react-cli@7 component MyComponentName --type=dialog

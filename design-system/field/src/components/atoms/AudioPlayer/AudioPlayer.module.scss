@@ -1,0 +1,60 @@
+@import 'styles/main';
+
+// to style the whole container
+:global(.rhap_container) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+// to style the controls button
+:global(.rhap_main-controls-button) {
+  @include applyThemes() {
+    color: t(primary-1);
+  }
+}
+
+// to style style the progress section container
+:global(.rhap_progress-section) {
+  position: relative;
+}
+
+// to style the progress time labels
+:global(.rhap_time) {
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  font-weight: 300;
+
+  // move the text down the progress bar
+  position: absolute;
+  top: 22px;
+}
+
+// to style the time on the left
+:global(.rhap_current-time) {
+  left: -3px;
+}
+
+// to style the time on the right
+:global(.rhap_total-time) {
+  right: -3px;
+}
+
+// to style the progress bar
+:global(.rhap_progress-bar) {
+  height: 2px;
+}
+
+// to style the progress indicator (circular head)
+:global(.rhap_progress-indicator) {
+  @include applyThemes() {
+    background-color: t(primary-11);
+  }
+}
+
+// to style the filled part of the progress bar
+:global(.rhap_progress-filled) {
+  @include applyThemes() {
+    background-color: t(primary-11);
+  }
+}

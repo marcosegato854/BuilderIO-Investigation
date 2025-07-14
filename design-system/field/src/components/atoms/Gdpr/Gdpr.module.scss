@@ -1,0 +1,43 @@
+@import 'styles/main';
+.container {
+  @include testi('Heading5');
+  font-weight: 800;
+  text-transform: uppercase;
+  color: map-deep-get($themes, 'dark', 'primary-4');
+  background: linear-gradient(
+    to left top,
+    transparent 47.75%,
+    currentColor 47%,
+    currentColor 53%,
+    transparent 52.25%
+  );
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: ' ';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: map-deep-get($themes, 'dark', 'primary-4');
+  }
+  &:hover {
+    @include applyThemes() {
+      color: t('primary-11');
+      background: linear-gradient(
+        to left top,
+        transparent 47.75%,
+        currentColor 47%,
+        currentColor 53%,
+        transparent 52.25%
+      );
+      &::before {
+        background-color: t('primary-11');
+      }
+    }
+  }
+}

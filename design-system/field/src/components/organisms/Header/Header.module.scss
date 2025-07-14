@@ -1,0 +1,66 @@
+@import 'styles/main';
+
+.container {
+  text-align: center;
+  padding: 0 36px;
+}
+
+.pegasus {
+  @include testi('Pegasus');
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  @include big-tablet {
+    line-height: 2em;
+  }
+}
+
+.leftTitle {
+  margin: 0 auto 0 auto;
+  text-align: left;
+  @include testi('Heading4');
+  font-size: 2.4em;
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  &Active {
+    // text-decoration: underline;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    font-weight: 400;
+    @include applyThemes() {
+      border-bottom: 2px solid t(secondary-6);
+    }
+  }
+  &Clickable {
+    cursor: pointer;
+  }
+}
+
+.centerTitle {
+  margin: 0 auto 0 auto;
+  @include testi('Heading3');
+  font-size: 2.4em;
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  white-space: nowrap;
+  overflow: visible;
+  @include ellipsis();
+
+  /* &Truncate {
+    @include ellipsis();
+  } */
+}
+
+.hamburgerMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: left;
+  padding: 25px;
+}

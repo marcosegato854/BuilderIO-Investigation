@@ -1,0 +1,2051 @@
+{
+  "_version": "0.0.23",
+  "pcu": {
+    "connection": {
+      "title": "Connection",
+      "disconnectButton": "Disconnect",
+      "activeNetworkTitle": "How to access Pegasus FIELD via browser",
+      "scanQrCode": "Scan this QR code",
+      "enterCredentials": "Enter the following credentials",
+      "ipLabel": "IP:",
+      "lanConnected": "LAN connected",
+      "lanNotConnected": "LAN not connected",
+      "AvailableWlans": "Available WLAN Network",
+      "CurrentWlan": "Current WLAN Network",
+      "Lan": "LAN",
+      "howToConnect": "How to connect your own device",
+      "noNetworkAvailable": "No network available",
+      "help": {
+        "title": "Connecting a device",
+        "wlan": "WLAN",
+        "wlanStep1": "Turn ON the hotspot of the WLAN device (tablet/phone/router).",
+        "wlanStep2": "From the PCU tap the Connect Page and connect to the WLAN hotspot",
+        "wlanStep3": "If the WLAN device is a tablet, open Pegasus FIELD by scanning the QR Code or by typing the IP address (displayed on the PCU screen) in the address bar of the browser.",
+        "wlanStep4": "If the WLAN device is a phone or a router, connect a tablet to the WLAN hotspot and follow the instructions of point 3.",
+        "lan": "LAN",
+        "lanStep1": "Connect the PCU to your laptop or tablet through a LAN cable.",
+        "lanStep2": "Set your device to the same ethernet subnet (subnet IP: 192.168.1.x, subnet mask: 255.255.255.0)",
+        "lanStep3": "Do not use the following IP for your device: 192.168.1.5.",
+        "lanStep4": "Open the internet browser on your device.",
+        "lanStep5": "Open Pegasus FIELD by typing the IP Address (displayed on the PCU screen) in the address bar of the browser"
+      }
+    },
+    "capture": {
+      "title": "Capture",
+      "buttonDeactivate": "Deactivate System",
+      "jobNamePlaceholder": "Job Name"
+    }
+  },
+  "initialization": {
+    "title": "System is booting...",
+    "title_initialized": "System boot complete.",
+    "ok": "Dismiss.",
+    "state": "Status",
+    "events": "Events",
+    "stateInitializing": "Initialisation in progress...",
+    "check_browser": {
+      "title": "Please, check the browser.",
+      "ios": "The browser you are using is not the recommended one from Leica Pegasus FIELD. <br/>Leica Pegasus FIELD works with the latest version of Safari.",
+      "android": "The browser you are using is not the recommended one for Leica Pegasus FIELD. <br/>Leica Pegasus FIELD works with the latest version of Google Chrome.",
+      "unknown": "The browser you are using is not the recommended one for Leica Pegasus FIELD. <br/>Leica Pegasus FIELD works with the latest version of Google Chrome.",
+      "windows": "The browser you are using is not the recommended one for Leica Pegasus FIELD. <br/>Leica Pegasus FIELD works with the latest version of Microsoft Edge.",
+      "ok": "OK"
+    }
+  },
+  "header": {
+    "pegasus": "Pegasus",
+    "welcome": "Welcome to Leica Pegasus FIELD",
+    "device": "Device:",
+    "searchbarPlaceholder": "What are you looking for?",
+    "mapSearchbarPlaceholder": "Search location",
+    "back": "Back to Projects",
+    "back_jobs": "Back to Jobs",
+    "menu": {
+      "title": "Profile details",
+      "login": "Login username",
+      "license": "Licence & Software updates",
+      "update": {
+        "usb": "Update detected",
+        "myWorld": "Update available"
+      },
+      "rebootDisabled": "Battery charge is too low to reboot.",
+      "help": "Help & Support",
+      "lang": "Change language",
+      "theme": "Change theme",
+      "logout": "Logout",
+      "shutdown": "Shutdown the system",
+      "reboot": "Reboot the system",
+      "version": "Version",
+      "version_ok": "API version supported",
+      "version_ko": "Expected API version {{expected}}",
+      "audio_ok": "Unmute the audio messages",
+      "audio_ko": "Mute the audio messages",
+      "copyright": "Copyright",
+      "processingShutdown": {
+        "title": "Do you really want to shut down the system?",
+        "text": "Some Jobs are currently in processing. If you switch OFF the system, the processing will stop. The processing can be manually reactivated after restarting the system.",
+        "okButtonLabel": "Shutdown",
+        "cancelButtonLabel": "Cancel"
+      },
+      "processingReboot": {
+        "title": "Do you really want to reboot the system?",
+        "text": "Some Jobs are currently in processing. If you reboot the system, the processing will stop. The processing can be manually reactivated after reboot.",
+        "okButtonLabel": "Reboot",
+        "cancelButtonLabel": "Cancel"
+      },
+      "country": "Country code"
+    },
+    "systemIsOff": "PCU and Sensor Unit are shutting down...",
+    "responsiveness": {
+      "minLeft": "minutes left"
+    },
+    "pcuTitles": {
+      "settings_page": "Settings"
+    }
+  },
+  "login": {
+    "form": {
+      "pegasus_field": "Pegasus FIELD",
+      "validation": {
+        "username": "Username required.",
+        "password": "Password required.",
+        "no_spaces": "Spaces are not allowed.",
+        "bad_characters": "Only alphanumeric characters are allowed."
+      },
+      "fields": {
+        "username": "Username",
+        "password": "Password",
+        "remember_me": "Keep me logged in"
+      },
+      "forgot_password": "Forgot your password?",
+      "retrive": "Retrieve",
+      "submit": "Log-in",
+      "or": "Or",
+      "qrcode": "Scan QR code",
+      "qrcodeReader": "Scan the QR code on the PCU screen.",
+      "qrcodeLegacy": "The camera is not responding. Click on the button to load a picture.",
+      "loadPicture": "Load a picture"
+    },
+    "forgot": {
+      "back": "Back",
+      "title": "Forgot password",
+      "please_contact": "Please contact the support via the following e-mail.",
+      "credentials": "Tap “Connect” on the home screen of the PCU. The credentials will be displayed in the connection section.",
+      "$support_email": "leica@support.com"
+    },
+    "info": {
+      "watch": "Click here to discover more"
+    },
+    "notification": {
+      "user_loggedIn": "User logged in",
+      "user_loggedOut": "User logged out"
+    }
+  },
+  "home": {
+    "connect": "Connect",
+    "capture": "Capture",
+    "browser": "Projects"
+  },
+  "project_browser": {
+    "slot": "Slot",
+    "disk": "Disk",
+    "header": {
+      "browser": "Project browser",
+      "planning": "Planning"
+    },
+    "filters": {
+      "title": "Filter by:",
+      "sort_title": "Sort by:",
+      "view_title": "View by:"
+    },
+    "subtitle": "My Projects",
+    "no_project": "No Projects found",
+    "search": "Search",
+    "no_items": "No items found",
+    "click_to_create": "Click + to create a new Project",
+    "kebab": {
+      "edit_project": "Edit Project",
+      "view_settings": "View settings",
+      "delete": "Delete Project"
+    },
+    "delete_button": "Yes, delete",
+    "delete_text": "Do you really want to delete this Project?<br />All the content of this Project will be removed from the disk.",
+    "cancel_button": "Cancel",
+    "no_disks": {
+      "title": "Unable to create new Projects",
+      "text": "Please plug in at least one HD and check the available disks in the top bar."
+    }
+  },
+  "job_browser": {
+    "project": "Project",
+    "header": {
+      "browser": "Job browser",
+      "planning": "Planning"
+    },
+    "filters": {
+      "title": "Filter by:",
+      "sort_title": "Sort by:",
+      "view_title": "View by:"
+    },
+    "subtitle": "My Jobs",
+    "no_job": "No items found",
+    "admin_job": "This Job type requires administrator privileges.",
+    "click_to_create": "Click + to create a new Job",
+    "kebab": {
+      "edit_job": "Edit Job",
+      "processing": "Processing",
+      "finalise_export": "Finalise & Export",
+      "image": "Image",
+      "pointcloud": "Trajectory and point cloud",
+      "pointcloud_noTrajectory": "Point cloud",
+      "view_settings": "View settings",
+      "view_plan": "View planning",
+      "view_measure": "View & Measure",
+      "job_report": "Job report",
+      "delete": "Delete Job",
+      "clone": "Clone Job"
+    },
+    "details": {
+      "name": "Name",
+      "scans": "Tracks",
+      "planned": "Planned",
+      "type": "Job type",
+      "ntrip": "RTK",
+      "dmi": "DMI",
+      "collectionmode": "Data capture mode",
+      "camera": "Camera",
+      "camera_blur": "Anonymise",
+      "antenna": "Antenna",
+      "profile": "Profile",
+      "completed": "Completed",
+      "size": "Size",
+      "creationdate": "Creation date",
+      "controlpoints": "Control points",
+      "updatedate": "Last update",
+      "disk": "Disk",
+      "jobs": "Jobs",
+      "coordinate": "Project Unit",
+      "drivingspeed": "Max. driving speed",
+      "scanner": "Scanner",
+      "position": "Accuracy",
+      "snSensorUnit": "Serial number",
+      "values": {
+        "yes": "Yes",
+        "no": "No",
+        "camera_distance": "Enabled: {{enable}}<br />Anonymise: {{blur}}<br />Distance: {{distance}}<br />Left: {{left}}<br />Right: {{right}}",
+        "camera_distance_no_orientation": "Enabled: {{enable}}<br />Anonymise: {{blur}}<br />Distance: {{distance}}",
+        "camera_time": "Enabled: {{enable}}<br />Anonymise: {{blur}}<br />Trigger time: {{elapse}}<br />Left: {{left}}<br />Right: {{right}}",
+        "camera_time_no_orientation": "Enabled: {{enable}}<br />Anonymise: {{blur}}<br />Trigger time: {{elapse}}",
+        "scanner": "Spacing: {{spacing}}<br />Rotations/s: {{rps}}<br />Points/s: {{pps}}<br />Range: {{range}}",
+        "scanner100": "Rotations/s: {{rps}}<br />Points/s: {{pps}}<br />Range: {{range}}"
+      }
+    },
+    "delete_title": "Delete {{job}}",
+    "delete_button": "Yes, delete",
+    "delete_text": "Do you really want to delete this Job?<br />All the content of this Job will be removed from the disk.",
+    "cancel_button": "Cancel",
+    "acquired_job_label": "OK",
+    "acquired_job_text": "You cannot start the same Job again, but you can perform processing and further actions.",
+    "new_jobtype_title": "New Job type",
+    "new_jobtype_text": "Specify the basic Job type (Road, Rail, or Marine). Then, enter a name for the new Job type.",
+    "new_jobtype_ok": "Save",
+    "new_jobtype_cancel": "Cancel",
+    "save_jobtype_title": "Settings change alert",
+    "save_jobtype_text": "Save the current Job settings in a new Job type for future uses?",
+    "save_jobtype_ok": "Save Job type",
+    "save_jobtype_cancel": "Do not save",
+    "save_jobtype_name_required": "Enter a name for the new Job type.",
+    "save_jobtype_min": "The name must be at least 3 characters long.",
+    "save_jobtype_exists": "Choose a unique name.",
+    "delete_jobtype_title": "Delete custom Job type",
+    "delete_jobtype_text": "Are you sure you want to delete the Job type '{{profile}}'? The Job settings will not be affected.'",
+    "delete_jobtype_ok": "Yes, delete it.",
+    "delete_jobtype_cancel": "Cancel",
+    "processed_images_tooltip": "Image processing successfully completed.",
+    "processing_images_tooltip": "Processing images...",
+    "not_processed_images_tooltip": "Image processing pending.",
+    "processed_office_tooltip": "Trajectory and point cloud processing successfully completed.",
+    "processed_office_tooltip_noTrajectory": "Point cloud processing successfully completed.",
+    "processing_office_tooltip": "Processing trajectory and point cloud...",
+    "processing_office_tooltip_noTrajectory": "Processing point cloud...",
+    "not_processed_office_tooltip": "Trajectory and point cloud processing pending.",
+    "not_processed_office_tooltip_noTrajectory": "Point cloud processing pending.",
+    "processing_log_title": "{{job}} processing log",
+    "report": {
+      "error": {
+        "title": "Job report"
+      },
+      "ready": {
+        "title": "Job report",
+        "text": "The report has been successfully created.",
+        "ok": "Open report",
+        "ko": "Close"
+      }
+    }
+  },
+  "settings": {
+    "screen_connect": "Enable automatic Screen Connect",
+    "error_log": { "title": "Error Log", "caption": "Download & View" },
+    "error_log_page": {
+      "button_title": "Download"
+    },
+    "admin_mode": "Admin Mode",
+    "admin_mode_alert": {
+      "title": "Are you sure you want to log out from the admin user?",
+      "okButtonLabel": "Yes",
+      "cancelButtonLabel": "Cancel"
+    },
+    "calibration": "Load Calibration",
+    "calibration_page": { "button_title": "Load Calibration File" },
+    "copyright": "Copyright",
+    "about_device": "About Device",
+    "about_device_page": {
+      "serial_number": "Serial Number",
+      "software_version": "Software Version",
+      "software_available": "Software Available",
+      "system_type": "System Type",
+      "windows_version": "Windows Version",
+      "product": "Product"
+    }
+  },
+  "progress_bar": {
+    "completed": "Completed",
+    "imported": "Imported"
+  },
+  "filters": {
+    "title": "Filter by:",
+    "sort_title": "Sort by:",
+    "view_title": "View by:",
+    "sort_options": {
+      "name_asc": {
+        "label": "Name (ascending)"
+      },
+      "name_desc": {
+        "label": "Name (descending)"
+      },
+      "date_asc": {
+        "label": "Creation date (ascending)"
+      },
+      "date_desc": {
+        "label": "Creation date (descending)"
+      },
+      "last_mod": {
+        "label": "Last modified"
+      }
+    },
+    "view_options": {
+      "gallery": {
+        "label": "Gallery"
+      },
+      "list": {
+        "label": "List"
+      }
+    },
+    "order": "Order"
+  },
+  "subtitle": "Projects",
+  "loading": "Loading...",
+  "project_item": {
+    "job": "Job",
+    "jobs": "Jobs",
+    "disk": "Stored on",
+    "progress": "Processing completion"
+  },
+  "job_item": {
+    "scan": "Track",
+    "scans": "Tracks",
+    "completed": "Completed"
+  },
+  "activation_button": "Start & Capture",
+  "new_project_form": {
+    "validation": {
+      "project_name": "Specify a Project name.",
+      "unit": "Specify the measurement units.",
+      "disk": "Specify a storage disk.",
+      "name_duplicate": "The name is already in use.",
+      "bad_characters": "Only alphanumeric characters are allowed.",
+      "min3": "The name must be at least 3 characters long.",
+      "max": "The name must be maximum 25 characters long."
+    },
+    "title": "New Project",
+    "project_title_label": "Project name",
+    "define_units": "Specify the measurement units",
+    "select_disk": "Select disk",
+    "cancel": "Cancel",
+    "saveBtn": "Create Project",
+    "tooltip": {
+      "full_disk": "Disk space is full."
+    }
+  },
+  "plan_quality_form": {
+    "save_btn": "Save & Close"
+  },
+  "new_job_form": {
+    "validation": {
+      "job_name": "Job name required.",
+      "type": "Job type required.",
+      "satellites": "Define satellites.",
+      "name_duplicate": "The name is already in use.",
+      "bad_characters": "Only alphanumeric characters are allowed.",
+      "min3": "The name must be at least 3 characters long.",
+      "max": "The name must be maximum 25 characters long."
+    },
+    "option": {
+      "planning": {
+        "plan_now": "Plan",
+        "without_plan": "No plan"
+      },
+      "job_type": {
+        "pedestrian": "Backpack",
+        "road": "Road",
+        "rail": "Rail",
+        "boat": "Marine",
+        "p-1": "Backpack",
+        "p0": "Road",
+        "p1": "Rail",
+        "p2": "Marine",
+        "custom": "Custom",
+        "new": "Create new"
+      },
+      "satellite": {
+        "gps": "GPS",
+        "glonass": "GLONASS",
+        "beidou": "BEIDOU",
+        "qzss": "QZSS",
+        "navic": "NAVIC",
+        "galileo": "GALILEO"
+      },
+      "collectionmode": {
+        "oneway": "One way",
+        "bothways": "Both ways",
+        "other": "Other"
+      },
+      "camera": {
+        "on": "ON",
+        "off": "OFF",
+        "distance": "Distance",
+        "time": "Time"
+      },
+      "camera_orientation": {
+        "landscape": "Landscape",
+        "portrait": "Portrait"
+      },
+      "camera_blur": {
+        "on": "ON",
+        "off": "OFF"
+      },
+      "dmi": {
+        "none": "No DMI",
+        "optical": "Optical",
+        "mechanical": "Mechanical",
+        "rail": "Rail"
+      },
+      "antenna": {
+        "single": "Single",
+        "double": "Double"
+      },
+      "rtk": {
+        "off": "OFF",
+        "on": "ON"
+      }
+    },
+    "left_camera": "Left camera orientation",
+    "right_camera": "Right camera orientation",
+    "image_blur": {
+      "title": "Not compliant with the <a href=\"/assets/documents/gdpr.pdf\" target=\"_blank\">GDPR</a>",
+      "text": "The User is obliged to comply with all laws, regulations and regulatory directives while using the Pegasus, also regarding data protection and privacy laws. For this purpose, Hexagon (hereinafter referred to as “We”) have activated an anonymisation function by default during the use of the Pegasus service. The User may deactivate this function on his own responsibility, but We reserve the right to automatically reactivate the anonymisation function after a certain period, upon installation of updates or upgrades, and after any maintenance, without having any obligation to inform the User about the activation. The User is obliged to always verify the activation / deactivation of the anonymisation function before starting to use the Pegasus service.",
+      "checkbox": "Do not show this warning for 30 days.",
+      "ok": "OK",
+      "cancel": "Cancel"
+    },
+    "title": "New Job",
+    "job_title_label": "Job name",
+    "add_a_thumbnail": "Thumbnail",
+    "delete_thumbnail": "Delete thumbnail",
+    "planning": "Job planning",
+    "type": "Type of Job",
+    "satellite_selection_single": "Constellation",
+    "satellite_selection": "Constellations",
+    "dmi": "DMI type",
+    "collectionmode": "Capture mode",
+    "camera_distance": "Image distance",
+    "camera_elapse": "Camera trigger time",
+    "drivingspeed": "Maximum speed",
+    "camera": "Camera",
+    "camera_blur": "Image anonymisation",
+    "antenna_type": "Antenna configuration",
+    "scanner_rotation_speed": "Profiler rotation speed (rps)",
+    "scanner_point_per_second": "Profiler points/s (pps)",
+    "scanner_range": "Maximum scanner range",
+    "rtk": "Real Time Kinematic (RTK)",
+    "scanline_spacing": "Scanline spacing",
+    "see_details": "Show details",
+    "see_less": "Show less",
+    "cancel": "Cancel",
+    "reset": "Reset",
+    "save_only": "Save & Close",
+    "job_tolerance": "Job tolerance"
+  },
+  "edit_job_form": {
+    "title": "Edit Job",
+    "update_btn_planned": "Plan",
+    "save_btn_planned": "Save & Plan",
+    "update_btn_unplanned": "Save & Capture",
+    "save_btn_unplanned": "Save & Proceed"
+  },
+  "acquisition": {
+    "title": "Data capture",
+    "gnssins": "GNSS/INS",
+    "imu": "IMU status",
+    "jobError": "This Job cannot be captured.",
+    "deactivate": "Deactivate",
+    "deactivating": "Deactivation in progress...",
+    "deactivate_disclaimer": "Deactivating the system during the alignment phase could cause loss of accuracy of the final trajectory data.",
+    "deactivate_failure": "Deactivation failed.",
+    "deactivateError": "Unable to deactivate.",
+    "pointcloud_error": "Error on loading the point cloud.",
+    "activation": {
+      "title": "Pegasus TRK activation",
+      "state": {
+        "starting": "Starting...",
+        "initializing": "Initialisation in progress...",
+        "shutdown": "Shut down in progress...",
+        "configuring": "Configuration in progress...",
+        "deactivating": "Deactivation in progress...",
+        "deactivated": "System deactivated",
+        "activating": "Activation in progress...",
+        "activated": "System successfully activated ",
+        "startinginitialalignment": "Starting initial alignment...",
+        "initialalignment": "Initial alignment",
+        "startingfinalalignment": "Starting final alignment...",
+        "finalalignment": "Final alignment",
+        "startinglogging": "Starting logging...",
+        "logging": "Logging in progress...",
+        "startingrecording": "Starting data capture...",
+        "stoppingrecording": "Stopping data capture...",
+        "recording": "Data capture in progress..."
+      },
+      "bootingUp": "Booting up...",
+      "abort": "Cancel activation",
+      "failure": "Activation failed"
+    },
+    "capture": {
+      "starting_alignment": "Starting alignment...",
+      "starting_logging": "Starting logging...",
+      "starting_recording": "Starting data capture...",
+      "stopping_recording": "Stopping data capture...",
+      "deactivating": "Deactivating..."
+    },
+    "main_button": {
+      "start_initial": "Start alignment",
+      "stop_initial": "Stop alignment",
+      "start_final": "Final alignment",
+      "stop_final": "Stop alignment",
+      "deactivate": "Deactivate the system",
+      "secondary": "Force deactivation",
+      "back_jobs": "Return to Project"
+    },
+    "camera_failure": {
+      "recording": "Data capture failed.",
+      "stop": "Stopping failed."
+    },
+    "deactivated_camera": {
+      "cancel_default": "Cancel",
+      "cancel_active": "Cancel",
+      "cancel_recording": "Resume capturing",
+      "ok_default": "OK",
+      "ok_active": "OK",
+      "ok_recording": "Stop capturing",
+      "title": "Camera disconnected",
+      "text_default": "Connection to a camera was lost after the system was turned ON.",
+      "text_activating": "Connection to a camera was lost after the system was turned ON. Do you want to activate the system anyway?",
+      "text_active": "Connection to a camera was lost after the system was turned ON. Reconnect the camera before starting the data capture.",
+      "text_recording": "Connection to a camera was lost after the system was turned ON. Stop the data capture and reconnect the camera."
+    },
+    "reactivated_camera": {
+      "cancel_default": "Cancel",
+      "cancel_all": "Cancel",
+      "ok_default": "OK",
+      "ok_active": "OK",
+      "ok_all": "OK",
+      "title": "Camera reconnected",
+      "text_default": "A camera has been reconnected.",
+      "text_some": "One of the disconnected cameras has been reconnected. Other cameras are still disconnected.",
+      "text_all": "A camera has been reconnected. Stop and restart the data capture to use the camera.",
+      "text_resume": "A camera has been reconnected. Do you want to resume the data capture?"
+    },
+    "back_to_jobs": "Back to Jobs",
+    "abort_button_label": "Abort",
+    "tooltips": {
+      "map_mode": "Map mode",
+      "camera_mode": "Camera mode",
+      "take_snapshot": "Take snapshot",
+      "pointcloud": "Toggle point cloud",
+      "add_tag": "Add tag",
+      "planned_tracks": "Toggle plan"
+    },
+    "dialogs": {
+      "ok": "OK",
+      "tts": {
+        "title": "Activating audio messages...",
+        "text": "Click to unlock the audio messages for the data capture.",
+        "ok": "OK"
+      }
+    },
+    "status": {
+      "gdop": "GDOP",
+      "satelliteavailable": "Satellites",
+      "rtkaccuracy": "RTK accuracy",
+      "rtkcorrectionreceived": "RTK corrections received",
+      "rtkstatus": "RTK status",
+      "internetconnected": "Internet access",
+      "ageofcorrections": "Last correction update",
+      "rtkserviceconnected": "RTK service connected",
+      "friendly_state_0": "Computed",
+      "friendly_state_1": "Computing...",
+      "friendly_state_2": "Suspicious",
+      "friendly_state_3": "Failed",
+      "gps_type": "Solution type",
+      "lastconnectionupdate": "Last Correction Update",
+      "numbersatelliteavailable": "Satellite available"
+    },
+    "alignment": {
+      "proceed": "Proceed",
+      "skip": "Skip",
+      "retry": "Retry",
+      "deactivate": "Deactivate",
+      "skip_alert": {
+        "title": "Stop alignment",
+        "text": "Skipping the initial alignment could compromise the final accuracy of the Job. Do you want to continue?",
+        "text_final": "Skipping the final alignment could compromise the final accuracy of the Job. Do you want to continue?",
+        "ok": "Yes",
+        "ko": "No"
+      },
+      "title": {
+        "static": "Static alignment",
+        "dynamic": "Dynamic alignment",
+        "confirmation": "Prepare for the next step."
+      },
+      "out_of_range": {
+        "title": "Out of range for alignment",
+        "text": "The alignment should start in a range of 100 m from the planned point. Click on Proceed to proceed anyway.",
+        "cancel": "Cancel",
+        "proceed": "Proceed"
+      },
+      "final_confirm": {
+        "title": "Final alignment",
+        "text": "Do you want to start the final alignment?",
+        "cancel": "Cancel",
+        "proceed": "Proceed"
+      },
+      "messages": {
+        "A1": "Remain stationary",
+        "A2": "Drive",
+        "A3": "Sail",
+        "AN1": "End alignment",
+        "AN2": "{time} dynamic alignment",
+        "AN3": "{space} dynamic alignment",
+        "AN4": "{time} static alignment",
+        "AN5": "{space} static alignment",
+        "AF": "Step failed. Please retry."
+      },
+      "remaining_seconds": "Seconds",
+      "remaining_meters": "Meters",
+      "remaining_feet": "Feet"
+    },
+    "routing": {
+      "stopping_button": "Continue capturing",
+      "actions": {
+        "turn": "Turn"
+      },
+      "directions": {
+        "left": "Left"
+      },
+      "dialogs": {
+        "abort": {
+          "title": "Turn OFF auto-capture",
+          "text": "Are you sure you want to turn OFF autonomous data capture? This can be turned ON again later in this Job.",
+          "back": "Cancel",
+          "confirm": "OK"
+        }
+      }
+    },
+    "camera": {
+      "disabled": "Camera is OFF for this Track",
+      "back": "Back to map",
+      "names": {
+        "Sphere": {
+          "Sphere": "Panoramic"
+        },
+        "Left": {
+          "Left_Forward": {
+            "portrait": "Left Bottom",
+            "landscape": "Left Forward",
+            "unknown": "Left"
+          },
+          "Left_Backward": {
+            "portrait": "Left Top",
+            "landscape": "Left Backward",
+            "unknown": "Left"
+          }
+        },
+        "Right": {
+          "Right_Forward": {
+            "portrait": "Right Top",
+            "landscape": "Right Forward",
+            "unknown": "Right"
+          },
+          "Right_Backward": {
+            "portrait": "Right Bottom",
+            "landscape": "Right Backward",
+            "unknown": "Right"
+          }
+        },
+        "Rear": {
+          "Rear_Left": "Rear Left",
+          "Rear_Right": "Rear Right"
+        },
+        "Front": {
+          "Front_Left": "Front Left",
+          "Front_Right": "Front Right"
+        }
+      }
+    }
+  },
+  "data_acquisition_small_status_bar": {
+    "rtk": "RTK",
+    "status": "Status"
+  },
+  "rtk": {
+    "dialog": {
+      "title": "RTK settings",
+      "back": "Cancel",
+      "cancel_activation": "Cancel activation",
+      "confirm": "OK",
+      "incomplete": "Server information is incomplete.",
+      "connection": "Connect to a server",
+      "mountpoints_failure": "A problem occurred while loading the mounting points.",
+      "loading": "Connecting to ",
+      "cancel": "Cancel",
+      "retry": "Retry",
+      "error": {
+        "authentication": "Unable to authenticate.",
+        "mountpoints": "Unable to load mounting points.",
+        "default": "Unable to connect."
+      }
+    },
+    "server": {
+      "form": {
+        "validation": {
+          "name": "Enter a server name.",
+          "url": "Enter a URL.",
+          "port": "Enter a port.",
+          "user": "Enter a username.",
+          "password": "Enter a password."
+        },
+        "title": "Add new server",
+        "fields": {
+          "name": "Server name",
+          "server": "URL",
+          "port": "Port n°",
+          "username": "Username",
+          "password": "Password"
+        },
+        "connect": "Connect",
+        "connected": "Connected",
+        "exists": "A server with the same name already exists.",
+        "update": "Update",
+        "save": "Save"
+      },
+      "delete_dialog": {
+        "title": "Delete server",
+        "confirm": "Delete",
+        "cancel": "Cancel",
+        "text": "Are you sure you want to delete this server?<br />Note: This cannot be undone."
+      },
+      "add_new": "Add new server",
+      "temporary": "New server",
+      "copy": "Copy"
+    },
+    "mountPoint": {
+      "form": {
+        "validation": {
+          "mountpoint": "Mounting point required",
+          "interfacemode": "Format required"
+        },
+        "mountpoint": "Mounting point",
+        "interfacemode": "Format",
+        "test": "RTK test"
+      }
+    },
+    "connection_info": {
+      "yes": "Yes",
+      "no": "No",
+      "waiting_for_test": "Waiting for test...",
+      "internetconnection": "Internet connection",
+      "ntripconnection": "RTK connection established",
+      "state": "Position",
+      "precision2d": "2D precision",
+      "precisionheight": "Height precision",
+      "satellitesinuse": "Number of satellites",
+      "hdop": "HDOP",
+      "vdop": "VDOP",
+      "gdop": "GDOP",
+      "agecorrection": "Last correction update",
+      "actualposition": "Current position",
+      "position": {
+        "latitude": "Latitude",
+        "longitude": "Longitude"
+      },
+      "gdop_status": {
+        "poor": "Poor"
+      },
+      "asml": "Elevation"
+    }
+  },
+  "units": {
+    "seconds": "seconds",
+    "meters": "meters",
+    "feet": "feet",
+    "metric": {
+      "KMH": "km/h",
+      "KM": "km",
+      "CM": "cm",
+      "HZ": "Hz",
+      "MSEC": "m/sec",
+      "MS": "ms",
+      "M": "m"
+    },
+    "imperial": {
+      "KMH": "mph",
+      "KM": "mi",
+      "CM": "in",
+      "HZ": "Hz",
+      "MSEC": "ft/sec",
+      "MS": "ms",
+      "M": "ft"
+    },
+    "time": {
+      "hours": "h",
+      "minutes": "m"
+    }
+  },
+  "unit": {
+    "metric": "Metric",
+    "imperial": "Imperial"
+  },
+  "side_panel": {
+    "tracks": {
+      "covered": "Captured",
+      "not_covered": "Planned"
+    },
+    "settings": {
+      "map_settings": "Map settings",
+      "max_speed": "Max. speed",
+      "audio_settings": "Audio settings",
+      "camera_settings": "Camera settings",
+      "point_cloud_thickness": "Point size",
+      "labelling": "Labelling",
+      "navigation": "Navigation",
+      "image_distance": "Image distance",
+      "image_elapse": "Image trigger time",
+      "scanline_spacing": "Scanline spacing",
+      "collection_mode": "Capture mode",
+      "brightness": "Brightness",
+      "camera": "Camera",
+      "general_volume": "General volume",
+      "error": "Error",
+      "collection": "Data capture",
+      "directions": "Routing directions",
+      "autocapture": "Automatic capture"
+    },
+    "media": {
+      "audio": "Audio",
+      "image": "Image",
+      "text": "Text"
+    },
+    "information": {
+      "title": "Job info",
+      "type_of_job": "Type of Job",
+      "positioning_accuracy": "Positioning accuracy",
+      "camera": "Camera",
+      "on": "ON",
+      "off": "OFF",
+      "scanline_spacing": "Scanline spacing",
+      "profiler_rotation_speed": "Profiler rotation speed",
+      "profiler_point_sec": "Profiler point/sec",
+      "driving_speed": "Driving speed",
+      "image_distance": "Image distance",
+      "dmi_type": "DMI type",
+      "antenna_type": "Antenna configuration"
+    },
+    "notifications": {
+      "title": "Errors & Warnings"
+    },
+    "job": {
+      "details": "Show details",
+      "setting": {
+        "title": "Job settings",
+        "type": "Type of Job",
+        "time": "Time to capture",
+        "space": "Estimated disk space",
+        "battery": "Estimated battery consumption",
+        "ditance": "Distance to drive",
+        "minutes": "minutes",
+        "hours": "hours"
+      },
+      "quality": {
+        "title": "Estimated quality",
+        "captureDate": "Capture date",
+        "time": "Time",
+        "to": "to",
+        "satellite": "Number of available satellites per 30 minutes interval",
+        "satType": "Satellite type",
+        "satNr": "Number of satellites",
+        "startTime": "Best time to capture",
+        "positionAccuracy": "QA scoring tolerances (green-yellow-red)"
+      },
+      "plan": {
+        "title": "View plan"
+      },
+      "needed": {
+        "title": "Estimated results"
+      }
+    },
+    "buttons": {
+      "title": "Alignment position",
+      "initial_point": "Initial",
+      "final_point": "Final",
+      "range": {
+        "show": "Show range",
+        "hide": "Hide range"
+      }
+    }
+  },
+  "help": {
+    "rtk": {
+      "title": "RTK",
+      "$type": "Image",
+      "$imageURL": "/assets/img/Real_Time_Kinematic_RTK_500x312_B.svg"
+    },
+    "job_tolerance": {
+      "title": "Estimated accuracy position colourisation",
+      "$type": "Image",
+      "$imageURL": "/assets/img/PositionAccuracy.gif"
+    },
+    "dmi_none": {
+      "title": "DMI",
+      "$type": "Text",
+      "text": "The distance measurement instrument (DMI) measures the travelled distance. The mechanical DMI counts the number of wheel revolutions per second while the optical DMI measures the covered distance with an optical sensor."
+    },
+    "dmi_optical": {
+      "title": "Optical DMI",
+      "$type": "Image",
+      "$imageURL": "/assets/img/OpticalDmi.gif"
+    },
+    "dmi_mechanical": {
+      "title": "Mechanical DMI",
+      "$type": "Image",
+      "$imageURL": "/assets/img/MechanicalDmi.gif"
+    },
+    "antenna_single": {
+      "title": "Single antenna",
+      "$type": "Image",
+      "$imageURL": "/assets/img/AntennaSingle.gif"
+    },
+    "antenna_double": {
+      "title": "Double antenna",
+      "$type": "Image",
+      "$imageURL": "/assets/img/AntennaDual.gif"
+    },
+    "collection_oneway": {
+      "title": "Data capture: One way",
+      "$type": "Image",
+      "$imageURL": "/assets/img/CollectionOneway.gif"
+    },
+    "collection_bothways": {
+      "title": "Data capture: Both ways",
+      "$type": "Image",
+      "$imageURL": "/assets/img/CollectionBoth.gif"
+    },
+    "profiler": {
+      "title": "Profiler rotation speed",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ScannerRotation.gif"
+    },
+    "image_distance": {
+      "title": "Image distance",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ImageDistance.gif"
+    },
+    "forgot_password": {
+      "title": "Forgot password",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ForgotPassword.png"
+    },
+    "coordinate_system": {
+      "title": "Coordinate system",
+      "$type": "Text",
+      "text": "The coordinate system affects the results in Finalise & Export. By selecting Automatic the coordinate system is calculated at the end of the first acquisition. It is possible to manually import a custom coordinate system. The coordinate system can be changed until the first processing is completed succesfully."
+    }
+  },
+  "language": {
+    "en": "English",
+    "jp": "Japanese",
+    "kr": "Korean",
+    "cn": "Chinese",
+    "de": "German",
+    "fr": "French",
+    "it": "Italian",
+    "es": "Spanish",
+    "pt": "Portuguese"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "firmwareUpdate": {
+    "header": "Licence & Software updates",
+    "su": "Sensor unit serial number",
+    "pcu": "PCU serial number",
+    "ccp": "CCP Licence Number",
+    "expire": "Expire date",
+    "version": "Firmware version",
+    "last": "Last update",
+    "update": "Update available which includes",
+    "footer": "You can only update licence and firmware from the display of the Pegasus Controller Unit.",
+    "versionAvailable": "Version {{ updateAvailableVersion }} detected on your device.",
+    "updateNow": "Update now",
+    "noStorageDetected": "No storage device detected.",
+    "noInstallerDetected": "No valid installer detected in your storage device.",
+    "howToUpdate": "How to perform an update",
+    "updateGuidelines": "Updates installation guidelines (from your storage device)",
+    "logMyWorld": "Log into myWorld and download a Pegasus FIELD installer.",
+    "savePEF": "Save Pegasus FIELD in the root folder of your storage device.",
+    "plugDevice": "Plug your storage device into a USB port of the PCU.",
+    "clickUpdateNow": "Then click Update now button above or on the PCU Licence & software menu.",
+    "prerequisites": "Checking prerequisites...",
+    "lastUpdate": "Last update",
+    "lastVersion": "Version {{firmwareVersion}} installed on {{updateDate}}.",
+    "suNotAttached": "Not attached.",
+    "prerequisitesSuccessful": "Prerequisites check successful.",
+    "prerequisitesInstallation": "Check prerequisites before installation.",
+    "cancel": "Cancel",
+    "retry": "Retry",
+    "systemError": "System prerequisites not met.",
+    "softwareError": "FIELD update is not valid.",
+    "notSafeError": "Pegasus FIELD Software update failed.",
+    "extractionError": "FIELD update extraction failed.",
+    "genericError": "Prerequisites check failed.",
+    "downloadAgain": "A required component is missing or corrupted. Redownload Pegasus FIELD Software from myWorld.",
+    "notUnplugStorage": "Please do not unplug your storage device.",
+    "dialog": {
+      "title1": "Licence agreement",
+      "title2": "Reboot required",
+      "headline1": "Please review the licence terms before installing the software, which will apply to all updates performed during this session.",
+      "headline2": "Update requires reboots.",
+      "headline3": "After the first reboot this page will not be available. You can check the installation progress directly on the PCU screen. At the end of the installation a reboot is required. Do you want to proceed?",
+      "cancel": "Cancel",
+      "agree": "I agree",
+      "yes": "Yes"
+    }
+  },
+  "checkUpdate": {
+    "versionAvailable": "Version {{ updateAvailableVersion }} is now available on myWorld.",
+    "licenseExpired": "CCP licence is expired. Renew it to update Pegasus FIELD.",
+    "myWorld": {
+      "title": "To check the release notes and download the latest installer:",
+      "button": "Visit myWorld"
+    },
+    "doNotShow": "Don't show for 7 days",
+    "okButton": "OK",
+    "noInternet": "No internet connection available",
+    "error": "Unable to retrieve information from myWorld",
+    "retry": "Click to retry",
+    "uptodate": "Software is already up to date",
+    "checkButton": "Click to check for updates",
+    "checking": "Checking for updates..."
+  },
+  "copyright": {
+    "title": "Copyright",
+    "text": "Leica Pegasus FIELD<br />Copyright © {{year}} Leica Geosystems AG.<br />This product is protected by the Hexagon Geosystems Software Licence Agreement.<br /><br />Portions of this software are copyrighted by others or licensed from others.<br />This software may use some or all components listed below.",
+    "library": "Library",
+    "url": "Licence URL"
+  },
+  "helpSupport": {
+    "header": "Help & Support",
+    "contact": "Contact support",
+    "helpGuide": "Help guide",
+    "about": "About",
+    "supportEmail": "Select support email",
+    "motivation": "What can we help you with?",
+    "motivations": {
+      "acquisition": "Data capture",
+      "deviceConnection": "Device connection",
+      "other": "Other"
+    },
+    "description": "Describe your issue",
+    "validation": {
+      "description": "Description required"
+    },
+    "footer": "By clicking 'Send' you will share all the information related to the selected option with the Leica Support.",
+    "send": "Send",
+    "cancel": "Cancel"
+  },
+  "planning": {
+    "title": "Job planning",
+    "submit": {
+      "estimate": "Estimate planning",
+      "start_activate": "Capture",
+      "save_activate": "Save and capture",
+      "save_only": "Save",
+      "optimise_plan": "Refine Track order",
+      "keep_plan": "Keep current plan",
+      "optimise_popup": "The estimate is based on the current Track order. Refining the Track order could improve the estimate. Note: Track order refinement is not reversible."
+    },
+    "tools": {
+      "draw_track": "Add points",
+      "draw_new_track": "New Track",
+      "end_track": "Close Track",
+      "draw_polygon": "Draw polygon",
+      "draw_new_polygon": "New polygon",
+      "upload_file": "Upload file"
+    },
+    "track": "Track",
+    "defaultNames": {
+      "track": "Track",
+      "polygon": "Polygon"
+    },
+    "alert": {
+      "notracks": {
+        "title": "Add at least one Track",
+        "message": "You cannot start estimating a plan without a Track.",
+        "button": "OK"
+      },
+      "initialAlignmentPoint": {
+        "title": "Define location for initial alignment",
+        "message": "You cannot start estimating a plan without defining a position for the initial alignment phase.",
+        "button": "Define the location for the initial alignment."
+      },
+      "finalAlignmentPoint": {
+        "title": "Define location for final alignment.",
+        "message": "The estimation does not account for the location of the final alignment. Final values may differ.",
+        "button": "OK"
+      },
+      "unsavedPlan": {
+        "title": "Unsaved Job plan",
+        "message": "Are you sure you want to exit without saving the plan? You will lose all the changes made.",
+        "ok": "Continue without saving",
+        "cancel": "Stay on the page"
+      }
+    },
+    "delete_confirm": {
+      "cancel": "Cancel",
+      "ok": "Yes",
+      "text": "Are you sure you want to delete {{pathName}}?",
+      "text_polygon": "Are you sure you want to delete {{pathName}} and its {{tracks}} Tracks?",
+      "title": "Delete {{type}}",
+      "track": "Track",
+      "polygon": "Polygon",
+      "polygon_internal_path": "Polygon Track"
+    },
+    "user_tips": {
+      "select_internal_track": "Select a Track to edit",
+      "starting_point_empty_polygon": "Draw a new Track or a new polygon by picking points on the map.",
+      "starting_point_empty": "Draw a new Track by picking points on the map.",
+      "initial_point": "Pick a point into the map to set the position for the initial alignment.",
+      "final_point": "Pick a point into the map to set the position for the final alignment.",
+      "starting_point_polygon": "Select a Track or polygon by picking it in the map (or select the item from the sidebar).",
+      "starting_point": "Select a Track by picking it in the map (or select the item from the sidebar).",
+      "new_track_start": "Pick a position on the map to start a new Track.",
+      "new_track": "Pick positions on the map to add additional points, double tap to end the Track.",
+      "new_polygon_start": "Pick a position on the map to start a new polygon.",
+      "new_polygon": "Pick positions on the map to add additional points, double tap to close the polygon.",
+      "toolbar_delete_polygon": "Pick a Track or polygon on the map to delete.",
+      "toolbar_delete": "Pick a Track on the map to delete.",
+      "toolbar_delete_internal": "Pick a Track on the map to delete.",
+      "toolbar_cut": "Pick a point on a Track to split the Track in that position.",
+      "toolbar_move": "Pick, hold and drag a point to move it within the map. It creates a new point if none exist.",
+      "use_tools": "Use the toolbar to access the editing tools.",
+      "busy": "Calculating..."
+    },
+    "errors": {
+      "nearest_point": "HERE Navigation map server is not responding. Please, check the internet connection.",
+      "arcs": "HERE Navigation map server is not responding. Please, check the internet connection.",
+      "shp_failed": "Importing SHP file failed.",
+      "estimate_failed": "Processing failed: an Internet connection is required for Job estimation.",
+      "shp_list_failed": "Listing SHP file failed.",
+      "path": "Error while calculating the requested path."
+    },
+    "warnings": {
+      "DS-039": {
+        "$type": "Error",
+        "title": "Critical disk space",
+        "text": "According to your plan, the Job will occupy more than 80% of the available disk space.",
+        "buttonCancel": "Continue anyway",
+        "buttonOk": "Move Job to a new disk"
+      },
+      "DS-038": {
+        "$type": "Error",
+        "title": "Disk space exceeded",
+        "textSingle": "The estimated Job size might exceed the available disk capacity. Free-up space on the assigned disk. Alternatively, add a new disk on which to move the Job without losing any data.",
+        "textMultiple": "The estimated Job size might exceed the available disk capacity. Free-up space on the assigned disk or move the Job to a new disk without losing any data.",
+        "buttonCancel": "Continue anyway",
+        "buttonOk": "Move Job to a new disk"
+      },
+      "job_moved": {
+        "$type": "message",
+        "title": "Job moved",
+        "text": "You can find the new Job on disk <b>{{disk}}</b> as <b>{{job}}</b> in Project <b>{{project}}</b>.",
+        "buttonOk": "OK"
+      }
+    },
+    "polygon_plan_filter": {
+      "checkAll": "Select/deselect all",
+      "roads": {
+        "allroad": "All roads",
+        "allcar": "All roads for cars",
+        "motorway": "Motorways",
+        "truck": "Truck lanes",
+        "primary": "Primary roads",
+        "secondary": "Secondary roads",
+        "tertiary": "Tertiary roads",
+        "residential": "Residential roads",
+        "pedestrian": "Pedestrian walkways",
+        "cycleway": "Bicycle lanes",
+        "service": "Service roads",
+        "livingstreet": "Living streets",
+        "allrailway": "All railways",
+        "rail": "Railways",
+        "lightrail": "Light railways",
+        "monorail": "Monorailways",
+        "funicular": "Funiculars",
+        "subway": "Subway railways",
+        "tram": "Tram railways",
+        "unclassified": "Unclassified"
+      },
+      "ramps": {
+        "include_ramps": "Include ramps",
+        "only_ramps": "Ramps only",
+        "no_ramps": "Ignore ramps"
+      },
+      "cancel": "Cancel",
+      "extract": "Extract",
+      "extractTracks": "Extract Tracks"
+    }
+  },
+  "job_info": {
+    "title": "Job info",
+    "rows": {
+      "planned": {
+        "title": "Job planning",
+        "values": {
+          "yes": "Planned",
+          "no": "No planning"
+        }
+      },
+      "type": {
+        "title": "Type of Job"
+      },
+      "dmi": {
+        "title": "DMI"
+      },
+      "ntrip": {
+        "title": "Positioning",
+        "values": {
+          "enabled": "RTK",
+          "not_enabled": "No RTK"
+        },
+        "mountpoint": {
+          "title": "Mounting point:"
+        },
+        "interfacemode": {
+          "title": "Format:"
+        }
+      },
+      "collectionmode": {
+        "title": "Data capture mode"
+      },
+      "antenna": {
+        "title": "Antenna configuration",
+        "valid": "Configuration available",
+        "invalid": "No configuration"
+      },
+      "drivingspeed": {
+        "title": "Max. suggested speed"
+      },
+      "camera": {
+        "title": "Camera",
+        "values": {
+          "yes": "ON",
+          "no": "OFF"
+        },
+        "distance": {
+          "title": "Image distance"
+        },
+        "elapse": {
+          "title": "Camera trigger time"
+        },
+        "blur": {
+          "title": "Image anonymisation"
+        },
+        "left": {
+          "title": "Left camera orientation"
+        },
+        "right": {
+          "title": "Right camera orientation"
+        }
+      },
+      "scanner": {
+        "scanlinespacing": {
+          "title": "Scanline spacing"
+        },
+        "rotationspeed": {
+          "title": "Profiler rotation speed"
+        },
+        "pointspersecond": {
+          "title": "Profiler points/s"
+        },
+        "range": {
+          "title": "Max. scanner range"
+        }
+      },
+      "position": {
+        "accuracy": {
+          "title": "Positioning accuracy"
+        }
+      }
+    },
+    "back_to_jobs": "Cancel activation",
+    "edit": "Change settings",
+    "confirm": "Proceed",
+    "recalculate": "Configure",
+    "use_saved_values": "Use saved values",
+    "errors": {
+      "2nd_antenna_not_configured": "Configure the second antenna before proceeding.",
+      "2nd_antenna_no_distance": "Specify the distance between the antenna and the panoramic camera. Only numbers are allowed.",
+      "2nd_antenna_min_distance": "The second antenna should be placed at a minimum distance of {{distance}} from the panoramic camera.",
+      "2nd_antenna_no_manual": "Enter the lever arm x, y, z values. Only numbers are allowed.",
+      "2nd_antenna_missing": "Only numbers are allowed.",
+      "2nd_antenna_invalid": "The second antenna configuration is invalid. Please, check the values."
+    },
+    "close": "Close"
+  },
+  "su": {
+    "su": "Sensor unit",
+    "model": {
+      "PEGASUS_TRK500_NEO": "PEGASUS TRK500 NEO",
+      "PEGASUS_TRK700_NEO": "PEGASUS TRK700 NEO",
+      "PEGASUS_TRK500_EVO": "PEGASUS TRK500 EVO",
+      "PEGASUS_TRK700_EVO": "PEGASUS TRK700 EVO",
+      "PEGASUS_TRK100": "PEGASUS TRK100",
+      "PEGASUS_TRK300": "PEGASUS TRK300",
+      "NO_SENSOR_UNIT": "No sensor unit connected"
+    }
+  },
+  "errors": {
+    "status_socket": "Error on connecting to status socket.",
+    "status_socket_connected": "Status socket connection resumed.",
+    "routing_socket": "Error on connecting to routing socket.",
+    "routing_socket_connected": "Routing socket connection resumed.",
+    "notifications_socket": "Error on connecting to notifications socket.",
+    "notifications_socket_connected": "Notifications socket connection resumed.",
+    "position_socket": "Error on connecting to position socket.",
+    "position_socket_connected": "Position socket connection resumed.",
+    "pointcloud_socket": "Error on connecting to point cloud socket.",
+    "pointcloud_socket_connected": "Point cloud socket connection resumed.",
+    "alignment_socket": "Error on connecting to alignment socket.",
+    "alignment_socket_connected": "Alignment socket connection resumed.",
+    "heightmap_failed": "Height-map failure",
+    "heightmap_resumed": "Height-map resumed"
+  },
+  "backend_errors": {
+    "dialogs": {
+      "ok": "OK",
+      "cancel": "Cancel"
+    },
+    "status_code": {
+      "404": "API not available"
+    },
+    "code": {
+      "ECONNABORTED": "Communication with the system is slow. Please, check the network connections or wait for the system to become responsive.",
+      "ACTSYS-001": "Initialisation in progress...",
+      "ACTSYS-002": "Initialised",
+      "ACTSYS-003": "Activating...",
+      "ACTSYS-004": "Activated",
+      "ACTSYS-005": "Deactivating...",
+      "ACTSYS-006": "Deactivated",
+      "ACTSYS-007": "Starting data capture...",
+      "ACTSYS-008": "Capturing...",
+      "ACTSYS-009": "Stopping data capture...",
+      "ACTSYS-010": "Logging...",
+      "ACTSYS-011": "Shutting down the system...",
+      "ACTSYS-012": "Aborting initialisation...",
+      "ACTSYS-013": "Aborting activation...",
+      "ACTSYS-014": "Aborting deactivation...",
+      "ACTSYS-015": "Aborting start data capture...",
+      "ACTSYS-016": "Aborting stop data capture...",
+      "ACTSYS-017": "Aborting system shutdown...",
+      "ACTSYS-018": "Rebooting system...",
+      "ACTSYS-019": "Start initial alignment",
+      "ACTSYS-020": "Initial alignment",
+      "ACTSYS-021": "Start final alignment",
+      "ACTSYS-022": "Final alignment",
+      "ACTSYS-023": "ICS configured",
+      "ACTSYS-024": "Start logging",
+      "ACTSYS-025": "Aborting initial alignment...",
+      "ACTSYS-026": "Aborting final alignment...",
+      "BTU-001": "Low battery.",
+      "BTU-002": "Low battery {p1}. Please replace it.",
+      "BTU-003": "Low battery: The system will be deactivated...",
+      "BTU-004": "Low battery: The system will stop the data capture...",
+      "BTU-005": "Low battery: The system will be turned OFF...",
+      "SYS-002": "Internal error.",
+      "SYS-003": "Authorisation is missing.",
+      "SYS-004": "The system is not in deactivate state or it is not initialised.",
+      "SYS-005": "The module {p1} is not in deactivate state or it is not initialised.",
+      "SYS-006": "The system is not in activate state, final or initial alignment state, or logging state.",
+      "SYS-007": "The module {p1} is not in logging state.",
+      "SYS-008": "The system is not in capturing state.",
+      "SYS-010": "Wrong system type.",
+      "SYS-011": "Unknown calibration folder.",
+      "SYS-012": "The calibration folder does not exist.",
+      "SYS-013": "Bad request. Please, contact the support.",
+      "SYS-014": "System is already activated.",
+      "SYS-015": "Configuration can be done only in deactivated state.",
+      "SYS-016": "Activation can be done only in deactivated state.",
+      "SYS-017": "Cancel activation can be done only in activated state.",
+      "SYS-018": "Deactivation can be done only in activated state, final or initial alignment state, or logging state.",
+      "SYS-019": "Start data capture can be done only in logging state.",
+      "SYS-020": "Cancel starting data capture can be done only in capturing state.",
+      "SYS-021": "Stopping data capture can be done only in capturing state.",
+      "SYS-022": "PCU temperature is high.",
+      "SYS-023": "PCU temperature is critical!",
+      "SYS-024": "Start logging can be done only in initial alignment state.",
+      "SYS-026": "The module {p1} is not in activate state.",
+      "SYS-027": "The system is not in logging state.",
+      "SYS-028": "Start initial alignment can be done only in activate state.",
+      "SYS-029": "Cancel starting initial alignment can be done only in initial alignment state.",
+      "SYS-030": "Start final alignment can be done only in logging state.",
+      "SYS-031": "Cancel starting final alignment can be done only in final alignment state.",
+      "SYS-033": "The module {p1} is not in the logging state.",
+      "SYS-034": "The module {p1} is not in the initial alignment state.",
+      "SYS-035": "The Sensor Unit is not connected to the Control Unit.",
+      "SYS-036": "System locked.",
+      "SYS-037": "System locked.",
+      "SYS-038": "The battery level is low.",
+      "SYS-039": "The licence is expired. Please, contact the support.",
+      "SYS-040": "Licence maintenance has expired. Please contact your sales representative.",
+      "SYS-041": "Unknown country code {p1}.",
+      "SYS-042": "Licence unavailable.",
+      "SYS-043": "Maintenance unavailable.",
+      "ACTPOS-001": "Loading RTK mounting points...",
+      "ACTPOS-002": "Testing RTK...",
+      "ACTPOS-003": "RTK mounting points loaded.",
+      "ACTPOS-004": "RTK tested.",
+      "POS-001": "Wrong server or internet connection problem.",
+      "POS-002": "Not enough satellites to activate the system.",
+      "POS-003": "Wrong accuracy class items.",
+      "POS-004": "Wrong DMI type.",
+      "POS-005": "There is already another RTK loading in execution.",
+      "POS-006": "Server unavailable.",
+      "POS-007": "There is already another RTK test in execution.",
+      "POS-008": "User unavailable.",
+      "POS-009": "Password unavailable.",
+      "POS-010": "Mounting point unavailable.",
+      "POS-011": "Interface mode unavailable.",
+      "POS-012": "Invalid action value.",
+      "POS-013": "Internet connection unavailable.",
+      "POS-014": "Network error. Retry or reboot the system.",
+      "POS-015": "The GNSS firmware is unsupported. Please, contact the support.",
+      "POS-016": "No data output.",
+      "POS-017": "Wrong RTK accuracy class items.",
+      "POS-018": "There are no available almanacs, or the clock model is invalid.",
+      "POS-019": "Configuring SPAN...",
+      "POS-020": "The almanacs are unavailable. Download in progress...",
+      "POS-021": "The GPS signal is unavailable, or the clock model is invalid.",
+      "POS-022": "There are not enough satellites to perform the alignment. Please, move to an open sky area.",
+      "POS-023": "GNSS position is invalid",
+      "CAM-000": "{p1} is unreachable.",
+      "ACTCAM-001": "FFC uploaded.",
+      "ACTCAM-002": "Uploading FFC...",
+      "MV-0": "Missing {p1} camera.",
+      "MV-1": "Missing {p1} camera.",
+      "MV-2": "Missing {p1} camera.",
+      "MV-3": "Missing {p1} camera.",
+      "MV-4": "Missing {p1} camera.",
+      "MV-5": "Missing {p1} camera.",
+      "MV-6": "Missing {p1} camera.",
+      "MV-7": "Missing {p1} camera.",
+      "MV-8": "Missing {p1} camera.",
+      "MV-9": "Missing {p1} camera.",
+      "CAM-001": "{p1} is in use.",
+      "CAM-002": "Camera {p1} firmware is unsupported. Please, contact the support.",
+      "CAM-003": "Camera {p1} configuration error.",
+      "CAM-004": "Camera {p1} driver is unsupported.",
+      "CAM-005": "Camera {p1} is unavailable.",
+      "CAM-006": "Error on loading the FFC on camera {p1}.",
+      "CAM-007": "Error in the colour configuration of the camera {p1}.",
+      "CAM-008": "Error on applying the FFC to the camera {p1}.",
+      "CAM-009": "Too many images in buffer. Try slowing down the vehicle. Please, contact the support.",
+      "CAM-010": "Internal colour optimisation error.",
+      "CAM-011": "Calibration data is missing on camera {p1}.",
+      "CAM-012": "Wrong calibration data on the camera {p1}.",
+      "CAM-013": "The serial number of the calibration file and of the camera {p1} are different.",
+      "CAM-014": "The {p1} camera is without orientation.",
+      "CAM-015": "The {p1} camera is without calibration.",
+      "CAM-016": "Waiting end of the colour optimisation task.",
+      "CAM-017": "Camera driver is unsupported. Please, contact the support.",
+      "CAM-018": "Front fisheye camera is unavailable.",
+      "CAM-019": "Rear fisheye camera is unavailable.",
+      "CAM-020": "Camera {p1} is not connected.",
+      "CAM-021": "Expected %d cameras, found %d.",
+      "CAM-022": "Recovering disconnected cameras...",
+      "CAM-023": "Camera snapshot is available only during data capture.",
+      "CAM-024": "Front fisheye camera is missing. Automatic brightness unavailable.",
+      "CAM-025": "Rear fisheye camera is missing. Automatic brightness unavailable.",
+      "CAM-026": "Wrong exposure.",
+      "CAM-027": "Wrong image quality value.",
+      "CAM-028": "Unavailable trigger type.",
+      "CAM-029": "There is already another FFC upload in execution.",
+      "CAM-030": "There are synchronisation issues with the camera {p1}.",
+      "CAM-031": "There are synchronisation issues with the camera {p1}.",
+      "CAM-032": "There are synchronisation issues with the camera {p1}.",
+      "CAM-033": "There are synchronisation issues with the camera {p1}.",
+      "CAM-034": "There are synchronisation issues with the camera {p1}.",
+      "CAM-035": "There are synchronisation issues with the camera {p1}.",
+      "CAM-036": "There are synchronisation issues with the camera {p1}.",
+      "CAM-037": "There are synchronisation issues with the camera {p1}.",
+      "CAM-038": "There are synchronisation issues with the camera {p1}.",
+      "CAM-039": "There are synchronisation issues with the camera {p1}.",
+      "CAM-040": "Camera {p1} is losing images.",
+      "CAM-041": "Camera {p1} is losing images.",
+      "CAM-042": "Camera {p1} is losing images.",
+      "CAM-043": "Camera {p1} is losing images.",
+      "CAM-044": "Camera {p1} is losing images.",
+      "CAM-045": "Camera {p1} is losing images.",
+      "CAM-046": "Camera {p1} is losing images.",
+      "CAM-047": "Camera {p1} is losing images.",
+      "CAM-048": "Camera {p1} is losing images.",
+      "CAM-049": "Camera {p1} is losing images.",
+      "CAM-050": "Front fisheye camera is unavailable.",
+      "CAM-051": "Rear fisheye camera is unavailable.",
+      "CAM-052": "A client is using the second antenna configurator: Close it before activating the system.",
+      "CAM-053": "Front camera is unavailable.",
+      "CAM-054": "Front camera calibration is unavailable.",
+      "CAM-055": "Front camera orientation is unavailable.",
+      "CAM-056": "Rear camera is unavailable.",
+      "CAM-057": "Rear camera calibration is unavailable.",
+      "CAM-058": "Rear camera orientation is unavailable.",
+      "CAM-059": "Camera {p1} is without FFC.",
+      "CAM-060": "Camera {p1} is without colour transformation.",
+      "CAM-061": "Error while loading the colour transformation on camera {p1}.",
+      "CAM-062": "Error while reading the camera calibration file {p1}.",
+      "CAM-063": "The calibration file {p1} is missing the camera’s serial number.",
+      "CAM-064": "The front fisheye camera calibration file is unavailable.",
+      "CAM-065": "The rear fisheye camera calibration file is unavailable.",
+      "CAM-066": "Camera name {p1} is unknown.",
+      "CAM-067": "The camera calibration file {p1} with serial number {p1} is a fisheye camera.",
+      "CAM-068": "Activating cameras...",
+      "CAM-069": "Recovering disconnected cameras: Turning OFF the cameras...",
+      "CAM-070": "Recovering disconnected cameras: Turning ON the cameras...",
+      "CAM-071": "Recovering disconnected cameras: Connecting the cameras...",
+      "CAM-072": "Recovering disconnected cameras: Connecting camera {p1}...",
+      "CAM-073": "Recovering disconnected cameras: Loading the colour optimisation...",
+      "CAM-074": "There are no disks with calibration files.",
+      "CAM-075": "{p1} is losing too many images.",
+      "CAM-076": "Camera {p1} is not ready.",
+      "CAM-077": "Error while reading calibration data of camera {p1}.",
+      "CAM-078": "Error while reading calibration file {p1}.",
+      "CAM-079": "Calibration file {p1} has a different serial number.",
+      "CAM-080": "The cameras {p1} and {p2} do not have the same orientation.",
+      "CAM-081": "Calibration data is missing on camera {p1}.",
+      "CAM-082": "New camera orientation available.",
+      "DS-001": "Disk change detected. Check the available disks in the top bar.",
+      "DS-002": "Error on writing the trajectory file: Disk full or disk error.",
+      "DS-003": "Error on writing the trajectory file: {p1}.",
+      "DS-004": "Error on writing the trajectory file: {p1}.",
+      "DS-005": "Empty Project name.",
+      "DS-006": "Bad Project name: {p1}.",
+      "DS-007": "Empty Job name.",
+      "DS-008": "Bad Job name: {p1}.",
+      "DS-009": "The disk is empty.",
+      "DS-010": "Unavailable disk {p1}.",
+      "DS-011": "Disk {p1} is not ready.",
+      "DS-012": "Error on creating the Projects folder {p1}.",
+      "DS-013": "The Job '{p1}' already exists.",
+      "DS-014": "Error on creating the log Job folder.",
+      "DS-015": "Error on creating the rover folder.",
+      "DS-016": "Error on creating the master folder.",
+      "DS-017": "Error on creating the GNSS file.",
+      "DS-018": "Error on creating the RTK file.",
+      "DS-019": "Error on creating the LiDAR file of the scanner {p1}.",
+      "DS-020": "Error on creating the low-resolution LiDAR file of the scanner {p1}.",
+      "DS-021": "Error on writing the LiDAR file of the scanner {p1}.",
+      "DS-022": "Error on writing the low-resolution LiDAR file of the scanner {p1}.",
+      "DS-023": "Error on creating the {p1} camera container.",
+      "DS-024": "Error on writing the {p1} camera container.",
+      "DS-025": "Bad Track name: {p1}.",
+      "DS-026": "Unknown coordinate system unit.",
+      "DS-027": "Project '{p1}' already exists.",
+      "DS-028": "Bad Job type name: {p1}.",
+      "DS-029": "Unknown Job type {p1}.",
+      "DS-030": "The disk space available is below {p1}%.",
+      "DS-031": "The disk space available is below {p1}%.",
+      "DS-032": "The disk space available is below {p1}%. Data capture is stopped. Perform the deactivation within {p2} minutes.",
+      "DS-033": "The disk space available is below {p1}%.",
+      "DS-034": "The disk space available is below {p1}%.",
+      "DS-035": "The disk space available is not sufficient.",
+      "DS-036": "The disk space available is critically low.",
+      "DS-037": "Internal error.",
+      "DS-038": "Available disk space not sufficient.",
+      "DS-039": "Available disk space is critically low.",
+      "DS-040": "Job report created.",
+      "DS-041": "Creating Job report...",
+      "DS-042": "There is already another Job report creation in execution.",
+      "DS-043": "The Job {p1} does not exist.",
+      "DS-044": "The Job report is unavailable.",
+      "DS-045": "The ImageAI processing on Job is not finished.",
+      "DS-046": "The Job is not acquired.",
+      "DS-047": "The Job is not done with RTK.",
+      "DS-048": "Error while deleting the Job report.",
+      "DS-049": "The disk space available for data processing is not sufficient.",
+      "DS-050": "Coordinates system locked: Unable to change it.",
+      "ZF-001": "ZF warning: {p1} {p2}.",
+      "ZF-002": "ZF error: {p1} {p2}.",
+      "ZF-003": "ZF message: {p1} {p2}.",
+      "ZF-004": "{p1}: Reference available.",
+      "SCN-001": "Calibration information missing for {p1}.",
+      "SCN-002": "Unable to start the scanner {p1}.",
+      "SCN-003": "Error while connecting to the scanner {p1}.",
+      "SCN-004": "Error while connecting to the scanner {p1}.",
+      "SCN-005": "Unable to get the serial number of the scanner {p1}.",
+      "SCN-006": "Unexpected state of the scanner {p1}.",
+      "SCN-007": "The firmware of {p1} is unsupported.",
+      "SCN-008": "Expected {p1} scanners, found {p2}.",
+      "SCN-009": "Expected {p1} SLAM scanners, found {p2}.",
+      "SCN-010": "The number of SLAM is different from the number of calibration files.",
+      "SCN-011": "Expected {p1} scanners, found {p2}.",
+      "SCN-012": "The PPS signal of the scanner {p1} is not locked.",
+      "SCN-013": "Synchronisation issues with the scanner {p1}.",
+      "SCN-014": "Unavailable synchronisation data for the scanner {p1}.",
+      "SCN-015": "Error while connecting to {p1}.",
+      "SCN-016": "Error while connecting to {p1}.",
+      "SCN-020": "No data from {p1}.",
+      "SCN-021": "No data from {p1}.",
+      "SCN-025": "No data from {p1}.",
+      "SCN-026": "No data from {p1}.",
+      "SCN-030": "Empty serial number in the calibration file {p1}.",
+      "SCN-031": "The calibration file for the scanner {p1} is unavailable.",
+      "SCN-032": "There are more scanner’s calibration files with the same serial number {p1}.",
+      "SCN-033": "The scanner with serial number {p1} is unavailable.",
+      "SCN-034": "Connecting {p1}...",
+      "SCN-035": "Command with {p2} Hz, {p3} points on scanner {p1} is unavailable.",
+      "SCN-040": "No data from {p1}.",
+      "SCN-041": "No data from {p1}.",
+      "SCN-045": "Waiting for {p1} to start...",
+      "SCN-046": "{p1} is losing too many packets.",
+      "SCN-047": "Restart the system.",
+      "SCN-050": "Streaming from scanner {p1} failed.",
+      "SCN-051": "Setting with {p2} Hz, {p3} points on scanner {p1} is unsupported.",
+      "SCN-052": "Expected {p1} Hesai scanners, found {p2}",
+      "SCN-060": "No data from {p1}",
+      "SCN-061": "No data from {p1}",
+      "SCN-065": "Issues while connecting to {p1}",
+      "SCN-066": "Issues while connecting to {p1}",
+      "SCN-070": "Data acquisition interrupted due to high temperature. Proceed with final alignment and deactivate the system.",
+      "SCN-071": "Scanner calibration might be compromised. It is recommended to proceed with final alignment.",
+      "SCN-072": "Scanner internal temperature close to 80°C (176°F) which is above standard use.",
+      "SCN-073": "{p1} is in standby. Shutdown the system and wait 30 minutes for it to cool down.",
+      "SCN-074": "{p1} is in standby. Shutdown the system and wait 30 minutes for it to cool down.",
+      "SCN-075": "{p1} is in standby. Shutdown the system and wait 30 minutes for it to cool down.",
+      "NTF-001": "Bad notification type.",
+      "NTF-002": "Invalid notification ID.",
+      "USR-001": "Login with user '{p1}' failed.",
+      "USR-002": "Unknown '{p1}' user.",
+      "USR-003": "A user has just login on the device. It can access data inside",
+      "USR-004": "A user has just logout from the device",
+      "USR-005": "Unknown authorization",
+      "ACTPLN-001": "Extracting polygon...",
+      "ACTPLN-002": "There is already another polygon extraction in execution.",
+      "ACTPLN-003": "Processing the plan...",
+      "ACTPLN-004": "No plan has been processed.",
+      "ACTPLN-005": "No shapefile has been imported.",
+      "ACTPLN-006": "No USB drive detected.",
+      "ACTPLN-008": "Processing shapefile.",
+      "ACTPLN-009": "Another shapefile import is already in progress.",
+      "ACTPLN-010": "The provided shapefile is empty.",
+      "ACTPLN-011": "No shapefile found.",
+      "ACTPLN-012": "Searching for shapefiles...",
+      "ACTPLN-013": "Another shapefile search is already in progress.",
+      "ACTPLN-014": "Error while opening the shapefile: {p1}.",
+      "ACTPLN-015": "Invalid split point selection: The point is too far from the Track.",
+      "PLN-001": "Extracting polygon...",
+      "PLN-002": "Another polygon extraction is already in progress.",
+      "PLN-003": "Processing the plan...",
+      "PLN-004": "No plan has been processed.",
+      "PLN-005": "No imported shape file.",
+      "PLN-006": "No USB drive detected.",
+      "PLN-007": "No shape file found on {{p1}} drive.",
+      "PLN-008": "Processing shape file...",
+      "PLN-009": "There is already another shapefile import in execution.",
+      "RTN-001": "Vehicle speed is above the set threshold.",
+      "RTN-002": "No space available on any disk for Job creation.",
+      "RTK-001": "Unable to establish the connection. Please, check the settings.",
+      "GIO001": "Wrong arguments. Correct number of parameters.",
+      "GIO002": "Unable to import legacy dataset.",
+      "GIO003": "Invalid Job name.",
+      "GIO004": "Invalid Track name.",
+      "GIO005": "No current trajectory for this Job.",
+      "GIO006": "Invalid trajectory name.",
+      "GIO007": "Unable to write orientation on image tables.",
+      "GIO008": "Licence error.",
+      "GIO009": "Errors while writing the frame orientation.",
+      "IMT001": "Wrong arguments.",
+      "IMT002": "Unable to open the Project.",
+      "IMT003": "Unable to open the Job",
+      "IMT004": "No data found.",
+      "IMT005": "Unable to read the trajectory data.",
+      "IMT006": "Unable to load the geo-transformation library.",
+      "IMT007": "Licence error.",
+      "IMT009": "Unable to import legacy dataset.",
+      "IMT012": "The CTS file does not exist.",
+      "IMT010": "Unable to convert trajectory coordinates.",
+      "IMT011": "Unable to convert trajectory coordinates for yaw correction.",
+      "IMT013": "Trajectory name cannot be empty.",
+      "PCJ001": "Wrong arguments.",
+      "PCJ002": "The Job does not exit.",
+      "PCJ003": "Unable to import legacy dataset.",
+      "PCJ004": "Licence error.",
+      "PCJ005": "Error on executing generate point cloud.",
+      "GPC001": "Wrong arguments.",
+      "GPC002": "Unable to import legacy dataset.",
+      "GPC003": "Invalid Job Name.",
+      "GPC004": "Unable to open the file.",
+      "GCP005": "No current trajectory for this Job.",
+      "GCP006": "Invalid trajectory name.",
+      "GCP007": "Invalid Track name.",
+      "EXL003": "Export LGS error.",
+      "EXL004": "Export LGSx error.",
+      "LGS003": "Export LGS error.",
+      "LGS006": "Epca error.",
+      "LGS004": "Licence error.",
+      "LGS007": "No frames available.",
+      "LGS005": "Error while writing the LGS file.",
+      "LGX003": "Export LGSx error.",
+      "LGX006": "Epca error.",
+      "LGX004": "Licence error.",
+      "LGX007": "No frames available.",
+      "LGX005": "Error while writing the LGSx file.",
+      "LCB001": "Licence error.",
+      "LCB002": "Unable to create a backup.",
+      "LCB003": "Unable to open the database",
+      "LCB004": "Unable to run the trajectory converter.",
+      "LCB005": "Unable to generate the images orientation.",
+      "LCB006": "Unable to generate the point cloud.",
+      "LCB007": "Unable to classify the point cloud.",
+      "LCB008": "Unable to export LGS.",
+      "LCB009": "Unable to export LAS.",
+      "LCB010": "Unable to export E57.",
+      "LCB011": "There is not enough space available on the disk.",
+      "LCB012": "Point cloud colourisation error.",
+      "LCB013": "Input error.",
+      "LCB014": "Unable to export LGSx.",
+      "LCB101": "Unable to run the process.",
+      "LCB102": "No RTK file.",
+      "LCB103": "Automatic mask generation error.",
+      "CLA002": "Point cloud classification error.",
+      "CLA003": "Point cloud classification error.",
+      "UPD-001": "Found an installer",
+      "ROU-006": "Cannot move a Track or polygon while recording it.",
+      "UPD-101": "No valid installer",
+      "UPD-102": "System not deactivated",
+      "UPD-103": "No sensor unit connected. Connect it and restart the system.",
+      "UPD-104": "PCU powered via AC plug. Plug a battery and restart the system.",
+      "UPD-105": "Active battery {p1} below 50 percent.",
+      "UPD-106": "Maintenance licence expired or not valid.",
+      "UPD-201": "Cannot access installer {p1}.",
+      "UPD-202": "Can't clean temporary installer folder {p1}.",
+      "UPD-203": "Can't extract version.ini file from the installer {p1} to {p2}.",
+      "UPD-204": "{p1} version in the installer ({p2}) is older than the one already installed ({p3}).",
+      "UPD-205": "Build date unavailable.",
+      "UPD-206": "Wrong build date format.",
+      "UPD-301": "Can't extract {p1} file from installer {p2} to {p3}.",
+      "UPD-302": "Can't extract all files from installer {p1} to {p2}.",
+      "UPD-401": "{p1} installer failed signature check ({p2}) - Error {p3}",
+      "UPD-402": "{p1} installer failed signature check ({p2} not correctly signed by Leica).",
+      "UPD-502": "Install version.ini file does not exist ({p1}).",
+      "UPD-504": "Install version.ini file is incorrectly formatted ({p1} = {p2}).",
+      "UPD-506": "Install version.ini version column is incorrectly formatted ({p1} = {p2}).",
+      "UPD-501": "Rollback version.ini file doesn't exist ({p1}).",
+      "UPD-503": "Rollback version.ini file is incorrectly formatted ({p1} = {p2}).",
+      "UPD-505": "Rollback version.ini version column is incorrectly formatted ({p1} = {p2}).",
+      "CS-001": "Source {p1} already exist on coordinate system {p2}.",
+      "CS-004": "No USB drive detected."
+    }
+  },
+  "notifications": {
+    "dataStorage": {
+      "DS-001": {
+        "title": "Disk change detected",
+        "text": "Please, check the available disks in the top bar.",
+        "okButton": "OK"
+      },
+      "DS-040": {
+        "title": "Critical disk space alert",
+        "text": "You are running out of disk space: 20% left.",
+        "okButton": "OK"
+      },
+      "DS-041": {
+        "title": "Critical disk space alert",
+        "text": "Low disk space: 10% left. The Job will be automatically closed.",
+        "okButton": "OK"
+      },
+      "DS-042": {
+        "text": "Low disk space: Data capture will be stopped. Time remaining until stopping data capture:",
+        "okButton": "OK"
+      },
+      "DS-010": {
+        "title": "The disk in use has been removed",
+        "text": "Job data has been lost. Please reconnect the disk to continue working on a new Job.",
+        "okButton": "OK"
+      },
+      "LCB011": {
+        "title": "Disk space warning",
+        "text": "Generating the selected export files for Job {p1} might cause you to run out of disk space. Do you want to continue anyway?",
+        "okButton": "OK",
+        "cancelButton": "Cancel"
+      },
+      "currentDisk": {
+        "title": "The disk in use has been removed",
+        "text": "Please reconnect the disk or click 'Redirect' to be redirected to Projects.",
+        "okButton": "Redirect"
+      }
+    },
+    "scannerTemperature": {
+      "leftScanner": "Left Scanner",
+      "rightScanner": "Right Scanner",
+      "SCN-072": {
+        "title": "Scanner temperature increasing",
+        "text": "Scanner internal temperature is approaching 80°C (176°F) which is above standard use.",
+        "okButton": "OK"
+      },
+      "SCN-071": {
+        "title": "Scanner temperature warning",
+        "text": "Scanner internal temperature is above 80°C (176 °F).<br/>Scanners calibration might be compromised.<br/>It is recommended to proceed with the final alignment.",
+        "okButton": "OK"
+      },
+      "SCN-070": {
+        "title": "Scanner emergency stop",
+        "text": "Scanner internal temperature is above 95°C (203°F).<br/>Scanners might get damaged due to high temperature.<br/>Data acquisition is interrupted.<br/>Proceed to final alignment before deactivating the system.",
+        "okButton": "OK"
+      },
+      "infoDialog": {
+        "title": "Scanner temperature",
+        "banner1": {
+          "tempC": "75°C",
+          "tempF": "167°F",
+          "text": "Scanner temperature is approaching {{temperature}} which is above standard use."
+        },
+        "banner2": {
+          "tempC": "80°C",
+          "tempF": "176°F",
+          "text": "Scanner calibration might be compromised. It is recommended to proceed with the final alignment."
+        },
+        "banner3": {
+          "tempC": "95°C",
+          "tempF": "203°F",
+          "text": "Scanner internal temperature is above {{temperature}}. Scanners might get damaged due to high temperature. Data acquisition is interrupted."
+        }
+      }
+    }
+  },
+  "offline": {
+    "message": "You are offline. Please, check the internet connection."
+  },
+  "performance": {
+    "connection": {
+      "internet": "Internet",
+      "gateway": "Hotspot",
+      "client": "Your device"
+    },
+    "system": {
+      "cpu": "CPU load",
+      "gpu": "GPU load",
+      "ram": "RAM load"
+    }
+  },
+  "second_antenna": {
+    "title": "Second antenna configuration",
+    "subtitle": "Pan and zoom the image to centre the target and click \"Calculate\"",
+    "use_saved_values": "Use last stored values",
+    "calculate": "Calculate",
+    "cancel": "Cancel",
+    "save": "Save",
+    "manual": "Insert values manually",
+    "pick": "Pick & Calculate",
+    "loading": "Initialising camera...",
+    "closing": "Saving...",
+    "dist": "Distance ({{unit}}) =",
+    "x": "X ({{unit}}) =",
+    "y": "Y ({{unit}}) =",
+    "z": "Z ({{unit}}) ="
+  },
+  "portraitOverlay": {
+    "rotate": "The application is designed to work in landscape mode. Please rotate your device.",
+    "mobile": "The application is designed to work with tablets. Mobile phones are not supported."
+  },
+  "api": {
+    "unexpectedError": "Unexpected error."
+  },
+  "job_processing": {
+    "status": {
+      "play": "Processing...",
+      "pause": "Processing paused",
+      "done": "Processed",
+      "error": "Processed with errors",
+      "none": "Start processing",
+      "imageOnly": "Only image processing completed."
+    },
+    "image": "Images processing",
+    "pointCloud": "Point cloud and trajectory processing",
+    "pointCloud_noTrajectory": "Point cloud processing",
+    "ready": "Ready for post-processing.",
+    "noRtkAvailable": "RTK is missing. Unable to process.",
+    "failed": {
+      "title": "Processing failed",
+      "text": "Error while processing the file.",
+      "retry": "Retry",
+      "cancel": "Cancel"
+    },
+    "options": {
+      "title": "Processing options",
+      "button_start": "Start processing",
+      "button_stop": "Stop processing",
+      "button_pause": "Pause processing",
+      "button_cancel": "Cancel",
+      "export": {
+        "label": "Export",
+        "lgs": "LGS",
+        "lgsx": "LGSx",
+        "las": "LAS",
+        "e57": "E57"
+      },
+      "finalise": {
+        "label": "Finalise",
+        "blur": "Image anonymisation",
+        "colorization": "Point cloud RGB colourisation"
+      }
+    },
+    "dialog": {
+      "header": "Finalise & Export"
+    },
+    "overwrite_alert": {
+      "title": "Export already done",
+      "text": "The Project folder already contains some export files. The files with the same name will be overwritten.",
+      "cta": "Do you want to continue?",
+      "okButtonLabel": "Yes",
+      "cancelButtonLabel": "No"
+    },
+    "pause_alert": {
+      "title": "Pause processing",
+      "text": "Pausing processing will cause the loss of other selected Finalise & Export options except anonymisation. Do you want to continue?",
+      "okButtonLabel": "Yes",
+      "cancelButtonLabel": "No"
+    }
+  },
+  "countries": {
+    "international": "International",
+    "CN": "China",
+    "JP": "Japan",
+    "KR": "South Korea"
+  },
+  "mapView": {
+    "map": "Map",
+    "satellite": "Satellite",
+    "here": {
+      "copyright": {
+        "terms": "Terms of use",
+        "$link": "https://legal.here.com/en/terms/serviceterms/us"
+      }
+    }
+  },
+  "import_shape": {
+    "title": "Upload file",
+    "cancel": "Cancel",
+    "refresh": "Refresh",
+    "upload": "Upload",
+    "available": "Available files",
+    "notAvailable": "No supported files found."
+  },
+  "coordsys": {
+    "errors": {
+      "listSystems": "Listing coordinate systems failed.",
+      "importSystem": "Importing coordinate systems failed.",
+      "listWkt": "Listing WKT files failed.",
+      "importWkt": "Importing WKT file failed."
+    },
+    "dialog": {
+      "title": "Coordinate system"
+    },
+    "deleteDialog": {
+      "title": "Delete coordinate system",
+      "titleWkt": "Delete WKT file",
+      "text": "Delete {{name}}?",
+      "textWkt": "Delete WKT file of {{name}}?",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "importDialog": {
+      "csysTitle": "Import coordinate system",
+      "csysSubtitle": "Available CSYS files",
+      "wktTitle": "Import WKT file for {{name}}",
+      "wktSubtitle": "Available WKT files",
+      "notAvailable": "No supported files found.",
+      "proceed": "Proceed",
+      "cancel": "Cancel",
+      "refresh": "Refresh",
+      "upload": "Import",
+      "sameCsysName": "A CSYS file with the same imported name has already been imported.",
+      "importedCsysName": "The custom coordinate system imported with that CSYS file is {{name}} and it will be selected.",
+      "confirmation": "Do you want to proceed?"
+    },
+    "selection": {
+      "projectFormTitle": "Coordinate system",
+      "processingDialogTitle": "Project coordinate system",
+      "automatic": "Automatic",
+      "import": "Import from USB"
+    },
+    "csysInfo": {
+      "title": "Coordinate system info",
+      "cancel": "Cancel",
+      "loadWkt": "Load WKT file",
+      "viewWkt": "View WKT file",
+      "confirm": "Confirm",
+      "transformation": "Transformation",
+      "ellipsoid": "Ellipsoid",
+      "projection": "Projection",
+      "geoidModel": "Geoid Model",
+      "cscsModel": "CSCS Model",
+      "wkt": "WKT",
+      "close": "Close",
+      "delete": "Delete",
+      "wktTitle": "WKT file of {{name}}",
+      "wktLoaded": "Loaded",
+      "wktMissing": "Missing"
+    },
+    "overwriteDialog": {
+      "title": "A .CSYS file named {{p2}} has already been imported.",
+      "text": "By clicking Proceed the system will load the stored CSYS.",
+      "okButton": "Proceed",
+      "cancelButton": "Cancel"
+    },
+    "processingDialog": {
+      "text1": "Once this processing round starts, the coordinate system will be locked for every Job in this Project.",
+      "text2": "The coordinate system can be changed later in Pegasus OFFICE.",
+      "cta": "Do you want to continue?",
+      "cancelButton": "Cancel",
+      "okButton": "Start processing"
+    }
+  }
+}

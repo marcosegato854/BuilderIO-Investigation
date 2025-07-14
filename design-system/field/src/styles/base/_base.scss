@@ -1,0 +1,56 @@
+// Partial SCSS file
+// partials' name always start with _
+
+// _base.scss contains CSS Resets and basic stuff
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  /* to use the power of inheritance */
+  /* Because of performance. 
+    It is faster to inherit that for every element (from the body) 
+    than it is to directly select every element to set it (with the universal selector). */
+  box-sizing: inherit;
+  touch-action: pan-y;
+}
+
+html {
+  /* overwrite default root font-size of the browser (16px) */
+  /* 10px is chosen to make things easier since to conver from px to rem we only need to divide by 10 */
+  /* in this way: 1rem = 10px */
+  /* also now it easier to write media queries since by changing the font-size 
+    the browser does a lot of auto work for us */
+  /* for example normally we have 10px font-size with 30px padding around the page,
+    by changing the the font-size to 5px we have automatically 15px of padding! */
+  /* it is very useful in smaller screens where we set smaller font but the layout stays consistent */
+  /* font-size: 10px; */
+
+  /* it is bad practice to set root font-size in px */
+  /* because of accessibility concern: to let the user set the font-size in the browser settings */
+  /* by default it's 16px but if the user set it to 20px it wouldn't work because we hardcoded a value */
+  /* so we need to use percentages: 62.5% of 16px = 10px */
+  /* 100% = 16px */
+  /* proportion used for value calculation: 100:16 = x:10 */
+  font-size: 62.5%;
+}
+
+body {
+  /* box-sizing gets inherited by all elements */
+  box-sizing: border-box;
+  /* enable this rules with lang-${language} to override the font size for specific languages */
+  // &.lang-cn {
+  //   font-size: 80%;
+  // }
+}
+
+// to make these elements inherit the font style since by default they don't
+input,
+textarea,
+button {
+  font-family: inherit;
+  // color: inherit;
+}

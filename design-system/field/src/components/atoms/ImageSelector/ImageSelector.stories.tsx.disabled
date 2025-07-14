@@ -1,0 +1,30 @@
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+import { ImageSelector, IImageSelectorProps } from './ImageSelector'
+
+export default {
+  title: 'Atoms/ImageSelector',
+  component: ImageSelector,
+  // See the options: https://storybook.js.org/docs/react/essentials/controls
+  argTypes: {
+    // 2) Assign the default value to the related property inside of argTypes{}
+    // options: {
+    //   defaultValue: defaultOptions,
+    // },
+  },
+  /**
+   * registers callbacks starting with 'on' to actions automatically
+   */
+  parameters: { actions: { argTypesRegex: '^on.*' } },
+} as Meta
+
+const Template: Story<IImageSelectorProps> = (args) => {
+  return (
+    <div style={{ width: '300px', height: '200px' }}>
+      <ImageSelector {...args} />
+    </div>
+  )
+}
+
+export const Default = Template.bind({})
+Default.args = {}

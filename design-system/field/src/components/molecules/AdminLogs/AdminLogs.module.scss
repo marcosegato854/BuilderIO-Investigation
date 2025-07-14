@@ -1,0 +1,56 @@
+@import 'styles/main';
+
+.alert {
+  :global(.MuiAlert-message) {
+    padding: 0;
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+.clipboard {
+  justify-content: end;
+  svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    padding: 0px;
+  }
+  path {
+    @include applyThemes() {
+      fill: t(primary-11);
+    }
+  }
+}
+.grid {
+  padding: 5px;
+  > * {
+    align-items: center;
+    display: flex;
+  }
+}
+.searchInput {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+.filter {
+  :global(.MuiCheckbox-root) {
+    padding: 0px 6px;
+  }
+  svg {
+    width: 28px;
+    height: 28px;
+    padding: 0px;
+  }
+  path {
+    @include applyThemes() {
+      fill: t(primary-16);
+    }
+  }
+  :global(.Mui-checked) {
+    path {
+      @include applyThemes() {
+        fill: t(primary-11);
+      }
+    }
+  }
+}

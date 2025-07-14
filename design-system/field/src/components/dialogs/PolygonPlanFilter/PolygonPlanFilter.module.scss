@@ -1,0 +1,38 @@
+@import 'styles/main';
+
+.form {
+  @include applyThemes() {
+    background-color: t(primary-4);
+    color: t(primary-11);
+  }
+  @include testi('Body1');
+  padding: 4px 12px;
+  border-radius: 10px;
+  width: 280px;
+
+  .checkboxes {
+    @include flexAlign(flex-start, flex-start);
+    flex-wrap: wrap;
+
+    .checkboxe {
+      /* This calc is made to avoid re-writing the MUI component */
+      flex-basis: calc(50% - 5px);
+    }
+  }
+
+  .checkboxe,
+  .radio {
+    font-size: 14px;
+    height: 36px;
+
+    > * {
+      font-size: inherit;
+    }
+  }
+
+  .buttons {
+    @include flexAlign();
+    gap: 15px;
+    padding: 15px 0;
+  }
+}

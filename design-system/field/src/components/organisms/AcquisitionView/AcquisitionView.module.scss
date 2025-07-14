@@ -1,0 +1,236 @@
+@import 'styles/main';
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.myVRCanvas {
+  height: 100%;
+  width: 100%;
+  display: block;
+  // position: absolute;
+  // left: 0px;
+  // top: 0px;
+  // zIndex: -1;
+  cursor: crosshair;
+}
+.hidden {
+  visibility: hidden;
+}
+.speechActivationDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-bottom: 10px;
+  @include blurBg();
+  z-index: 1;
+
+  @include applyThemes {
+    background-color: rgba(t(primary-1), 0.3);
+  }
+  @include noSelectText();
+  .subHeader {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .backToJobs {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include applyThemes() {
+      color: t(primary-11);
+      path {
+        fill: t(primary-11);
+      }
+    }
+    @include testi('Body1');
+
+    cursor: pointer;
+    span {
+      margin-left: 16px;
+    }
+  }
+}
+.bottomControls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  // padding: 18px;
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .row2 {
+    // height: 0;
+    // overflow: hidden;
+    padding-top: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+  }
+  .recordingButton {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    /* z-index: 1600; */
+    z-index: 1407;
+    pointer-events: all;
+  }
+}
+.backToJobs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @include applyThemes() {
+    color: t(primary-11);
+    path {
+      fill: t(primary-11);
+    }
+  }
+  @include testi('Body1');
+
+  cursor: pointer;
+  span {
+    margin-left: 16px;
+  }
+}
+.circularProgress {
+  margin: 17px;
+  margin-top: -5%;
+  margin-bottom: 10px;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include applyThemes {
+    background-color: rgba(t(primary-3), 0.6);
+  }
+  circle {
+    stroke: rgba(t(primary-1), 0.6);
+  }
+  @media screen and (min-height: 640px) {
+    margin-top: 0px;
+    height: 170px;
+    width: 170px;
+    border-radius: 85px;
+  }
+}
+.progressLabel {
+  @include testi('Heading4');
+  font-weight: 400;
+  font-size: 1.8em;
+  white-space: nowrap;
+  text-align: center;
+  @include applyThemes {
+    color: t(primary-11);
+  }
+  @media screen and (min-height: 640px) {
+    font-size: 2.4em;
+  }
+}
+.blockScreen {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1601; */
+  z-index: 1408;
+}
+
+.dataAcquisitionRight {
+  @include flexAlign(flex-end, flex-end);
+  /* flex-direction: row-reverse; */
+
+  .sideButtons {
+    margin-right: 8px;
+  }
+
+  .sidePanel {
+    pointer-events: all;
+  }
+
+  @media screen and (min-height: 920px) {
+    .sidePanel {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 18px;
+    }
+
+    .sideButtons {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    flex-direction: column-reverse;
+
+    .sideButtons {
+      margin-right: 0;
+      margin-top: 8px;
+    }
+  }
+}
+
+.hereCopy {
+  position: fixed;
+  left: 0;
+  bottom: 14px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+
+  .copyText {
+    color: rgba(map-deep-get($themes, 'dark', 'primary-1'), 1);
+    @include testi('Caption');
+    @include testi('Bold');
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding: 0px 8px;
+    a {
+      color: inherit;
+      margin: 0px 8px;
+      text-decoration: none;
+      pointer-events: all;
+    }
+  }
+}
+
+.scannerTemperature {
+  position: fixed;
+  top: 110px;
+  right: 10px;
+  z-index: 1409;
+}
+
+@media screen and (min-height: 760px) {
+  .scannerTemperature {
+    top: 126px;
+  }
+}

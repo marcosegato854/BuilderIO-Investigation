@@ -1,0 +1,1973 @@
+{
+  "_version": "0.0.22",
+  "initialization": {
+    "title": "システムは起動中です。",
+    "title_initialized": "システムの起動が完了しました。",
+    "ok": "拒否",
+    "state": "ステータス",
+    "events": "イベント",
+    "stateInitializing": "アクティベートしています...",
+    "check_browser": {
+      "title": "ブラウザを確認してください。",
+      "ios": "お使いのブラウザーはPegasus FIELDの推奨ブラウザーではありません。 <br/>Pegasus FIELD は、最新バージョンの Safariで動作します。",
+      "android": "お使いのブラウザーはPegasus FIELDの推奨ブラウザーではありません。 <br/>Pegasus FIELDは、最新バージョンの Google Chromeで動作します。",
+      "unknown": "お使いのブラウザーはPegasus FIELDの推奨ブラウザーではありません。 <br/>Pegasus FIELDは、最新バージョンの Google Chromeで動作します。",
+      "windows": "お使いのブラウザーはPegasus FIELDの推奨ブラウザーではありません。 <br/>Pegasus FIELDは、最新バージョンの Microsoft Edgeで動作します。",
+      "ok": "OK"
+    }
+  },
+  "header": {
+    "pegasus": "Pegasus",
+    "welcome": "Leica Pegasus FIELDへようこそ",
+    "device": "機器:",
+    "searchbarPlaceholder": "探しているプロジェクト名の一部を入力してください",
+    "mapSearchbarPlaceholder": "場所を検索",
+    "back": "Projectに戻る",
+    "back_jobs": "Jobに戻る",
+    "menu": {
+      "title": "プロファイル詳細",
+      "login": "ログインユーザー名",
+      "license": "ライセンス/ソフトウェアアップデート",
+      "update": {
+        "usb": "アップデートが検出されました",
+        "myWorld": "アップデートがあります"
+      },
+      "rebootDisabled": "バッテリー残量が低すぎて再起動できません。",
+      "help": "ヘルプ＆サポート",
+      "lang": "言語を変更",
+      "theme": "テーマを変更",
+      "logout": "ログアウト",
+      "shutdown": "システムをシャットダウン",
+      "reboot": "システムを再起動",
+      "version": "バージョン",
+      "version_ok": "サポートされているAPIバージョン",
+      "version_ko": "予想されるAPIバージョン {{expected}}",
+      "audio_ok": "アナウンスのミュートを解除する",
+      "audio_ko": "アナウンスをミュート",
+      "copyright": "著作権",
+      "processingShutdown": {
+        "title": "本当にシステムをシャットダウンしてもよろしいですか?",
+        "text": "一部のJobは現在処理中です。 システムの電源を切ると、処理が停止します。 システムの再起動後、手動で処理を再開できます。",
+        "okButtonLabel": "シャットダウン",
+        "cancelButtonLabel": "キャンセル"
+      },
+      "processingReboot": {
+        "title": "本当にシステムを再起動してもよろしいですか?",
+        "text": "一部のJobは現在処理中です。 システムを再起動すると、処理が停止します。 再起動後、手動で処理を再開できます。",
+        "okButtonLabel": "再起動",
+        "cancelButtonLabel": "キャンセル"
+      },
+      "country": "国コード"
+    },
+    "systemIsOff": "PCUとPegasus TRKはシャットダウン中です...",
+    "responsiveness": {
+      "minLeft": "残り分数"
+    }
+  },
+  "login": {
+    "form": {
+      "pegasus_field": "Pegasus FIELD",
+      "validation": {
+        "username": "ユーザー名が必要です。",
+        "password": "パスワードが必要です。",
+        "no_spaces": "スペースは使用できません。",
+        "bad_characters": "英数字のみを使用できます。"
+      },
+      "fields": {
+        "username": "ユーザー名",
+        "password": "パスワード",
+        "remember_me": "ログイン状態を保つ"
+      },
+      "forgot_password": "パスワードをお忘れですか",
+      "retrive": "取得する",
+      "submit": "ログイン",
+      "or": "または",
+      "qrcode": "QRコードをスキャン",
+      "qrcodeReader": "PCUの画面のQRコードをスキャンします。",
+      "qrcodeLegacy": "カメラが反応しません。 ボタンをクリックして画像を読み込みます。",
+      "loadPicture": "画像を読み込む"
+    },
+    "forgot": {
+      "back": "後",
+      "title": "パスワードを忘れました",
+      "please_contact": "下記メールにてサポートまでご連絡ください。",
+      "credentials": "PCUのホーム画面で「接続」をタップします。 認証情報が接続セクションに表示されます。",
+      "$support_email": "leica@support.com"
+    },
+    "info": {
+      "watch": "ここをクリックして詳細をご覧ください。"
+    }
+  },
+  "project_browser": {
+    "slot": "スロット",
+    "disk": "ディスク",
+    "header": {
+      "browser": "Projectブラウザー",
+      "planning": "計測計画"
+    },
+    "filters": {
+      "title": "フィルター:",
+      "sort_title": "並び替え:",
+      "view_title": "表示:"
+    },
+    "subtitle": "マイProject",
+    "no_project": "Projectが見つかりません。",
+    "search": "検索",
+    "no_items": "アイテムが見つかりません",
+    "click_to_create": "+ をクリックして新しいProjectを作成します。",
+    "kebab": {
+      "edit_project": "Project編集",
+      "view_settings": "設定を表示",
+      "delete": "Projectを削除"
+    },
+    "delete_button": "はい、削除します",
+    "delete_text": "本当にこのProjectを削除してもよろしいですか?<br />このProjectの全てのコンテンツがディスクから削除されます。",
+    "cancel_button": "キャンセル",
+    "no_disks": {
+      "title": "新しいProjectを作成できません",
+      "text": "少なくとも1つのHDを接続し、トップバーの中の利用可能なディスクを確認してください。"
+    }
+  },
+  "job_browser": {
+    "project": "Project",
+    "header": {
+      "browser": "Jobブラウザー",
+      "planning": "計測計画"
+    },
+    "filters": {
+      "title": "フィルター:",
+      "sort_title": "並び替え:",
+      "view_title": "表示:"
+    },
+    "subtitle": "Job",
+    "no_job": "アイテムが見つかりません",
+    "admin_job": "このJobタイプには管理者権限が必要です。",
+    "click_to_create": "+ をクリックして新しいプロジェクトを作成します",
+    "kebab": {
+      "edit_job": "Jobを編集",
+      "processing": "処理",
+      "finalise_export": "ファイナライズと出力",
+      "image": "画像",
+      "pointcloud": "軌跡と点群",
+      "pointcloud_noTrajectory": "点群",
+      "view_settings": "設定を表示",
+      "view_plan": "計測計画を表示",
+      "view_measure": "表示＆計測",
+      "job_report": "Jobレポート",
+      "delete": "Jobの削除",
+      "clone": "Jobを複製"
+    },
+    "details": {
+      "name": "名称",
+      "scans": "Track数",
+      "planned": "有効",
+      "type": "Jobタイプ",
+      "ntrip": "有効",
+      "dmi": "DMI",
+      "collectionmode": "計測モード",
+      "camera": "カメラ",
+      "camera_blur": "画像のぼかし処理",
+      "antenna": "アンテナ",
+      "profile": "プロファイル",
+      "completed": "完了しました",
+      "size": "データサイズ",
+      "creationdate": "作成日(日/月/年)",
+      "controlpoints": "Control Point数",
+      "updatedate": "最終更新",
+      "disk": "ディスク",
+      "jobs": "Job数",
+      "coordinate": "Project単位",
+      "drivingspeed": "最高走行速度",
+      "scanner": "スキャナー",
+      "position": "精度",
+      "snSensorUnit": "シリアルナンバー",
+      "values": {
+        "yes": "有効",
+        "no": "無効",
+        "camera_distance": "有効にする: {{enable}}<br />画像のぼかし処理: {{blur}}<br />画像の撮影距離間隔: {{distance}}<br />左: {{left}}<br />右: {{right}}",
+        "camera_distance_no_orientation": "有効にする: {{enable}}<br />画像のぼかし処理: {{blur}}<br />画像の撮影距離間隔: {{distance}}",
+        "camera_time": "有効にする: {{enable}}<br />画像のぼかし処理: {{blur}}<br />画像の撮影時間間隔: {{elapse}}<br />左: {{left}}<br />右: {{right}}",
+        "camera_time_no_orientation": "有効にする: {{enable}}<br />画像のぼかし処理: {{blur}}<br />画像の撮影時間間隔: {{elapse}}",
+        "scanner": "走査線間隔: {{spacing}}<br />スキャナー回転数/秒: {{rps}}<br />スキャナー取得点数/秒: {{pps}}<br />スキャナー最大取得距離: {{range}}",
+        "scanner100": "スキャナー回転数/秒: {{rps}}<br />スキャナー取得点数/秒: {{pps}}<br />スキャナー最大取得距離: {{range}}"
+      }
+    },
+    "delete_title": "{{job}}を削除します。",
+    "delete_button": "はい、削除します",
+    "delete_text": "本当にこのJobを削除してもよろしいですか?<br />このJobのすべてのコンテンツがディスクから削除されます。",
+    "cancel_button": "キャンセル",
+    "acquired_job_label": "OK",
+    "acquired_job_text": "同じJobを再度開始することはできませんが、処理と追加のアクションを実行することはできます。",
+    "new_jobtype_title": "新しいJobタイプ",
+    "new_jobtype_text": "基本的なJobタイプを指定 (車載、鉄道、船舶)。 次に、新しいJobタイプの名前を入力します。",
+    "new_jobtype_ok": "保存",
+    "new_jobtype_cancel": "キャンセル",
+    "save_jobtype_title": "設定変更アラート",
+    "save_jobtype_text": "今後使用するために、現在のJob設定を新しいJobタイプに保存しますか?",
+    "save_jobtype_ok": "Jobタイプを保存",
+    "save_jobtype_cancel": "保存しない",
+    "save_jobtype_name_required": "新しいJobタイプの名前を入力します。",
+    "save_jobtype_min": "名前は3 文字以上の長さでなければなりません。",
+    "save_jobtype_exists": "一意の名前を選択してください。",
+    "delete_jobtype_title": "カスタムJobタイプを削除",
+    "delete_jobtype_text": "Jobタイプ「{{profile}}」を本当に削除してもよろしいですか？ Job設定は影響を受けません。'",
+    "delete_jobtype_ok": "はい、削除します。",
+    "delete_jobtype_cancel": "キャンセル",
+    "processed_images_tooltip": "画像処理が正常に完了しました。",
+    "processing_images_tooltip": "画像を処理しています...",
+    "not_processed_images_tooltip": "画像処理は保留中です。",
+    "processed_office_tooltip": "軌跡と点群の処理が正常に完了しました。",
+    "processed_office_tooltip_noTrajectory": "点群処理を完了させるのに成功しました。",
+    "processing_office_tooltip": "軌跡と点群を処理しています...",
+    "processing_office_tooltip_noTrajectory": "点群を処理しています...",
+    "not_processed_office_tooltip": "軌跡と点群の処理は保留中です。",
+    "not_processed_office_tooltip_noTrajectory": "点群処理は保留中です。",
+    "processing_log_title": "{{job}}処理ログ",
+    "report": {
+      "error": {
+        "title": "Jobレポート"
+      },
+      "ready": {
+        "title": "Jobレポート",
+        "text": "レポートが正常に作成されました。",
+        "ok": "レポートを開く",
+        "ko": "閉じる"
+      }
+    }
+  },
+  "progress_bar": {
+    "completed": "完了しました",
+    "imported": "読み込み済み"
+  },
+  "filters": {
+    "title": "フィルター:",
+    "sort_title": "並び替え:",
+    "view_title": "表示:",
+    "sort_options": {
+      "name_asc": {
+        "label": "名前 (昇順)"
+      },
+      "name_desc": {
+        "label": "名前 (降順)"
+      },
+      "date_asc": {
+        "label": "作成日 (昇順)"
+      },
+      "date_desc": {
+        "label": "作成日 (降順)"
+      },
+      "last_mod": {
+        "label": "最終更新"
+      }
+    },
+    "view_options": {
+      "gallery": {
+        "label": "ギャラリー"
+      },
+      "list": {
+        "label": "リスト"
+      }
+    },
+    "order": "順番"
+  },
+  "subtitle": "Project",
+  "loading": "読み込んでいます...",
+  "project_item": {
+    "job": "Job",
+    "jobs": "Job数",
+    "disk": "保存先",
+    "progress": "処理完了"
+  },
+  "job_item": {
+    "scan": "Track",
+    "scans": "Track数",
+    "completed": "完了しました"
+  },
+  "activation_button": "開始および計測",
+  "new_project_form": {
+    "validation": {
+      "project_name": "Project名を指定",
+      "unit": "距離単位を指定",
+      "disk": "ストレージ ディスクを指定します。",
+      "name_duplicate": "この名前は既に使用されています。",
+      "bad_characters": "英数字のみを使用できます。",
+      "min3": "名前は3 文字以上の長さでなければなりません。",
+      "max": "名前の長さは最大25文字までです。"
+    },
+    "title": "新規Project",
+    "project_title_label": "Project名",
+    "define_units": "測定単位を指定",
+    "select_disk": "ディスクを選択",
+    "cancel": "キャンセル",
+    "saveBtn": "Projectを作成",
+    "tooltip": {
+      "full_disk": "ディスクの空き容量がありません。"
+    }
+  },
+  "plan_quality_form": {
+    "save_btn": "保存して閉じる"
+  },
+  "new_job_form": {
+    "validation": {
+      "job_name": "Job名が必要です。",
+      "type": "Jobタイプが必要です。",
+      "satellites": "使用する測位衛星を選択します。",
+      "name_duplicate": "この名前は既に使用されています。",
+      "bad_characters": "英数字のみを使用できます。",
+      "min3": "名前は3 文字以上の長さでなければなりません。",
+      "max": "名前の長さは最大25文字までです。"
+    },
+    "option": {
+      "planning": {
+        "plan_now": "計測計画",
+        "without_plan": "計測計画なし"
+      },
+      "job_type": {
+        "pedestrian": "Backpack",
+        "road": "車載",
+        "rail": "レール",
+        "boat": "船舶",
+        "p-1": "Backpack",
+        "p0": "車載",
+        "p1": "レール",
+        "p2": "船舶",
+        "custom": "カスタム",
+        "new": "新規作成"
+      },
+      "satellite": {
+        "gps": "GPS",
+        "glonass": "GLONASS",
+        "beidou": "BEIDOU",
+        "qzss": "QZSS",
+        "navic": "NAVIC",
+        "galileo": "GALILEO"
+      },
+      "collectionmode": {
+        "oneway": "一方向",
+        "bothways": "両方向",
+        "other": "その他"
+      },
+      "camera": {
+        "on": "あり",
+        "off": "なし",
+        "distance": "距離",
+        "time": "時間"
+      },
+      "camera_orientation": {
+        "landscape": "横位置",
+        "portrait": "縦位置"
+      },
+      "camera_blur": {
+        "on": "あり",
+        "off": "なし"
+      },
+      "dmi": {
+        "none": "DMI なし",
+        "optical": "光学DMI",
+        "mechanical": "機械式DMI",
+        "rail": "レール"
+      },
+      "antenna": {
+        "single": "シングル",
+        "double": "ダブル"
+      },
+      "rtk": {
+        "off": "なし",
+        "on": "あり"
+      }
+    },
+    "left_camera": "左カメラの向き",
+    "right_camera": "右カメラの向き",
+    "image_blur": {
+      "title": "<a href=\"/assets/documents/gdpr.pdf\" target=\"_blank\">GDPR</a>に準拠していません",
+      "text": "ユーザーは、Pegasusを使用している間、データ保護とプライバシーに関するものを含む全ての法律、規制、および指示を遵守する義務があります。 この目的のために、Hexagon (以下「当社」) は、Pegasus サービスの使用中にデフォルトでぼかし処理機能を有効にしています。 ユーザーは自身の責任でこの機能を無効にすることができますが、当社は、一定期間後、更新またはアップグレードのインストール時、およびメンテナンス後に、この機能を再有効化する権利を保有します。有効化についてユーザーに通知する義務はありません。 ユーザーは、Pegasus サービスの使用を開始する前に、ぼかし処理機能の有効/無効を常に確認する義務があります。",
+      "checkbox": "この警告を30日間表示しない。",
+      "ok": "OK",
+      "cancel": "キャンセル"
+    },
+    "title": "新しいJob",
+    "job_title_label": "Job名",
+    "add_a_thumbnail": "サムネイル",
+    "delete_thumbnail": "サムネイルを削除",
+    "planning": "計測計画",
+    "type": "Jobの計測形式",
+    "satellite_selection_single": "測位衛星",
+    "satellite_selection": "測位衛星",
+    "dmi": "DMIの種類",
+    "collectionmode": "計測モード",
+    "camera_distance": "画像の撮影距離間隔",
+    "camera_elapse": "画像の撮影時間間隔",
+    "drivingspeed": "制限速度",
+    "camera": "カメラ",
+    "camera_blur": "画像のぼかし処理",
+    "antenna_type": "アンテナ設定",
+    "scanner_rotation_speed": "スキャナー回転数 (Hz)",
+    "scanner_point_per_second": "スキャナー取得点数 (点/秒)",
+    "scanner_range": "スキャナー最大取得距離",
+    "rtk": "リアルタイムキネマティック (RTK)",
+    "scanline_spacing": "走査線間隔",
+    "see_details": "詳細を表示",
+    "see_less": "詳細を非表示",
+    "cancel": "キャンセル",
+    "reset": "リセット",
+    "save_only": "保存して閉じる",
+    "job_tolerance": "Jobの許容範囲"
+  },
+  "edit_job_form": {
+    "title": "Jobを編集",
+    "update_btn_planned": "計測計画",
+    "save_btn_planned": "保存して計測計画を立てる",
+    "update_btn_unplanned": "保存して計測する",
+    "save_btn_unplanned": "保存して続行"
+  },
+  "acquisition": {
+    "title": "計測",
+    "gnssins": "GNSS/INS",
+    "imu": "IMUステータス",
+    "jobError": "このJobでは計測できません。",
+    "deactivate": "ディアクティベート",
+    "deactivating": "ディアクティベートしています...",
+    "deactivate_disclaimer": "アライメント中にディアクティベートすると、軌跡の精度が悪化する可能性があります。",
+    "deactivate_failure": "ディアクティベートに失敗しました。",
+    "deactivateError": "ディアクティベートできません。",
+    "pointcloud_error": "点群の読み込み中にエラーが発生しました。",
+    "activation": {
+      "title": "Pegasus TRK アクティベート",
+      "state": {
+        "starting": "起動...",
+        "initializing": "アクティベートしています...",
+        "shutdown": "シャットダウンしています..",
+        "configuring": "設定しています...",
+        "deactivating": "ディアクティベートしています...",
+        "deactivated": "ディアクティベートしました",
+        "activating": "アクティベートしています...",
+        "activated": "正常にアクティベートされました ",
+        "startinginitialalignment": "初期アライメントを開始...",
+        "initialalignment": "初期アライメント",
+        "startingfinalalignment": "最終アライメントを開始...",
+        "finalalignment": "最終アライメント",
+        "startinglogging": "ログ記録開始...",
+        "logging": "ログ記録を開始しています...",
+        "startingrecording": "計測を開始しています...",
+        "stoppingrecording": "計測を停止しています...",
+        "recording": "計測しています..."
+      },
+      "bootingUp": "起動しています...",
+      "abort": "アクティベートをキャンセル",
+      "failure": "アクティベート失敗"
+    },
+    "capture": {
+      "starting_alignment": "アライメントを開始しています...",
+      "starting_logging": "ログ記録開始...",
+      "starting_recording": "計測を開始しています...",
+      "stopping_recording": "計測を停止しています...",
+      "deactivating": "ディアクティベートしています..."
+    },
+    "main_button": {
+      "start_initial": "アライメントを開始",
+      "stop_initial": "アライメントを停止",
+      "start_final": "最終アライメント",
+      "stop_final": "アライメントを停止",
+      "deactivate": "システムをディアクティベートする",
+      "secondary": "強制的にディアクティベート",
+      "back_jobs": "Projectに戻る"
+    },
+    "camera_failure": {
+      "recording": "計測に失敗しました。",
+      "stop": "停止に失敗しました。"
+    },
+    "deactivated_camera": {
+      "cancel_default": "キャンセル",
+      "cancel_active": "キャンセル",
+      "cancel_recording": "計測を再開",
+      "ok_default": "OK",
+      "ok_active": "OK",
+      "ok_recording": "計測を停止",
+      "title": "カメラが切断されました",
+      "text_default": "システムの電源を入れた後、カメラとの接続が失われました。",
+      "text_activating": "システムの電源を入れた後、カメラとの接続が失われました。 それでもシステムをアクティベートしますか?",
+      "text_active": "システムの電源を入れた後、カメラとの接続が失われました。 計測を開始する前に、カメラを再接続してください。",
+      "text_recording": "システムの電源を入れた後、カメラとの接続が失われました。 計測を停止し、カメラを再接続します。"
+    },
+    "reactivated_camera": {
+      "cancel_default": "キャンセル",
+      "cancel_all": "キャンセル",
+      "ok_default": "OK",
+      "ok_active": "OK",
+      "ok_all": "OK",
+      "title": "カメラが再接続されました",
+      "text_default": "カメラが再接続されました。",
+      "text_some": "切断されたカメラの 1 つが再接続されました。 他のカメラはまだ切断されています。",
+      "text_all": "カメラが再接続されました。 カメラを使用するには、計測を一旦停止して再開してください。",
+      "text_resume": "カメラが再接続されました。 計測を再開してもよろしいですか?"
+    },
+    "back_to_jobs": "Jobに戻る",
+    "abort_button_label": "中止",
+    "tooltips": {
+      "map_mode": "マップモード",
+      "camera_mode": "カメラモード",
+      "take_snapshot": "スナップショットを撮影",
+      "pointcloud": "点群を切り替え",
+      "add_tag": "タグの追加",
+      "planned_tracks": "プランを切り替える"
+    },
+    "dialogs": {
+      "ok": "OK",
+      "tts": {
+        "title": "アナウンスを有効化しています...",
+        "text": "クリックして、計測用のアナウンスのロックを解除します。",
+        "ok": "OK"
+      }
+    },
+    "status": {
+      "gdop": "GDOP",
+      "satelliteavailable": "衛星",
+      "rtkaccuracy": "RTK精度",
+      "rtkcorrectionreceived": "RTK補正情報を受信しました",
+      "rtkstatus": "RTKステータス",
+      "internetconnected": "インターネットアクセス",
+      "ageofcorrections": "最新の補正情報に更新",
+      "rtkserviceconnected": "RTKサービスが接続されました",
+      "friendly_state_0": "計算済み",
+      "friendly_state_1": "計算中...",
+      "friendly_state_2": "疑わしい",
+      "friendly_state_3": "失敗",
+      "gps_type": "ソリューションタイプ"
+    },
+    "alignment": {
+      "proceed": "続行",
+      "skip": "スキップ",
+      "retry": "再試行",
+      "deactivate": "ディアクティベート",
+      "skip_alert": {
+        "title": "アライメントを停止",
+        "text": "初期調整をスキップすると、Jobの最終的な精度が損なわれる可能性があります。 続行してもよろしいですか？",
+        "text_final": "最終アライメントをスキップすると、Jobの精度が悪化する可能性があります。 続行してもよろしいですか？",
+        "ok": "有効",
+        "ko": "無効"
+      },
+      "title": {
+        "static": "静的アライメント",
+        "dynamic": "動的アライメント",
+        "confirmation": "次のステップに備えます。"
+      },
+      "out_of_range": {
+        "title": "アライメントが可能な範囲外です",
+        "text": "アライメントは、計画したスタート地点から100m 以内で開始する必要があります。 [続行]をクリックして続行します。",
+        "cancel": "キャンセル",
+        "proceed": "続行"
+      },
+      "final_confirm": {
+        "title": "最終アライメント",
+        "text": "最終アライメントを開始してもよろしいですか?",
+        "cancel": "キャンセル",
+        "proceed": "続行"
+      },
+      "messages": {
+        "A1": "静止中",
+        "A2": "走行",
+        "A3": "帆",
+        "AN1": "アラインメント終了",
+        "AN2": "{time} 動的アライメント",
+        "AN3": "{space} 動的アライメント",
+        "AN4": "{time} 静的アライメント",
+        "AN5": "{space} 静的アライメント",
+        "AF": "ステップが失敗しました。 再試行してください"
+      },
+      "remaining_seconds": "秒",
+      "remaining_meters": "メートル",
+      "remaining_feet": "フィート"
+    },
+    "routing": {
+      "stopping_button": "計測を続行",
+      "actions": {
+        "turn": "回転"
+      },
+      "directions": {
+        "left": "左"
+      },
+      "dialogs": {
+        "abort": {
+          "title": "自動キャプチャをオフにします",
+          "text": "本当に自律的データキャプチャをオフにしたいですか？ これは、後ほどこのJob内で、再度オンにすることができます。",
+          "back": "キャンセル",
+          "confirm": "OK"
+        }
+      }
+    },
+    "camera": {
+      "disabled": "このTrackのカメラはオフです",
+      "back": "マップに戻る",
+      "names": {
+        "Sphere": {
+          "Sphere": "パノラマ"
+        },
+        "Left": {
+          "Left_Forward": {
+            "portrait": "左・下方",
+            "landscape": "左・前方",
+            "unknown": "左"
+          },
+          "Left_Backward": {
+            "portrait": "左・上方",
+            "landscape": "左・後方",
+            "unknown": "左"
+          }
+        },
+        "Right": {
+          "Right_Forward": {
+            "portrait": "右・上方",
+            "landscape": "右・前方",
+            "unknown": "右"
+          },
+          "Right_Backward": {
+            "portrait": "右・下方",
+            "landscape": "右・後方",
+            "unknown": "右"
+          }
+        },
+        "Rear": {
+          "Rear_Left": "リア左",
+          "Rear_Right": "リア右"
+        },
+        "Front": {
+          "Front_Left": "フロント左",
+          "Front_Right": "フロント右"
+        }
+      }
+    }
+  },
+  "data_acquisition_small_status_bar": {
+    "rtk": "有効",
+    "status": "ステータス"
+  },
+  "rtk": {
+    "dialog": {
+      "title": "RTK設定",
+      "back": "キャンセル",
+      "cancel_activation": "アクティベートをキャンセル",
+      "confirm": "OK",
+      "incomplete": "サーバー情報が不足しています。",
+      "connection": "サーバーに接続",
+      "mountpoints_failure": "取り付けポイントの読み込み中に問題が発生しました。",
+      "loading": "へ接続 ",
+      "cancel": "キャンセル",
+      "retry": "再試行",
+      "error": {
+        "authentication": "認証できません。",
+        "mountpoints": "取り付けポイントを読み込めません。",
+        "default": "接続できません。"
+      }
+    },
+    "server": {
+      "form": {
+        "validation": {
+          "name": "サーバー名を入力します。",
+          "url": "URLを入力します。",
+          "port": "ポートを入力します。",
+          "user": "ユーザー名を入力します。",
+          "password": "パスワードを入力します。"
+        },
+        "title": "新規サーバーを追加",
+        "fields": {
+          "name": "サーバー名",
+          "server": "URL",
+          "port": "ポート n°",
+          "username": "ユーザー名",
+          "password": "パスワード"
+        },
+        "connect": "接続",
+        "connected": "接続済み",
+        "exists": "同じ名称のサーバーが既に存在しています。",
+        "update": "アップデート",
+        "save": "保存"
+      },
+      "delete_dialog": {
+        "title": "サーバーを削除",
+        "confirm": "完全に消去",
+        "cancel": "キャンセル",
+        "text": "このサーバーを本当に削除してよろしいですか？<br />注意: この操作は取り消すことができません。"
+      },
+      "add_new": "新規サーバーを追加",
+      "temporary": "新規サーバー",
+      "copy": "コピー"
+    },
+    "mountPoint": {
+      "form": {
+        "validation": {
+          "mountpoint": "マウントポイントが必要です",
+          "interfacemode": "フォーマットしてください"
+        },
+        "mountpoint": "マウントポイント",
+        "interfacemode": "フォーマット",
+        "test": "RTKのテスト"
+      }
+    },
+    "connection_info": {
+      "yes": "有効",
+      "no": "無効",
+      "waiting_for_test": "テスト待機...",
+      "internetconnection": "インターネット接続",
+      "ntripconnection": "RTK接続が確立されました",
+      "state": "ポジション",
+      "precision2d": "2D精度",
+      "precisionheight": "高さ精度",
+      "satellitesinuse": "衛星数",
+      "hdop": "HDOP",
+      "vdop": "VDOP",
+      "gdop": "GDOP",
+      "agecorrection": "最新の補正情報に更新",
+      "actualposition": "現在の位置",
+      "position": {
+        "latitude": "緯度",
+        "longitude": "経度"
+      },
+      "gdop_status": {
+        "poor": "残差大"
+      },
+      "asml": "高度"
+    }
+  },
+  "units": {
+    "seconds": "秒",
+    "meters": "メートル",
+    "feet": "フィート",
+    "metric": {
+      "KMH": "km/h",
+      "KM": "km",
+      "CM": "cm",
+      "HZ": "Hz",
+      "MSEC": "m/Sec",
+      "MS": "ms",
+      "M": "m"
+    },
+    "imperial": {
+      "KMH": "mph",
+      "KM": "mi",
+      "CM": "in",
+      "HZ": "Hz",
+      "MSEC": "ft/Sec",
+      "MS": "ms",
+      "M": "ft"
+    },
+    "time": {
+      "hours": "h",
+      "minutes": "m"
+    }
+  },
+  "unit": {
+    "metric": "メートル法",
+    "imperial": "ヤード・ポンド法"
+  },
+  "side_panel": {
+    "tracks": {
+      "covered": "計測済み",
+      "not_covered": "有効"
+    },
+    "settings": {
+      "map_settings": "マップ設定",
+      "max_speed": "制限速度",
+      "audio_settings": "オーディオ設定",
+      "camera_settings": "カメラ設定",
+      "point_cloud_thickness": "点群サイズ",
+      "labelling": "ラベル表示",
+      "navigation": "ナビゲーション",
+      "image_distance": "画像の撮影距離間隔",
+      "image_elapse": "画像の撮影時間間隔",
+      "scanline_spacing": "走査線間隔",
+      "collection_mode": "計測モード",
+      "brightness": "輝度",
+      "camera": "カメラ",
+      "general_volume": "音量",
+      "error": "エラー",
+      "collection": "計測",
+      "directions": "ルート指示",
+      "autocapture": "自動計測"
+    },
+    "media": {
+      "audio": "オーディオ",
+      "image": "画像",
+      "text": "文字"
+    },
+    "information": {
+      "title": "Job情報",
+      "type_of_job": "Jobの計測形式",
+      "positioning_accuracy": "位置精度",
+      "camera": "カメラ",
+      "on": "あり",
+      "off": "なし",
+      "scanline_spacing": "走査線間隔",
+      "profiler_rotation_speed": "スキャナー回転数",
+      "profiler_point_sec": "スキャナー取得点数",
+      "driving_speed": "走行速度",
+      "image_distance": "画像の撮影距離間隔",
+      "dmi_type": "DMIの種類",
+      "antenna_type": "アンテナ設定"
+    },
+    "notifications": {
+      "title": "エラーと警告"
+    },
+    "job": {
+      "details": "詳細を表示",
+      "setting": {
+        "title": "Jobの設定",
+        "type": "Jobの計測形式",
+        "time": "計測する時間",
+        "space": "ディスク消費量(推定)",
+        "battery": "バッテリー消費量(推定)",
+        "ditance": "走行距離",
+        "minutes": "分",
+        "hours": "時間"
+      },
+      "quality": {
+        "title": "品質(推定)",
+        "captureDate": "計測日",
+        "time": "時間",
+        "to": "終了",
+        "satellite": "30分ごとの使用可能衛星数",
+        "satType": "衛星の種類",
+        "satNr": "衛星数",
+        "startTime": "計測に適したな時間",
+        "positionAccuracy": "品質の色分けのしきい値(緑-黄-赤)"
+      },
+      "plan": {
+        "title": "計測計画を表示"
+      },
+      "needed": {
+        "title": "結果(推定)"
+      }
+    },
+    "buttons": {
+      "title": "アライメント位置",
+      "initial_point": "初期",
+      "final_point": "最終",
+      "range": {
+        "show": "範囲を表示",
+        "hide": "範囲を非表示"
+      }
+    }
+  },
+  "help": {
+    "rtk": {
+      "title": "有効",
+      "$type": "Image",
+      "$imageURL": "/assets/img/Real_Time_Kinematic_RTK_500x312_B.svg"
+    },
+    "job_tolerance": {
+      "title": "推定位置精度の色付け",
+      "$type": "Image",
+      "$imageURL": "/assets/img/PositionAccuracy.gif"
+    },
+    "dmi_none": {
+      "title": "DMI",
+      "$type": "Text",
+      "text": "DMIは移動距離を測定します。 機械式DMI は1秒あたりの車輪の回転数をカウントし、光学DMIは光学センサーで走行距離を測定します。"
+    },
+    "dmi_optical": {
+      "title": "光学DMI",
+      "$type": "Image",
+      "$imageURL": "/assets/img/OpticalDmi.gif"
+    },
+    "dmi_mechanical": {
+      "title": "機械式DMI",
+      "$type": "Image",
+      "$imageURL": "/assets/img/MechanicalDmi.gif"
+    },
+    "antenna_single": {
+      "title": "シングルアンテナ",
+      "$type": "Image",
+      "$imageURL": "/assets/img/AntennaSingle.gif"
+    },
+    "antenna_double": {
+      "title": "ダブルアンテナ",
+      "$type": "Image",
+      "$imageURL": "/assets/img/AntennaDual.gif"
+    },
+    "collection_oneway": {
+      "title": "計測: 一方向",
+      "$type": "Image",
+      "$imageURL": "/assets/img/CollectionOneway.gif"
+    },
+    "collection_bothways": {
+      "title": "計測: 両方向",
+      "$type": "Image",
+      "$imageURL": "/assets/img/CollectionBoth.gif"
+    },
+    "profiler": {
+      "title": "スキャナー回転数",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ScannerRotation.gif"
+    },
+    "image_distance": {
+      "title": "画像の撮影距離間隔",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ImageDistance.gif"
+    },
+    "forgot_password": {
+      "title": "パスワードを忘れました",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ForgotPassword.png"
+    },
+    "coordinate_system": {
+      "title": "座標系：",
+      "$type": "Text",
+      "text": "座標系は、ファイナライズとエクスポートの結果に影響を及ぼします。 自動を選択すると、座標系は最初の取得終了時に計算されます。 カスタム座標系は、手動でインポートすることができます。 座標系は、最初の処理が正常に完了するまで変更できます。"
+    }
+  },
+  "language": {
+    "en": "英語",
+    "jp": "日本語",
+    "kr": "韓国語",
+    "cn": "中国語",
+    "de": "ドイツ語",
+    "fr": "フランス語",
+    "it": "イタリア語",
+    "es": "スペイン語",
+    "pt": "ポルトガル語"
+  },
+  "theme": {
+    "dark": "ダーク",
+    "light": "ライト"
+  },
+  "firmwareUpdate": {
+    "header": "ライセンス/ソフトウェアアップデート",
+    "su": "Pegasus TRKのシリアルナンバー",
+    "pcu": "PCUシリアルナンバー",
+    "ccp": "CCPライセンス番号",
+    "expire": "有効期限",
+    "version": "ファームウェアのバージョン",
+    "last": "最終更新",
+    "update": "以下を含むアップデートが利用可能",
+    "footer": "ライセンスとファームウェアは、Pegasusコントローラユニットのディスプレイからのみアップデートできます。",
+    "versionAvailable": "あなたのデバイスでバージョン{{ updateAvailableVersion }}が検出されました。",
+    "updateNow": "今すぐアップデート",
+    "noStorageDetected": "ストレージデバイスが検出されませんでした。",
+    "noInstallerDetected": "あなたのストレージデバイスで有効なインストーラが検出されませんでした。",
+    "howToUpdate": "アップデートの実行方法",
+    "updateGuidelines": "アップデートインストールガイドライン (あなたのストレージデバイスから)",
+    "logMyWorld": "myWorld にログインして、Pegasus FIELDインストーラーをダウンロードしてください。",
+    "savePEF": "あなたのストレージデバイスのルートフォルダーにPegasus FIELDを保存します。",
+    "plugDevice": "あなたのストレージデバイスを、PCUのUSBポートに接続します。",
+    "clickUpdateNow": "次に、上部の「今すぐアップデート」ボタン、または「PCU Licence & software」メニューをクリックしてください。",
+    "prerequisites": "現在の状態を確認しています...",
+    "lastUpdate": "最終更新",
+    "lastVersion": "バージョン{{firmwareVersion}}が{{updateDate}}にインストールされました。",
+    "suNotAttached": "添付されていません。",
+    "prerequisitesSuccessful": "前提条件の確認に成功しました。",
+    "prerequisitesInstallation": "インストール前に前提条件を確認してください。",
+    "cancel": "キャンセル",
+    "retry": "再試行",
+    "systemError": "システムの前提条件が満たされていません。",
+    "softwareError": "FIELDアップデートが無効です。",
+    "notSafeError": "Pegasus FIELDソフトウェアのアップデートに失敗しました。",
+    "extractionError": "FIELDアップデートの抽出に失敗しました。",
+    "genericError": "前提条件の確認に失敗しました。",
+    "downloadAgain": "必要なコンポーネントが欠落しているか、または、破損しています。 myWorld からPegasus FIELDソフトウェアを再ダウンロードしてください。",
+    "notUnplugStorage": "あなたのストレージデバイスの接続を解除しないでください。",
+    "dialog": {
+      "title1": "ライセンス契約",
+      "title2": "再起動が必要です。",
+      "headline1": "ソフトウェアをインストールする前に、ライセンス条件を確認してください。この条件は、このセッション中に実行されるすべてのアップデートに適用されます。",
+      "headline2": "アップデートには再起動が必要です。",
+      "headline3": "最初の再起動後に、このページは使用できなくなります。 インストールの進行状況は、PCU画面で直接確認できます。 インストールの最後に、再起動が必要です。 続行しますか?",
+      "cancel": "キャンセル",
+      "agree": "同意します",
+      "yes": "有効"
+    }
+  },
+  "checkUpdate": {
+    "versionAvailable": "バージョン{{ updateAvailableVersion }}が、myWorldで利用できるようになりました。",
+    "licenseExpired": "CCPライセンスが期限切れです。 Pegasus FIELD をアップデートするには、ライセンスをアップデートしてください。",
+    "myWorld": {
+      "title": "リリースノートを確認し、最新のインストーラーをダウンロードするには：",
+      "button": "myWorldにアクセスする"
+    },
+    "doNotShow": "7日間表示されません",
+    "okButton": "OK",
+    "noInternet": "インターネット接続が利用できません",
+    "error": "myWorldから情報を取得できません",
+    "retry": "クリックして再試行する",
+    "uptodate": "ソフトウェアは既に最新です",
+    "checkButton": "クリックして、アップデートを確認します",
+    "checking": "アップデートを確認中..."
+  },
+  "copyright": {
+    "title": "著作権",
+    "text": "Leica Pegasus FIELD <br />著作権©{{year}}Leica Geosystems AG<br />この製品は、Hexagon Geosystemソフトウェアライセンス契約によって保護されています。<br /><br />このソフトウェアの一部は、他者によって著作権が保護されているか、または、他者からライセンスを受けています。<br />このソフトウェアは、以下にリストされている一部またはすべてのコンポーネントを使用する場合があります。",
+    "library": "ライブラリー",
+    "url": "ライセンスURL"
+  },
+  "helpSupport": {
+    "header": "ヘルプ＆サポート",
+    "contact": "サポートへ連絡してください",
+    "helpGuide": "ヘルプガイド",
+    "about": "情報",
+    "supportEmail": "サポートメールを選択",
+    "motivation": "何をいたしましょうか？",
+    "motivations": {
+      "acquisition": "計測",
+      "deviceConnection": "デバイス接続",
+      "other": "その他"
+    },
+    "description": "問題を説明してください。",
+    "validation": {
+      "description": "説明が必要です"
+    },
+    "footer": "[送信] をクリックすると、選択したオプションに関連するすべての情報をLeicaサポートと共有できます。",
+    "send": "送信",
+    "cancel": "キャンセル"
+  },
+  "planning": {
+    "title": "計測計画",
+    "submit": {
+      "estimate": "計測計画の見積もり",
+      "start_activate": "計測",
+      "save_activate": "保存して計測",
+      "save_only": "保存",
+      "optimise_plan": "注文Trackを絞り込む",
+      "keep_plan": "現在の計測計画を維持する",
+      "optimise_popup": "見積もりは現在の注文Trackに基づいています。 注文Trackを絞り込むことで、予測が改善される可能性があります。 注意: 注文Trackの絞り込みは、元に戻せません。"
+    },
+    "tools": {
+      "draw_track": "ポイント追加",
+      "draw_new_track": "新しいTrack",
+      "end_track": "Trackを閉じる",
+      "draw_polygon": "ポリゴンを作成",
+      "draw_new_polygon": "新しいポリゴン",
+      "upload_file": "ファイルをアップロード"
+    },
+    "track": "Track",
+    "defaultNames": {
+      "track": "Track",
+      "polygon": "ポリゴン"
+    },
+    "alert": {
+      "notracks": {
+        "title": "少なくとも 1 つのTrackを追加",
+        "message": "Trackなしで計測計画の見積もりを開始することはできません。",
+        "button": "OK"
+      },
+      "initialAlignmentPoint": {
+        "title": "初期アライメントの場所を設定",
+        "message": "初期アライメントの場所を設定せずに、計測計画の見積もりを開始することはできません。",
+        "button": "初期アライメントの場所を設定します。"
+      },
+      "finalAlignmentPoint": {
+        "title": "最終アライメントの場所を設定します。",
+        "message": "この見積もりでは、最終アライメントの場所は考慮されていません。 最終的な値は異なる場合があります。",
+        "button": "OK"
+      },
+      "unsavedPlan": {
+        "title": "未保存のJobプラン",
+        "message": "計測計画を保存せずに終了してもよろしいですか? 全ての変更が失われます。",
+        "ok": "保存せずに続行",
+        "cancel": "ページに留まる"
+      }
+    },
+    "delete_confirm": {
+      "cancel": "キャンセル",
+      "ok": "有効",
+      "text": "{{pathName}}を本当に削除してもよろしいですか？",
+      "text_polygon": "本当に{{pathName}}とその{{tracks}} Trackを削除したいですか？",
+      "title": "{{type}}を削除します。",
+      "track": "Track",
+      "polygon": "ポリゴン",
+      "polygon_internal_path": "ポリゴンTrack"
+    },
+    "user_tips": {
+      "select_internal_track": "編集するTrackを選択",
+      "starting_point_empty_polygon": "マップ上のポイントを選択して、新しいTrackまたは新しいポリゴンを描画します。",
+      "starting_point_empty": "マップ上のポイントを選択して、新しいTrackを描画します。",
+      "initial_point": "マップ内のポイントをピックして、初期アライメントの場所を設定します。",
+      "final_point": "マップ内のポイントをピックして、最終アライメントの場所を設定します。",
+      "starting_point_polygon": "Trackまたはポリゴンをマップで選択して選択します (またはサイドバーからアイテムを選択します)。",
+      "starting_point": "Trackをマップで選択して選択します (またはサイドバーからアイテムを選択します)。",
+      "new_track_start": "マップ上の場所を選択して、新しいTrackを開始します。",
+      "new_track": "マップ上の場所を選択してポイントを追加し、ダブルタップしてTrackを終了します。",
+      "new_polygon_start": "マップ上の場所を選択して、新しいポリゴンを開始します。",
+      "new_polygon": "マップ上の場所を選択してポイントを追加し、ダブルタップしてポリゴンを終了します。",
+      "toolbar_delete_polygon": "削除するマップ上のTrackまたはポリゴンを選択します。",
+      "toolbar_delete": "削除するマップ上のTrackを選択します。",
+      "toolbar_delete_internal": "削除するマップ上のTrackを選択します。",
+      "toolbar_cut": "Track上のポイントをピックして、その位置でTrackを分割します。",
+      "toolbar_move": "ポイントをピックしてホールド、ドラッグでマップ内で移動します。 存在しない場合は、新しいポイントを作成します。",
+      "use_tools": "ツールバーを使用して編集ツールにアクセスします。",
+      "busy": "計算しています..."
+    },
+    "errors": {
+      "nearest_point": "HEREナビゲーションマップサーバーが応答していません。 インターネット接続を確認してください。",
+      "arcs": "HEREナビゲーションマップサーバーが応答していません。 インターネット接続を確認してください。",
+      "shp_failed": "シェイプファイルの読み込みに失敗しました。",
+      "estimate_failed": "処理に失敗しました： Jobの見積もりには、インターネット接続が必要です。",
+      "shp_list_failed": "SHPファイルのリスト表示に失敗しました。",
+      "path": "要求されたパスの計算中にエラーが発生しました。"
+    },
+    "warnings": {
+      "DS-039": {
+        "$type": "Error",
+        "title": "ディスクの空き容量がありません",
+        "text": "計測計画によると、Jobは使用可能なディスク容量の80%以上を使用します。",
+        "buttonCancel": "それでも続行しますか",
+        "buttonOk": "Jobを新しいディスクに移動"
+      },
+      "DS-038": {
+        "$type": "Error",
+        "title": "ディスクの空き容量が無くなりました",
+        "textSingle": "推定Job サイズが、使用可能なディスク容量を超える可能性があります。 割り当てられたディスクのスペースを解放します。 または、データを失うことなくJobを移動する新しいディスクを追加します。",
+        "textMultiple": "推定Job サイズが、使用可能なディスク容量を超える可能性があります。 データを失うことなく、割り当てられたディスクのスペースを解放するか、Jobを新しいディスクに移動します。",
+        "buttonCancel": "それでも続行しますか",
+        "buttonOk": "Jobを新しいディスクに移動"
+      },
+      "job_moved": {
+        "$type": "message",
+        "title": "Jobは移動しました",
+        "text": "あなたは、Project<b>{{project}}</b>の<b>{{job}}</b>として、ディスク<b>{{disk}}</b>上で新しいJobを見つけることができます。",
+        "buttonOk": "OK"
+      }
+    },
+    "polygon_plan_filter": {
+      "checkAll": "全て選択/選択解除",
+      "roads": {
+        "allroad": "全ての道路",
+        "allcar": "全ての自動車用道路",
+        "motorway": "高速道路",
+        "truck": "トラックレーン",
+        "primary": "幹線道路",
+        "secondary": "二次道路",
+        "tertiary": "三次道路",
+        "residential": "住宅道路",
+        "pedestrian": "歩行者専用道路",
+        "cycleway": "自転車レーン",
+        "service": "側道",
+        "livingstreet": "生活通路",
+        "allrailway": "全ての鉄道",
+        "rail": "鉄道",
+        "lightrail": "軽便鉄道",
+        "monorail": "モノレール",
+        "funicular": "ケーブルカー",
+        "subway": "地下鉄",
+        "tram": "路面電車",
+        "unclassified": "未分類"
+      },
+      "ramps": {
+        "include_ramps": "スロープを含める",
+        "only_ramps": "スロープのみ",
+        "no_ramps": "スロープを無視する"
+      },
+      "cancel": "キャンセル",
+      "extract": "抽出",
+      "extractTracks": "Trackを抽出"
+    }
+  },
+  "job_info": {
+    "title": "Job情報",
+    "rows": {
+      "planned": {
+        "title": "計測計画",
+        "values": {
+          "yes": "有効",
+          "no": "計測計画なし"
+        }
+      },
+      "type": {
+        "title": "Jobの計測形式"
+      },
+      "dmi": {
+        "title": "DMI"
+      },
+      "ntrip": {
+        "title": "RTK計測",
+        "values": {
+          "enabled": "有効",
+          "not_enabled": "無効"
+        },
+        "mountpoint": {
+          "title": "マウントポイント:"
+        },
+        "interfacemode": {
+          "title": "フォーマット:"
+        }
+      },
+      "collectionmode": {
+        "title": "計測モード"
+      },
+      "antenna": {
+        "title": "アンテナ設定",
+        "valid": "設定を利用できます",
+        "invalid": "設定を利用できません"
+      },
+      "drivingspeed": {
+        "title": "推奨上限速度"
+      },
+      "camera": {
+        "title": "カメラ",
+        "values": {
+          "yes": "あり",
+          "no": "なし"
+        },
+        "distance": {
+          "title": "画像の撮影距離間隔"
+        },
+        "elapse": {
+          "title": "画像の撮影時間間隔"
+        },
+        "blur": {
+          "title": "画像のぼかし処理"
+        },
+        "left": {
+          "title": "左カメラの向き"
+        },
+        "right": {
+          "title": "右カメラの向き"
+        }
+      },
+      "scanner": {
+        "scanlinespacing": {
+          "title": "走査線間隔"
+        },
+        "rotationspeed": {
+          "title": "スキャナー回転数"
+        },
+        "pointspersecond": {
+          "title": "スキャナー取得点数"
+        },
+        "range": {
+          "title": "スキャナー最大取得距離"
+        }
+      },
+      "position": {
+        "accuracy": {
+          "title": "位置精度"
+        }
+      }
+    },
+    "back_to_jobs": "アクティベートをキャンセル",
+    "edit": "設定を変更",
+    "confirm": "続行",
+    "recalculate": "設定",
+    "use_saved_values": "保存された値を使用",
+    "errors": {
+      "2nd_antenna_not_configured": "続行する前に、2ndアンテナを構成します。",
+      "2nd_antenna_no_distance": "アンテナと魚眼カメラ間の距離を入力します。 数字のみ入力可能です。",
+      "2nd_antenna_min_distance": "2ndアンテナは、魚眼カメラから {{distance}} の最小距離に配置する必要があります。",
+      "2nd_antenna_no_manual": "レバーアームの x、y、z 値を入力します。 数字のみ入力可能です。",
+      "2nd_antenna_missing": "数字のみ入力可能です。",
+      "2nd_antenna_invalid": "2番目のアンテナ構成が無効です。 値を確認してください。"
+    },
+    "close": "閉じる"
+  },
+  "su": {
+    "su": "本体のシリアルナンバー",
+    "model": {
+      "PEGASUS_TRK500_NEO": "Pegasus TRK500Neo",
+      "PEGASUS_TRK700_NEO": "Pegasus TRK700Neo",
+      "PEGASUS_TRK500_EVO": "Pegasus TRK500Evo",
+      "PEGASUS_TRK700_EVO": "Pegasus TRK700Evo",
+      "PEGASUS_TRK100": "Pegasus TRK100",
+      "PEGASUS_TRK300": "PEGASUS TRK300",
+      "NO_SENSOR_UNIT": "Pegasus TRKが接続されていません"
+    }
+  },
+  "errors": {
+    "status_socket": "ステータスソケットへの接続でエラーが発生しました。",
+    "status_socket_connected": "ステータスソケット接続が再開されました。",
+    "routing_socket": "ルーティングソケットへの接続でエラーが発生しました。",
+    "routing_socket_connected": "ルーティングソケット接続が再開されました。",
+    "notifications_socket": "通知ソケットへの接続でエラーが発生しました。",
+    "notifications_socket_connected": "通知ソケット接続が再開されました。",
+    "position_socket": "位置ソケットへの接続でエラーが発生しました。",
+    "position_socket_connected": "位置ソケット接続が再開されました。",
+    "pointcloud_socket": "点群ソケットへの接続でエラーが発生しました。",
+    "pointcloud_socket_connected": "点群ソケット接続が再開されました。",
+    "alignment_socket": "アライメントソケットへの接続でエラーが発生しました。",
+    "alignment_socket_connected": "アライメントソケット接続が再開されました。",
+    "heightmap_failed": "標高-マップ失敗",
+    "heightmap_resumed": "標高-マップ再開"
+  },
+  "backend_errors": {
+    "dialogs": {
+      "ok": "OK",
+      "cancel": "キャンセル"
+    },
+    "status_code": {
+      "404": "API利用不可"
+    },
+    "code": {
+      "ECONNABORTED": "システムとの通信が遅延しています。 ネットワーク接続を確認するか、システムが応答するまでお待ちください。",
+      "ACTSYS-001": "アクティベートしています...",
+      "ACTSYS-002": "初期化が完了しました。",
+      "ACTSYS-003": "アクティベートしています...",
+      "ACTSYS-004": "アクティベートが完了しました。",
+      "ACTSYS-005": "ディアクティベートしています...",
+      "ACTSYS-006": "ディアクティベートが完了しました。",
+      "ACTSYS-007": "計測を開始しています...",
+      "ACTSYS-008": "計測中...",
+      "ACTSYS-009": "計測を停止しています...",
+      "ACTSYS-010": "ログを記録しています...",
+      "ACTSYS-011": "システムをシャットダウンしています...",
+      "ACTSYS-012": "初期化を中止しています...",
+      "ACTSYS-013": "アクティベートを中止しています...",
+      "ACTSYS-014": "ディアクティベートを中止しています...",
+      "ACTSYS-015": "計測開始を中止しています...",
+      "ACTSYS-016": "計測停止を中止しています...",
+      "ACTSYS-017": "シャットダウンを中止しています...",
+      "ACTSYS-018": "システムを再起動しています...",
+      "ACTSYS-019": "初期アライメントを開始",
+      "ACTSYS-020": "初期アライメント",
+      "ACTSYS-021": "最終アライメントを開始",
+      "ACTSYS-022": "最終アライメント",
+      "ACTSYS-023": "ICS設定",
+      "ACTSYS-024": "ログ記録開始",
+      "ACTSYS-025": "最初アライメントを中止...",
+      "ACTSYS-026": "最終アライメントを中止...",
+      "BTU-001": "バッテリー残量低下。",
+      "BTU-002": "バッテリー残量低下 {p1}。 交換してください。",
+      "BTU-003": "バッテリー残量低下: ディアクティベートされます...",
+      "BTU-004": "バッテリー残量低下: 計測を停止します...",
+      "BTU-005": "バッテリー残量低下: シャットダウンされます...",
+      "SYS-002": "内部エラー.",
+      "SYS-003": "承認がありません。",
+      "SYS-004": "システムがディアクティベート状態でないか、初期化されていません。",
+      "SYS-005": "モジュール {p1} がディアクティベート状態でないか、初期化されていません。",
+      "SYS-006": "システムは、アクティベート状態、最終または初期アライメント状態、またはログ記録状態ではありません。",
+      "SYS-007": "モジュール {p1} はログ記録状態ではありません。",
+      "SYS-008": "システムは計測状態ではありません。",
+      "SYS-010": "ハードウェアの種類が間違っています。",
+      "SYS-011": "キャリブレーションフォルダーが見つかりません。",
+      "SYS-012": "キャリブレーションフォルダーが存在しません。",
+      "SYS-013": "無効なリクエスト サポートにお問い合わせください。",
+      "SYS-014": "システムは既にアクティベートされています。",
+      "SYS-015": "設定は、ディアクティベート状態でのみ変更できます。",
+      "SYS-016": "アクティベートは、ディアクティベート状態でのみ実行できます。",
+      "SYS-017": "アクティベートのキャンセルは、アクティベート状態でのみ実行できます。",
+      "SYS-018": "ディアクティベートは、アクティベート状態、最終または初期アライメント状態、またはログ記録状態でのみ実行できます。",
+      "SYS-019": "計測開始は、ログ記録状態でのみ実行できます。",
+      "SYS-020": "計測開始のキャンセルは、計測状態でのみ実行できます。",
+      "SYS-021": "計測停止は、計測状態でのみ実行できます。",
+      "SYS-022": "PCUが高温です。",
+      "SYS-023": "PCUが危険域にまで過熱しています!",
+      "SYS-024": "ログ記録開始は、初期アライメント状態でのみ実行できます。",
+      "SYS-026": "モジュール {p1} はアクティベート状態ではありません。",
+      "SYS-027": "システムはログ記録状態ではありません。",
+      "SYS-028": "初期アライメントの開始は、アクティベート状態でのみ実行できます。",
+      "SYS-029": "初期アライメントのキャンセルは、初期アライメント状態でのみ実行できます。",
+      "SYS-030": "最終アライメントの開始は、ログ記録状態でのみ実行できます。",
+      "SYS-031": "最終アライメントのキャンセルは、初期アライメント状態でのみ実行できます。",
+      "SYS-033": "モジュール {p1} はログ記録状態ではありません。",
+      "SYS-034": "モジュール {p1} は初期アライメント状態ではありません。",
+      "SYS-035": "Pegasus TRKがPCUに接続されていません。",
+      "SYS-036": "システムがロックされています。",
+      "SYS-037": "システムがロックされています。",
+      "SYS-038": "バッテリー残量ががありません。",
+      "SYS-039": "ライセンスの有効期限が切れています。 サポートにお問い合わせください。",
+      "SYS-040": "ライセンスのメンテナンスが期限切れです。 営業担当者にお問い合わせください。",
+      "SYS-041": "不明な国コード {p1}。",
+      "SYS-042": "ライセンスは利用できません。",
+      "SYS-043": "メンテナンスは利用できません。",
+      "ACTPOS-001": "RTKマウントポイントを読み込んでいます...",
+      "ACTPOS-002": "TPSをテストしています...",
+      "ACTPOS-003": "RTKマウントポイントが読み込まれました。",
+      "ACTPOS-004": "RTKをテストしました。",
+      "POS-001": "サーバーが間違っているかインターネット接続の問題があります。",
+      "POS-002": "システムをアクティベートするのに十分な測位衛星がありません。",
+      "POS-003": "精度クラスの項目が間違っています。",
+      "POS-004": "DMIの種類が間違っています。",
+      "POS-005": "別のRTKを読み込んでいます。",
+      "POS-006": "サーバー使用不可",
+      "POS-007": "別のRTKテストを実行しています。",
+      "POS-008": "このユーザーは利用できません。",
+      "POS-009": "このパスワードは利用できません。",
+      "POS-010": "マウントポイントが利用できません。",
+      "POS-011": "インターフェイスモードが利用できません。",
+      "POS-012": "無効なアクション値です。",
+      "POS-013": "インターネット接続が利用できません。",
+      "POS-014": "ネットワークエラー 再試行、またはシステムを再起動します。",
+      "POS-015": "GNSSファームウェアがサポートされていません。 サポートにお問い合わせください。",
+      "POS-016": "データ出力先がありません。",
+      "POS-017": "RTK精度クラスの項目が間違っています。",
+      "POS-018": "利用可能なアルマナックがないか、クロックモデルが無効です。",
+      "POS-019": "SPANを設定しています...",
+      "POS-020": "アルマナックは利用できません。 ダウンロードしています...",
+      "POS-021": "利用可能なGPS信号がないか、クロックモデルが無効です。",
+      "POS-022": "アライメントを実行するのに十分な測位衛星がありません。 オープンスカイエリアに移動してください。",
+      "POS-023": "GNSS位置が無効です",
+      "CAM-000": "{p1} にアクセスできません。",
+      "ACTCAM-001": "FFCをアップロードしました。",
+      "ACTCAM-002": "FFCをアップロードしています...",
+      "MV-0": "{p1} カメラがありません。",
+      "MV-1": "{p1} カメラがありません。",
+      "MV-2": "{p1} カメラがありません。",
+      "MV-3": "{p1} カメラがありません。",
+      "MV-4": "{p1} カメラがありません。",
+      "MV-5": "{p1} カメラがありません。",
+      "MV-6": "{p1} カメラがありません。",
+      "MV-7": "{p1} カメラがありません。",
+      "MV-8": "{p1} カメラがありません。",
+      "MV-9": "{p1} カメラがありません。",
+      "CAM-001": "{p1} は使用中です。",
+      "CAM-002": "カメラ {p1} ファームウェアはサポートされていません。 サポートにお問い合わせください。",
+      "CAM-003": "カメラ {p1} の設定エラー。",
+      "CAM-004": "カメラ {p1} ドライバーはサポートされていません。",
+      "CAM-005": "カメラ {p1} は使用できません。",
+      "CAM-006": "カメラ {p1} のFFCの読み込み中にエラーが発生しました。",
+      "CAM-007": "カメラ {p1} での色情報設定中にエラーが発生しました。",
+      "CAM-008": "FFCをカメラ {p1} への適用中にエラーが発生しました。",
+      "CAM-009": "バッファ内の画像が多すぎます。 車両の速度を落としてください。 サポートにお問い合わせください。",
+      "CAM-010": "内部カラー調整エラー。",
+      "CAM-011": "カメラ{p1}にキャリブレーションデータがありません。",
+      "CAM-012": "カメラ {p1} のキャリブレーションデータが正しくありません。",
+      "CAM-013": "キャリブレーションファイルとカメラ {p1} のシリアルナンバーが一致しません。",
+      "CAM-014": "{p1} カメラのキャリブレーションデータがありません。",
+      "CAM-015": "{p1} カメラはキャリブレーションされていません。",
+      "CAM-016": "色情報調整の終了を待っています。",
+      "CAM-017": "カメラのドライバーがサポートされていません。 サポートにお問い合わせください。",
+      "CAM-018": "フロント魚眼カメラは使用できません。",
+      "CAM-019": "リア魚眼カメラは使用できません。",
+      "CAM-020": "カメラ {p1} は接続されていません。",
+      "CAM-021": "%d 台のカメラが必要ですが、%d 個が見つかりました。",
+      "CAM-022": "切断されたカメラを回復しています...",
+      "CAM-023": "カメラのスナップショットは、計測中にのみ使用できます。",
+      "CAM-024": "フロント魚眼カメラがありません。 自動露出は利用できません。",
+      "CAM-025": "リア魚眼カメラがありません。 自動露出は利用できません。",
+      "CAM-026": "露出が不適切です。",
+      "CAM-027": "画質の値が間違っています。",
+      "CAM-028": "使用できないトリガータイプです。",
+      "CAM-029": "既に別のFFCをアップロードしています。",
+      "CAM-030": "カメラ {p1} との同期に問題があります。",
+      "CAM-031": "カメラ {p1} との同期に問題があります。",
+      "CAM-032": "カメラ {p1} との同期に問題があります。",
+      "CAM-033": "カメラ {p1} との同期に問題があります。",
+      "CAM-034": "カメラ {p1} との同期に問題があります。",
+      "CAM-035": "カメラ {p1} との同期に問題があります。",
+      "CAM-036": "カメラ {p1} との同期に問題があります。",
+      "CAM-037": "カメラ {p1} との同期に問題があります。",
+      "CAM-038": "カメラ {p1} との同期に問題があります。",
+      "CAM-039": "カメラ {p1} との同期に問題があります。",
+      "CAM-040": "カメラ {p1} で画像が失われています。",
+      "CAM-041": "カメラ {p1} で画像が失われています。",
+      "CAM-042": "カメラ {p1} で画像が失われています。",
+      "CAM-043": "カメラ {p1} で画像が失われています。",
+      "CAM-044": "カメラ {p1} で画像が失われています。",
+      "CAM-045": "カメラ {p1} で画像が失われています。",
+      "CAM-046": "カメラ {p1} で画像が失われています。",
+      "CAM-047": "カメラ {p1} で画像が失われています。",
+      "CAM-048": "カメラ {p1} で画像が失われています。",
+      "CAM-049": "カメラ {p1} で画像が失われています。",
+      "CAM-050": "フロント魚眼カメラは使用できません。",
+      "CAM-051": "リア魚眼カメラは使用できません。",
+      "CAM-052": "クライアントは2ndアンテナ設定を使用しています: システムをアクティベートする前に閉じてください。",
+      "CAM-053": "フロントカメラは使用できません。",
+      "CAM-054": "フロントカメラのキャリブレーションは利用できません。",
+      "CAM-055": "フロントカメラのキャリブレーションは利用できません。",
+      "CAM-056": "リアカメラは利用できません。",
+      "CAM-057": "リアカメラのキャリブレーションは利用できません。",
+      "CAM-058": "リアカメラのキャリブレーションは利用できません。",
+      "CAM-059": "カメラ {p1} にはFFCがありません。",
+      "CAM-060": "カメラ {p1} には色変換情報がありません。",
+      "CAM-061": "カメラ {p1} での色変換情報の読み込み中にエラーが発生しました。",
+      "CAM-062": "キャリブレーションファイル {p1} の読込みエラー",
+      "CAM-063": "キャリブレーションファイル {p1} にカメラのシリアルナンバーがありません。",
+      "CAM-064": "フロント魚眼カメラのキャリブレーションファイルは利用できません。",
+      "CAM-065": "リア魚眼カメラのキャリブレーションファイルは利用できません。",
+      "CAM-066": "カメラ名 {p1} が不明です。",
+      "CAM-067": "シリアルナンバー {p1} のキャリブレーションファイル {p1} は魚眼カメラ用です。",
+      "CAM-068": "カメラをアクティベートしています...",
+      "CAM-069": "切断されたカメラを回復しています: カメラの電源をオフにしています...",
+      "CAM-070": "切断されたカメラを回復しています: カメラの電源をオンにしています...",
+      "CAM-071": "切断されたカメラを回復しています: カメラに接続しています...",
+      "CAM-072": "切断されたカメラを回復しています: カメラ {p1} を接続しています...",
+      "CAM-073": "切断されたカメラを回復しています: 色調整の情報を読み込んでいます...",
+      "CAM-074": "キャリブレーションファイルのあるSSDがありません。",
+      "CAM-075": "{p1}は多くの画像を失っています。",
+      "CAM-076": "カメラ{p1}の準備ができていません。",
+      "CAM-077": "カメラ{p1}のキャリブレーション データの読み取り中にエラーが発生しました。",
+      "CAM-078": "キャリブレーションファイル{p1}の読み取り中にエラーが発生しました。",
+      "CAM-079": "キャリブレーションファイル{p1}のシリアル番号が異なります。",
+      "CAM-080": "カメラ{p1}と{p2}の向きが異なります。",
+      "CAM-081": "カメラ{p1}にキャリブレーションデータがありません。",
+      "CAM-082": "新しいカメラの向きが利用可能です。",
+      "DS-001": "ディスクの変更が検出されました。 上部のバーで使用可能なディスクを確認します。",
+      "DS-002": "軌跡ファイルの書き込みエラー: ディスクがいっぱいか、またはアクセスエラーです。",
+      "DS-003": "軌跡ファイルの書き込みエラー: {p1}。",
+      "DS-004": "軌跡ファイルの書き込みエラー: {p1}。",
+      "DS-005": "Project名が空です。",
+      "DS-006": "使用できないProject名です: {p1}。",
+      "DS-007": "Job名が空です。",
+      "DS-008": "使用できないJob名です: {p1}。",
+      "DS-009": "ディスクは空です。",
+      "DS-010": "ディスク {p1} は使用できません。",
+      "DS-011": "ディスク {p1} は準備できていません。",
+      "DS-012": "Projectフォルダー {p1} の作成中にエラーが発生しました。",
+      "DS-013": "Job '{p1}' は既に存在しています。",
+      "DS-014": "ログJobフォルダの作成中にエラーが発生しました。",
+      "DS-015": "ローバーフォルダーの作成中にエラーが発生しました。",
+      "DS-016": "マスターフォルダーの作成中にエラーが発生しました。",
+      "DS-017": "GNSSファイルの作成中にエラーが発生しました。",
+      "DS-018": "RTKファイルの作成中にエラーが発生しました。",
+      "DS-019": "スキャナー {p1} のLiDARファイルの作成中にエラーが発生しました。",
+      "DS-020": "スキャナー {p1} の低解像度LiDARファイルの作成中にエラーが発生しました。",
+      "DS-021": "スキャナー {p1} のLiDARファイルの書き込み中にエラーが発生しました。",
+      "DS-022": "スキャナー {p1} の低解像度LiDARファイルの書き込み中にエラーが発生しました。",
+      "DS-023": "{p1} カメラ コンテナーの作成中にエラーが発生しました。",
+      "DS-024": "{p1} カメラ コンテナーの書き込み中にエラーが発生しました。",
+      "DS-025": "使用できないTrack名です: {p1}。",
+      "DS-026": "座標系の単位が不明です。",
+      "DS-027": "Project '{p1}' は既に存在します。",
+      "DS-028": "使用できないJobタイプ名です: {p1}。",
+      "DS-029": "Jobタイプ {p1} が不明です。",
+      "DS-030": "使用可能なディスク容量が {p1}% 未満です。",
+      "DS-031": "使用可能なディスク容量が {p1}% 未満です。",
+      "DS-032": "使用可能なディスク容量が {p1}% 未満です。 計測が停止されます。 {p2} 分以内にディアクティベートを実行してください。",
+      "DS-033": "使用可能なディスク容量が {p1}% 未満です。",
+      "DS-034": "使用可能なディスク容量が {p1}% 未満です。",
+      "DS-035": "使用可能なディスク容量が不足しています。",
+      "DS-036": "使用可能なディスク容量が非常に少なくなっています。",
+      "DS-037": "内部エラー.",
+      "DS-038": "使用可能なディスク容量が不足しています。",
+      "DS-039": "使用可能なディスク容量が非常に少なくなっています。",
+      "DS-040": "Jobレポートが作成されました。",
+      "DS-041": "Jobレポートを作成しています...",
+      "DS-042": "別のJobレポートを作成しています。",
+      "DS-043": "Job {p1} は存在しません。",
+      "DS-044": "Job レポートは利用できません。",
+      "DS-045": "JobのImageAI処理が完了していません。",
+      "DS-046": "Jobは取得されません。",
+      "DS-047": "Jobは、RTKで完了していません。",
+      "DS-048": "Jobレポートの削除中にエラーが発生しました。",
+      "DS-049": "データ処理に利用可能なディスク容量が不足しています。",
+      "DS-050": "座標系がロックされています： 変更できません。",
+      "ZF-001": "ZF 警告: {p1} {p2}。",
+      "ZF-002": "ZF エラー: {p1} {p2}。",
+      "ZF-003": "ZF メッセージ： {p1} {p2}。",
+      "ZF-004": "{p1}: 参照可能",
+      "SCN-001": "{p1} のキャリブレーション情報がありません。",
+      "SCN-002": "スキャナー {p1} を開始できません。",
+      "SCN-003": "スキャナー {p1} への接続中にエラーが発生しました。",
+      "SCN-004": "スキャナー {p1} への接続中にエラーが発生しました。",
+      "SCN-005": "スキャナー {p1} のシリアルナンバーを取得できません。",
+      "SCN-006": "スキャナー {p1} にエラーが発生しました。",
+      "SCN-007": "{p1} のファームウェアはサポートされていません。",
+      "SCN-008": "{p1} のスキャナーが予期されていましたが、{p2} が見つかりました。",
+      "SCN-009": "{p1} SLAMスキャナーが予期されていましたが、{p2} が見つかりました。",
+      "SCN-010": "SLAMの数が、キャリブレーションファイルの数と一致しません。",
+      "SCN-011": "{p1} のスキャナーが予期されていましたが、{p2} が見つかりました。",
+      "SCN-012": "スキャナー {p1} の PPS信号がロックされていません。",
+      "SCN-013": "スキャナー {p1} との同期に問題があります。",
+      "SCN-014": "スキャナー {p1} の同期データを利用できません。",
+      "SCN-015": "{p1} への接続中にエラーが発生しました。",
+      "SCN-016": "{p1} への接続中にエラーが発生しました。",
+      "SCN-020": "{p1} からのデータがありません。",
+      "SCN-021": "{p1} からのデータがありません。",
+      "SCN-025": "{p1} からのデータがありません。",
+      "SCN-026": "{p1} からのデータがありません。",
+      "SCN-030": "キャリブレーションファイル {p1} のシリアルナンバーが空です。",
+      "SCN-031": "スキャナー {p1} のキャリブレーションファイルは利用できません。",
+      "SCN-032": "同じシリアルナンバー {p1} のスキャナーのキャリブレーションファイルが他にもあります。",
+      "SCN-033": "シリアルナンバー {p1} のスキャナーは使用できません。",
+      "SCN-034": "{p1}を接続中...",
+      "SCN-035": "スキャナー{p1}で、{p2}Hz、{p3}ポイントのコマンドは、利用できません。",
+      "SCN-040": "{p1} からのデータがありません。",
+      "SCN-041": "{p1} からのデータがありません。",
+      "SCN-045": "{p1} の開始を待っています...",
+      "SCN-046": "{p1}にパケットロスが発生しています。",
+      "SCN-047": "システムを再起動します。",
+      "SCN-050": "スキャナー{p1}からのストリーミングに失敗しました。",
+      "SCN-051": "スキャナー{p1}の{p2}Hz、{p3}ポイントの設定は、サポートされていません。",
+      "SCN-052": "予期された{p1}Hesaiスキャナが{p2}見つかりました",
+      "SCN-060": "{p1}～からのデータはありません",
+      "SCN-061": "{p1}～からのデータはありません",
+      "SCN-065": "{p1}～への接続中に問題が発生しました",
+      "SCN-066": "{p1}～への接続中に問題が発生しました",
+      "SCN-070": "過熱により計測が中断されました。 終了アライメントを実行し、システムをディアクティベートしてください。",
+      "SCN-071": "スキャナーのキャリブレーションが損なわれる可能性があります。 終了アライメントの実行を推奨します。",
+      "SCN-072": "スキャナーの温度が80°C（176°F）まで上昇しており、使用温度を超えています。",
+      "SCN-073": "{p1}が待機中です。システムをシャットダウンし、30分放置し冷却してください。",
+      "SCN-074": "{p1}が待機中です。システムをシャットダウンし、30分放置し冷却してください。",
+      "SCN-075": "スキャナー{p1}の温度が高くなっています。",
+      "NTF-001": "通知タイプが正しくありません。",
+      "NTF-002": "無効な通知IDです｡",
+      "USR-001": "ユーザー '{p1}' でのログインに失敗しました。",
+      "USR-002": "不明な '{p1}' ユーザーです。",
+      "ACTPLN-001": "ポリゴンを抽出しています...",
+      "ACTPLN-002": "別のポリゴン抽出を実行しています。",
+      "ACTPLN-003": "計測計画を処理しています...",
+      "ACTPLN-004": "有効な計測計画がありません。",
+      "ACTPLN-005": "シェープファイルがインポートされていません。",
+      "ACTPLN-006": "USBドライブが検出されませんでした。",
+      "ACTPLN-008": "シェープファイルを処理中です。",
+      "ACTPLN-009": "別のシェープファイルのインポートが既に進行中です。",
+      "ACTPLN-010": "シェイプファイルは空です。",
+      "ACTPLN-011": "シェープファイルが見つかりません。",
+      "ACTPLN-012": "シェープファイルを検索中...",
+      "ACTPLN-013": "別のシェープファイルの検索が既に進行中です。",
+      "ACTPLN-014": "シェイプファイルの展開エラー： {p1}。",
+      "ACTPLN-015": "無効なスプリットポイントの選択： その点はTrackから遠すぎます。",
+      "PLN-001": "ポリゴンを抽出しています...",
+      "PLN-002": "別のポリゴン抽出が既に進行中です。",
+      "PLN-003": "計測計画を処理しています...",
+      "PLN-004": "有効な計測計画がありません。",
+      "PLN-005": "シェイプファイルが読み込まれていません。",
+      "PLN-006": "USBドライブが検出されませんでした。",
+      "PLN-007": "{{p1}} ドライブにシェイプファイルが見つかりません。",
+      "PLN-008": "シェイプファイルを処理しています...",
+      "PLN-009": "別のシェイプファイルを読み込んでいます。",
+      "RTN-001": "車速が制限速度を超えています。",
+      "RTN-002": "Jobの作成に使用できるディスク領域がありません。",
+      "RTK-001": "接続を確立できません。 設定を確認してください。",
+      "GIO001": "間違った引数です。 パラメーターの数を修正してください。",
+      "GIO002": "レガシーデータセットを読み込めません。",
+      "GIO003": "無効なJob名です。",
+      "GIO004": "無効なTrack名です。",
+      "GIO005": "このJobには最新の軌跡がありません。",
+      "GIO006": "無効な軌跡名です。",
+      "GIO007": "画像テーブルにキャリブレーション情報を書き込めません。",
+      "GIO008": "ライセンスエラー",
+      "GIO009": "キャリブレーション情報書き込み中にエラーが発生しました。",
+      "IMT001": "間違った引数です。",
+      "IMT002": "Projectを開けません。",
+      "IMT003": "Jobを開けません。",
+      "IMT004": "データが見つかりません。",
+      "IMT005": "軌跡データを読み込めません。",
+      "IMT006": "地理変換ライブラリーを読込めません。",
+      "IMT007": "ライセンスエラー",
+      "IMT009": "レガシーデータセットを読み込めません。",
+      "IMT012": "CTSファイルが存在しません。",
+      "IMT010": "軌跡座標を変換できません。",
+      "IMT011": "ヨー補正の軌跡座標を変換できません。",
+      "IMT013": "軌跡名は空にできません。",
+      "PCJ001": "間違った引数です。",
+      "PCJ002": "Jobは存在しません。",
+      "PCJ003": "レガシーデータセットを読み込めません。",
+      "PCJ004": "ライセンスエラー",
+      "PCJ005": "点群の作成中にエラーが発生しました。",
+      "GPC001": "間違った引数です。",
+      "GPC002": "レガシーデータセットを読み込めません。",
+      "GPC003": "無効なJob名です。",
+      "GPC004": "ファイルを開けません。",
+      "GCP005": "このJobには最新の軌跡がありません。",
+      "GCP006": "無効な軌跡名です。",
+      "GCP007": "無効なTrack名です。",
+      "EXL003": "LGS出力エラー",
+      "EXL004": "LGSx出力エラー",
+      "LGS003": "LGS出力エラー",
+      "LGS006": "Epcaエラー。",
+      "LGS004": "ライセンスエラー",
+      "LGS007": "フレームは使用できません。",
+      "LGS005": "LGSファイルの書き込み中にエラーが発生しました。",
+      "LGX003": "LGSx出力エラー",
+      "LGX006": "Epcaエラー。",
+      "LGX004": "ライセンスエラー",
+      "LGX007": "フレームは使用できません。",
+      "LGX005": "LGSxファイルの書き込み中のエラー",
+      "LCB001": "ライセンスエラー",
+      "LCB002": "バックアップを作成できません。",
+      "LCB003": "データベースを開けません。",
+      "LCB004": "軌跡変換を実行できません。",
+      "LCB005": "画像をキャリブレーションできません。",
+      "LCB006": "点群を作成できません。",
+      "LCB007": "点群をクラス分けできません。",
+      "LCB008": "LGSを出力できません。",
+      "LCB009": "LASを出力できません。",
+      "LCB010": "E57を出力できません。",
+      "LCB011": "ディスクに十分な空き容量がありません。",
+      "LCB012": "点群の色付けエラー",
+      "LCB013": "入力エラー。",
+      "LCB014": "LGSxを出力できません。",
+      "LCB101": "プロセスを実行できません。",
+      "LCB102": "RTKファイルがありません。",
+      "LCB103": "自動マスク生成エラー。",
+      "CLA002": "点群クラス分けエラー",
+      "CLA003": "点群クラス分けエラー",
+      "UPD-001": "インストーラーが見つかりました。",
+      "ROU-006": "記録中にTrackまたはポリゴンを移動できません。",
+      "UPD-101": "有効なインストーラーがありません。",
+      "UPD-102": "システムがディアクティベートされていません",
+      "UPD-103": "センサーユニットが接続されていません。 接続して、システムを再起動してください。",
+      "UPD-104": "PCUは、ACプラグで電源供給されています。 バッテリーを接続して、システムを再起動してください。",
+      "UPD-105": "アクティブバッテリー {p1}が50% 未満です。",
+      "UPD-106": "メンテナンスライセンスの有効期限が切れているか、または無効です。",
+      "UPD-201": "インストーラ {p1}にアクセスできません。",
+      "UPD-202": "一時インストーラ フォルダー{p1}を消去できません。",
+      "UPD-203": "インストーラ {p1} から {p2} に version.ini ファイルを抽出できません。",
+      "UPD-204": "{p1}インストーラー({p2})内のバージョンは、既にインストールされているバージョンよりも古いです({p3}) 。",
+      "UPD-205": "ビルド日付が利用できません。",
+      "UPD-206": "ビルド日付の形式が間違っています。",
+      "UPD-301": "インストーラー{p2}からファイル{p1}を抽出して{p3}に展開できません。",
+      "UPD-302": "インストーラー{p1} からすべてのファイルを抽出して{p2}に展開できません。",
+      "UPD-401": "{p1}インストーラーは、署名チェック({p2}) に失敗しました– エラー{p3}",
+      "UPD-402": "{p1}インストーラーは署名チェックに失敗しました ({p2}は、Leica によって正しく署名されていません)。",
+      "UPD-502": "インストール version.ini ファイルが存在しません ({p1})。",
+      "UPD-504": "インストールversion.ini ファイルの形式が正しくありません ({p1} = {p2})。",
+      "UPD-506": "インストール version.ini のバージョン列の形式が正しくありません ({p1} = {p2})。",
+      "UPD-501": "Rollback version.iniファイルが存在しません ({p1})。",
+      "UPD-503": "Rollback version.iniファイルの形式が正しくありません ({p1} = {p2})。",
+      "UPD-505": "Rollback version.ini のバージョン列の形式が正しくありません({p1} = {p2})。",
+      "CS-001": "ソース {p1}は、既に座標系{p2}に存在します。",
+      "CS-004": "USBドライブが検出されませんでした。"
+    }
+  },
+  "notifications": {
+    "dataStorage": {
+      "DS-001": {
+        "title": "ディスクの変更が検出されました",
+        "text": "上部のバーで使用可能なディスクを確認します。",
+        "okButton": "OK"
+      },
+      "DS-040": {
+        "title": "重大なディスク容量警告",
+        "text": "ディスクの空き容量が不足しています。 残り20%。",
+        "okButton": "OK"
+      },
+      "DS-041": {
+        "title": "重大なディスク容量警告",
+        "text": "ディスクの空き容量が不足しています: 残り10%。 Jobは自動的に閉じられます。",
+        "okButton": "OK"
+      },
+      "DS-042": {
+        "text": "ディスクの空き容量が不足しています: 計測をが停止します。 計測停止までの残り時間:",
+        "okButton": "OK"
+      },
+      "DS-010": {
+        "title": "使用中のディスクが取り外されました",
+        "text": "Jobデータが失われました。 新しいJobの作業を続行するには、ディスクを再接続してください。",
+        "okButton": "OK"
+      },
+      "LCB011": {
+        "title": "ディスクスペースの警告",
+        "text": "Job {p1}の選択したエクスポートファイルを生成すると、ディスク領域が不足する可能性があります。 それでも続行したいですか？",
+        "okButton": "OK",
+        "cancelButton": "キャンセル"
+      },
+      "currentDisk": {
+        "title": "使用中のディスクが取り外されました",
+        "text": "ディスクを再接続するか、[リダイレクト] をクリックしてください。",
+        "okButton": "リダイレクト"
+      }
+    },
+    "scannerTemperature": {
+      "leftScanner": "左スキャナー",
+      "rightScanner": "右スキャナー",
+      "SCN-072": {
+        "title": "スキャナーの温度が上昇しています。",
+        "text": "スキャナーの温度が80°C（176°F）まで上昇しており、使用温度を超えています。",
+        "okButton": "OK"
+      },
+      "SCN-071": {
+        "title": "スキャナーオーバーヒート警告",
+        "text": "スキャナーの温度が80°C（176°F）を超えています。<br/>スキャナーのキャリブレーションが損なわれる可能性があります。<br/>終了アライメントの実行を推奨します。",
+        "okButton": "OK"
+      },
+      "SCN-070": {
+        "title": "スキャナー緊急停止",
+        "text": "スキャナーの温度が95°C（203°F）を超えています。<br/>過熱によるスキャナー破損の恐れがあります。<br/>計測が中断されました。<br/>システムをディアクティベートする前に終了アライメントを実行してください。",
+        "okButton": "OK"
+      },
+      "infoDialog": {
+        "title": "スキャナーの温度",
+        "banner1": {
+          "tempC": "75°C",
+          "tempF": "167°F",
+          "text": "スキャナーの温度が{{temperature}}に近づいており、使用温度を超えています。"
+        },
+        "banner2": {
+          "tempC": "80°C",
+          "tempF": "176°F",
+          "text": "スキャナーのキャリブレーションが損なわれる可能性があります。 終了アライメントの実行を推奨します。"
+        },
+        "banner3": {
+          "tempC": "95°C",
+          "tempF": "203°F",
+          "text": "スキャナーの温度が{{temperature}}を超えています。 過熱によるスキャナー破損の恐れがあります。 計測が中断されました。"
+        }
+      }
+    }
+  },
+  "offline": {
+    "message": "オフラインです。 インターネット接続を確認してください。"
+  },
+  "performance": {
+    "connection": {
+      "internet": "インターネット",
+      "gateway": "ホットスポット",
+      "client": "使用しているデバイス"
+    },
+    "system": {
+      "cpu": "CPU負荷",
+      "gpu": "GPU負荷",
+      "ram": "メモリー負荷"
+    }
+  },
+  "second_antenna": {
+    "title": "2ndアンテナ設定",
+    "subtitle": "画像を移動およびズームしてターゲットを中央に配置し、[計算] をクリックします",
+    "use_saved_values": "最後に保存された値を使用",
+    "calculate": "計算実行",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "manual": "値を手動で挿入する",
+    "pick": "選択および計算",
+    "loading": "カメラを初期化します...",
+    "closing": "保存中...",
+    "dist": "距離 ({{unit}}) =",
+    "x": "X ({{unit}}) =",
+    "y": "Y ({{unit}}) =",
+    "z": "Z ({{unit}}) ="
+  },
+  "portraitOverlay": {
+    "rotate": "アプリケーションは、横向きの画面で動作するように設計されています。 デバイスを回転させてください。",
+    "mobile": "アプリケーションは、タブレットで動作するように設計されています。 携帯電話はサポートされていません。"
+  },
+  "api": {
+    "unexpectedError": "予期しないエラーです。"
+  },
+  "job_processing": {
+    "status": {
+      "play": "処理しています…",
+      "pause": "処理が一時停止中です",
+      "done": "処理済み",
+      "error": "エラーが発生して処理されました",
+      "none": "処理を開始",
+      "imageOnly": "画像処理のみ完了しました。"
+    },
+    "image": "画像処理",
+    "pointCloud": "点群と軌跡の処理",
+    "pointCloud_noTrajectory": "点群処理",
+    "ready": "後処理の準備ができました。",
+    "noRtkAvailable": "RTKが見つかりません。 処理できません。",
+    "failed": {
+      "title": "処理に失敗しました。",
+      "text": "ファイル処理中のエラーです。",
+      "retry": "再試行",
+      "cancel": "キャンセル"
+    },
+    "options": {
+      "title": "処理オプション",
+      "button_start": "処理を開始",
+      "button_stop": "処理を中止",
+      "button_pause": "処理の一時停止",
+      "button_cancel": "キャンセル",
+      "export": {
+        "label": "出力",
+        "lgs": "LGS",
+        "lgsx": "LGSx",
+        "las": "LAS",
+        "e57": "E57"
+      },
+      "finalise": {
+        "label": "ファイナライズ",
+        "blur": "画像のぼかし処理",
+        "colorization": "点群の色付け"
+      }
+    },
+    "dialog": {
+      "header": "ファイナライズと出力"
+    },
+    "overwrite_alert": {
+      "title": "出力は既に完了しました",
+      "text": "Projectフォルダには、既にいくつかのエクスポートファイルが含まれています。 同名のファイルは上書きされます。",
+      "cta": "続行してもよろしいですか？",
+      "okButtonLabel": "有効",
+      "cancelButtonLabel": "無効"
+    },
+    "pause_alert": {
+      "title": "処理の一時停止",
+      "text": "処理を一時停止すると、匿名化を除く、選択したその他のファイナライズとエクスポートオプションが失われます。 続行してもよろしいですか？",
+      "okButtonLabel": "有効",
+      "cancelButtonLabel": "無効"
+    }
+  },
+  "countries": {
+    "international": "全世界",
+    "CN": "中国用",
+    "JP": "日本用",
+    "KR": "韓国用"
+  },
+  "mapView": {
+    "map": "マップ",
+    "satellite": "衛星",
+    "here": {
+      "copyright": {
+        "terms": "利用規約",
+        "$link": "https://legal.here.com/en/terms/serviceterms/us"
+      }
+    }
+  },
+  "import_shape": {
+    "title": "ファイルをアップロード",
+    "cancel": "キャンセル",
+    "refresh": "リフレッシュする",
+    "upload": "アップロードする",
+    "available": "利用可能なファイル",
+    "notAvailable": "サポートされているファイルが見つかりません。"
+  },
+  "coordsys": {
+    "errors": {
+      "listSystems": "座標系の一覧表示に失敗しました。",
+      "importSystem": "座標系のインポートに失敗しました。",
+      "listWkt": "WKTファイルの一覧表示に失敗しました。",
+      "importWkt": "WKTファイルのインポートに失敗しました。"
+    },
+    "dialog": {
+      "title": "座標系："
+    },
+    "deleteDialog": {
+      "title": "座標系を削除する",
+      "titleWkt": "WKTファイルを削除する",
+      "text": "{{name}}を削除しますか？",
+      "textWkt": "{{name}}の WKTファイルを削除しますか？",
+      "cancel": "キャンセル",
+      "delete": "完全に消去"
+    },
+    "importDialog": {
+      "csysTitle": "座標系をインポートする",
+      "csysSubtitle": "利用可能なCSYSファイル",
+      "wktTitle": "{{name}}WKTファイルをインポートする",
+      "wktSubtitle": "利用可能なWKTファイル",
+      "notAvailable": "サポートされているファイルが見つかりません。",
+      "proceed": "続行",
+      "cancel": "キャンセル",
+      "refresh": "リフレッシュする",
+      "upload": "読み込む",
+      "sameCsysName": "インポートした同じ名前のCSYSファイルが、既にインポートされています。",
+      "importedCsysName": "そのCSYSファイルでインポートされたカスタム座標系は{{name}}で、これが選択されます。",
+      "confirmation": "続行しますか?"
+    },
+    "selection": {
+      "projectFormTitle": "座標系：",
+      "processingDialogTitle": "Project座標系",
+      "automatic": "自動",
+      "import": "USBからインポートします"
+    },
+    "csysInfo": {
+      "title": "座標系情報",
+      "cancel": "キャンセル",
+      "loadWkt": "WKTファイルをロードする",
+      "viewWkt": "WKTファイルを表示する",
+      "confirm": "適用",
+      "transformation": "変換",
+      "ellipsoid": "楕円体",
+      "projection": "投影法",
+      "geoidModel": "ジオイドモデル",
+      "cscsModel": "CSCSモデル",
+      "wkt": "WKT",
+      "close": "閉じる",
+      "delete": "完全に消去",
+      "wktTitle": "WKT ファイル{{name}}",
+      "wktLoaded": "読み込み済み",
+      "wktMissing": "見つかりません"
+    },
+    "overwriteDialog": {
+      "title": "{{p2}} という名前の.CSYSファイルは既にインポートされています。",
+      "text": "続行（Proceed）をクリックすると、システムは保存されているCSYSをロードします。",
+      "okButton": "続行",
+      "cancelButton": "キャンセル"
+    },
+    "processingDialog": {
+      "text1": "この処理ラウンドが開始されると、このProjectのすべてのJobの座標系がロックされます。",
+      "text2": "座標系は、後ほどPegasus OFFICEで変更できます。",
+      "cta": "続行してもよろしいですか？",
+      "cancelButton": "キャンセル",
+      "okButton": "処理を開始"
+    }
+  }
+}

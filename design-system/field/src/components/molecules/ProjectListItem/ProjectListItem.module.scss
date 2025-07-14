@@ -1,0 +1,117 @@
+@import 'styles/main';
+
+// USING BEM NOTATION
+.projectListItem {
+  @include flexAlign(center, space-between);
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  gap: 15px;
+
+  @include applyThemes() {
+    background-color: rgba(t(primary-3), 0.6);
+  }
+
+  .leftSide {
+    @include flexAlign(center, flex-start);
+    flex: 1 1 auto;
+
+    .img {
+      align-self: stretch;
+      width: 109px;
+      height: 60px;
+      border-radius: 10px;
+      cursor: pointer;
+      object-fit: cover;
+      img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .imgPlaceholder {
+      align-self: stretch;
+      width: 109px;
+      border-radius: 10px;
+      display: flex;
+      cursor: pointer;
+      @include applyThemes() {
+        background-color: t(primary-6);
+      }
+
+      img {
+        margin: auto;
+        max-width: 60%;
+      }
+    }
+
+    .title {
+      @include testi('Body1');
+      color: map-deep-get($themes, 'light', 'primary-2');
+      width: 20%;
+      margin-left: 25px;
+      cursor: pointer;
+
+      h1 {
+        font-size: 1.6rem;
+        @include ellipsis;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .coordinateSystem {
+        margin-left: 6px;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background-color: map-deep-get($themes, 'light', 'primary-1');
+          margin-right: 6px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    .description {
+      @include testi('Body1');
+      font-size: 1.4rem;
+      margin: 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: map-deep-get($themes, 'light', 'primary-1');
+      cursor: pointer;
+
+      .scanNumber {
+        font-size: 3rem;
+        height: 35px;
+      }
+    }
+
+    .projectCompletion {
+      // @include flexAlign();
+      flex: 1 1 auto;
+      margin: 0 20px;
+      background-color: map-deep-get($themes, 'dark', 'primary-22');
+      padding: 12px;
+      border-radius: 12px;
+    }
+  }
+
+  .rightSide {
+    @include flexAlign(center, flex-end);
+
+    .processing {
+      circle {
+        stroke: map-deep-get($themes, 'light', 'primary-1');
+      }
+    }
+  }
+}

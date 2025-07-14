@@ -1,0 +1,14 @@
+@import 'styles/main';
+.container {
+  @include blurBg();
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  @include applyThemes() {
+    background-color: rgba(t(primary-10), 0.5);
+  }
+}
+.flexWrapper {
+  display: flex;
+  gap: 1px;
+}

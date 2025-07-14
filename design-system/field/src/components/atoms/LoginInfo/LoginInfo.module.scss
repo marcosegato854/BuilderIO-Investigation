@@ -1,0 +1,27 @@
+@import 'styles/main';
+
+.container {
+  @include testi('Body1');
+  @include flexAlign;
+  @include applyThemes() {
+    color: t('primary-11');
+  }
+
+  .play {
+    cursor: pointer;
+    @include pathDimension(40px);
+    margin-left: 12px;
+    cursor: pointer;
+
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+      &:hover {
+        path {
+          fill: t('primary-11');
+        }
+      }
+    }
+  }
+}

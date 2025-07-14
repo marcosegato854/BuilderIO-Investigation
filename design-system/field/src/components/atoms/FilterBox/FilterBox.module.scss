@@ -1,0 +1,183 @@
+@import 'styles/main';
+
+.filterBox {
+  $c: &;
+  @include testi('Caption');
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.title {
+  // text-transform: uppercase;
+  margin-right: 5px;
+
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+
+  &[data-disabled] {
+    @include applyThemes() {
+      color: t(primary-13);
+    }
+  }
+}
+
+.title {
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+}
+
+.selector {
+  @include applyThemes() {
+    border-color: t(primary-13);
+    color: t(primary-11);
+    padding-right: 30px;
+
+    // dropdown triangle
+    // downward triangle
+    &::after {
+      // TRICK for drawing a triangle using borders
+      // top right bottom left
+      border-color: t(primary-11) transparent transparent transparent;
+    }
+
+    // dropdown triangle
+    // upword triangle
+    &.active::after {
+      // TRICK for drawing a triangle using borders
+      // top right bottom left
+      border-color: transparent transparent t(primary-1) transparent;
+    }
+  }
+}
+
+.option {
+  @include applyThemes() {
+    background: t(primary-13);
+    &:hover {
+      background-color: t(primary-11);
+      color: t(primary-1);
+    }
+  }
+}
+
+.selector {
+  position: relative;
+  flex: 1;
+  padding: 6px 0 6px 0;
+  background-color: transparent;
+  font-weight: 400; // Regular
+
+  @include applyThemes() {
+    border-color: t(dropdown);
+    color: t(primary-11);
+  }
+  // dropdown triangle
+  // downward triangle
+  &::after {
+    // TRICK for drawing a triangle using borders
+    // top right bottom left
+    @include applyThemes() {
+      border-color: t(primary-11) transparent transparent transparent;
+    }
+  }
+  // dropdown triangle
+  // upword triangle
+  &.active::after {
+    // TRICK for drawing a triangle using borders
+    // top right bottom left
+    @include applyThemes() {
+      border-color: transparent transparent t(primary-11) transparent;
+    }
+  }
+  .option {
+    @include applyThemes() {
+      background: t(dropdown);
+    }
+
+    &:hover {
+      @include applyThemes() {
+        background-color: t(primary-11);
+        color: t(primary-1);
+      }
+    }
+  }
+
+  // dropdown triangle
+  &::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    border: 7px solid transparent;
+  }
+
+  // dropdown triangle if the selecto box has been clicked
+  &.active::after {
+    top: 5px;
+  }
+
+  // since :disabled pseudo-class doesn't work in non-input elements
+  // we can achieve the same thing using the disabled attribute of the element
+  // so if disabled attribute is present, apply the following style
+  &[data-disabled] {
+    @include applyThemes() {
+      border-color: t(primary-13);
+      color: t(primary-13);
+      // dropdown triangle
+      &::after {
+        border-color: t(primary-13) transparent transparent transparent;
+      }
+
+      // when select is in active state
+      &.active::after {
+        top: 5px;
+        border-color: transparent transparent t(primary-13) transparent;
+      }
+    }
+    &.active::after {
+      top: 5px;
+    }
+  }
+
+  &[data-disabled] ~ .icon {
+    @include applyThemes() {
+      color: t(primary-13);
+    }
+  }
+}
+
+// list of options
+.optionList {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  // since it needs to start at the bottom of the select box
+  // we need to shift it down as much as the the height of its parent
+  top: 28px;
+  left: 0;
+  @include applyThemes() {
+    color: t(primary-1);
+  }
+}
+
+// a single option
+.option {
+  list-style-type: none;
+  padding: 5px 10px;
+  cursor: pointer;
+
+  &--selected {
+    // text-transform: uppercase;
+  }
+}
+
+.menu {
+  &OrderTitle {
+    display: block;
+    padding: 12px 16px 4px 16px;
+    font-size: 1.2em;
+    color: map-deep-get($themes, 'dark', 'primary-13');
+  }
+}

@@ -1,0 +1,79 @@
+@import 'styles/main';
+
+.item {
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &Header {
+    @include flexAlign(center, space-between);
+    padding: 3px 10px;
+  }
+
+  &Editing {
+    @include applyThemes() {
+      border: 2px solid t(primary-4);
+    }
+    border-radius: 6px;
+
+    .itemHeader {
+      @include applyThemes() {
+        background-color: t(primary-4);
+        color: t(primary-11);
+      }
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+  }
+
+  &NotListed {
+    .itemHeader {
+      padding-right: 3px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+
+  .name {
+    text-transform: uppercase;
+    @include testi('Body1');
+  }
+
+  .ipAddress {
+    @include testi('Body1');
+    font-size: 1.3rem;
+  }
+}
+
+.truncate {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iconsList {
+  @include flexAlign(center, space-evenly);
+  gap: 15px;
+
+  // select all the children (icons)
+  & * {
+    @include applyThemes() {
+      fill: t(primary-11);
+    }
+  }
+
+  &Action {
+    cursor: pointer;
+  }
+}
+
+.rtkServerFormContainer {
+  padding: 0px 8px;
+}

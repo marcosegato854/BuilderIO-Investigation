@@ -1,0 +1,23 @@
+@import 'styles/main';
+
+.container {
+  &White,
+  &Processing {
+    path {
+      fill: map-deep-get($themes, 'light', 'primary-1');
+    }
+  }
+}
+
+.rightTriangle {
+  margin-left: 12px;
+  width: 16px;
+
+  path {
+    fill: map-deep-get($themes, 'light', 'primary-1');
+  }
+}
+
+.containerProcessing {
+  padding: 0;
+}

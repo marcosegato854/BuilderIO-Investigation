@@ -1,0 +1,50 @@
+// *** PRIMARY COLORS ***
+
+// DARK UI
+$color-dark-ui-black: #000;
+$color-dark-ui-grey-dark-1: #191919;
+$color-dark-ui-grey-dark-2: #323232;
+$color-dark-ui-grey-1: #4a4a4a;
+$color-dark-ui-grey-2: #777;
+$color-dark-ui-white: #fff;
+
+// LIGHT UI
+$color-light-ui-white: #fff;
+$color-light-ui-grey-light-1: #d2d2d2;
+$color-light-ui-grey-light-2: #b4b4b4;
+$color-light-ui-grey-light-3: #646464;
+$color-light-ui-grey-dark: #191919;
+$color-light-ui-black: #000;
+
+// *** SECONDARY COLORS ***
+$color-red: #cd171a;
+$color-yellow: #efcf0a;
+$color-yellow-1: #f5ea00;
+$color-yellow-2: #fcee21;
+$color-black: #000;
+$color-white: #fff;
+$color-green: #7faf42;
+$color-green-light: #a5d867;
+$color-green-dark: #509e2f;
+$color-orange: #ed8b00;
+$color-blue: #0097ba;
+$color-blue-dark: #01577d;
+$color-lilac: #c724cd;
+$color-disabled: #585858;
+
+// RTK / GDOP ACCURACY COLOURS
+$color-accuracy-bad: #ff0000;
+$color-accuracy-average: #ffff00;
+$color-accuracy-good: #00ff00;
+
+// FONT
+// $default-font-size: 1.6rem;
+
+// GRID
+// we can change them as we want and the CSS will automatically follow up
+// say that on another project we want smaller horizontal gutters
+// we only need to change that single one and will take effect on the entire page
+// it seems like MAGIC!
+// $grid-width: 114rem;
+// $gutter-vertical: 8rem;
+// $gutter-horizontal: 6rem;

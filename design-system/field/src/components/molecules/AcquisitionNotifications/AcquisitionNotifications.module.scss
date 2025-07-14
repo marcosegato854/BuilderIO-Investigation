@@ -1,0 +1,79 @@
+@import 'styles/main';
+
+$swiper_height: 32px;
+$swiper_height_iPad: 42px;
+.outerSwiper {
+  pointer-events: all;
+  height: $swiper_height;
+  overflow: hidden;
+  position: relative;
+}
+.severity {
+  pointer-events: all;
+  height: $swiper_height;
+  // overflow: hidden;
+  position: relative;
+  &::before {
+    content: ' ';
+    width: 100%;
+    height: 50px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+  }
+  &::after {
+    content: ' ';
+    width: 100%;
+    height: 8px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+  }
+
+  @include applyThemes() {
+    background-color: rgba(t(primary-1), 0.5);
+    &.severity-2 {
+      // ERROR
+      &::before {
+        background: linear-gradient(
+          0deg,
+          rgba(t(secondary-6), 0.2) 0%,
+          rgba(t(secondary-6), 0) 100%
+        );
+      }
+      &::after {
+        background: t(secondary-6);
+      }
+    }
+    &.severity-1 {
+      // WARNING
+      &::before {
+        background: linear-gradient(
+          0deg,
+          rgba(t(secondary-10), 0.2) 0%,
+          rgba(t(secondary-10), 0) 100%
+        );
+      }
+      &::after {
+        background: t(secondary-10);
+      }
+    }
+    &.severity-4 {
+      // MESSAGE
+    }
+  }
+
+  &.iPad {
+    height: $swiper_height_iPad;
+    .outerSwiper {
+      height: $swiper_height_iPad;
+    }
+  }
+}

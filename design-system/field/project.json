@@ -1,0 +1,77 @@
+{
+  "root": "libs/field",
+  "sourceRoot": "libs/field/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/field/**/*.{ts,tsx}"],
+        "fix": true
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/field"],
+      "options": {
+        "jestConfig": "libs/field/jest.config.js",
+        "passWithNoTests": true
+      },
+      "TEST": true
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "open": true,
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/field/src"]
+        },
+        "config": {
+          "configFolder": "libs/field/.storybook"
+        },
+        "assets": [
+          {
+            "input": "libs/field/public/assets",
+            "glob": "**/*",
+            "output": "assets"
+          }
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/react",
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/field/src"]
+        },
+        "outputPath": "dist/storybook/field",
+        "config": {
+          "configFolder": "libs/field/.storybook"
+        },
+        "assets": [
+          {
+            "input": "libs/field/public/assets",
+            "glob": "**/*",
+            "output": "assets"
+          }
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

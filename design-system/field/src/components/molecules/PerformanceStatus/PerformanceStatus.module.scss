@@ -1,0 +1,167 @@
+@import 'styles/main';
+
+.sysInfo,
+.sysDetails {
+  display: flex;
+  //width: 345px;
+  height: 36px;
+  border-radius: 20px;
+  align-items: center;
+  padding: 0 20px;
+  position: absolute;
+  top: 16px;
+  right: 72px;
+  z-index: 1407;
+
+  @include applyThemes() {
+    background-color: t(primary-2);
+    color: t(primary-11);
+  }
+  svg {
+    @include pathDimension(20px);
+  }
+  .circularProgress {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .statusWarning {
+    @include pathDimension(16px);
+  }
+
+  > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include testi('Caption');
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+  .label {
+    margin-right: 4px;
+    white-space: nowrap;
+  }
+
+  .lastSpan {
+    margin-left: 4px;
+  }
+
+  .caret {
+    transform: rotate(0);
+    transition: all 0.3s;
+    @include pathDimension(12px);
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+
+    &Open {
+      transform: rotate(180deg);
+    }
+  }
+
+  .tachometer {
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+}
+
+.sysInfo {
+  cursor: pointer;
+}
+
+.sysDetails {
+  //width: 440px;
+  height: auto;
+  top: 56px;
+  right: 18px;
+  padding: 0;
+
+  &Column {
+    justify-content: stretch;
+    padding: 16px;
+    &:not(:last-child) {
+      @include applyThemes() {
+        border-right: 1px solid t('primary-21');
+      }
+    }
+
+    .row {
+      @include flexAlign(center, space-between);
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .batteryRow {
+      position: relative;
+      .batteryStatus {
+        @include flexAlign(center, flex-start);
+        /* &Warning {
+          position: relative;
+          top: 2px;
+          margin-left: 4px;
+        } */
+        .label {
+          min-width: 28px;
+          text-align: left;
+        }
+
+        .name {
+          margin-left: 6px;
+          position: relative;
+          /* top: -2px; */
+        }
+      }
+      .batteryDuration {
+        text-align: left;
+        position: relative;
+        top: -4px;
+      }
+    }
+
+    .statusWarning {
+      @include pathDimension(16px);
+    }
+  }
+
+  & > div {
+    align-items: stretch;
+  }
+}
+
+.acplug {
+  margin-right: 6px;
+  @include applyThemes() {
+    path {
+      fill: t('primary-11');
+    }
+  }
+}
+
+.batteryIcon {
+  @include applyThemes() {
+    path,
+    rect {
+      fill: t('primary-11');
+    }
+  }
+}
+
+.pie {
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+    
+.usersSVG {
+  padding: 4px;
+}

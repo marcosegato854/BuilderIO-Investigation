@@ -1,0 +1,22 @@
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+import {
+  StatusBarNotification,
+  IStatusBarNotificationProps,
+} from './StatusBarNotification'
+
+export default {
+  title: 'Atoms/StatusBarNotification',
+  component: StatusBarNotification,
+  argTypes: {},
+  parameters: { actions: { argTypesRegex: '^on.*' } },
+} as Meta
+
+const Template: Story<IStatusBarNotificationProps> = (args) => {
+  return <StatusBarNotification {...args} />
+}
+
+export const Default = Template.bind({})
+Default.args = {
+  message: 'status bar message',
+}

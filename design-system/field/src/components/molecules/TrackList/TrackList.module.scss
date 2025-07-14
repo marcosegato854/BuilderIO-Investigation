@@ -1,0 +1,154 @@
+@import 'styles/main';
+
+.container {
+  width: 100%;
+  @include applyThemes() {
+    color: t('primary-11');
+  }
+  @include testi('Body1');
+}
+
+.track {
+  @include testi('Body1');
+
+  &Container {
+    max-height: 300px;
+  }
+
+  @include flexAlign(center, space-between);
+
+  &Click {
+    @include flexAlign(center, flex-start);
+    cursor: pointer;
+    min-width: 0;
+
+    svg {
+      min-width: 14px;
+    }
+  }
+
+  &Edit {
+    @include flexAlign(center, flex-end);
+  }
+
+  &Caret {
+    margin-right: 8px;
+    @include pathDimension(12px);
+    transform: rotate(-90deg);
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+    transition: all 0.3s;
+  }
+
+  &Name {
+  }
+
+  &Icon {
+    /* width: 16px; */
+    height: 24px;
+
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+  }
+
+  &Dot {
+    height: 12px;
+    width: 12px;
+    background-color: violet;
+    border-radius: 50%;
+    margin: 0 12px;
+  }
+
+  &.trackSelected {
+    .trackCaret {
+      transform: rotate(0deg);
+    }
+
+    .trackName {
+      font-weight: 700;
+    }
+  }
+
+  &.trackInCapture {
+    .trackDot {
+      animation: pulse 1s infinite;
+    }
+  }
+
+  &Container:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+
+  &Extract {
+    @include flexAlign();
+    padding: 8px;
+  }
+
+  &Disabled {
+    opacity: 0.5;
+    text-decoration-line: line-through;
+  }
+
+  .disableIcon {
+    @include pathDimension(16px);
+    cursor: pointer;
+    filter: grayscale(1);
+    opacity: 0.5;
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+
+    &On {
+      filter: grayscale(0);
+      opacity: 1;
+      filter: drop-shadow(1px 1px 2px t(secondary-5));
+      @include applyThemes() {
+        path {
+          fill: t(secondary-5);
+        }
+      }
+    }
+  }
+
+  .flipIcon {
+    margin-right: 8px;
+    @include pathDimension(14px);
+    cursor: pointer;
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+}
+
+.internalTracks {
+  padding-left: 16px;
+}
+
+.editable {
+  @include testi('Body1');
+  font-size: 1.5625rem;
+}
+
+@include applyThemes {
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+}

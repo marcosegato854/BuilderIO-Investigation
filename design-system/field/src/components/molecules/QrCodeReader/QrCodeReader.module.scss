@@ -1,0 +1,107 @@
+@import 'styles/main';
+
+.qrcode {
+  text-align: center;
+  p {
+    @include testi('Body1');
+    @include applyThemes() {
+      color: t('primary-11');
+    }
+    margin-bottom: 8px;
+    @include big-tablet {
+      margin-bottom: 12px;
+    }
+  }
+
+  svg {
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+  }
+  margin-bottom: 24px;
+
+  &Reader {
+    max-width: 80%;
+    width: 60vh;
+
+    &.qrcodeLegacy {
+      /* display: none; */
+    }
+  }
+
+  &Container {
+    @include flexAlign();
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include applyThemes() {
+      background-color: t('primary-1');
+    }
+  }
+
+  &Close {
+    position: fixed;
+    left: 24px;
+    top: 24px;
+
+    svg {
+      width: 24px;
+
+      @include applyThemes() {
+        path {
+          fill: t('primary-11');
+        }
+      }
+    }
+  }
+
+  &Header {
+    @include testi('Body1');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+  }
+}
+
+.paper {
+  @include applyThemes() {
+    background-color: t('secondary-5');
+    color: t('primary-11');
+
+    svg {
+      path {
+        color: t('primary-11');
+      }
+    }
+  }
+
+  border-radius: 6px;
+  padding: 12px;
+  transform: translateX(-50%);
+  position: fixed;
+  width: calc(100% - 32px);
+  left: 50%;
+  bottom: 16px;
+  @include flexAlign(center, space-between);
+
+  &Msg {
+    @include flexAlign();
+
+    svg {
+      width: 24px;
+      margin-right: 12px;
+    }
+
+    span {
+      @include testi('Body1');
+      margin-right: 24px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import 'styles/main';
+
+.scrollableOnLeft {
+  // need to specify height in order to make scrollbar appear
+  // take parent's whole height
+  height: 100%;
+  // hide bottom scrollbar when overflowing on x axis
+  overflow-x: hidden;
+  // show scrollbar when overflowing on y axis
+  overflow-y: auto;
+  // to make the scrollbar appear on the left
+  // we change the direction of the text
+  direction: rtl;
+
+  // to override the text direction of the page's content component
+  & > * {
+    direction: ltr;
+  }
+
+  //style the scrollbar
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @include applyThemes {
+      background-color: t(primary-3);
+    }
+
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include applyThemes {
+      background-color: t(primary-7);
+    }
+
+    border-radius: 10px;
+  }
+}

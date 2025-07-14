@@ -1,0 +1,12 @@
+@import 'styles/main';
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  @include noSelectText();
+  > * {
+    pointer-events: all;
+  }
+}

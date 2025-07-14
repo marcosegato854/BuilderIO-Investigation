@@ -1,0 +1,33 @@
+@import 'styles/main';
+
+.redPlusMobileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  border: 0;
+  transition: background-color 0.2s;
+  outline: none; // remove the focus rectangle around the button
+  cursor: pointer;
+
+  @include applyThemes() {
+    background-color: t(secondary-5);
+  }
+
+  &:active {
+    background-color: #a31315;
+  }
+
+  &__icon {
+    @include pathDimension(20px);
+    fill: white;
+  }
+
+  &:disabled {
+    @include applyThemes() {
+      background-color: t(dropdown);
+    }
+  }
+}

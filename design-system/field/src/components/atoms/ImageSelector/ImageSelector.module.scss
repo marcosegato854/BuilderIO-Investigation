@@ -1,0 +1,36 @@
+@import 'styles/main';
+
+.imageSelector {
+  @include applyThemes() {
+    background-color: t(primary-1);
+  }
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+// taking an approach similar to BEM in case of variants
+// instead of usign block--variant (&--variant), we use camelCase blockVariant (&Variant)
+// in this way we can benefit from autocompletion when using style object in className
+.photo {
+  &Selected {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &Unselected,
+  &Overlay {
+    @include absCenter;
+    height: 78px;
+    width: 78px;
+  }
+}
+
+.uploadButton {
+  display: none;
+  position: absolute;
+  z-index: -1;
+}

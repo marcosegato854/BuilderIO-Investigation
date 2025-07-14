@@ -1,0 +1,58 @@
+@import 'styles/main';
+
+// USING BEM NOTATION
+.jobGridItem {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  width: 360px;
+  height: 270px;
+  overflow: hidden;
+
+  &Acquired {
+    img {
+      opacity: 0.5;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      object-fit: cover;
+    }
+  }
+
+  &__imgPlaceholder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    @include applyThemes() {
+      background-color: t(primary-6);
+    }
+    img {
+      margin: 20% auto auto auto;
+      max-width: 30%;
+    }
+    cursor: pointer;
+  }
+
+  &__header {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    @include blurBg();
+  }
+}
+
+.processingStatusContainer {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  right: 18px;
+}

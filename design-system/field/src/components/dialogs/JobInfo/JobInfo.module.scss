@@ -1,0 +1,176 @@
+@import 'styles/main';
+
+.jobInfo {
+  // display: inline-block;
+
+  @include scrollableDialogContainer();
+
+  @include applyThemes() {
+    background-color: t(primary-5);
+    color: t(primary-11);
+  }
+
+  width: 462px;
+  border-radius: 10px;
+
+  // to fix border radius
+  overflow: hidden;
+
+  .scrolling {
+    margin: 2px 8px 2px 0;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  padding: 16px 24px 10px 24px;
+
+  @include big-tablet {
+    padding: 20px 30px;
+  }
+}
+
+.title {
+  @include testi('Heading5');
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  margin: 0 0 0 26px;
+}
+
+.main {
+  padding: 16px 30px 25px 30px;
+}
+
+.label {
+  @include testi('Body1');
+  font-weight: 400;
+  margin-top: 5px;
+  display: inline-block;
+
+  &Inner {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+
+  @include big-tablet {
+    margin-top: 15px;
+  }
+}
+
+.value {
+  @include testi('Body1');
+  font-weight: 600;
+  margin-top: 5px;
+
+  &Inner {
+    margin: 0;
+  }
+  @include big-tablet {
+    margin-top: 15px;
+  }
+}
+
+.insideIcon {
+  display: block;
+  margin-right: 12px;
+  vertical-align: super;
+  @include applyThemes() {
+    stroke: t(primary-11);
+  }
+}
+
+.innerCell {
+  display: flex;
+  align-items: center;
+}
+
+.field {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.ucase {
+  text-transform: uppercase;
+}
+
+.editIcon {
+  width: 14px;
+
+  @include applyThemes() {
+    fill: t(primary-11);
+  }
+}
+
+.antennaButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px !important;
+}
+
+.cameraContainer {
+  height: 190px;
+  border-radius: 5px;
+  margin-top: 10px !important;
+  padding: 4px;
+
+  @include applyThemes() {
+    background-color: t(primary-14);
+    border: 2px solid t(primary-11);
+  }
+}
+
+.footer {
+  height: 82px;
+
+  @include applyThemes() {
+    background-color: t(primary-6);
+  }
+
+  padding: 18px 25px 20px 25px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.noError {
+  p:global(.Mui-error) {
+    display: none;
+  }
+}
+
+.antennaValues {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.accuracy {
+  padding-top: 24px;
+  padding-right: 24px;
+  pointer-events: none;
+}
+
+.standardUserValues {
+  @include testi('ButtonLabel');
+  display: block;
+  width: 100%;
+  // text-align: right;
+  @include applyThemes() {
+    color: t(secondary-5);
+    &.valid {
+      color: t(secondary-4);
+    }
+  }
+}

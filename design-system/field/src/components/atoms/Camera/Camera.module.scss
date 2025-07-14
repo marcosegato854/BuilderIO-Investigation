@@ -1,0 +1,41 @@
+@import 'styles/main';
+
+.container {
+  width: 100%;
+  height: 100%;
+  &Contain {
+    object-fit: contain;
+  }
+  &Cover {
+    object-fit: cover;
+  }
+  overflow: hidden;
+}
+
+.camera {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  &Contain {
+    object-fit: contain;
+  }
+  &Cover {
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+.align {
+  &Center {
+    object-position: center;
+    // object-fit: cover;
+  }
+  &Right {
+    object-position: right;
+    // object-fit: cover;
+  }
+  &Left {
+    object-position: left;
+    // object-fit: cover;
+  }
+}

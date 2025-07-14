@@ -1,0 +1,94 @@
+@import 'styles/main';
+
+.sidePanel {
+  height: 383px;
+  display: flex;
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  box-shadow: 0 0 15px 0 rgba(map-deep-get($themes, 'dark', 'primary-1'), 0.05);
+
+  &__pageContainer,
+  &__menu {
+    @include applyThemes() {
+      background-color: rgba(t(primary-10), 0.85);
+    }
+  }
+
+  // contains navigationBar and pageContent
+  &__pageContainer {
+    width: 278px;
+    padding: 12px 9px;
+    margin-right: 4px;
+    border-radius: 4px;
+  }
+
+  &__navigationBar {
+    @include testi('Body1');
+    font-weight: 300;
+    padding-left: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+  }
+
+  &__navigationTab {
+    font-weight: 400;
+    @include applyThemes() {
+      border-bottom: 2px solid t(secondary-5);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+  &__menuIcon {
+    @include pathDimension(20px);
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+
+  &__menuIconContainer {
+    transition: all 0.2s;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    &--active {
+      @include applyThemes() {
+        background-color: t(primary-4);
+      }
+    }
+
+    &__disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) and (max-height: 640px) {
+  .sidePanel {
+    height: 300px;
+
+    &__pageContainer {
+      height: 100%;
+    }
+  }
+}

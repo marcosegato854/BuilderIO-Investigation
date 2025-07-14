@@ -1,0 +1,59 @@
+@import 'styles/main';
+
+/* According to the mockup the colors will be the same for every theme */
+
+.container {
+  position: relative;
+  background-color: rgba(map-deep-get($themes, 'dark', 'primary-14'), 0.5);
+  @include testi('Body1');
+  color: map-deep-get($themes, 'dark', 'primary-11');
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  padding: 12px;
+  @include blurBg();
+  &Close {
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgba(map-deep-get($themes, 'dark', 'primary-1'), 0.5);
+    border-radius: 50%;
+    @include flexAlign();
+
+    svg {
+      fill: currentColor;
+      height: 16px;
+    }
+  }
+
+  .header {
+    color: inherit;
+    text-align: center;
+    padding: 12px;
+    @include testi('Heading5');
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  .content {
+    background-color: map-deep-get($themes, 'dark', 'primary-3');
+    border-radius: 6px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+    /* max-width: 680px; */
+    width: 680px;
+
+    .item {
+      min-width: 0;
+      @include ellipsis;
+    }
+  }
+
+  .tabpanel {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,66 @@
+@import 'styles/main';
+
+// USING BEM NOTATION
+.singleTool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  // add animation when background changes color
+  transition: background-color 0.2s;
+  box-shadow: 0 0 15px 0 rgba(map-deep-get($themes, 'dark', 'primary-1'), 0.05);
+
+  @include applyThemes() {
+    background-color: rgba(t(primary-10), 0.85);
+
+    // select all elements inside <svg>
+    svg * {
+      fill: t(primary-11);
+    }
+
+    &.selected {
+      background-color: t(primary-11);
+
+      svg * {
+        fill: t(primary-10);
+      }
+    }
+  }
+
+  svg {
+    transition: all 0.2s;
+    @include pathDimension(22px);
+  }
+
+  &.disabled {
+    pointer-events: none;
+    svg {
+      opacity: 0.5;
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    &.selected {
+      @include applyThemes() {
+        background-color: t(primary-11);
+
+        svg * {
+          fill: t(primary-10);
+        }
+      }
+    }
+    @include on-hover {
+      @include applyThemes() {
+        background-color: t(primary-11);
+        svg * {
+          fill: t(primary-10);
+        }
+      }
+    }
+  }
+}

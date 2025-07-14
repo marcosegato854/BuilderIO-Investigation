@@ -1,0 +1,23 @@
+@import 'styles/main';
+
+.container {
+  @include testi('ButtonLabel');
+  display: inline-block;
+  padding: 0px 6px;
+  line-height: 30px;
+  white-space: nowrap;
+  background-color: map-deep-get($themes, 'dark', 'primary-9');
+  color: map-deep-get($themes, 'dark', 'primary-2');
+  border-radius: 4px;
+  &.accuracy-0 {
+    background-color: $color-accuracy-good;
+  }
+  &.accuracy-1 {
+    background-color: $color-accuracy-average;
+  }
+  &.accuracy-2 {
+    background-color: $color-accuracy-bad;
+    color: map-deep-get($themes, 'dark', 'primary-11');
+    font-weight: 700;
+  }
+}

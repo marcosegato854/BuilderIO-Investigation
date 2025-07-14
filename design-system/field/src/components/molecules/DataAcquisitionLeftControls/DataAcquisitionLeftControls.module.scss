@@ -1,0 +1,25 @@
+@import 'styles/main';
+
+.controls {
+  display: flex;
+  gap: 13px;
+  @include noSelectText();
+  > * {
+    pointer-events: all;
+  }
+}
+
+.left {
+  @include noSelectText();
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.right {
+  @include noSelectText();
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-self: flex-end;
+}

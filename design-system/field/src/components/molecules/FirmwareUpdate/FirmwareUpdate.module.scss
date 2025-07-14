@@ -1,0 +1,36 @@
+@import 'styles/main';
+
+/* According to the mockup the colors will be the same for every theme */
+
+.closeicon {
+  svg {
+    @include pathDimension(10px);
+  }
+}
+
+.headericon {
+  svg {
+    @include pathDimension(32px);
+  }
+}
+
+.prerequisites {
+  &__done {
+    @include pathDimension(20px);
+    path {
+      fill: map-deep-get($themes, 'dark', 'secondary-4');
+    }
+  }
+  &__stopped {
+    @include pathDimension(20px);
+    path {
+      fill: map-deep-get($themes, 'dark', 'primary-11');
+    }
+  }
+  &__error {
+    @include pathDimension(20px);
+    path {
+      fill: map-deep-get($themes, 'dark', 'secondary-5');
+    }
+  }
+}

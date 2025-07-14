@@ -1,0 +1,245 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react'
+import {
+  fireEvent,
+  queries,
+  RenderResult,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react'
+import NewJobForm from 'components/dialogs/NewJobForm/NewJobForm'
+import { DialogManager } from 'components/organisms/DialogManager/DialogManager'
+import moxios from 'moxios'
+import { dropRepeats, mergeDeepRight, prop } from 'ramda'
+import { store } from 'store'
+import { mkNewJob } from 'store/features/dataStorage/mockApi'
+import {
+  dataStorageJobTypesActions,
+  dataStorageProjectDetailActions,
+  selectDataStorageTempJob,
+} from 'store/features/dataStorage/slice'
+import { resetStoreAction } from 'store/features/global/slice'
+import {
+  scannerInfoActions,
+  scannerSupportedSettingsActions,
+  selectScannerModel,
+  selectScannerSupportedSettings,
+} from 'store/features/scanner/slice'
+import { SettingsRow } from 'store/features/scanner/types'
+import { mockStore } from 'store/mock/mockStoreTests'
+import apiClient from 'store/services/apiClientBackend'
+import { renderWithProvider } from 'utils/test'
+import { relevant } from 'utils/jobs'
+import { getRangesForCoordinateSystem } from 'components/dialogs/NewJobForm/ranges'
+import { systemInfoActions } from 'store/features/system/slice'
+import { SystemInfo } from 'store/features/system/types'
+
+// REMOVED AFTER IPLEMENTING THE NEW SCANNER SETTINGS
+
+const zfSettingsTable = {
+  settings: [
+    {
+      rps: 50,
+      pts: 1000000,
+      mr: 182,
+    },
+    {
+      rps: 100,
+      pts: 1000000,
+      mr: 182,
+    },
+    {
+      rps: 150,
+      pts: 1000000,
+      mr: 182,
+    },
+    {
+      rps: 200,
+      pts: 1000000,
+      mr: 182,
+    },
+    {
+      rps: 267,
+      pts: 1000000,
+      mr: 182,
+    },
+  ],
+}
+
+/**
+ * Mock the store dispatch function
+ * in order to test dispatches and their content
+ */
+
+let component: RenderResult<typeof queries>
+let mockDispatchRealStore: jest.SpyInstance<any, [action: any]>
+let mockedSaveJobApi: jest.SpyInstance<any>
+const mockedLocalStorageGet: jest.Mock<any> = jest.fn(() => null)
+const mockedLocalStorageSet: jest.Mock<any> = jest.fn(() => null)
+const prepareMocks = async () => {
+  mockDispatchRealStore = jest.spyOn(store, 'dispatch')
+  jest.spyOn(global, 'fetch').mockResolvedValue({
+    text: jest.fn().mockResolvedValue(''),
+  } as any)
+  mockedSaveJobApi = mkNewJob()
+  jest.useFakeTimers()
+  moxios.install(apiClient)
+  // moxios.install(mockApiClientDiskManagement)
+  moxios.stubRequest('/datastorage/projects/p/Project002/jobs', {
+    status: 200,
+    response: { jobs: mockStore.dataStorageService.jobs },
+  })
+  moxios.stubRequest('/datastorage/jobtype', {
+    status: 200,
+    response: {
+      jobtype: mockStore.dataStorageService.jobTypes,
+    },
+  })
+  moxios.stubRequest('/position/supportedsatellites', {
+    status: 200,
+    response: {
+      satellites: mockStore.positionService.supportedSatellites,
+    },
+  })
+  // prepare the store
+  await waitFor(
+    () => {
+      store.dispatch(
+        systemInfoActions.success(
+          mergeDeepRight(mockStore.system.info!, {
+            sensorUnit: {
+              connected: true,
+            },
+          }) as SystemInfo
+        )
+      )
+      store.dispatch(
+        dataStorageProjectDetailActions.success(
+          mockStore.dataStorageService.currentProject!
+        )
+      )
+      store.dispatch(
+        dataStorageJobTypesActions.success({
+          jobtype: mockStore.dataStorageService.jobTypes,
+        })
+      )
+      store.dispatch(
+        scannerInfoActions.success({
+          scanner: [
+            {
+              manufacturer: 'ZF',
+              name: 'Scanner1',
+              position: 'Center',
+              model: 'CL-360HD',
+              serial: '5210050',
+              firmware: '1.7.0-RC7',
+            },
+            {
+              manufacturer: 'Velodyne',
+              name: 'FrontSLAM',
+              position: 'Front',
+              model: '',
+              serial: '',
+              firmware: '',
+            },
+          ],
+          softwareversion: '0',
+        })
+      )
+      store.dispatch(
+        scannerSupportedSettingsActions.success(
+          mockStore.scanner.supportedSettings
+        )
+      )
+    },
+    { timeout: 500 }
+  )
+  jest.advanceTimersByTime(500)
+  // render
+  await waitFor(
+    () => {
+      component = renderWithProvider(
+        <div>
+          <DialogManager />
+          <NewJobForm />
+        </div>
+      )(store)
+    },
+    { timeout: 500 }
+  )
+  jest.advanceTimersByTime(500)
+}
+
+describe('NewJobForm ZF Scanner (Store)', () => {
+  beforeEach(async () => {
+    Object.defineProperty(window, 'localStorage', {
+      value: {
+        getItem: mockedLocalStorageGet,
+        setItem: mockedLocalStorageSet,
+      },
+      writable: true,
+    })
+    await prepareMocks()
+  })
+
+  afterEach(() => {
+    jest.restoreAllMocks()
+    mockedSaveJobApi.mockClear()
+    mockDispatchRealStore.mockClear()
+    mockedLocalStorageGet.mockClear()
+    mockedLocalStorageSet.mockClear()
+    moxios.uninstall(apiClient)
+    // moxios.uninstall(mockApiClientDiskManagement)
+    store.dispatch(resetStoreAction())
+    jest.useRealTimers()
+  })
+
+  test('scanner model should be ZF', async () => {
+    const state = await store.getState()
+    const scannerModel = await selectScannerModel(state)
+    expect(scannerModel).toBe('ZF')
+  })
+
+  test('should display profiler rotation speed field', async () => {
+    const showDetailsButton = component.getByTestId('show-details')
+    fireEvent.click(showDetailsButton)
+    expect(component.getByTestId('profiler-rotation-speed')).toBeTruthy()
+  })
+
+  test('should display the max scanner range as a fixed value', async () => {
+    const showDetailsButton = component.getByTestId('show-details')
+    fireEvent.click(showDetailsButton)
+    expect(screen.queryByTestId('max-scanner-range')).not.toBeInTheDocument()
+    expect(component.getByTestId('max-scanner-range-readonly')).toBeTruthy()
+  })
+
+  test('current job type should be Road', async () => {
+    const state = await store.getState()
+    const tempJob = await selectDataStorageTempJob(state)
+    expect(tempJob!.type).toBe('Road')
+  })
+
+  test('should keep the relevant settings from the job type', async () => {
+    const state = await store.getState()
+    const tempJob = await selectDataStorageTempJob(state)
+    expect(relevant(tempJob!)).toEqual(
+      relevant(mockStore.dataStorageService.jobTypes[0])
+    )
+  })
+
+  test('scanner range max value should be related to the scanner', () => {
+    const ranges = getRangesForCoordinateSystem(zfSettingsTable)
+    expect(ranges.scannerRange.max).toBe(182)
+  })
+
+  test('scanner points per second should be related to the scanner', () => {
+    const ranges = getRangesForCoordinateSystem(zfSettingsTable)
+    expect(ranges.scannerPointPerSecond.max).toBe(1000)
+  })
+
+  test('scanner points per second should be related to the scanner', () => {
+    const ranges = getRangesForCoordinateSystem(zfSettingsTable)
+    expect(ranges.scannerRotationSpeed.max).toBe(267)
+  })
+})

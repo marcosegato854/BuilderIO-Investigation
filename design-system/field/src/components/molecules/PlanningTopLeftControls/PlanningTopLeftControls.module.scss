@@ -1,0 +1,30 @@
+@import 'styles/main';
+.container {
+  @include blurBg();
+  display: inline-block;
+  padding: 10px 9px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(map-deep-get($themes, 'dark', 'primary-1'), 0.05);
+  @include applyThemes() {
+    background-color: rgba(t(primary-10), 0.85);
+  }
+  pointer-events: all;
+  > * {
+    cursor: pointer;
+  }
+}
+.flexWrapper {
+  display: flex;
+  gap: 1px;
+
+  svg {
+    @include applyThemes() {
+      path:nth-child(1) {
+        fill: t(primary-11);
+      }
+      path:nth-child(2) {
+        fill: rgba(t(primary-11), 0.4);
+      }
+    }
+  }
+}

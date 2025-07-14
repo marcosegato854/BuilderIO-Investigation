@@ -1,0 +1,114 @@
+@import 'styles/main';
+
+.container {
+  position: absolute;
+  left: 18px;
+  top: 160px;
+  bottom: 200px;
+  @include big-tablet {
+    top: 200px;
+  }
+}
+.cameraList {
+  width: 235px;
+  // padding: 30px;
+  @include applyThemes() {
+    background-color: t(primary-10);
+  }
+  height: calc(100vh - 310px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include big-tablet {
+    height: calc(100vh - 400px);
+  }
+}
+.header {
+  @include testi('Body1');
+  // @include testi('Bold');
+  padding: 10px;
+  position: relative;
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    border-radius: 9px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include applyThemes() {
+      background-color: rgba(t(primary-11), 0.5);
+      path {
+        fill: t(primary-10);
+      }
+    }
+  }
+}
+.scrollable {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 10px;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @include applyThemes {
+      background-color: t(primary-10);
+    }
+
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include applyThemes {
+      background-color: t(primary-7);
+    }
+
+    border-radius: 10px;
+  }
+}
+.customizedGrid {
+  :global(.MuiGrid-container) {
+    margin-bottom: 3px;
+    cursor: pointer;
+    @include applyThemes {
+      &:hover,
+      &[data-selected='true'] {
+        .cameraWrapper {
+          border: 1px solid t(primary-11);
+        }
+      }
+    }
+  }
+}
+.cameraWrapper {
+  border-radius: 5px;
+  @include blurBg(0px); // fixes name layer ignoring border-radius
+  overflow: hidden;
+  height: 130px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+.name {
+  @include testi('ButtonLabel');
+  @include applyThemes() {
+    background-color: rgba(t(primary-10), 0.6);
+    color: t(primary-11);
+  }
+  @include blurBg(40px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}

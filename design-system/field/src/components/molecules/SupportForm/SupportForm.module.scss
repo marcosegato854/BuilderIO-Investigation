@@ -1,0 +1,33 @@
+@import 'styles/main';
+
+.formSelect {
+  > div {
+    width: auto;
+  }
+}
+
+.formRadio {
+  font-size: inherit;
+
+  span {
+    font-size: inherit;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 32px;
+  }
+}
+
+.formEmailLabel {
+  margin-right: 16px;
+}
+
+.buttonsContainer {
+  @include flexAlign();
+  gap: 32px;
+
+  & > button {
+    text-transform: capitalize;
+    padding: 2px 32px;
+  }
+}

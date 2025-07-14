@@ -1,0 +1,50 @@
+@import 'styles/main';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0px 12px 0px;
+
+  &.empty {
+    padding: 0;
+  }
+
+  .newItem {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &Tm {
+      margin-top: 12px;
+    }
+
+    &Disable {
+      cursor: default;
+      opacity: 0.7;
+    }
+
+    @include flexAlign(center, space-between);
+
+    @include applyThemes() {
+      background-color: t(primary-4);
+      color: t(primary-11);
+    }
+
+    &Header {
+      text-transform: uppercase;
+      @include testi('Body1');
+    }
+
+    svg {
+      @include pathDimension(16px);
+
+      @include applyThemes() {
+        path {
+          fill: t(primary-11);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import 'styles/main';
+
+.projectGridItem {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  width: 360px;
+  height: 270px;
+  overflow: hidden;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      object-fit: cover;
+    }
+  }
+
+  &__imgPlaceholder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    @include applyThemes() {
+      background-color: t(primary-6);
+    }
+    img {
+      margin: 20% auto auto auto;
+      max-width: 30%;
+    }
+    cursor: pointer;
+  }
+
+  &__header {
+    padding: 13px 2px 8px 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(map-deep-get($themes, 'dark', 'primary-3'), 0.4);
+    border-radius: 0 0 10px 10px;
+
+    &Top {
+      @include flexAlign(center, space-between);
+    }
+
+    &Bottom {
+      padding-top: 16px;
+      padding-right: 13px;
+    }
+
+    /* .jobsAcquired {
+      display: block;
+      width: 100%;
+      flex: 1 1 auto;
+    } */
+  }
+
+  &__titleDiv {
+    width: calc(100% - 52px);
+  }
+
+  &__title {
+    @include testi('Body1');
+    font-size: 1.4rem;
+    color: map-deep-get($themes, 'light', 'primary-2');
+    cursor: pointer;
+    @include ellipsis;
+  }
+
+  &__description {
+    @include testi('Body1');
+    font-size: 1.2rem;
+    color: map-deep-get($themes, 'light', 'primary-1');
+
+    &Disk {
+      margin-left: 6px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: map-deep-get($themes, 'light', 'primary-1');
+        margin-right: 6px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+  &.withImage {
+    .projectGridItem__header {
+      @include blurBg();
+    }
+  }
+
+  .processing {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    circle {
+      stroke: map-deep-get($themes, 'light', 'primary-1');
+    }
+  }
+}

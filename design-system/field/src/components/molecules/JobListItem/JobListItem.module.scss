@@ -1,0 +1,112 @@
+@import 'styles/main';
+
+.jobListItem {
+  @include flexAlign(center, space-between);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  gap: 12px;
+
+  @include applyThemes() {
+    background-color: rgba(t(primary-3), 0.6);
+  }
+
+  &Acquired {
+    opacity: 0.5;
+  }
+
+  .title {
+    max-width: 15%;
+    min-width: 10%;
+    height: 60px;
+    cursor: pointer;
+    @include flexAlign(center, flex-start);
+    // min-width: 0;
+    flex: 1;
+
+    p {
+      // @include ellipsis;
+      word-break: break-word;
+      @include testi('Body1');
+      font-size: 1.6rem;
+      color: map-deep-get($themes, 'light', 'primary-2');
+    }
+  }
+
+  .description {
+    @include testi('Body1');
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: map-deep-get($themes, 'light', 'primary-1');
+    cursor: pointer;
+    flex: 1;
+    height: 60px;
+  }
+
+  .scanNumber {
+    font-size: 3rem;
+    height: 35px;
+    flex: 1;
+  }
+
+  .su {
+    font-size: 1.4rem;
+    font-weight: 300;
+    @include flexAlign();
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    height: 60px;
+    color: map-deep-get($themes, 'light', 'primary-1');
+
+    &Model {
+    }
+  }
+
+  .imgPlaceholder {
+    align-self: stretch;
+    width: 109px;
+    height: 66px;
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+    @include applyThemes() {
+      background-color: t(primary-6);
+    }
+
+    img {
+      margin: auto;
+      max-width: 60%;
+    }
+  }
+
+  .img {
+    align-self: stretch;
+    width: 109px;
+    height: 66px;
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: cover;
+
+    img {
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .processingStatusContainer {
+    flex: 1 1 auto;
+    width: 360px;
+    max-width: 360px;
+    text-align: right;
+  }
+
+  .kebabMenu {
+    height: 60px;
+    @include flexAlign();
+  }
+}

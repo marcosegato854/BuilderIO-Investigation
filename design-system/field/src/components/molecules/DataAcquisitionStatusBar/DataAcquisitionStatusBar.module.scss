@@ -1,0 +1,105 @@
+@import 'styles/main';
+
+.container {
+  @include noSelectText();
+}
+.grid {
+  @include testi('ButtonLabel');
+  @include applyThemes {
+    background-color: rgba(t(primary-10), 0.4);
+    @include blurBg();
+    border-radius: 4px;
+    color: t(primary-11);
+  }
+  :global(.MuiGrid-item) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px 20px;
+    &:nth-child(1) {
+      border-right: 1px solid
+        rgba(map-deep-get($themes, 'dark', 'primary-18'), 0.3);
+    }
+  }
+  @include big-tablet {
+    :global(.MuiGrid-item) {
+      padding: 15px 20px;
+    }
+  }
+}
+.gnssins {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  pointer-events: all;
+  .text {
+    white-space: nowrap;
+  }
+  .icon {
+    flex: 1;
+    flex-grow: 1;
+    margin-left: 8px;
+    @include flexAlign(center, 'flex-start');
+    &.svgIcon {
+      svg {
+        width: 32px;
+      }
+    }
+    &State0 {
+      path {
+        fill: $color-accuracy-good;
+      }
+    }
+    &State1 {
+      fill: $color-accuracy-average;
+    }
+    &State2 {
+      path {
+        fill: $color-accuracy-bad;
+      }
+    }
+    &State3 {
+    }
+  }
+  .help {
+    padding: 0 20px;
+    @include flexAlign();
+    svg {
+      width: 20px;
+    }
+    path {
+      @include applyThemes {
+        fill: t(primary-11);
+      }
+    }
+  }
+  &.rtk {
+    .text {
+      flex: 0;
+      white-space: normal;
+      flex-basis: 200px;
+    }
+  }
+}
+.tooltipContents {
+  width: 207px;
+  text-align: center;
+  @include testi('ButtonLabel');
+}
+.spanInfo {
+  border-top: 1px solid rgba(map-deep-get($themes, 'dark', 'primary-18'), 0.3);
+  > div {
+    padding-top: 3px;
+  }
+  @include big-tablet {
+    > div {
+      padding-top: inherit;
+    }
+  }
+}
+
+.satellites {
+  align-self: flex-start;
+}

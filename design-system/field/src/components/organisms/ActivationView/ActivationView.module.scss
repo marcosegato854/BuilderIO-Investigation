@@ -1,0 +1,111 @@
+@import 'styles/main';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  @include applyThemes() {
+    background-color: rgba(t(primary-10), 0.4);
+  }
+  padding-bottom: 17px;
+}
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main {
+  @include applyThemes() {
+    background-color: rgba(t(primary-1), 1);
+  }
+}
+.PEGASUS_TRK700_NEO {
+  background-image: url(/assets/img/TRK700_Neo.png);
+}
+.PEGASUS_TRK700_EVO {
+  background-image: url(/assets/img/TRK700_Evo.png);
+}
+.PEGASUS_TRK500_NEO {
+  background-image: url(/assets/img/TRK500_Neo.png);
+}
+.PEGASUS_TRK500_EVO {
+  background-image: url(/assets/img/TRK500_Evo.png);
+}
+.PEGASUS_TRK300 {
+  background-image: url(/assets/img/TRK300.png);
+}
+:global(.theme-dark) {
+  .PEGASUS_TRK100 {
+    background-image: url(/assets/img/TRK100-dark.png);
+  }
+}
+
+:global(.theme-light) {
+  .PEGASUS_TRK100 {
+    background-image: url(/assets/img/TRK100-light.png);
+  }
+}
+
+.progress {
+  position: relative;
+}
+.circularProgress {
+  margin-bottom: 10px;
+  margin: 17px;
+  border-radius: 85px;
+  height: 170px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include applyThemes {
+    background-color: rgba(t(primary-3), 0.6);
+  }
+  // > * {
+  //   opacity: 0.5;
+  // }
+  circle {
+    stroke: rgba(t(primary-1), 0.6);
+  }
+}
+.progressLabel {
+  @include testi('Heading4');
+  @include applyThemes() {
+    color: t('primary-11');
+  }
+  font-weight: 400;
+  font-size: 2.4em;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%) translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+  left: 50%;
+}
+
+.abortButton {
+  position: fixed;
+  z-index: 1600;
+  bottom: 20px;
+  right: 20px;
+}
+.done {
+  max-width: 204px;
+}
+
+.PEGASUS_TRK700_NEO,
+.PEGASUS_TRK700_EVO,
+.PEGASUS_TRK500_NEO,
+.PEGASUS_TRK500_EVO,
+.PEGASUS_TRK300,
+.PEGASUS_TRK100 {
+  .progressLabel {
+    color: map-deep-get($themes, 'dark', 'primary-11');
+  }
+}

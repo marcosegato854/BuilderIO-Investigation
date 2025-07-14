@@ -1,0 +1,1973 @@
+{
+  "_version": "0.0.22",
+  "initialization": {
+    "title": "O sistema está iniciando…",
+    "title_initialized": "Inicialização concluída.",
+    "ok": "Ignorar.",
+    "state": "Estado",
+    "events": "Eventos",
+    "stateInitializing": "Inicialização em curso…",
+    "check_browser": {
+      "title": "Verifique o browser.",
+      "ios": "O browser atual não é o recomendado pelo Leica Pegasus FIELD. <br/>O Leica Pegasus FIELD trabalha com a versão mais recente do Safari.",
+      "android": "O browser atual não é o recomendado para o Leica Pegasus FIELD. <br/>O Leica Pegasus FIELD trabalha com a versão mais recente do Google Chrome.",
+      "unknown": "O browser atual não é o recomendado para o Leica Pegasus FIELD. <br/>O Leica Pegasus FIELD trabalha com a versão mais recente do Google Chrome.",
+      "windows": "O browser atual não é o recomendado para o Leica Pegasus FIELD. <br/>O Leica Pegasus FIELD trabalha com a versão mais recente do Microsoft Edge.",
+      "ok": "OK"
+    }
+  },
+  "header": {
+    "pegasus": "Pegasus",
+    "welcome": "Bem-vindo ao Leica Pegasus FIELD",
+    "device": "Dispositivo:",
+    "searchbarPlaceholder": "O que procura?",
+    "mapSearchbarPlaceholder": "Procurar localização",
+    "back": "Voltar aos Projetos",
+    "back_jobs": "Voltar a Jobs",
+    "menu": {
+      "title": "Detalhes do perfil",
+      "login": "Nome do Usuário",
+      "license": "Atualizações de licença e software",
+      "update": {
+        "usb": "Atualização detectada",
+        "myWorld": "Atualização disponível"
+      },
+      "rebootDisabled": "A carga da bateria está muito baixa para uma reinicialização.",
+      "help": "Ajuda & Suporte",
+      "lang": "Alterar idioma",
+      "theme": "Alterar tema",
+      "logout": "Encerrar sessão",
+      "shutdown": "Desligar o sistema",
+      "reboot": "Reiniciar o sistema",
+      "version": "Versão",
+      "version_ok": "Versão API não suportada",
+      "version_ko": "Versão API esperada {{expected}}",
+      "audio_ok": "Ativar mensagens de áudio",
+      "audio_ko": "Silenciar mensagens de áudio",
+      "copyright": "Direitos de autor",
+      "processingShutdown": {
+        "title": "Deseja realmente desligar o sistema?",
+        "text": "Alguns Jobs estão em processamento. Se desligar o sistema, o processamento parará. O processamento pode ser reativado manualmente após reiniciar o sistema.",
+        "okButtonLabel": "Desligar",
+        "cancelButtonLabel": "Cancelar"
+      },
+      "processingReboot": {
+        "title": "Deseja realmente reiniciar o sistema?",
+        "text": "Alguns Jobs estão em processamento. Se reiniciar o sistema, o processamento parará. O processamento pode ser reativado manualmente após o reinício.",
+        "okButtonLabel": "Reiniciar",
+        "cancelButtonLabel": "Cancelar"
+      },
+      "country": "Código do país"
+    },
+    "systemIsOff": "A PCU e a Unidade Sensor estão desligando…",
+    "responsiveness": {
+      "minLeft": "minutos restantes"
+    }
+  },
+  "login": {
+    "form": {
+      "pegasus_field": "Pegasus FIELD",
+      "validation": {
+        "username": "Nome do Usuário obrigatório.",
+        "password": "Senha obrigatória.",
+        "no_spaces": "Não são permitidos espaços.",
+        "bad_characters": "Somente são permitidos carácteres alfanuméricos."
+      },
+      "fields": {
+        "username": "Usuário",
+        "password": "Senha",
+        "remember_me": "Manter a sessão iniciada"
+      },
+      "forgot_password": "Esqueceu a senha?",
+      "retrive": "Recuperar",
+      "submit": "Iniciar sessão",
+      "or": "Ou",
+      "qrcode": "Ler código QR",
+      "qrcodeReader": "Leia o código QR na tela PCU.",
+      "qrcodeLegacy": "A câmara não responde. Clique no botão para carregar a imagem.",
+      "loadPicture": "Carregar uma imagem"
+    },
+    "forgot": {
+      "back": "Voltar",
+      "title": "Senha Esquecida",
+      "please_contact": "Contacte o suporte através do seguinte endereço de e-mail.",
+      "credentials": "Toque em \"Conectar\" na tela inicial da PCU. As credenciais serão apresentadas na seção de conexão.",
+      "$support_email": "leica@support.com"
+    },
+    "info": {
+      "watch": "Clique aqui para descobrir mais"
+    }
+  },
+  "project_browser": {
+    "slot": "Ranhura",
+    "disk": "Disco",
+    "header": {
+      "browser": "Localizador de Projetos",
+      "planning": "Planejamento"
+    },
+    "filters": {
+      "title": "Filtrar por:",
+      "sort_title": "Ordenar por:",
+      "view_title": "Visualizar por:"
+    },
+    "subtitle": "Meus projetos",
+    "no_project": "Nenhum Projeto encontrado",
+    "search": "Pesquisar",
+    "no_items": "Nenhum item encontrado",
+    "click_to_create": "Clique em + para criar um novo Projeto",
+    "kebab": {
+      "edit_project": "Editar Projeto",
+      "view_settings": "Ver definições",
+      "delete": "Apagar Projeto"
+    },
+    "delete_button": "Sim, apagar",
+    "delete_text": "Deseja realmente apagar este Projeto?<br />Todos os conteúdos deste Projeto serão removidos do disco.",
+    "cancel_button": "Cancelar",
+    "no_disks": {
+      "title": "Não é possível criar novos projetos",
+      "text": "Conecte pelo menos um disco rígido e verifique os discos disponíveis na barra superior."
+    }
+  },
+  "job_browser": {
+    "project": "Projeto",
+    "header": {
+      "browser": "Localizador de Job",
+      "planning": "Planejamento"
+    },
+    "filters": {
+      "title": "Filtrar por:",
+      "sort_title": "Ordenar por:",
+      "view_title": "Visualizar por:"
+    },
+    "subtitle": "Meus Jobs",
+    "no_job": "Nenhum item encontrado",
+    "admin_job": "Este tipo de job requer privilégios de administrador.",
+    "click_to_create": "Clique em + para criar um novo Job",
+    "kebab": {
+      "edit_job": "Editar Job",
+      "processing": "Processamento",
+      "finalise_export": "Finalizar & Exportar",
+      "image": "Imagem",
+      "pointcloud": "Trajetória e nuvem de pontos",
+      "pointcloud_noTrajectory": "Nuvem de pontos",
+      "view_settings": "Ver definições",
+      "view_plan": "Ver planejamento",
+      "view_measure": "Ver & Medir",
+      "job_report": "Relatório do Job",
+      "delete": "Apagar Job",
+      "clone": "Clonar Job"
+    },
+    "details": {
+      "name": "Nome",
+      "scans": "Tracks",
+      "planned": "Planejado",
+      "type": "Tipo de Job",
+      "ntrip": "Com RTK",
+      "dmi": "DMI",
+      "collectionmode": "Modo de captura",
+      "camera": "Câmara",
+      "camera_blur": "Anonimizar",
+      "antenna": "Antena",
+      "profile": "Perfil",
+      "completed": "Concluído",
+      "size": "Tamanho",
+      "creationdate": "Data da criação",
+      "controlpoints": "Pontos de apoio",
+      "updatedate": "Última atualização",
+      "disk": "Disco",
+      "jobs": "Jobs",
+      "coordinate": "Unidade do Projeto",
+      "drivingspeed": "Velocidade máx. de condução",
+      "scanner": "Scanner",
+      "position": "Precisão",
+      "snSensorUnit": "Número de série",
+      "values": {
+        "yes": "Sim",
+        "no": "Não",
+        "camera_distance": "Ativado: {{enable}}<br />Anonimizar: {{blur}}<br />Distância: {{distance}}<br />Esquerda: {{left}}<br />Direita: {{right}}",
+        "camera_distance_no_orientation": "Ativado: {{enable}}<br />Anonimizar: {{blur}}<br />Distância: {{distance}}",
+        "camera_time": "Ativado: {{enable}}<br />Anonimizar: {{blur}}<br />Tempo de disparo: {{elapse}}<br />Esquerda: {{left}}<br />Direita: {{right}}",
+        "camera_time_no_orientation": "Ativado: {{enable}}<br />Anonimizar: {{blur}}<br />Tempo de disparo: {{elapse}}",
+        "scanner": "Espaçamento: {{spacing}}<br />Rotações/s: {{rps}}<br />Pontos/s: {{pps}}<br />Alcance: {{range}}",
+        "scanner100": "Rotações/s: {{rps}}<br />Pontos/s: {{pps}}<br />Alcance: {{range}}"
+      }
+    },
+    "delete_title": "Apagar {{job}}",
+    "delete_button": "Sim, apagar",
+    "delete_text": "Deseja realmente apagar este Job?<br />Todos os conteúdos deste Job serão removidos do disco.",
+    "cancel_button": "Cancelar",
+    "acquired_job_label": "OK",
+    "acquired_job_text": "Não pode iniciar o mesmo Job outra vez, mas pode executar o processamento e outras ações.",
+    "new_jobtype_title": "Novo tipo de Job",
+    "new_jobtype_text": "Especifique o tipo de Job base (Rodoviário, Ferroviário ou Náutico). Em seguida, introduza um nome para o novo tipo de Job.",
+    "new_jobtype_ok": "Salvar",
+    "new_jobtype_cancel": "Cancelar",
+    "save_jobtype_title": "Alerta de alteração de definições",
+    "save_jobtype_text": "Salvar as definições de Job atuais num novo tipo de Job para utilização futura?",
+    "save_jobtype_ok": "Salvar tipo de Job",
+    "save_jobtype_cancel": "Não salvar",
+    "save_jobtype_name_required": "Introduza um nome para o novo tipo de Job.",
+    "save_jobtype_min": "O nome tem de ter pelo menos 3 caracteres.",
+    "save_jobtype_exists": "Escolha um nome único.",
+    "delete_jobtype_title": "Apagar tipo de Job personalizado",
+    "delete_jobtype_text": "Tem a certeza de que pretende apagar o tipo de Job '{{profile}}'? As definições do Job não serão afetadas.'",
+    "delete_jobtype_ok": "Sim, apague.",
+    "delete_jobtype_cancel": "Cancelar",
+    "processed_images_tooltip": "Processamento da imagem concluído com sucesso.",
+    "processing_images_tooltip": "Processando imagens…",
+    "not_processed_images_tooltip": "Processamento de imagens pendente.",
+    "processed_office_tooltip": "Processamento da trajetória e nuvem de pontos concluído com sucesso.",
+    "processed_office_tooltip_noTrajectory": "Processamento da nuvem de pontos concluído com sucesso.",
+    "processing_office_tooltip": "Processando trajetória e nuvem de pontos…",
+    "processing_office_tooltip_noTrajectory": "Processando nuvem de pontos...",
+    "not_processed_office_tooltip": "Processamento da trajetória e nuvem de pontos pendente.",
+    "not_processed_office_tooltip_noTrajectory": "Processamento da nuvem de pontos pendente.",
+    "processing_log_title": "Registro de processamento do {{job}}",
+    "report": {
+      "error": {
+        "title": "Relatório do Job"
+      },
+      "ready": {
+        "title": "Relatório do Job",
+        "text": "O relatório foi criado com sucesso.",
+        "ok": "Abrir relatório",
+        "ko": "Fechar"
+      }
+    }
+  },
+  "progress_bar": {
+    "completed": "Concluído",
+    "imported": "Importado"
+  },
+  "filters": {
+    "title": "Filtrar por:",
+    "sort_title": "Ordenar por:",
+    "view_title": "Visualizar por:",
+    "sort_options": {
+      "name_asc": {
+        "label": "Nome (ascendente)"
+      },
+      "name_desc": {
+        "label": "Nome (descendente)"
+      },
+      "date_asc": {
+        "label": "Data de criação (ascendente)"
+      },
+      "date_desc": {
+        "label": "Data de criação (descendente)"
+      },
+      "last_mod": {
+        "label": "Última modificação"
+      }
+    },
+    "view_options": {
+      "gallery": {
+        "label": "Galeria"
+      },
+      "list": {
+        "label": "Lista"
+      }
+    },
+    "order": "Ordem"
+  },
+  "subtitle": "Projetos",
+  "loading": "Carregando...",
+  "project_item": {
+    "job": "Job",
+    "jobs": "Jobs",
+    "disk": "Armazenado em",
+    "progress": "Processamento concluído"
+  },
+  "job_item": {
+    "scan": "Track",
+    "scans": "Tracks",
+    "completed": "Concluído"
+  },
+  "activation_button": "Iniciar & Capturar",
+  "new_project_form": {
+    "validation": {
+      "project_name": "Especifique um nome de Projeto.",
+      "unit": "Especifique as unidades de medida.",
+      "disk": "Especifique um disco de armazenamento.",
+      "name_duplicate": "O nome já existe.",
+      "bad_characters": "Somente são permitidos carácteres alfanuméricos.",
+      "min3": "O nome tem de ter pelo menos 3 caracteres.",
+      "max": "O nome deve ter no máximo 25 caracteres."
+    },
+    "title": "Novo Projeto",
+    "project_title_label": "Nome do Projeto",
+    "define_units": "Especifique as unidades de medida",
+    "select_disk": "Selecione disco",
+    "cancel": "Cancelar",
+    "saveBtn": "Criar Projeto",
+    "tooltip": {
+      "full_disk": "O disco está cheio."
+    }
+  },
+  "plan_quality_form": {
+    "save_btn": "Salvar & Fechar"
+  },
+  "new_job_form": {
+    "validation": {
+      "job_name": "Nome do Job necessário.",
+      "type": "Tipo de Job necessário.",
+      "satellites": "Definir satélites.",
+      "name_duplicate": "O nome já existe.",
+      "bad_characters": "Somente são permitidos carácteres alfanuméricos.",
+      "min3": "O nome tem de ter pelo menos 3 caracteres.",
+      "max": "O nome deve ter no máximo 25 caracteres."
+    },
+    "option": {
+      "planning": {
+        "plan_now": "Planejado",
+        "without_plan": "Não planejado"
+      },
+      "job_type": {
+        "pedestrian": "Pedestre",
+        "road": "Rodoviário",
+        "rail": "Ferroviário",
+        "boat": "Náutico",
+        "p-1": "Pedestre",
+        "p0": "Rodoviário",
+        "p1": "Ferroviário",
+        "p2": "Náutico",
+        "custom": "Personalizado",
+        "new": "Criar novo"
+      },
+      "satellite": {
+        "gps": "GPS",
+        "glonass": "GLONASS",
+        "beidou": "BEIDOU",
+        "qzss": "QZSS",
+        "navic": "NAVIC",
+        "galileo": "GALILEO"
+      },
+      "collectionmode": {
+        "oneway": "Sentido único",
+        "bothways": "Duplo sentido",
+        "other": "Outro"
+      },
+      "camera": {
+        "on": "LIGADO",
+        "off": "DESLIGADO",
+        "distance": "Distância",
+        "time": "Tempo"
+      },
+      "camera_orientation": {
+        "landscape": "Horizontal",
+        "portrait": "Vertical"
+      },
+      "camera_blur": {
+        "on": "LIGADO",
+        "off": "DESLIGADO"
+      },
+      "dmi": {
+        "none": "Sem DMI",
+        "optical": "Ótico",
+        "mechanical": "Mecânico",
+        "rail": "Ferroviário"
+      },
+      "antenna": {
+        "single": "Única",
+        "double": "Dupla"
+      },
+      "rtk": {
+        "off": "DESLIGADO",
+        "on": "LIGADO"
+      }
+    },
+    "left_camera": "Orientação da câmara esquerda",
+    "right_camera": "Orientação da câmara direita",
+    "image_blur": {
+      "title": "Não está em conformidade com o <a href=\"/assets/documents/gdpr.pdf\" target=\"_blank\">LGPD</a>",
+      "text": "O usuário é obrigado a cumprir todas as leis, regulamentos e diretivas regulamentares ao utilizar o Pegasus, bem como às leis de privacidade e proteção de dados. Para este fim, a Hexagon (doravante referida como \"Nós\") ativou a função de anonimização por padrão durante o uso do serviço Pegasus. O usuário poderá desativar esta função sob a sua responsabilidade, mas reservamo-nos o direito de reativar automaticamente a função de anonimização após um certo período de tempo, após a instalação de atualizações, e após qualquer trabalho de manutenção, sem que haja qualquer obrigação de avisar o usuário sobre à ativação. O usuário é obrigado a verificar sempre a ativação/desativação da função de anonimização antes de utilizar o serviço Pegasus.",
+      "checkbox": "Não mostrar este aviso durante 30 dias.",
+      "ok": "OK",
+      "cancel": "Cancelar"
+    },
+    "title": "Novo Job",
+    "job_title_label": "Nome do Job",
+    "add_a_thumbnail": "Miniatura",
+    "delete_thumbnail": "Apagar miniatura",
+    "planning": "Planejamento do Job",
+    "type": "Tipo de Job",
+    "satellite_selection_single": "Constelação",
+    "satellite_selection": "Constelações",
+    "dmi": "Tipo de DMI",
+    "collectionmode": "Modo de captura",
+    "camera_distance": "Distância da imagem",
+    "camera_elapse": "Tempo de disparo da câmara",
+    "drivingspeed": "Velocidade máxima",
+    "camera": "Câmara",
+    "camera_blur": "Anonimização da imagem",
+    "antenna_type": "Configuração da antena",
+    "scanner_rotation_speed": "Velocidade de rotação do perfilador (rps)",
+    "scanner_point_per_second": "Perfilador Pontos/s (pps)",
+    "scanner_range": "Alcance máximo do scanner",
+    "rtk": "Posic. Cinemático Tempo Real (RTK)",
+    "scanline_spacing": "Espaçamento entre perfis",
+    "see_details": "Mostrar detalhes",
+    "see_less": "Mostrar menos",
+    "cancel": "Cancelar",
+    "reset": "Redefinir",
+    "save_only": "Salvar & Fechar",
+    "job_tolerance": "Tolerância do Job"
+  },
+  "edit_job_form": {
+    "title": "Editar Job",
+    "update_btn_planned": "Planejado",
+    "save_btn_planned": "Salvar & Planejar",
+    "update_btn_unplanned": "Salvar & Capturar",
+    "save_btn_unplanned": "Salvar & Continuar"
+  },
+  "acquisition": {
+    "title": "Captura de dados",
+    "gnssins": "GNSS/INS",
+    "imu": "Estado IMU",
+    "jobError": "Este Job não pode ser capturado.",
+    "deactivate": "Desativar",
+    "deactivating": "Desativação em curso…",
+    "deactivate_disclaimer": "Desativar o sistema durante a fase de alinhamento pode provocar a falta de precisão dos dados da trajetória final.",
+    "deactivate_failure": "A desativação falhou.",
+    "deactivateError": "Não é possível desativar.",
+    "pointcloud_error": "Erro ao carregar a nuvem de pontos.",
+    "activation": {
+      "title": "Ativação do Pegasus TRK",
+      "state": {
+        "starting": "Iniciando…",
+        "initializing": "Inicialização em curso…",
+        "shutdown": "Desligamento em curso…",
+        "configuring": "Configuração em curso…",
+        "deactivating": "Desativação em curso…",
+        "deactivated": "Sistema desativado",
+        "activating": "Ativação em curso…",
+        "activated": "Sistema ativado com sucesso ",
+        "startinginitialalignment": "Iniciando alinhamento inicial…",
+        "initialalignment": "Alinhamento inicial",
+        "startingfinalalignment": "Iniciando alinhamento final…",
+        "finalalignment": "Alinhamento final",
+        "startinglogging": "Iniciando registro…",
+        "logging": "Registro em curso…",
+        "startingrecording": "Iniciando captura de dados…",
+        "stoppingrecording": "Parando captura de dados…",
+        "recording": "Captura de dados em curso…"
+      },
+      "bootingUp": "Iniciando...",
+      "abort": "Cancelar ativação",
+      "failure": "A ativação falhou"
+    },
+    "capture": {
+      "starting_alignment": "Iniciando alinhamento…",
+      "starting_logging": "Iniciando registro…",
+      "starting_recording": "Iniciando captura de dados…",
+      "stopping_recording": "Parando captura de dados…",
+      "deactivating": "Desativando…"
+    },
+    "main_button": {
+      "start_initial": "Iniciar alinhamento",
+      "stop_initial": "Parar alinhamento",
+      "start_final": "Alinhamento final",
+      "stop_final": "Parar alinhamento",
+      "deactivate": "Desativar o sistema",
+      "secondary": "Forçar desativação",
+      "back_jobs": "Voltar ao Projeto"
+    },
+    "camera_failure": {
+      "recording": "A captura de dados falhou.",
+      "stop": "Parada falhou."
+    },
+    "deactivated_camera": {
+      "cancel_default": "Cancelar",
+      "cancel_active": "Cancelar",
+      "cancel_recording": "Retomar captura",
+      "ok_default": "OK",
+      "ok_active": "OK",
+      "ok_recording": "Parar captura",
+      "title": "Câmara desconectada",
+      "text_default": "A conexão à câmara foi perdida após o sistema ser ligado.",
+      "text_activating": "A conexão à câmara foi perdida após o sistema ser ligado. Deseja ativar o sistema mesmo assim?",
+      "text_active": "A conexão à câmara foi perdida após o sistema ser ligado. Reconecte a câmara antes de iniciar a captura de dados.",
+      "text_recording": "A conexão à câmara foi perdida após o sistema ser ligado. Pare a captura de dados e reconecte a câmara."
+    },
+    "reactivated_camera": {
+      "cancel_default": "Cancelar",
+      "cancel_all": "Cancelar",
+      "ok_default": "OK",
+      "ok_active": "OK",
+      "ok_all": "OK",
+      "title": "Câmara reconectada",
+      "text_default": "Uma câmara foi reconectada.",
+      "text_some": "Uma das câmaras desconectadas foi reconectada. As outras câmaras ainda estão desconectadas.",
+      "text_all": "Uma câmara foi reconectada. Pare e reinicie a captura de dados para utilizar a câmara.",
+      "text_resume": "Uma câmara foi reconectada. Deseja retomar a captura de dados?"
+    },
+    "back_to_jobs": "Voltar a Jobs",
+    "abort_button_label": "Abortar",
+    "tooltips": {
+      "map_mode": "Modo Mapa",
+      "camera_mode": "Modo Câmara",
+      "take_snapshot": "Tirar foto",
+      "pointcloud": "Alternar nuvem de pontos",
+      "add_tag": "Adicionar rótulo",
+      "planned_tracks": "Alternar plano"
+    },
+    "dialogs": {
+      "ok": "OK",
+      "tts": {
+        "title": "Ativando mensagens de áudio…",
+        "text": "Clique para desbloquear as mensagens de áudio para a captura de dados.",
+        "ok": "OK"
+      }
+    },
+    "status": {
+      "gdop": "GDOP",
+      "satelliteavailable": "Satélites",
+      "rtkaccuracy": "Precisão RTK",
+      "rtkcorrectionreceived": "Correções RTK recebidas",
+      "rtkstatus": "Estado RTK",
+      "internetconnected": "Acesso Internet",
+      "ageofcorrections": "Última atualização da correção",
+      "rtkserviceconnected": "Serviço RTK conectado",
+      "friendly_state_0": "Calculado",
+      "friendly_state_1": "Calculando…",
+      "friendly_state_2": "Suspeito",
+      "friendly_state_3": "Falha",
+      "gps_type": "Tipo de solução"
+    },
+    "alignment": {
+      "proceed": "Continuar",
+      "skip": "Ignorar",
+      "retry": "Tentar novamente",
+      "deactivate": "Desativar",
+      "skip_alert": {
+        "title": "Parar alinhamento",
+        "text": "Ignorar o alinhamento inicial pode comprometer a precisão do Job final. Deseja continuar?",
+        "text_final": "Ignorar o alinhamento final pode comprometer a precisão do trabalho final. Deseja continuar?",
+        "ok": "Sim",
+        "ko": "Não"
+      },
+      "title": {
+        "static": "Alinhamento estático",
+        "dynamic": "Alinhamento dinâmico",
+        "confirmation": "Preparar para o passo seguinte."
+      },
+      "out_of_range": {
+        "title": "Fora do alcance para o alinhamento",
+        "text": "O alinhamento deve ser iniciado numa distância de 100 m a partir do ponto planejado. Clique em Continuar para continuar mesmo assim.",
+        "cancel": "Cancelar",
+        "proceed": "Continuar"
+      },
+      "final_confirm": {
+        "title": "Alinhamento final",
+        "text": "Deseja iniciar o alinhamento final?",
+        "cancel": "Cancelar",
+        "proceed": "Continuar"
+      },
+      "messages": {
+        "A1": "Permanecer parado",
+        "A2": "Dirija",
+        "A3": "Navegue",
+        "AN1": "Terminar alinhamento",
+        "AN2": "{time} alinhamento dinâmico",
+        "AN3": "{space} alinhamento dinâmico",
+        "AN4": "{time} alinhamento estático",
+        "AN5": "{space} alinhamento estático",
+        "AF": "A etapa falhou. Tente novamente."
+      },
+      "remaining_seconds": "Segundos",
+      "remaining_meters": "Metros",
+      "remaining_feet": "Pés"
+    },
+    "routing": {
+      "stopping_button": "Continuar captura",
+      "actions": {
+        "turn": "Vire à"
+      },
+      "directions": {
+        "left": "Esquerda"
+      },
+      "dialogs": {
+        "abort": {
+          "title": "Desativar captura automática",
+          "text": "Tem certeza de que deseja desativar a captura de dados autônoma? Essa opção pode ser ativada novamente neste Job.",
+          "back": "Cancelar",
+          "confirm": "OK"
+        }
+      }
+    },
+    "camera": {
+      "disabled": "A câmara está desligada para esta Track",
+      "back": "Voltar ao mapa",
+      "names": {
+        "Sphere": {
+          "Sphere": "Panorâmica"
+        },
+        "Left": {
+          "Left_Forward": {
+            "portrait": "Inferior Esquerda",
+            "landscape": "Dianteira Esquerda",
+            "unknown": "Esquerda"
+          },
+          "Left_Backward": {
+            "portrait": "Superior Esquerda",
+            "landscape": "Traseira Esquerda",
+            "unknown": "Esquerda"
+          }
+        },
+        "Right": {
+          "Right_Forward": {
+            "portrait": "Superior Direita",
+            "landscape": "Dianteira Direita",
+            "unknown": "Direita"
+          },
+          "Right_Backward": {
+            "portrait": "Inferior Direita",
+            "landscape": "Traseira Direita",
+            "unknown": "Direita"
+          }
+        },
+        "Rear": {
+          "Rear_Left": "Pavimento Esquerda",
+          "Rear_Right": "Pavimento Direita"
+        },
+        "Front": {
+          "Front_Left": "Frontal Esquerda",
+          "Front_Right": "Frontal Direita"
+        }
+      }
+    }
+  },
+  "data_acquisition_small_status_bar": {
+    "rtk": "Com RTK",
+    "status": "Estado"
+  },
+  "rtk": {
+    "dialog": {
+      "title": "Definições RTK",
+      "back": "Cancelar",
+      "cancel_activation": "Cancelar ativação",
+      "confirm": "OK",
+      "incomplete": "Informações do servidor incompletas.",
+      "connection": "Conectar a um servidor",
+      "mountpoints_failure": "Ocorreu um problema ao carregar os pontos de instalação.",
+      "loading": "Conectando a ",
+      "cancel": "Cancelar",
+      "retry": "Tentar novamente",
+      "error": {
+        "authentication": "Não foi possível autenticar.",
+        "mountpoints": "Não foi possível carregar os pontos de instalação.",
+        "default": "Não é possível efetuar a conexão."
+      }
+    },
+    "server": {
+      "form": {
+        "validation": {
+          "name": "Insira nome do servidor.",
+          "url": "Insira URL.",
+          "port": "Insira porta.",
+          "user": "Insira usuário.",
+          "password": "Insira senha."
+        },
+        "title": "Adicionar novo servidor",
+        "fields": {
+          "name": "Nome Servidor",
+          "server": "URL",
+          "port": "Porta n.º",
+          "username": "Usuário",
+          "password": "Senha"
+        },
+        "connect": "Conectar",
+        "connected": "Conectado",
+        "exists": "Já existe um servidor com o mesmo nome.",
+        "update": "Atualizar",
+        "save": "Salvar"
+      },
+      "delete_dialog": {
+        "title": "Apagar servidor",
+        "confirm": "Apagar",
+        "cancel": "Cancelar",
+        "text": "Tem certeza de que deseja excluir este servidor?<br />Nota: Esta ação não pode ser anulada."
+      },
+      "add_new": "Adicionar novo servidor",
+      "temporary": "Novo servidor",
+      "copy": "Copiar"
+    },
+    "mountPoint": {
+      "form": {
+        "validation": {
+          "mountpoint": "Ponto instalação necessário",
+          "interfacemode": "Formato necessário"
+        },
+        "mountpoint": "Ponto instalação",
+        "interfacemode": "Formato",
+        "test": "Testar RTK"
+      }
+    },
+    "connection_info": {
+      "yes": "Sim",
+      "no": "Não",
+      "waiting_for_test": "Aguardando teste…",
+      "internetconnection": "Conexão Internet",
+      "ntripconnection": "Conexão RTK",
+      "state": "Posição",
+      "precision2d": "Precisão 2D",
+      "precisionheight": "Precisão da altura",
+      "satellitesinuse": "Número de satélites",
+      "hdop": "HDOP",
+      "vdop": "VDOP",
+      "gdop": "GDOP",
+      "agecorrection": "Última atualização da correção",
+      "actualposition": "Posição atual",
+      "position": {
+        "latitude": "Latitude",
+        "longitude": "Longitude"
+      },
+      "gdop_status": {
+        "poor": "Ruim"
+      },
+      "asml": "Alt. Elipsoidal"
+    }
+  },
+  "units": {
+    "seconds": "segundos",
+    "meters": "metros",
+    "feet": "pés",
+    "metric": {
+      "KMH": "km/h",
+      "KM": "km",
+      "CM": "cm",
+      "HZ": "Hz",
+      "MSEC": "m/s",
+      "MS": "ms",
+      "M": "m"
+    },
+    "imperial": {
+      "KMH": "mph",
+      "KM": "mi",
+      "CM": "pol.",
+      "HZ": "Hz",
+      "MSEC": "pé/s",
+      "MS": "ms",
+      "M": "pés"
+    },
+    "time": {
+      "hours": "h",
+      "minutes": "m"
+    }
+  },
+  "unit": {
+    "metric": "Métrico",
+    "imperial": "Imperial"
+  },
+  "side_panel": {
+    "tracks": {
+      "covered": "Capturado",
+      "not_covered": "Planejado"
+    },
+    "settings": {
+      "map_settings": "Definições do mapa",
+      "max_speed": "Velocidade máx.",
+      "audio_settings": "Definições de áudio",
+      "camera_settings": "Definições da câmara",
+      "point_cloud_thickness": "Tamanho do ponto",
+      "labelling": "Marcação",
+      "navigation": "Navegação",
+      "image_distance": "Distância da imagem",
+      "image_elapse": "Tempo de disparo da imagem",
+      "scanline_spacing": "Espaçamento entre perfis",
+      "collection_mode": "Modo de captura",
+      "brightness": "Brilho",
+      "camera": "Câmara",
+      "general_volume": "Volume geral",
+      "error": "Erro",
+      "collection": "Captura de dados",
+      "directions": "Direções de rota",
+      "autocapture": "Captura automática"
+    },
+    "media": {
+      "audio": "Áudio",
+      "image": "Imagem",
+      "text": "Texto"
+    },
+    "information": {
+      "title": "Informações do Job",
+      "type_of_job": "Tipo de Job",
+      "positioning_accuracy": "Precisão de posicionamento",
+      "camera": "Câmara",
+      "on": "LIGADO",
+      "off": "DESLIGADO",
+      "scanline_spacing": "Espaçamento entre perfis",
+      "profiler_rotation_speed": "Velocidade de rotação do perfilador",
+      "profiler_point_sec": "Perfilador Pontos/seg",
+      "driving_speed": "Velocidade de condução",
+      "image_distance": "Distância da imagem",
+      "dmi_type": "Tipo de DMI",
+      "antenna_type": "Configuração da antena"
+    },
+    "notifications": {
+      "title": "Erros & Avisos"
+    },
+    "job": {
+      "details": "Mostrar detalhes",
+      "setting": {
+        "title": "Definições do Job",
+        "type": "Tipo de Job",
+        "time": "Tempo para capturar",
+        "space": "Espaço estimado no disco",
+        "battery": "Consumo estimado da bateria",
+        "ditance": "Distância para conduzir",
+        "minutes": "minutos",
+        "hours": "horas"
+      },
+      "quality": {
+        "title": "Qualidade estimada",
+        "captureDate": "Data de captura",
+        "time": "Tempo",
+        "to": "a",
+        "satellite": "Número de satélites disponíveis por intervalo de 30 minutos",
+        "satType": "Tipo de satélite",
+        "satNr": "Número de satélites",
+        "startTime": "Melhor hora para capturar",
+        "positionAccuracy": "Tolerâncias de classificação QA (verde-amarelo-vermelho)"
+      },
+      "plan": {
+        "title": "Ver planejamento"
+      },
+      "needed": {
+        "title": "Resultados estimados"
+      }
+    },
+    "buttons": {
+      "title": "Posição do alinhamento",
+      "initial_point": "Início",
+      "final_point": "Fim",
+      "range": {
+        "show": "Mostrar alcance",
+        "hide": "Ocultar alcance"
+      }
+    }
+  },
+  "help": {
+    "rtk": {
+      "title": "Com RTK",
+      "$type": "Image",
+      "$imageURL": "/assets/img/Real_Time_Kinematic_RTK_500x312_B.svg"
+    },
+    "job_tolerance": {
+      "title": "Colorização estimada da posição de precisão",
+      "$type": "Image",
+      "$imageURL": "/assets/img/PositionAccuracy.gif"
+    },
+    "dmi_none": {
+      "title": "DMI",
+      "$type": "Text",
+      "text": "O instrumento de medição de distâncias (DMI) mede a distância percorrida. O DMI mecânico conta o número de rotações da roda por segundo, enquanto o DMI ótico mede a distância percorrida com um sensor ótico."
+    },
+    "dmi_optical": {
+      "title": "DMI ótico",
+      "$type": "Image",
+      "$imageURL": "/assets/img/OpticalDmi.gif"
+    },
+    "dmi_mechanical": {
+      "title": "DMI mecânico",
+      "$type": "Image",
+      "$imageURL": "/assets/img/MechanicalDmi.gif"
+    },
+    "antenna_single": {
+      "title": "Antena única",
+      "$type": "Image",
+      "$imageURL": "/assets/img/AntennaSingle.gif"
+    },
+    "antenna_double": {
+      "title": "Antena dupla",
+      "$type": "Image",
+      "$imageURL": "/assets/img/AntennaDual.gif"
+    },
+    "collection_oneway": {
+      "title": "Captura de dados: Sentido único",
+      "$type": "Image",
+      "$imageURL": "/assets/img/CollectionOneway.gif"
+    },
+    "collection_bothways": {
+      "title": "Captura de dados: Duplo sentido",
+      "$type": "Image",
+      "$imageURL": "/assets/img/CollectionBoth.gif"
+    },
+    "profiler": {
+      "title": "Velocidade de rotação do perfilador",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ScannerRotation.gif"
+    },
+    "image_distance": {
+      "title": "Distância da imagem",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ImageDistance.gif"
+    },
+    "forgot_password": {
+      "title": "Senha Esquecida",
+      "$type": "Image",
+      "$imageURL": "/assets/img/ForgotPassword.png"
+    },
+    "coordinate_system": {
+      "title": "Sistema de coordenadas",
+      "$type": "Text",
+      "text": "O sistema de coordenadas afeta os resultados em Finalizar e Exportar. Ao selecionar Automática, o sistema de coordenadas é calculado no final da primeira aquisição. É possível importar manualmente um sistema de coordenadas personalizado. O sistema de coordenadas pode ser alterado até que o primeiro processamento seja concluído com sucesso."
+    }
+  },
+  "language": {
+    "en": "Inglês",
+    "jp": "Japonês",
+    "kr": "Coreano",
+    "cn": "Chinês",
+    "de": "Alemão",
+    "fr": "Francês",
+    "it": "Italiano",
+    "es": "Espanhol",
+    "pt": "Português"
+  },
+  "theme": {
+    "dark": "Escuro",
+    "light": "Claro"
+  },
+  "firmwareUpdate": {
+    "header": "Atualizações de licença e software",
+    "su": "Número de série da unidade sensor",
+    "pcu": "Número de série da PCU",
+    "ccp": "Número de licença CCP",
+    "expire": "Data de validade",
+    "version": "Versão de firmware",
+    "last": "Última atualização",
+    "update": "Atualização disponível, que inclui",
+    "footer": "Só pode atualizar a licença e o firmware a partir da tela da unidade de controle Pegasus.",
+    "versionAvailable": "A versão {{ updateAvailableVersion }} foi detectada no seu dispositivo.",
+    "updateNow": "Atualizar agora",
+    "noStorageDetected": "Nenhum dispositivo de armazenamento detectado.",
+    "noInstallerDetected": "Nenhum instalador válido detectado no seu dispositivo de armazenamento.",
+    "howToUpdate": "Como fazer uma atualização",
+    "updateGuidelines": "Diretrizes de instalação de atualizações (a partir do seu dispositivo de armazenamento)",
+    "logMyWorld": "Faça login no myWorld e baixe um instalador Pegasus FIELD.",
+    "savePEF": "Salve o Pegasus FIELD no diretório raiz do seu dispositivo de armazenamento.",
+    "plugDevice": "Conecte seu dispositivo de armazenamento a uma porta USB da PCU.",
+    "clickUpdateNow": "Em seguida, clique no botão Atualizar agora acima ou no menu Licença e software da PCU.",
+    "prerequisites": "Verificando pré-requisitos...",
+    "lastUpdate": "Última atualização",
+    "lastVersion": "Versão {{firmwareVersion}} instalada em {{updateDate}}.",
+    "suNotAttached": "Não anexado.",
+    "prerequisitesSuccessful": "Pré-requisitos verificados com sucesso.",
+    "prerequisitesInstallation": "Verificar pré-requisitos antes da instalação.",
+    "cancel": "Cancelar",
+    "retry": "Tentar novamente",
+    "systemError": "Pré-requisitos do sistema não atendidos.",
+    "softwareError": "A atualização do FIELD não é válida.",
+    "notSafeError": "Falha ao atualizar o software Pegasus FIELD.",
+    "extractionError": "Falha ao extrair a atualização do FIELD.",
+    "genericError": "Falha ao verificar os pré-requisitos.",
+    "downloadAgain": "Um componente necessário está faltando ou está corrompido. Baixe novamente o software Pegasus FIELD do myWorld.",
+    "notUnplugStorage": "Não desconecte o seu dispositivo de armazenamento.",
+    "dialog": {
+      "title1": "Acordo de licença",
+      "title2": "É necessário reiniciar",
+      "headline1": "Revise os termos da licença antes de instalar o software, que são aplicáveis a todas as atualizações durante esta sessão.",
+      "headline2": "A atualização requer reinicializações.",
+      "headline3": "Esta página não estará disponível após a primeira reinicialização. Você pode verificar o progresso da instalação diretamente na tela da PCU. Uma reinicialização é necessária após a instalação ser concluída. Deseja continuar?",
+      "cancel": "Cancelar",
+      "agree": "Eu concordo",
+      "yes": "Sim"
+    }
+  },
+  "checkUpdate": {
+    "versionAvailable": "A versão {{ updateAvailableVersion }} está disponível no myWorld.",
+    "licenseExpired": "Licença CCP expirada. Renove a licença para atualizar o Pegasus FIELD.",
+    "myWorld": {
+      "title": "Para verificar as notas sobre a versão e baixar o instalador mais recente:",
+      "button": "Visite myWorld"
+    },
+    "doNotShow": "Não mostrar por 7 dias",
+    "okButton": "OK",
+    "noInternet": "Nenhuma conexão à Internet disponível.",
+    "error": "Não é possível recuperar as informações do myWorld.",
+    "retry": "Clique para tentar novamente",
+    "uptodate": "O software já está atualizado",
+    "checkButton": "Clique para verificar se há atualizações",
+    "checking": "Verificando atualizações..."
+  },
+  "copyright": {
+    "title": "Direitos de autor",
+    "text": "Leica Pegasus FIELD<br />Copyright © {{year}} Leica Geosystems AG.<br />Este produto está protegido pelo contrato de licenciamento do software da Hexagon Geosystems.<br /><br />Algumas partes deste software estão protegidas por direitos de autor de terceiros ou licenciadas por terceiros.<br />Este software poderá utilizar alguns ou todos os componentes listados abaixo.",
+    "library": "Biblioteca",
+    "url": "URL da licença"
+  },
+  "helpSupport": {
+    "header": "Ajuda & Suporte",
+    "contact": "Contactar suporte",
+    "helpGuide": "Guia de ajuda",
+    "about": "Sobre",
+    "supportEmail": "Selecionar o e-mail de suporte",
+    "motivation": "Em que podemos ajudá-lo?",
+    "motivations": {
+      "acquisition": "Captura de dados",
+      "deviceConnection": "Conexão do dispositivo",
+      "other": "Outro"
+    },
+    "description": "Descreva o seu problema",
+    "validation": {
+      "description": "Descrição necessária"
+    },
+    "footer": "Ao clicar em 'Enviar', compartilharemos com a assistência Leica todas as informações relacionadas com a opção selecionada.",
+    "send": "Enviar",
+    "cancel": "Cancelar"
+  },
+  "planning": {
+    "title": "Planejamento do Job",
+    "submit": {
+      "estimate": "Planejamento estimado",
+      "start_activate": "Capturar",
+      "save_activate": "Salvar e capturar",
+      "save_only": "Salvar",
+      "optimise_plan": "Refinar ordem das Tracks",
+      "keep_plan": "Manter plano atual",
+      "optimise_popup": "A estimativa é baseada na ordem atual de Tracks. Refinar a ordem de Tracks pode melhorar a estimativa. Nota: O refinamento da ordem das Tracks é irreversível."
+    },
+    "tools": {
+      "draw_track": "Adic. ponto",
+      "draw_new_track": "Nova Track",
+      "end_track": "Fechar Track",
+      "draw_polygon": "Desenhar polígono",
+      "draw_new_polygon": "Novo polígono",
+      "upload_file": "Carregar arquivo"
+    },
+    "track": "Track",
+    "defaultNames": {
+      "track": "Track",
+      "polygon": "Polígono"
+    },
+    "alert": {
+      "notracks": {
+        "title": "Adicionar, pelo menos, uma Track",
+        "message": "Não pode começar a efetuar um plano sem uma Track.",
+        "button": "OK"
+      },
+      "initialAlignmentPoint": {
+        "title": "Definir localização para alinhamento inicial",
+        "message": "Não pode começar a estimar um planejamento sem definir uma posição para a fase de alinhamento inicial.",
+        "button": "Definir a localização para o alinhamento inicial."
+      },
+      "finalAlignmentPoint": {
+        "title": "Defina a localização para o alinhamento final.",
+        "message": "A estimativa não inclui a localização para o alinhamento final. Os valores finais poderão variar.",
+        "button": "OK"
+      },
+      "unsavedPlan": {
+        "title": "Planejamento de Job não salvo",
+        "message": "Tem certeza de que deseja sair sem salvar o planejamento? Perderá todas as alterações efetuadas.",
+        "ok": "Continuar sem salvar",
+        "cancel": "Manter-se na página"
+      }
+    },
+    "delete_confirm": {
+      "cancel": "Cancelar",
+      "ok": "Sim",
+      "text": "Tem certeza de que deseja excluir {{pathName}}?",
+      "text_polygon": "Tem certeza de que deseja excluir {{pathName}} e suas {{tracks}} Tracks?",
+      "title": "Apagar {{type}}",
+      "track": "Track",
+      "polygon": "Polígono",
+      "polygon_internal_path": "Track do polígono"
+    },
+    "user_tips": {
+      "select_internal_track": "Selecione uma Track para editar",
+      "starting_point_empty_polygon": "Faça uma nova Track ou um novo polígono selecionando pontos no mapa.",
+      "starting_point_empty": "Faça uma nova Track selecionando pontos no mapa.",
+      "initial_point": "Escolha um ponto no mapa para definir a posição para o alinhamento inicial.",
+      "final_point": "Escolha um ponto no mapa para definir a posição para o alinhamento final.",
+      "starting_point_polygon": "Selecione uma Track ou um polígono selecionando-o no mapa (ou selecione o item na barra lateral).",
+      "starting_point": "Selecione uma Track selecionando-a no mapa (ou selecione o item na barra lateral).",
+      "new_track_start": "Escolha uma posição no mapa para começar uma nova Track.",
+      "new_track": "Escolha posições no mapa para adicionar pontos adicionais, toque duas vezes para terminar a Track.",
+      "new_polygon_start": "Escolha uma posição no mapa para começar um novo polígono.",
+      "new_polygon": "Escolha posições no mapa para adicionar pontos adicionais, toque duas vezes para fechar o polígono.",
+      "toolbar_delete_polygon": "Escolha uma Track ou um polígono no mapa para apagar.",
+      "toolbar_delete": "Escolha uma Track no mapa para apagar.",
+      "toolbar_delete_internal": "Escolha uma Track no mapa para apagar.",
+      "toolbar_cut": "Escolha um ponto na Track para dividir a Track nessa posição.",
+      "toolbar_move": "Escolha e arraste um ponto para o mover dentro do mapa. Isto cria um novo ponto caso não exista nenhum.",
+      "use_tools": "Utilize a barra de ferramentas para aceder às ferramentas de edição.",
+      "busy": "Calculando…"
+    },
+    "errors": {
+      "nearest_point": "O servidor do mapa de navegação HERE não responde. Verifique a conexão Internet.",
+      "arcs": "O servidor do mapa de navegação HERE não responde. Verifique a conexão Internet.",
+      "shp_failed": "A importação do arquivo SHP falhou.",
+      "estimate_failed": "O processamento falhou: uma conexão à Internet é necessária para a estimativa do Job.",
+      "shp_list_failed": "Falha ao listar o arquivo SHP.",
+      "path": "Erro ao calcular o caminho solicitado."
+    },
+    "warnings": {
+      "DS-039": {
+        "$type": "Error",
+        "title": "Espaço em disco crítico",
+        "text": "De acordo com o seu planejamento, o Job ocupará mais de 80% do espaço disponível no disco.",
+        "buttonCancel": "Continuar mesmo assim",
+        "buttonOk": "Mover o Job para um novo disco"
+      },
+      "DS-038": {
+        "$type": "Error",
+        "title": "Espaço do disco excedido",
+        "textSingle": "O tamanho estimado do Job poderá exceder a capacidade disponível no disco. Libere espaço no disco atribuído. Alternativamente, adicione um novo disco para o qual possa mover o Job sem perder dados.",
+        "textMultiple": "O tamanho estimado do Job poderá exceder a capacidade disponível no disco. Libere espaço no disco atribuído ou mova o Job para um novo disco sem perder dados.",
+        "buttonCancel": "Continuar mesmo assim",
+        "buttonOk": "Mover o Job para um novo disco"
+      },
+      "job_moved": {
+        "$type": "message",
+        "title": "Job movido",
+        "text": "Pode encontrar o novo Job no disco <b>{{disk}}</b> como <b>{{job}}</b> no Projeto <b>{{project}}</b>.",
+        "buttonOk": "OK"
+      }
+    },
+    "polygon_plan_filter": {
+      "checkAll": "Selecionar/desselecionar tudo",
+      "roads": {
+        "allroad": "Todas as estradas",
+        "allcar": "Todas as estradas para carros",
+        "motorway": "Autoestradas",
+        "truck": "Faixas para caminhões",
+        "primary": "Estradas principais",
+        "secondary": "Estradas secundárias",
+        "tertiary": "Estradas terciárias",
+        "residential": "Estradas residenciais",
+        "pedestrian": "Passeios para pedestres",
+        "cycleway": "Ciclofaixas",
+        "service": "Estradas de serviço",
+        "livingstreet": "Ruas para pedestres e ciclistas",
+        "allrailway": "Todas as ferrovias",
+        "rail": "Ferrovias",
+        "lightrail": "Metropolitanos ligeiros",
+        "monorail": "Ferrovias individuais",
+        "funicular": "Funiculares",
+        "subway": "Ferrovia para metrô",
+        "tram": "Ferrovia para bonde",
+        "unclassified": "Não classificado"
+      },
+      "ramps": {
+        "include_ramps": "Incluir rampas",
+        "only_ramps": "Apenas rampas",
+        "no_ramps": "Ignorar rampas"
+      },
+      "cancel": "Cancelar",
+      "extract": "Extrair",
+      "extractTracks": "Extrair Tracks"
+    }
+  },
+  "job_info": {
+    "title": "Informações do Job",
+    "rows": {
+      "planned": {
+        "title": "Planejamento do Job",
+        "values": {
+          "yes": "Planejado",
+          "no": "Não planejado"
+        }
+      },
+      "type": {
+        "title": "Tipo de Job"
+      },
+      "dmi": {
+        "title": "DMI"
+      },
+      "ntrip": {
+        "title": "Posicionamento",
+        "values": {
+          "enabled": "Com RTK",
+          "not_enabled": "Sem RTK"
+        },
+        "mountpoint": {
+          "title": "Ponto instalação:"
+        },
+        "interfacemode": {
+          "title": "Formato:"
+        }
+      },
+      "collectionmode": {
+        "title": "Modo de captura"
+      },
+      "antenna": {
+        "title": "Configuração da antena",
+        "valid": "Configuração disponível",
+        "invalid": "Nenhuma configuração"
+      },
+      "drivingspeed": {
+        "title": "Velocidade máx. sugerida"
+      },
+      "camera": {
+        "title": "Câmara",
+        "values": {
+          "yes": "LIGADO",
+          "no": "DESLIGADO"
+        },
+        "distance": {
+          "title": "Distância da imagem"
+        },
+        "elapse": {
+          "title": "Tempo de disparo da câmara"
+        },
+        "blur": {
+          "title": "Anonimização da imagem"
+        },
+        "left": {
+          "title": "Orientação da câmara esquerda"
+        },
+        "right": {
+          "title": "Orientação da câmara direita"
+        }
+      },
+      "scanner": {
+        "scanlinespacing": {
+          "title": "Espaçamento entre perfis"
+        },
+        "rotationspeed": {
+          "title": "Velocidade de rotação do perfilador"
+        },
+        "pointspersecond": {
+          "title": "Perfilidor Pontos/s"
+        },
+        "range": {
+          "title": "Alcance máx. do scanner"
+        }
+      },
+      "position": {
+        "accuracy": {
+          "title": "Precisão de posicionamento"
+        }
+      }
+    },
+    "back_to_jobs": "Cancelar ativação",
+    "edit": "Alterar definições",
+    "confirm": "Continuar",
+    "recalculate": "Configurar",
+    "use_saved_values": "Utilizar valores salvos",
+    "errors": {
+      "2nd_antenna_not_configured": "Configurar a segunda antena antes de continuar.",
+      "2nd_antenna_no_distance": "Especificar a distância entre a antena e a câmara panorâmica. Apenas números.",
+      "2nd_antenna_min_distance": "A segunda antena deve estar colocada a uma distância mínima de {{distance}} da câmara panorâmica.",
+      "2nd_antenna_no_manual": "Introduza os valores x, y, z do lever-arm. Apenas números.",
+      "2nd_antenna_missing": "Apenas números.",
+      "2nd_antenna_invalid": "A configuração da segunda antena não é válida. Verifique os valores."
+    },
+    "close": "Fechar"
+  },
+  "su": {
+    "su": "Unidade Sensor",
+    "model": {
+      "PEGASUS_TRK500_NEO": "PEGASUS TRK500 NEO",
+      "PEGASUS_TRK700_NEO": "PEGASUS TRK700 NEO",
+      "PEGASUS_TRK500_EVO": "PEGASUS TRK500 EVO",
+      "PEGASUS_TRK700_EVO": "PEGASUS TRK700 EVO",
+      "PEGASUS_TRK100": "PEGASUS TRK100",
+      "PEGASUS_TRK300": "PEGASUS TRK300",
+      "NO_SENSOR_UNIT": "Nenhuma unidade sensor conectada"
+    }
+  },
+  "errors": {
+    "status_socket": "Erro na conexão ao socket de estado.",
+    "status_socket_connected": "Conexão ao socket de estado retomada.",
+    "routing_socket": "Erro na conexão ao socket de roteamento.",
+    "routing_socket_connected": "Conexão ao socket de roteamento retomada.",
+    "notifications_socket": "Erro na conexão ao socket de notificação.",
+    "notifications_socket_connected": "Conexão ao socket de notificação retomada.",
+    "position_socket": "Erro na conexão ao socket de posição.",
+    "position_socket_connected": "Conexão ao socket de posição retomada.",
+    "pointcloud_socket": "Erro na conexão ao socket da nuvem de pontos.",
+    "pointcloud_socket_connected": "Conexão ao socket da nuvem de pontos retomada.",
+    "alignment_socket": "Erro na conexão ao socket de alinhamento.",
+    "alignment_socket_connected": "Conexão ao socket de alinhamento retomada.",
+    "heightmap_failed": "Falha do mapa de altura",
+    "heightmap_resumed": "Mapa de altura retomado"
+  },
+  "backend_errors": {
+    "dialogs": {
+      "ok": "OK",
+      "cancel": "Cancelar"
+    },
+    "status_code": {
+      "404": "API indisponível"
+    },
+    "code": {
+      "ECONNABORTED": "A comunicação com o sistema está lenta. Verifique as ligações à rede ou espere que o sistema responda.",
+      "ACTSYS-001": "Inicialização em curso…",
+      "ACTSYS-002": "Inicializado",
+      "ACTSYS-003": "Ativando…",
+      "ACTSYS-004": "Ativado",
+      "ACTSYS-005": "Desativando…",
+      "ACTSYS-006": "Desativado",
+      "ACTSYS-007": "Iniciando captura de dados…",
+      "ACTSYS-008": "Capturando…",
+      "ACTSYS-009": "Parando captura de dados…",
+      "ACTSYS-010": "Registrando…",
+      "ACTSYS-011": "Desligando sistema…",
+      "ACTSYS-012": "Abortando inicialização…",
+      "ACTSYS-013": "Abortando ativação…",
+      "ACTSYS-014": "Abortando desativação…",
+      "ACTSYS-015": "Abortando captura de dados…",
+      "ACTSYS-016": "Abortando parada da captura de dados…",
+      "ACTSYS-017": "Abortando desligamento do sistema…",
+      "ACTSYS-018": "Reiniciando sistema…",
+      "ACTSYS-019": "Iniciar alinhamento inicial",
+      "ACTSYS-020": "Alinhamento inicial",
+      "ACTSYS-021": "Iniciar alinhamento final",
+      "ACTSYS-022": "Alinhamento final",
+      "ACTSYS-023": "ICS configurado",
+      "ACTSYS-024": "Iniciar registro",
+      "ACTSYS-025": "Abortando alinhamento inicial…",
+      "ACTSYS-026": "Abortando alinhamento final…",
+      "BTU-001": "Bateria fraca.",
+      "BTU-002": "Bateria fraca {p1}. Substitua.",
+      "BTU-003": "Bateria fraca: O sistema será desativado…",
+      "BTU-004": "Bateria fraca: O sistema parará a captura de dados…",
+      "BTU-005": "Bateria fraca: O sistema será desligado…",
+      "SYS-002": "Erro interno.",
+      "SYS-003": "Autorização faltando.",
+      "SYS-004": "O sistema não está no estado desativado ou não foi iniciado.",
+      "SYS-005": "O módulo {p1} não está no estado desativado ou não foi iniciado.",
+      "SYS-006": "O sistema não está no estado ativado, no estado de alinhamento final ou inicial, ou no estado de registro.",
+      "SYS-007": "O módulo {p1} não está no estado de registro.",
+      "SYS-008": "O sistema não está no modo de captura.",
+      "SYS-010": "Tipo de sistema errado.",
+      "SYS-011": "Pasta de calibração desconhecida.",
+      "SYS-012": "A pasta de calibração não existe.",
+      "SYS-013": "Pedido incorreto. Contacte o suporte técnico.",
+      "SYS-014": "O sistema já está ativado.",
+      "SYS-015": "A configuração só pode ser realizada no estado desativado.",
+      "SYS-016": "A ativação só pode ser realizada no estado desativado.",
+      "SYS-017": "O cancelamento da ativação só pode ser realizado no estado ativado.",
+      "SYS-018": "A desativação só pode ser realizada no estado ativado, no estado de alinhamento final ou inicial, ou no estado de registro.",
+      "SYS-019": "O início da captura de dados só pode ser realizado no estado de registro.",
+      "SYS-020": "O cancelamento do início da captura de dados só pode ser realizado no estado de captura.",
+      "SYS-021": "A parada da captura de dados só pode ser realizada no estado de captura.",
+      "SYS-022": "A temperatura da PCU está elevada.",
+      "SYS-023": "A temperatura da PCU está crítica!",
+      "SYS-024": "O início do registro só pode ser realizado no estado de alinhamento inicial.",
+      "SYS-026": "O módulo {p1} não está no estado ativado.",
+      "SYS-027": "O sistema não está no modo de registro.",
+      "SYS-028": "O início do alinhamento inicial só pode ser realizado no estado ativado.",
+      "SYS-029": "O cancelamento do início do alinhamento inicial só pode ser realizado no estado de alinhamento inicial.",
+      "SYS-030": "O início do alinhamento final só pode ser realizado no estado de registro.",
+      "SYS-031": "O cancelamento do início do alinhamento final só pode ser realizado no estado de alinhamento final.",
+      "SYS-033": "O módulo {p1} não está no estado de registro.",
+      "SYS-034": "O módulo {p1} não está no estado de alinhamento inicial.",
+      "SYS-035": "A Unidade Sensor não está ligada à Unidade de Controle.",
+      "SYS-036": "Sistema bloqueado.",
+      "SYS-037": "Sistema bloqueado.",
+      "SYS-038": "O nível da bateria está baixo.",
+      "SYS-039": "A licença expirou. Contacte o suporte técnico.",
+      "SYS-040": "A data de manutenção da licença expirou. Contacte o seu representante de vendas.",
+      "SYS-041": "Código do país {p1} desconhecido.",
+      "SYS-042": "Licença não disponível.",
+      "SYS-043": "Manutenção não disponível.",
+      "ACTPOS-001": "Carregando pontos instalação RTK…",
+      "ACTPOS-002": "Testando RTK…",
+      "ACTPOS-003": "Pontos instalação RTK carregados.",
+      "ACTPOS-004": "RTK testado.",
+      "POS-001": "Servidor errado ou problema na conexão Internet.",
+      "POS-002": "Não há satélites o suficiente para ativar o sistema.",
+      "POS-003": "Itens de classe de precisão errados.",
+      "POS-004": "Tipo de DMI errado.",
+      "POS-005": "Já há outra solicitação RTK em curso.",
+      "POS-006": "Servidor indisponível.",
+      "POS-007": "Já há outro teste RTK em curso.",
+      "POS-008": "Usuário indisponível.",
+      "POS-009": "Senha indisponível.",
+      "POS-010": "Ponto de instalação indisponível.",
+      "POS-011": "Modo de interface indisponível.",
+      "POS-012": "Valor de ação inválido.",
+      "POS-013": "Conexão Internet indisponível",
+      "POS-014": "Erro de rede. Tente novamente ou reinicie o sistema.",
+      "POS-015": "O firmware GNSS não é suportado. Contacte o suporte técnico.",
+      "POS-016": "Sem saída de dados.",
+      "POS-017": "Itens de classe de precisão RTK errados.",
+      "POS-018": "Não há almanaques disponíveis, ou o modelo do relógio é inválido.",
+      "POS-019": "Configurando SPAN…",
+      "POS-020": "Os almanaques não estão disponíveis. Descarga em curso…",
+      "POS-021": "O sinal GPS não está disponível ou o modelo do relógio é inválido.",
+      "POS-022": "Não há satélites o suficiente para realizar o alinhamento. Vá para uma área a céu aberto.",
+      "POS-023": "Posição do GNSS inválida",
+      "CAM-000": "{p1} não é alcançável.",
+      "ACTCAM-001": "FFC carregado.",
+      "ACTCAM-002": "Carregando FFC…",
+      "MV-0": "Câmara {p1} ausente.",
+      "MV-1": "Câmara {p1} ausente.",
+      "MV-2": "Câmara {p1} ausente.",
+      "MV-3": "Câmara {p1} ausente.",
+      "MV-4": "Câmara {p1} ausente.",
+      "MV-5": "Câmara {p1} ausente.",
+      "MV-6": "Câmara {p1} ausente.",
+      "MV-7": "Câmara {p1} ausente.",
+      "MV-8": "Câmara {p1} ausente.",
+      "MV-9": "Câmara {p1} ausente.",
+      "CAM-001": "A {p1} está sendo utilizada.",
+      "CAM-002": "O firmware da câmara {p1} não é suportado. Contacte o suporte técnico.",
+      "CAM-003": "Erro de configuração da câmara {p1}.",
+      "CAM-004": "A unidade da câmara {p1} não é suportada.",
+      "CAM-005": "A câmara {p1} não está disponível.",
+      "CAM-006": "Erro ao carregar o FFC na câmara {p1}.",
+      "CAM-007": "Erro na configuração de cores da câmara {p1}.",
+      "CAM-008": "Erro ao aplicar o FFC na câmara {p1}.",
+      "CAM-009": "Demasiadas imagens na memória intermédia. Tente desacelerar o veículo. Contacte o suporte técnico.",
+      "CAM-010": "Erro na otimização de cores internas.",
+      "CAM-011": "Dados de calibração ausentes na câmera {p1}.",
+      "CAM-012": "Dados de calibração errados na câmara {p1}.",
+      "CAM-013": "O número de série do arquivo de calibração e o da câmara {p1} são diferentes.",
+      "CAM-014": "A câmara {p1} não tem orientação.",
+      "CAM-015": "A câmara {p1} não tem calibração.",
+      "CAM-016": "A aguardar pelo fim da tarefa de otimização das cores.",
+      "CAM-017": "Driver da câmara não é suportada. Contacte o suporte técnico.",
+      "CAM-018": "A câmara panorâmica dianteira não está disponível.",
+      "CAM-019": "A câmara panorâmica traseira não está disponível.",
+      "CAM-020": "A câmara {p1} não está conectada.",
+      "CAM-021": "%d câmaras esperadas, %d encontradas.",
+      "CAM-022": "Recuperando câmaras desconectadas…",
+      "CAM-023": "As fotos instantâneas da câmara estão disponíveis apenas durante a captura de dados.",
+      "CAM-024": "A câmara panorâmica dianteira está ausente. Brilho automático indisponível.",
+      "CAM-025": "A câmara panorâmica traseira está ausente. Brilho automático indisponível.",
+      "CAM-026": "Exposição errada.",
+      "CAM-027": "Valor errado da qualidade da imagem.",
+      "CAM-028": "Tipo de disparo indisponível.",
+      "CAM-029": "Já há outro FFC em execução.",
+      "CAM-030": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-031": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-032": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-033": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-034": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-035": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-036": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-037": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-038": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-039": "Há problemas de sincronização com a câmara {p1}.",
+      "CAM-040": "A câmara {p1} está perdendo imagens.",
+      "CAM-041": "A câmara {p1} está perdendo imagens.",
+      "CAM-042": "A câmara {p1} está perdendo imagens.",
+      "CAM-043": "A câmara {p1} está perdendo imagens.",
+      "CAM-044": "A câmara {p1} está perdendo imagens.",
+      "CAM-045": "A câmara {p1} está perdendo imagens.",
+      "CAM-046": "A câmara {p1} está perdendo imagens.",
+      "CAM-047": "A câmara {p1} está perdendo imagens.",
+      "CAM-048": "A câmara {p1} está perdendo imagens.",
+      "CAM-049": "A câmara {p1} está perdendo imagens.",
+      "CAM-050": "A câmara panorâmica dianteira não está disponível.",
+      "CAM-051": "A câmara panorâmica traseira não está disponível.",
+      "CAM-052": "Um cliente está utilizando o configurador da segunda antena: Feche-o antes de ativar o sistema.",
+      "CAM-053": "A câmara frontal não está disponível.",
+      "CAM-054": "A calibração da câmara frontal não está disponível.",
+      "CAM-055": "A orientação da câmara frontal não está disponível.",
+      "CAM-056": "A câmara de pavimento não está disponível.",
+      "CAM-057": "A calibração da câmara de pavimento não está disponível.",
+      "CAM-058": "A orientação da câmara de pavimento não está disponível.",
+      "CAM-059": "A câmara {p1} está sem FFC.",
+      "CAM-060": "A câmara {p1} está sem transformação de cores.",
+      "CAM-061": "Erro ao carregar a transformação de cores na câmara {p1}.",
+      "CAM-062": "Erro ao ler o arquivo de calibração da câmara {p1}.",
+      "CAM-063": "O arquivo de calibração {p1} não tem o número de série da câmara.",
+      "CAM-064": "O arquivo de calibração da câmara panorâmica dianteira não está disponível.",
+      "CAM-065": "O arquivo de calibração da câmara panorâmica traseira não está disponível.",
+      "CAM-066": "O nome da câmara {p1} é desconhecido.",
+      "CAM-067": "O arquivo de calibração da câmara {p1} com o número de série {p1} é uma câmara panorâmica.",
+      "CAM-068": "Ativando câmaras…",
+      "CAM-069": "Recuperando câmaras desconectadas: Desligando câmaras…",
+      "CAM-070": "Recuperando câmaras desconectadas: Ligando câmaras…",
+      "CAM-071": "Recuperando câmaras desconectadas: Conectando as câmaras…",
+      "CAM-072": "Recuperando câmaras desconectadas: Ligando câmara {p1}…",
+      "CAM-073": "Recuperando câmaras desconectadas: Carregando a otimização de cores…",
+      "CAM-074": "Não há discos com arquivos de calibração.",
+      "CAM-075": "{p1} está perdendo muitas imagens.",
+      "CAM-076": "A câmera {p1} não está pronta.",
+      "CAM-077": "Erro durante a leitura dos dados de calibração da câmera {p1}.",
+      "CAM-078": "Erro durante a leitura do arquivo de calibração {p1}.",
+      "CAM-079": "O arquivo de calibração {p1} tem um número de série diferente.",
+      "CAM-080": "As câmeras {p1} e {p2} não têm a mesma orientação.",
+      "CAM-081": "Dados de calibração ausentes na câmera {p1}.",
+      "CAM-082": "Nova orientação de câmera disponível.",
+      "DS-001": "Alteração do disco detetada. Verifique os discos disponíveis na barra superior.",
+      "DS-002": "Erro ao escrever o arquivo da trajetória: Disco cheio ou erro de disco.",
+      "DS-003": "Erro ao escrever o arquivo da trajetória: {p1}.",
+      "DS-004": "Erro ao escrever o arquivo da trajetória: {p1}.",
+      "DS-005": "Nome do Projeto vazio.",
+      "DS-006": "Nome do Projeto incorreto: {p1}.",
+      "DS-007": "Nome do Job está vazio.",
+      "DS-008": "Nome do Job incorreto: {p1}.",
+      "DS-009": "O disco está vazio.",
+      "DS-010": "Disco {p1} indisponível.",
+      "DS-011": "O disco {p1} não está pronto.",
+      "DS-012": "Erro ao criar a pasta do Projeto {p1}.",
+      "DS-013": "O Job '{p1}' já existe.",
+      "DS-014": "Erro ao criar a pasta do Job de registro.",
+      "DS-015": "Erro ao criar a pasta Rover.",
+      "DS-016": "Erro ao criar a pasta Master.",
+      "DS-017": "Erro ao criar o arquivo GNSS.",
+      "DS-018": "Erro ao criar o arquivo RTK.",
+      "DS-019": "Erro ao criar o arquivo LiDAR do scanner {p1}.",
+      "DS-020": "Erro ao criar o arquivo LiDAR de baixa resolução do scanner {p1}.",
+      "DS-021": "Erro ao escrever o arquivo LiDAR do scanner {p1}.",
+      "DS-022": "Erro ao escrever o arquivo LiDAR de baixa resolução do scanner {p1}.",
+      "DS-023": "Erro ao criar o contêiner da câmara {p1}.",
+      "DS-024": "Erro ao escrever o contêiner da câmara {p1}.",
+      "DS-025": "Nome da Track incorreto: {p1}.",
+      "DS-026": "Unidade do sistema de coordenadas desconhecida.",
+      "DS-027": "O Projeto '{p1}' já existe.",
+      "DS-028": "Nome do tipo de Job incorreto: {p1}.",
+      "DS-029": "Tipo de Job {p1} desconhecido.",
+      "DS-030": "O espaço disponível no disco é inferior a {p1}%.",
+      "DS-031": "O espaço disponível no disco é inferior a {p1}%.",
+      "DS-032": "O espaço disponível no disco é inferior a {p1}%. A captura de dados está parada. Executar a desativação em {p2} minutos.",
+      "DS-033": "O espaço disponível no disco é inferior a {p1}%.",
+      "DS-034": "O espaço disponível no disco é inferior a {p1}%.",
+      "DS-035": "O espaço disponível no disco não é suficiente.",
+      "DS-036": "O espaço disponível no disco é muito baixo.",
+      "DS-037": "Erro interno.",
+      "DS-038": "O espaço disponível no disco não é suficiente.",
+      "DS-039": "O espaço disponível no disco é muito baixo.",
+      "DS-040": "Relatório do Job criado.",
+      "DS-041": "A criar relatório do Job…",
+      "DS-042": "Já há outra criação de relatório do Job em curso.",
+      "DS-043": "O job {p1} não existe.",
+      "DS-044": "O relatório do Job não está disponível.",
+      "DS-045": "O processamento IA da imagem no Job não está concluído.",
+      "DS-046": "O Job não foi adquirido.",
+      "DS-047": "O Job não foi realizado com RTK.",
+      "DS-048": "Erro ao excluir o relatório do Job.",
+      "DS-049": "O espaço em disco disponível para processamento dos dados não é suficiente.",
+      "DS-050": "Sistema de coordenadas bloqueado: Não é possível alterá-lo.",
+      "ZF-001": "Aviso ZF: {p1} {p2}.",
+      "ZF-002": "Erro ZF: {p1} {p2}.",
+      "ZF-003": "Mensagem ZF: {p1} {p2}.",
+      "ZF-004": "{p1}: Referência disponível.",
+      "SCN-001": "Informações de calibração em falta para {p1}.",
+      "SCN-002": "Não é possível iniciar o scanner {p1}.",
+      "SCN-003": "Erro ao conectar ao scanner {p1}.",
+      "SCN-004": "Erro ao conectar ao scanner {p1}.",
+      "SCN-005": "Não é possível obter o número de série do scanner {p1}.",
+      "SCN-006": "Estado inesperado do scanner {p1}.",
+      "SCN-007": "O firmware do {p1} não é suportado.",
+      "SCN-008": "{p1} scanners esperados, {p2} encontrados.",
+      "SCN-009": "{p1} scanners SLAM esperados, {p2} encontrados.",
+      "SCN-010": "O número de SLAM é diferente do número de arquivos de calibração.",
+      "SCN-011": "{p1} scanners esperados, {p2} encontrados.",
+      "SCN-012": "O sinal PPS do scanner {p1} não está bloqueado.",
+      "SCN-013": "Há problemas de sincronização com o scanner {p1}.",
+      "SCN-014": "Dados de sincronização indisponíveis para o scanner {p1}.",
+      "SCN-015": "Erro ao conectar a {p1}.",
+      "SCN-016": "Erro ao conectar a {p1}.",
+      "SCN-020": "Sem dados de {p1}.",
+      "SCN-021": "Sem dados de {p1}.",
+      "SCN-025": "Sem dados de {p1}.",
+      "SCN-026": "Sem dados de {p1}.",
+      "SCN-030": "Número de série vazio no arquivo de calibração {p1}.",
+      "SCN-031": "O arquivo de calibração para o scanner {p1} não está disponível.",
+      "SCN-032": "Há mais arquivos de calibração do scanner com o mesmo número de série {p1}.",
+      "SCN-033": "O scanner com o número de série {p1} não está disponível.",
+      "SCN-034": "Conectando {p1}...",
+      "SCN-035": "Comando com {p2} Hz, {p3} pontos no scanner {p1} não disponível.",
+      "SCN-040": "Sem dados de {p1}.",
+      "SCN-041": "Sem dados de {p1}.",
+      "SCN-045": "À espera de {p1} para iniciar…",
+      "SCN-046": "{p1} está perdendo muitos pacotes.",
+      "SCN-047": "Reinicie o sistema.",
+      "SCN-050": "Falha ao fazer o streaming a partir do scanner {p1}.",
+      "SCN-051": "Configuração {p2} Hz, {p3} pontos no scanner {p1} não suportado.",
+      "SCN-052": "{p1} Scanners Hesai esperados, {p2} encontrados",
+      "SCN-060": "Sem dados de {p1}.",
+      "SCN-061": "Sem dados de {p1}.",
+      "SCN-065": "Problemas ao conectar-se ao {p1}",
+      "SCN-066": "Problemas ao conectar-se ao {p1}",
+      "SCN-070": "Aquisição de dados interrompida devido a temperatura elevada. Proceder ao alinhamento final e desativar o sistema.",
+      "SCN-071": "A calibração do scanner pode estar comprometida. Recomenda-se proceder ao alinhamento final.",
+      "SCN-072": "A temperatura interna do scanner está próxima de 80°C (176°F), acima do limite de utilização normal.",
+      "SCN-073": "{p1} está em modo de espera. Desligue o sistema e aguarde 30 minutos para arrefecer.",
+      "SCN-074": "{p1} está em modo de espera. Desligue o sistema e aguarde 30 minutos para arrefecer.",
+      "SCN-075": "A temperatura do scanner {p1} está elevada",
+      "NTF-001": "Tipo de notificação incorreto.",
+      "NTF-002": "ID de notificação inválida.",
+      "USR-001": "O início de sessão com o usuário '{p1}' falhou.",
+      "USR-002": "Utilizador '{p1}' desconhecido.",
+      "ACTPLN-001": "Extraindo polígono…",
+      "ACTPLN-002": "Já há outra extração de polígono em curso.",
+      "ACTPLN-003": "Processando planejamento…",
+      "ACTPLN-004": "Nenhum planejamento foi processado.",
+      "ACTPLN-005": "Nenhum arquivo SHP foi importado.",
+      "ACTPLN-006": "Nenhuma unidade USB detectada.",
+      "ACTPLN-008": "Processando arquivo SHP.",
+      "ACTPLN-009": "Outra importação de arquivo SHP já está em andamento.",
+      "ACTPLN-010": "O arquivo SHP fornecido está vazio.",
+      "ACTPLN-011": "Nenhum arquivo SHP encontrado.",
+      "ACTPLN-012": "Pesquisando arquivos SHP...",
+      "ACTPLN-013": "Outra pesquisa de arquivo SHP já está em andamento.",
+      "ACTPLN-014": "Erro ao abrir o arquivo SHP: {p1}.",
+      "ACTPLN-015": "Seleção de ponto de divisão inválida: O ponto está muito distante da Track.",
+      "PLN-001": "Extraindo polígono…",
+      "PLN-002": "Outra extração de polígono já está em andamento.",
+      "PLN-003": "Processando planejamento…",
+      "PLN-004": "Nenhum planejamento foi processado.",
+      "PLN-005": "Nenhum arquivo SHP importado.",
+      "PLN-006": "Nenhuma unidade USB detectada.",
+      "PLN-007": "Nenhum arquivo SHP encontrado na unidade {{p1}}.",
+      "PLN-008": "Processando arquivo SHP…",
+      "PLN-009": "á há outra importação de arquivo SHP em curso.",
+      "RTN-001": "A velocidade do veículo é superior ao limite definido.",
+      "RTN-002": "Sem espaço disponível em nenhum disco para criar o Job.",
+      "RTK-001": "Não é possível estabelecer a conexão. Verifique as definições.",
+      "GIO001": "Argumentos errados. Número de parâmetros correto.",
+      "GIO002": "Não é possível importar o conjunto de dados legado.",
+      "GIO003": "Nome do Job inválido.",
+      "GIO004": "Nome da Track inválido.",
+      "GIO005": "Não há trajetória atual para este Job.",
+      "GIO006": "Nome da trajetória inválido.",
+      "GIO007": "Não é possível indicar orientação nas tabelas de imagem.",
+      "GIO008": "Erro de licença.",
+      "GIO009": "Erro ao indicar a orientação da imagem.",
+      "IMT001": "Argumentos errados.",
+      "IMT002": "Não é possível abrir o Projeto.",
+      "IMT003": "Não é possível abrir o Job",
+      "IMT004": "Não foram encontrados dados.",
+      "IMT005": "Não é possível ler os dados da trajetória.",
+      "IMT006": "Não é possível carregar a biblioteca de geotransformação.",
+      "IMT007": "Erro de licença.",
+      "IMT009": "Não é possível importar o conjunto de dados legado.",
+      "IMT012": "O arquivo CTS não existe.",
+      "IMT010": "Não é possível converter as coordenadas da trajetória.",
+      "IMT011": "Não é possível converter as coordenadas da trajetória para correção da rotação sobre o eixo y.",
+      "IMT013": "O nome da trajetória não pode estar vazio.",
+      "PCJ001": "Argumentos errados.",
+      "PCJ002": "O Job não existe.",
+      "PCJ003": "Não é possível importar o conjunto de dados legado.",
+      "PCJ004": "Erro de licença.",
+      "PCJ005": "Erro ao gerar a nuvem de pontos.",
+      "GPC001": "Argumentos errados.",
+      "GPC002": "Não é possível importar o conjunto de dados legado.",
+      "GPC003": "Nome do Job inválido.",
+      "GPC004": "Não é possível abrir o arquivo.",
+      "GCP005": "Não há trajetória atual para este Job.",
+      "GCP006": "Nome da trajetória inválido.",
+      "GCP007": "Nome da Track inválido.",
+      "EXL003": "Erro ao exportar LGS.",
+      "EXL004": "Erro ao exportar LGSx.",
+      "LGS003": "Erro ao exportar LGS.",
+      "LGS006": "Erro Epca.",
+      "LGS004": "Erro de licença.",
+      "LGS007": "Nenhuma imagem disponível.",
+      "LGS005": "Erro ao escrever o arquivo LGS.",
+      "LGX003": "Erro ao exportar LGSx.",
+      "LGX006": "Erro Epca.",
+      "LGX004": "Erro de licença.",
+      "LGX007": "Nenhuma imagem disponível.",
+      "LGX005": "Erro ao escrever o arquivo LGSx.",
+      "LCB001": "Erro de licença.",
+      "LCB002": "Não é possível criar uma cópia de segurança.",
+      "LCB003": "Não é possível abrir a base de dados",
+      "LCB004": "Não é possível executar o conversor de trajetória.",
+      "LCB005": "Não é possível gerar a orientação de imagens.",
+      "LCB006": "Não é possível gerar a nuvem de pontos.",
+      "LCB007": "Não é possível classificar a nuvem de pontos.",
+      "LCB008": "Não é possível exportar LGS.",
+      "LCB009": "Não é possível exportar LAS.",
+      "LCB010": "Não é possível exportar E57.",
+      "LCB011": "Não há espaço em disco suficiente disponível.",
+      "LCB012": "Erro de colorização da nuvem de pontos.",
+      "LCB013": "Erro de entrada.",
+      "LCB014": "Não é possível exportar LGSx.",
+      "LCB101": "Não é possível executar o processo.",
+      "LCB102": "Nenhum arquivo RTK.",
+      "LCB103": "Erro de geração de máscara automática.",
+      "CLA002": "Erro de classificação da nuvem de pontos.",
+      "CLA003": "Erro de classificação da nuvem de pontos.",
+      "UPD-001": "Instalador encontrado",
+      "ROU-006": "Não é possível mover uma Track ou polígono durante sua gravação.",
+      "UPD-101": "Nenhum instalador válido",
+      "UPD-102": "Sistema não desativado",
+      "UPD-103": "Nenhuma unidade sensor conectada. Conecte-a e reinicie o sistema.",
+      "UPD-104": "PCU alimentada por tomada de CA. Conecte uma bateria e reinicie o sistema.",
+      "UPD-105": "Bateria ativa {p1} abaixo de 50 porcento.",
+      "UPD-106": "Licença de manutenção expirada ou não válida.",
+      "UPD-201": "Não é possível acessar o instalador {p1}.",
+      "UPD-202": "Não é possível limpar a pasta do instalador temporária {p1}.",
+      "UPD-203": "Não é possível extrair o arquivo version.ini do instalador {p1} para {p2}.",
+      "UPD-204": "A versão {p1} no instalador ({p2}) é mais antiga que a versão já instalada ({p3}).",
+      "UPD-205": "Data do build não disponível.",
+      "UPD-206": "Formato errado de data do build.",
+      "UPD-301": "Não é possível extrair o arquivo {p1} do instalador {p2} para {p3}.",
+      "UPD-302": "Não é possível extrair todos os arquivos do instalador {p1} para {p2}.",
+      "UPD-401": "Falha ao verificar a assinatura do instalador {p1} ({p2}) - Erro {p3}",
+      "UPD-402": "{p1}Falha ao verificar a assinatura do instalador ({p2} não foi devidamente assinado pela Leica).",
+      "UPD-502": "O arquivo version.ini de instalação não existe ({p1}).",
+      "UPD-504": "O arquivo version.ini de instalação não está formatado corretamente ({p1} = {p2}).",
+      "UPD-506": "A coluna de versão version.ini de instalação não está formatada corretamente ({p1} = {p2}).",
+      "UPD-501": "O arquivo version.ini de rollback não existe ({p1}).",
+      "UPD-503": "O arquivo version.ini de rollback não está formatado corretamente ({p1} = {p2}).",
+      "UPD-505": "A coluna de versão version.ini de rollback não está formatada corretamente ({p1} = {p2}).",
+      "CS-001": "Origem de {p1} já existe no sistema de coordenadas {p2}.",
+      "CS-004": "Nenhuma unidade USB detectada."
+    }
+  },
+  "notifications": {
+    "dataStorage": {
+      "DS-001": {
+        "title": "Alteração do disco detetada",
+        "text": "Verifique os discos disponíveis na barra superior.",
+        "okButton": "OK"
+      },
+      "DS-040": {
+        "title": "Alerta crítico de espaço no disco",
+        "text": "Pouco espaço em disco: 20% restante.",
+        "okButton": "OK"
+      },
+      "DS-041": {
+        "title": "Alerta crítico de espaço no disco",
+        "text": "Pouco espaço em disco: 10% restante. O Job será automaticamente fechado.",
+        "okButton": "OK"
+      },
+      "DS-042": {
+        "text": "Pouco espaço em disco: A captura de dados será parada. Tempo restante até à parada da captura de dados:",
+        "okButton": "OK"
+      },
+      "DS-010": {
+        "title": "O disco utilizado foi removido",
+        "text": "Os dados do Job foram perdidos. Volte a conectar o disco para continuar a trabalhar num novo Job.",
+        "okButton": "OK"
+      },
+      "LCB011": {
+        "title": "Alerta de espaço em disco",
+        "text": "Gerar arquivos de exportação selecionados para o Job {p1} pode fazer com que você fique sem espaço em disco. Deseja continuar mesmo assim?",
+        "okButton": "OK",
+        "cancelButton": "Cancelar"
+      },
+      "currentDisk": {
+        "title": "O disco utilizado foi removido",
+        "text": "Volte a conectar o disco ou clique em 'Reencaminhar' para ser reencaminhado para Projetos.",
+        "okButton": "Reencaminhar"
+      }
+    },
+    "scannerTemperature": {
+      "leftScanner": "Scanner esquerdo",
+      "rightScanner": "Scanner direito",
+      "SCN-072": {
+        "title": "Scanner temperature increasing",
+        "text": "Scanner internal temperature is approaching 80°C (176°F) which is above standard use.",
+        "okButton": "OK"
+      },
+      "SCN-071": {
+        "title": "Temperatura do scanner a aumentar",
+        "text": "A temperatura interna do scanner está acima de 80°C (176°F).<br/>A calibração dos scanners pode estar comprometida.<br/>Recomenda-se proceder ao alinhamento final.",
+        "okButton": "OK"
+      },
+      "SCN-070": {
+        "title": "Paragem de emergência do scanner",
+        "text": "A temperatura interna do scanner está acima de 95°C (203°F).<br/>Os scanners podem sofrer danos devido à temperatura elevada.<br/>Aquisição de dados interrompida.<br/>Proceder ao alinhamento final antes de desativar o sistema.",
+        "okButton": "OK"
+      },
+      "infoDialog": {
+        "title": "Temperatura do scanner",
+        "banner1": {
+          "tempC": "75°C",
+          "tempF": "167°F",
+          "text": "A temperatura do scanner está a aproximar-se de {{temperature}}, acima do limite de utilização normal."
+        },
+        "banner2": {
+          "tempC": "80°C",
+          "tempF": "176°F",
+          "text": "A calibração do scanner pode estar comprometida. Recomenda-se proceder ao alinhamento final."
+        },
+        "banner3": {
+          "tempC": "95°C",
+          "tempF": "203°F",
+          "text": "A temperatura interna do scanner está acima de {{temperature}}. Os scanners podem sofrer danos devido à temperatura elevada. Aquisição de dados interrompida."
+        }
+      }
+    }
+  },
+  "offline": {
+    "message": "Está offline. Verifique a conexão Internet."
+  },
+  "performance": {
+    "connection": {
+      "internet": "Internet",
+      "gateway": "Hotspot",
+      "client": "Seu dispositivo"
+    },
+    "system": {
+      "cpu": "CPU",
+      "gpu": "GPU",
+      "ram": "RAM"
+    }
+  },
+  "second_antenna": {
+    "title": "Configuração da segunda antena",
+    "subtitle": "Aplicar panorâmica e zoom na imagem para centrar o alvo e clique em \"Calcular\"",
+    "use_saved_values": "Utilizar os últimos valores armazenados",
+    "calculate": "Calcular",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "manual": "Inserir valores manualmente",
+    "pick": "Escolher & Calcular",
+    "loading": "Inicializando câmara…",
+    "closing": "Salvando…",
+    "dist": "Distância ({{unit}}) =",
+    "x": "X ({{unit}}) =",
+    "y": "Y ({{unit}}) =",
+    "z": "Z ({{unit}}) ="
+  },
+  "portraitOverlay": {
+    "rotate": "O aplicativo foi concebido para trabalhar no modo horizontal. Gire seu dispositivo.",
+    "mobile": "O aplicativo foi concebido para trabalhar com tablets. Não são suportados celulares."
+  },
+  "api": {
+    "unexpectedError": "Erro inesperado."
+  },
+  "job_processing": {
+    "status": {
+      "play": "Processando...",
+      "pause": "Processamento pausado",
+      "done": "Processado",
+      "error": "Processado com erros",
+      "none": "Iniciar processo",
+      "imageOnly": "Apenas o processamento de imagens foi concluído."
+    },
+    "image": "Processamento de imagens",
+    "pointCloud": "Processamento da nuvem de pontos e da trajetória",
+    "pointCloud_noTrajectory": "Processamento da nuvem de pontos",
+    "ready": "Pronto para pós-processamento.",
+    "noRtkAvailable": "RTK em falta. Não é possível processar.",
+    "failed": {
+      "title": "O processamento falhou.",
+      "text": "Erro ao processar o arquivo.",
+      "retry": "Tentar novamente",
+      "cancel": "Cancelar"
+    },
+    "options": {
+      "title": "Opções de processamento",
+      "button_start": "Iniciar processo",
+      "button_stop": "Parar processo",
+      "button_pause": "Pausar processo",
+      "button_cancel": "Cancelar",
+      "export": {
+        "label": "Exportar",
+        "lgs": "LGS",
+        "lgsx": "LGSx",
+        "las": "LAS",
+        "e57": "E57"
+      },
+      "finalise": {
+        "label": "Finalizar",
+        "blur": "Anonimização da imagem",
+        "colorization": "Colorização RGB da nuvem de pontos"
+      }
+    },
+    "dialog": {
+      "header": "Finalizar & Exportar"
+    },
+    "overwrite_alert": {
+      "title": "Exportação já realizada",
+      "text": "A pasta do Projeto já contém alguns arquivos de exportação. Os arquivos com o mesmo nome serão substituídos.",
+      "cta": "Deseja continuar?",
+      "okButtonLabel": "Sim",
+      "cancelButtonLabel": "Não"
+    },
+    "pause_alert": {
+      "title": "Pausar processo",
+      "text": "Pausar o processamento pode causar a perda de outras opções Finalização e Exportação selecionadas, exceto anonimização. Deseja continuar?",
+      "okButtonLabel": "Sim",
+      "cancelButtonLabel": "Não"
+    }
+  },
+  "countries": {
+    "international": "Internacional",
+    "CN": "China",
+    "JP": "Japão",
+    "KR": "Coreia do Sul"
+  },
+  "mapView": {
+    "map": "Mapa",
+    "satellite": "Satélite",
+    "here": {
+      "copyright": {
+        "terms": "Termos de utilização",
+        "$link": "https://legal.here.com/en/terms/serviceterms/us"
+      }
+    }
+  },
+  "import_shape": {
+    "title": "Carregar arquivo",
+    "cancel": "Cancelar",
+    "refresh": "Atualizar",
+    "upload": "Carregar",
+    "available": "Arquivos disponíveis",
+    "notAvailable": "Nenhum arquivo suportado foi encontrado."
+  },
+  "coordsys": {
+    "errors": {
+      "listSystems": "Falha ao listar sistemas de coordenadas.",
+      "importSystem": "Falha ao importar sistemas de coordenadas.",
+      "listWkt": "Falha ao listar arquivos WKT.",
+      "importWkt": "Falha ao importar arquivo WKT."
+    },
+    "dialog": {
+      "title": "Sistema de coordenadas"
+    },
+    "deleteDialog": {
+      "title": "Excluir sistema de coordenadas",
+      "titleWkt": "Excluir arquivo WKT",
+      "text": "Excluir {{name}}?",
+      "textWkt": "Excluir arquivo WKT de {{name}}?",
+      "cancel": "Cancelar",
+      "delete": "Apagar"
+    },
+    "importDialog": {
+      "csysTitle": "Importar sistema de coordenadas",
+      "csysSubtitle": "Arquivos CSYS disponíveis",
+      "wktTitle": "Importar arquivo WKT para {{name}}",
+      "wktSubtitle": "Arquivos WKT disponíveis",
+      "notAvailable": "Nenhum arquivo suportado foi encontrado.",
+      "proceed": "Continuar",
+      "cancel": "Cancelar",
+      "refresh": "Atualizar",
+      "upload": "Importar",
+      "sameCsysName": "Um arquivo CSYS com o mesmo nome de importação já foi importado.",
+      "importedCsysName": "O sistema de coordenadas personalizado importado com esse arquivo CSYS é {{name}} e ele será selecionado.",
+      "confirmation": "Deseja continuar?"
+    },
+    "selection": {
+      "projectFormTitle": "Sistema de coordenadas",
+      "processingDialogTitle": "Sistema de coordenadas do Projeto",
+      "automatic": "Automático",
+      "import": "Importar de USB"
+    },
+    "csysInfo": {
+      "title": "Informações sobre o sistema de coordenadas",
+      "cancel": "Cancelar",
+      "loadWkt": "Carregar arquivo WKT",
+      "viewWkt": "Ver arquivo WKT",
+      "confirm": "Confirmar",
+      "transformation": "Transformação",
+      "ellipsoid": "Elipsoide",
+      "projection": "Projeção",
+      "geoidModel": "Modelo geoide",
+      "cscsModel": "Modelo CSCS",
+      "wkt": "WKT",
+      "close": "Fechar",
+      "delete": "Apagar",
+      "wktTitle": "Arquivo WKT de {{name}}",
+      "wktLoaded": "Carregado",
+      "wktMissing": "Ausente"
+    },
+    "overwriteDialog": {
+      "title": "Um arquivo .CSYS chamado {{p2}} já foi importado.",
+      "text": "Clicar em Continuar fará com que o sistema carregue o CSYS armazenado.",
+      "okButton": "Continuar",
+      "cancelButton": "Cancelar"
+    },
+    "processingDialog": {
+      "text1": "Após o início dessa rodada de processamento, o sistema de coordenadas ficará bloqueado para cada Job deste Projeto.",
+      "text2": "O sistema de coordenadas pode ser alterado posteriormente no Pegasus OFFICE.",
+      "cta": "Deseja continuar?",
+      "cancelButton": "Cancelar",
+      "okButton": "Iniciar processo"
+    }
+  }
+}

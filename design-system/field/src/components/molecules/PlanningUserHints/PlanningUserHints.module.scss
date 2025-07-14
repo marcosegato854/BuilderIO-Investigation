@@ -1,0 +1,44 @@
+@import 'styles/main';
+
+.userHint {
+  border-radius: 10px;
+  padding: 8px;
+  margin-right: 8px;
+  @include flexAlign();
+  @include applyThemes() {
+    color: t(primary-18);
+    background-color: t(secondary-8);
+  }
+  @include testi('Body1');
+  font-size: 14px;
+
+  &Icon {
+    height: 24px;
+    margin-right: 8px;
+    svg {
+      height: 24px;
+      @include applyThemes() {
+        path {
+          fill: t(primary-18);
+        }
+      }
+    }
+  }
+
+  &Desktop {
+    position: fixed;
+    z-index: 0;
+    white-space: nowrap;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  &.closed {
+    .text {
+      display: none;
+    }
+    .userHintIcon {
+      margin-right: 0;
+    }
+  }
+}

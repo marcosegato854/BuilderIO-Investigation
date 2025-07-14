@@ -1,0 +1,26 @@
+@import 'styles/main';
+
+.cameraBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box {
+  width: 360px;
+  height: 240px;
+  position: relative;
+  border: 1px solid map-deep-get($themes, 'dark', 'primary-11');
+  border-radius: 5px;
+}
+
+.label {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background-color: map-deep-get($themes, 'dark', 'primary-1');
+  color: map-deep-get($themes, 'dark', 'primary-11');
+  padding: 3px;
+  @include testi('Caption');
+  @include testi('Bold');
+}

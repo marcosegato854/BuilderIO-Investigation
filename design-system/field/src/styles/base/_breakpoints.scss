@@ -1,0 +1,75 @@
+@import '~sass-mq/mq';
+
+$mq-breakpoints: (
+  xs: 0px,
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1920px,
+);
+
+@mixin extra-small() {
+  @include mq($from: xs) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @include extra-small() {
+    @content;
+  }
+}
+
+@mixin small() {
+  @include mq($from: sm) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait() {
+  @include small {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @include mq($from: md) {
+    @content;
+  }
+}
+
+@mixin big-tablet() {
+  @media screen and (min-height: 760px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape() {
+  @include medium {
+    @content;
+  }
+}
+
+@mixin large() {
+  @include mq($from: lg) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @include large {
+    @content;
+  }
+}
+
+@mixin extra-large() {
+  @include mq($from: xl) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include extra-large() {
+    @content;
+  }
+}

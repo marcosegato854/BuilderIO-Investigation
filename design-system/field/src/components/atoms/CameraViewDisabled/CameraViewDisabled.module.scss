@@ -1,0 +1,44 @@
+@import 'styles/main';
+
+.container {
+  @include flexAlign(center, center);
+  flex-direction: column;
+  @include applyThemes() {
+    color: t(primary-11);
+    background-color: rgba(t(primary-10), 0.3);
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  @include blurBg();
+  padding-bottom: 100px;
+
+  img {
+    max-height: 45vh;
+  }
+
+  .title {
+    @include testi('Heading5');
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-height: 640px) {
+    .title {
+      font-size: 3.2em;
+    }
+
+    img {
+      max-height: 65vh;
+    }
+  }
+
+  &.recording {
+    img {
+      max-height: 45vh;
+    }
+  }
+}

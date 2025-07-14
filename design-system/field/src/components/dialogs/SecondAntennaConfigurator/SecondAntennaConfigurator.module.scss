@@ -1,0 +1,170 @@
+@import 'styles/main';
+
+.container {
+  background-color: rgba(map-deep-get($themes, 'light', 'primary-14'), 0.75);
+  box-shadow: 0px 50px 80px 2px rgba(0, 0, 0, 0.15);
+  @include blurBg();
+  // width: 100%;
+  // height: 100%;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+  border-radius: 10px;
+
+  color: map-deep-get($themes, 'dark', 'primary-11');
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 10px;
+}
+.header {
+  display: flex;
+  padding: 10px 15px;
+  .text {
+    flex: 1;
+  }
+  .title,
+  .subtitle {
+    @include testi('Body1');
+  }
+  .subtitle {
+    font-size: 1.4em;
+  }
+  .close {
+    cursor: pointer;
+  }
+}
+.content {
+  flex: 1;
+  margin: 0 15px;
+  background-color: rgba(map-deep-get($themes, 'light', 'primary-22'), 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .contentBottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .image {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(map-deep-get($themes, 'light', 'primary-11'), 1);
+    .marker {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: red;
+      opacity: 0.5;
+      padding: 1px;
+      margin-left: -1px;
+      margin-top: -1px;
+      visibility: hidden;
+      border-radius: 1px;
+    }
+    .prismaZoom {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
+      .imageWrapper {
+        // flex: 1;
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+      }
+    }
+  }
+  .values {
+    padding: 10px 10px;
+    // width: 270px;
+    width: 600px;
+  }
+  .buttons {
+    display: flex;
+    padding: 10px 10px;
+    gap: 8px;
+    justify-content: flex-end;
+    button {
+      // text-transform: capitalize;
+      @include testi('Caption');
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+  }
+}
+.footer {
+  padding: 10px 30px;
+  padding-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  position: relative;
+
+  button {
+    // text-transform: capitalize;
+    @include testi('Caption');
+    line-height: 1.25;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 14px;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background-color: rgba(map-deep-get($themes, 'light', 'primary-24'), 1);
+  }
+  button {
+    // text-transform: capitalize;
+    @include testi('ButtonLabel');
+  }
+}
+.aim {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.3);
+  pointer-events: none;
+}
+.portrait {
+  .prismaZoom {
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+.landscape {
+  .prismaZoom {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.manual {
+  &Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(map-deep-get($themes, 'dark', 'primary-23'), 1);
+    @include flexAlign();
+  }
+
+  &Image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

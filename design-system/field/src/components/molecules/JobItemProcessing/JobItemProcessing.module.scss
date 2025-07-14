@@ -1,0 +1,147 @@
+@import 'styles/main';
+
+.containerGrid,
+.containerList {
+  padding: 12px;
+  gap: 24px;
+  position: relative;
+
+  .progressDetail {
+    margin-top: 12px;
+    padding-top: 12px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      margin-top: -12px;
+      left: 12px;
+      width: calc(100% - 24px);
+      height: 1px;
+      background-color: rgba(map-deep-get($themes, 'dark', 'primary-16'), 1);
+    }
+
+    &Bar {
+      &:not(:last-of-type) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &Text {
+      @include testi('Caption');
+      font-weight: 400;
+      color: map-deep-get($themes, 'dark', 'secondary-4');
+    }
+  }
+
+  .progressError {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+
+    h3 {
+      @include testi('Body1');
+      font-size: 1.8rem;
+    }
+
+    p {
+      @include testi('Caption');
+      font-weight: 400;
+    }
+
+    &Cta {
+      @include flexAlign(center, flex-start);
+      gap: 16px;
+      margin-top: 16px;
+    }
+  }
+
+  .buttons {
+    @include flexAlign(flex-start, space-between);
+
+    .btn {
+      cursor: pointer;
+    }
+
+    svg {
+      @include pathDimension(21px);
+      @include applyThemes() {
+        path {
+          fill: map-deep-get($themes, 'light', 'primary-1');
+        }
+      }
+    }
+  }
+}
+
+.containerList {
+  border-radius: 12px;
+  background-color: rgba(map-deep-get($themes, 'dark', 'primary-22'), 1);
+  @include flexAlign(flex-start, flex-end);
+  float: right;
+
+  .progress {
+    flex: 1 1 auto;
+    gap: 24px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+}
+
+.containerGrid {
+  border-radius: 0 0 12px 12px;
+  background-color: rgba(map-deep-get($themes, 'dark', 'primary-3'), 0.4);
+  width: 360px;
+  max-height: 270px;
+
+  &Expanded {
+    border-radius: 12px;
+    height: 270px;
+  }
+
+  .header {
+    @include flexAlign(center, space-between);
+
+    &Title {
+      min-width: 0;
+
+      &Name {
+        @include testi('Body1');
+        font-size: 1.4rem;
+        color: map-deep-get($themes, 'light', 'primary-2');
+        cursor: pointer;
+        @include ellipsis;
+      }
+
+      &Description {
+        @include testi('Body1');
+        font-size: 1.2rem;
+        color: map-deep-get($themes, 'light', 'primary-1');
+      }
+    }
+
+    .hardwareModel {
+      margin-left: 16px;
+    }
+
+    .buttons {
+      gap: 6px;
+      align-self: flex-start;
+    }
+
+    &Full {
+      .scansNumber {
+        display: block;
+      }
+      .hardwareModel {
+        margin-left: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .progress {
+    margin-top: 12px;
+  }
+}

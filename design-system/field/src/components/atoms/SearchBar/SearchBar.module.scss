@@ -1,0 +1,75 @@
+@import 'styles/main';
+.container {
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  position: relative;
+
+  &__searchBar {
+    height: 31px;
+    width: 100%;
+    border: 1px solid;
+    padding: 0px 30px 16px 0;
+    margin-top: 10px;
+    outline: none; // remove the focus rectangle around the button
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    // input element has a strange behaviour: it doesn't inherit font properties
+    @include testi('Body1');
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    background-color: transparent;
+
+    @include applyThemes() {
+      color: t(primary-11);
+      border-color: t(primary-3);
+    }
+
+    &:focus:enabled {
+      font-weight: 700; // Bold
+
+      @include applyThemes() {
+        border-bottom: 2px solid t(primary-3);
+      }
+
+      // the placeholder doesn't change style on :focus
+      &::-webkit-input-placeholder {
+        font-weight: 300;
+      }
+    }
+
+    &:disabled {
+      @include applyThemes() {
+        color: t(primary-13);
+        border-color: t(primary-13);
+        // when the search-bar is disabled, change the icon color as well
+        // the only way to select the icon is to put it as the sibling immediately after in HTML
+        & + .icon {
+          color: t(primary-13);
+        }
+      }
+    }
+
+    @include big-tablet {
+      margin-top: 16px;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px !important;
+    margin-left: 18px;
+    // position the icon before the search-bar
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include applyThemes() {
+      fill: t(primary-11);
+      stroke: t(primary-11);
+    }
+  }
+}

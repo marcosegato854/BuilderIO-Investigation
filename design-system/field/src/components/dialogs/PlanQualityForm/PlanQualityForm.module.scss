@@ -1,0 +1,187 @@
+@import 'styles/main';
+
+.planQualityForm {
+  @include scrollableDialogContainer();
+
+  @include applyThemes() {
+    background-color: t(primary-5);
+    color: t(primary-11);
+  }
+  width: 469px;
+  // height: 655px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    padding: 20px 30px;
+    @include flexAlign(center, flex-start);
+
+    h1 {
+      @include testi('Heading5');
+      font-size: 1.8rem;
+    }
+
+    &Icon {
+      @include flexAlign();
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      margin-right: 20px;
+
+      @include applyThemes() {
+        background-color: t(primary-11);
+        path {
+          fill: t(primary-1);
+        }
+      }
+
+      svg {
+        @include pathDimension(20px);
+      }
+    }
+  }
+
+  .scrollable {
+    margin: 2px 8px 2px 0;
+  }
+
+  .label {
+    @include testi('Body1');
+    white-space: nowrap;
+  }
+
+  .dataContainer {
+    padding: 0px 30px 30px 30px;
+
+    .row {
+      @include flexAlign(center, space-between);
+      padding: 12px 0;
+
+      &PickerDate,
+      &PickerTime {
+        @include applyThemes() {
+          background-color: t(primary-4);
+          color: t(primary-11);
+        }
+        @include flexAlign(center);
+        border-radius: 6px;
+        padding: 0px 12px;
+
+        input {
+          @include testi('Body1');
+        }
+
+        svg {
+          height: 16px;
+          width: 16px;
+        }
+      }
+
+      &PickerTime {
+        margin: 0 12px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .chart {
+    margin-top: 12px;
+
+    &Scroll {
+      overflow: auto;
+      position: relative;
+      @include customScrollbar();
+    }
+
+    .customTooltip {
+      margin: 0;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+      @include applyThemes() {
+        background-color: t(primary-4);
+        color: t(primary-11);
+      }
+
+      .label {
+        margin: 0;
+        @include testi('ButtonLabel');
+      }
+    }
+  }
+
+  .footer {
+    height: 82px;
+    @include applyThemes() {
+      background-color: t(primary-6);
+    }
+
+    padding: 18px 25px 20px 25px;
+    display: flex;
+    justify-content: flex-end;
+
+    .buttonsContainer {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  .slider {
+    margin-top: 16px;
+
+    &Label,
+    &Caption {
+      text-align: center;
+      @include testi('Body1');
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    &Container {
+      padding: 0 24px;
+    }
+
+    &Low {
+      @include applyThemes() {
+        color: t(secondary-4);
+      }
+    }
+
+    &Mid {
+      @include applyThemes() {
+        color: t(secondary-1);
+      }
+    }
+
+    &High {
+      @include applyThemes() {
+        color: t(secondary-6);
+      }
+    }
+  }
+}
+
+.icon {
+  button {
+    svg {
+      @include applyThemes() {
+        path {
+          fill: t(primary-11);
+        }
+      }
+    }
+  }
+}
+
+/* ::-webkit-calendar-picker-indicator {
+  @include applyThemes() {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="'#{t(primary-11)}'" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  }
+}
+ */

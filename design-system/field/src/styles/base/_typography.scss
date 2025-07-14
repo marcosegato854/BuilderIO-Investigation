@@ -1,0 +1,67 @@
+@import '~testi/_testi';
+
+/* We put font style into body because in this way we can use the power of inheritance */
+/* instead of selecting everything */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  // color: $color-grey-dark;
+  color: white;
+}
+
+$testi: (
+  'Ubuntu-font': (
+    font-family: 'Ubuntu, sans-serif',
+  ),
+  'Body-font': (
+    font-family: 'Roboto, sans-serif',
+  ),
+  'Bold': (
+    font-weight: 700,
+  ),
+  'Pegasus': (
+    font-size: 1.2rem,
+    font-weight: 400,
+    font-style: normal,
+    line-height: 2em,
+    letter-spacing: 1.4em,
+  ),
+  'Heading1': (
+    font-size: 4.8rem,
+    font-weight: 300,
+  ),
+  'Heading2': (
+    font-size: 4rem,
+    font-weight: 300,
+  ),
+  'Heading3': (
+    font-size: 3.2rem,
+    font-weight: 400,
+  ),
+  'Heading4': (
+    font-size: 3.2rem,
+    font-weight: 300,
+  ),
+  'Heading5': (
+    font-size: 2rem,
+    font-weight: 400,
+  ),
+  'Heading6': (
+    font-size: 2rem,
+    font-weight: 300,
+  ),
+  'Body1': (
+    font-size: 1.6rem,
+    font-weight: 400,
+  ),
+  'ButtonLabel': (
+    font-size: 1.4rem,
+    font-weight: 400,
+    letter-spacing: 0.5px,
+  ),
+  'Caption': (
+    font-size: 1.2rem,
+    font-weight: 300,
+  ),
+);

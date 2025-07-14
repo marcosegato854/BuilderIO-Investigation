@@ -1,0 +1,18 @@
+@import 'styles/main';
+.infoItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @include applyThemes {
+    color: t(primary-11);
+  }
+  > :nth-child(1) {
+    flex: 1;
+  }
+  & + & {
+    margin-top: 10px;
+  }
+  &.hidden {
+    visibility: hidden;
+  }
+}

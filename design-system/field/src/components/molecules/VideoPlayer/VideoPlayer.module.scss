@@ -1,0 +1,96 @@
+@import 'styles/main';
+
+.videoPlayer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  @include applyThemes() {
+    background-color: t(primary-1);
+  }
+
+  &__topGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include applyThemes() {
+      background: linear-gradient(t(primary-5), transparent);
+    }
+    height: 50px;
+    width: 100%;
+  }
+
+  &__playerTitle {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include testi('ButtonLabel');
+    @include testi('Bold');
+    @include applyThemes() {
+      color: t(primary-11);
+    }
+  }
+
+  &__playerClose {
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+
+  &__controlVolumeOn,
+  &__controlVolumeOff {
+    margin-left: 20px;
+    @include pathDimension(24px);
+  }
+
+  &__controlVolumeSlider {
+    margin-left: 10px;
+    width: 100px !important;
+  }
+
+  &__controlTime {
+    font-size: 1.4rem;
+    @include testi('ButtonLabel');
+    @include applyThemes() {
+      color: t(primary-11);
+    }
+    margin-right: 20px;
+  }
+
+  &__controlPlay,
+  &__controlPause {
+    margin: 0 20px 0 20px;
+    @include pathDimension(24px);
+  }
+
+  &__controlsWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    @include applyThemes() {
+      background: linear-gradient(transparent, t(primary-5));
+    }
+  }
+}

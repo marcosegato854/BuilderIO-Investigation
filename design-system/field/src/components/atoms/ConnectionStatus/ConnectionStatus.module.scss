@@ -1,0 +1,55 @@
+@import 'styles/main';
+
+.icon {
+  &0 {
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+  }
+
+  &1 {
+    @include applyThemes() {
+      path {
+        fill: t('primary-21');
+      }
+      path:nth-child(1) {
+        fill: t('primary-11');
+      }
+    }
+  }
+
+  &2 {
+    @include applyThemes() {
+      path {
+        fill: t('primary-21');
+      }
+      path:nth-child(1),
+      path:nth-child(2) {
+        fill: t('primary-11');
+      }
+    }
+  }
+
+  &3 {
+    @include applyThemes() {
+      path {
+        fill: t('primary-21');
+      }
+      path:nth-child(1),
+      path:nth-child(2),
+      path:nth-child(3) {
+        fill: t('primary-11');
+      }
+    }
+  }
+
+  &4 {
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+  }
+}

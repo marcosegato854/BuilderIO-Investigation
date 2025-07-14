@@ -1,0 +1,59 @@
+@import 'styles/main';
+
+.mapSearchBar {
+  position: relative;
+  margin-right: -18px;
+  margin-top: -12px;
+  @include testi('Body1');
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+
+  &Icon {
+    @include pathDimension(16px);
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+
+  .popupIndicatorOpen {
+    transform: rotate(0deg);
+  }
+
+  .input {
+    @include testi('Body1');
+    @include applyThemes() {
+      color: t(primary-11);
+    }
+  }
+
+  :global(.MuiAutocomplete-listbox),
+  :global(.MuiAutocomplete-input),
+  :global(.MuiAutocomplete-groupUl) {
+    @include applyThemes() {
+      color: t(primary-11);
+    }
+
+    @include testi('Body1');
+  }
+
+  :global(.MuiAutocomplete-listbox) {
+    @include applyThemes() {
+      background-color: t(primary-10);
+    }
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  }
+
+  :global(.MuiAutocomplete-noOptions) {
+    @include applyThemes() {
+      background-color: t(primary-10);
+    }
+    display: none;
+  }
+
+  :global(.MuiInputLabel-shrink) {
+    opacity: 0;
+  }
+}

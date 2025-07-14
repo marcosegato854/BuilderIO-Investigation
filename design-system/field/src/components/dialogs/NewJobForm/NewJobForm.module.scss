@@ -1,0 +1,225 @@
+@import 'styles/main';
+
+.newJobForm {
+  @include scrollableDialogContainer();
+  height: 90vh;
+
+  @include applyThemes() {
+    background-color: t(primary-5);
+    color: t(primary-11);
+  }
+  width: 469px;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  .scrollable {
+    margin: 2px 8px 2px 0;
+  }
+}
+
+.title {
+  @include testi('Heading5');
+  font-size: 1.8rem;
+  padding: 10px 30px;
+  @include big-tablet {
+    padding: 20px 20px 10px 30px;
+  }
+}
+
+.mainForm {
+  margin-right: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 14px 0px 30px;
+}
+
+.jobNameInput {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.imageSelector {
+  margin-top: 10px;
+  width: 100%;
+  height: 238px;
+}
+
+.label {
+  @include testi('Body1');
+  @include flexAlign(center, space-between);
+}
+
+.planningRow {
+  margin-top: 16px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.singleOpenSelectBox {
+  width: 274px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 60px;
+}
+
+.selectBoxRow {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-bottom: 20px;
+}
+
+.fieldBox {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.fieldBoxLabelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.helpIcon {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  @include applyThemes() {
+    path {
+      fill: t('primary-11');
+    }
+  }
+}
+
+//style the see more/see less label container
+.seeMoreContainer {
+  margin: 0px auto 20px auto;
+  text-align: center;
+  @include big-tablet {
+    margin: 0px auto 20px auto;
+  }
+}
+
+.footer {
+  height: 82px;
+  @include applyThemes() {
+    background-color: t(primary-6);
+  }
+
+  padding: 18px 25px 20px 25px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.seeDetailIcon {
+  height: 24px;
+
+  @include applyThemes() {
+    fill: t(primary-11);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.rtkShowDetails {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-left: 24px;
+  transition: all 0.2s;
+  @include testi('Body1');
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+
+  span {
+    margin-right: 5px;
+  }
+
+  svg {
+    transform: rotate(-90deg);
+    @include pathDimension(9px);
+    path {
+      @include applyThemes() {
+        fill: t(primary-11);
+      }
+    }
+  }
+
+  &:active > * {
+    @include applyThemes() {
+      color: t(secondary-8);
+    }
+  }
+}
+.blurDisclaimer {
+  text-align: left;
+  padding: 20px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding-bottom: 8px;
+  }
+  ul {
+    padding: 10px 20px;
+  }
+}
+
+.blurWarning {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  outline: none; // remove the focus rectangle around the button
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  svg {
+    width: 100%;
+    height: 100%;
+    @include applyThemes() {
+      fill: t(primary-11);
+    }
+  }
+}

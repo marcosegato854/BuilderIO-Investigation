@@ -1,0 +1,63 @@
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+import { HereCopyright } from 'components/atoms/HereCopyright/HereCopyright'
+import { mockStore } from 'store/mock/mockStoreTests'
+import configureMockStore from 'redux-mock-store'
+import { mergeDeepRight } from 'ramda'
+import { Provider } from 'react-redux'
+
+// Example of how we should declare props' default values:
+
+// 1) Declare the defaultProps object with the right properties and assign them a value
+// const defaultProps: IHereCopyrightProps = {
+//   propertyA: 'hello',
+//   propertyB: true,
+// }
+
+export default {
+  title: 'Atoms/HereCopyright',
+  component: HereCopyright,
+  // See the options: https://storybook.js.org/docs/react/essentials/controls
+  argTypes: {
+    // 2) Assign the default value to the related property inside of argTypes{}
+    // propertyA: {
+    //   defaultValue: defaultProps.propertyA,
+    // },
+  },
+  /**
+   * registers callbacks starting with 'on' to actions automatically
+   */
+  parameters: { actions: { argTypesRegex: '^on.*' } },
+} as Meta
+
+const Template: Story = (args) => {
+  return <HereCopyright {...args} />
+}
+
+export const Default = Template.bind({})
+Default.args = {}
+
+/** INFO AVAILABLE */
+const mockStoreWithInfoAvailable = mergeDeepRight(mockStore, {
+  positionService: {
+    tilesCopyright: {
+      alt: 'copy alt',
+      boxes: [],
+      label: 'Deutschland',
+      maxLevel: 20,
+      minLevel: 5,
+    },
+  },
+})
+const InitialValuesInfoAvailable = configureMockStore()(
+  mockStoreWithInfoAvailable
+)
+const TemplateInfoAvailable: Story = (args) => {
+  return (
+    <Provider store={InitialValuesInfoAvailable}>
+      <HereCopyright {...args} />
+    </Provider>
+  )
+}
+export const InfoAvailable = TemplateInfoAvailable.bind({})
+InfoAvailable.args = {}

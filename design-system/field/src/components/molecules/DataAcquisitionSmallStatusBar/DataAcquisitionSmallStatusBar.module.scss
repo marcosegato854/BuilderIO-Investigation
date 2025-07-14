@@ -1,0 +1,86 @@
+@import 'styles/main';
+
+.panel {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  height: 61px;
+  width: 283px;
+  border-radius: 6px;
+  @include blurBg();
+  @include applyThemes() {
+    color: t(primary-11);
+    background-color: rgba(t(primary-10), 0.6);
+  }
+
+  &WithoutRTK {
+    width: auto;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.label {
+  @include testi('Body1');
+  margin-right: 15px;
+  padding-left: 8px;
+}
+
+.valueBox {
+  width: 157px;
+  height: 44px;
+  @include testi('Body1');
+  font-size: 1.4rem;
+  // margin-right: 25px;
+
+  border-radius: 4px;
+  // @include applyThemes() {
+  color: map-deep-get($themes, 'dark', 'primary-1');
+  // }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.quality {
+  &0 {
+    background-color: $color-accuracy-good;
+  }
+
+  &1 {
+    background-color: $color-accuracy-average;
+  }
+
+  &2 {
+    background-color: $color-accuracy-bad;
+    color: map-deep-get($themes, 'dark', 'primary-11');
+  }
+}
+
+.iconButton {
+  padding-left: 25px;
+  background: none;
+  border: none;
+  height: 100%;
+  padding-right: 25px;
+  .icon {
+    @include pathDimension(16px);
+
+    * {
+      @include applyThemes() {
+        fill: t(primary-11);
+      }
+    }
+
+    &Up {
+      transform: rotate(180deg);
+    }
+
+    &Down {
+      transform: rotate(0deg);
+    }
+  }
+}

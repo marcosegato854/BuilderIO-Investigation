@@ -1,0 +1,65 @@
+@import 'styles/main';
+
+.container {
+  background-color: rgba(map-deep-get($themes, 'light', 'primary-14'), 0.75);
+  @include applyThemes() {
+    &.severity-2 {
+      // ERROR
+      background-color: rgba(t(secondary-6), 0.8);
+      .text {
+        color: map-deep-get($themes, 'dark', 'primary-11');
+      }
+    }
+    &.severity-1 {
+      // WARNING
+      background-color: rgba(t(secondary-10), 0.8);
+    }
+    &.severity-4 {
+      // MESSAGE
+      background-color: rgba(
+        map-deep-get($themes, 'light', 'primary-14'),
+        0.75
+      );
+      .text {
+        color: map-deep-get($themes, 'light', 'primary-1');
+      }
+    }
+  }
+  // box-shadow: 0px 50px 80px 2px rgba(0, 0, 0, 0.15);
+  @include blurBg();
+  width: 322px;
+  border-radius: 10px;
+
+  // padding-top: 42px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-bottom: 21px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.icon {
+  svg {
+    width: 164px;
+    // height: 89px;
+  }
+  margin-bottom: -46px;
+}
+.text {
+  margin-top: 12px;
+  @include testi('Caption');
+  // @include testi('Bold');
+  font-size: 2em;
+  line-height: 2em;
+  color: map-deep-get($themes, 'dark', 'primary-1');
+}
+.button {
+  margin-top: 24px;
+  display: block;
+  width: 100%;
+  text-align: right;
+}

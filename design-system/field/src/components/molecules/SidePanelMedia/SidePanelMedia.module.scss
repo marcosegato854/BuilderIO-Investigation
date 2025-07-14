@@ -1,0 +1,157 @@
+@import 'styles/main';
+
+.sidePanelMedia {
+  @include testi('Body1');
+}
+
+.navigationBar {
+  font-weight: 300;
+  @include applyThemes() {
+    text-decoration-color: t(secondary-5);
+  }
+  padding-left: 17px;
+  margin-bottom: 15px;
+
+  .tabList {
+    display: flex;
+    gap: 50px;
+  }
+
+  .tab {
+    list-style: none;
+    @include applyThemes() {
+      border-bottom: 2px solid transparent;
+    }
+    cursor: pointer;
+
+    &Selected {
+      @include applyThemes() {
+        border-bottom: 2px solid t(secondary-5);
+      }
+      font-weight: 400;
+    }
+  }
+}
+
+.contentContainer {
+  height: 315px;
+}
+
+.list {
+  padding-left: 12px;
+  list-style-type: none;
+  > :not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.annotation {
+  height: 137px;
+  width: 237px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include applyThemes() {
+    background-color: t(primary-8);
+  }
+}
+
+.content {
+  height: 93px;
+  width: 220px;
+  border-radius: 10px;
+  @include noSelectText();
+}
+
+.audioBox {
+  height: 93px;
+  width: 220px;
+}
+
+.text {
+  @include applyThemes() {
+    background-color: t(primary-18);
+    color: t(primary-1);
+  }
+
+  padding: 7px 11px;
+  // To truncate text after 3 lines
+  // source: https://kiranworkspace.com/ellipsis-to-multiline-text-in-css/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.annotationFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  // to be able to separete title from icon
+  // cannot use flex: 1 because the flex-direction is reversed
+  width: 100%;
+
+  .title {
+    // to create equal space between left and right side of the note title
+    margin: 0 auto;
+    @include testi('Body1');
+  }
+
+  .icon {
+    margin-right: 15px;
+  }
+}
+
+.icon {
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
+
+  & > * {
+    @include applyThemes() {
+      fill: t(primary-11);
+    }
+  }
+}
+
+// IN ORDER TO MAKE object-fit work
+// you need to set container's position, height, width, overflow
+// set image's width and height
+.fullscreenContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 20px;
+}
+
+.fullscreenImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.content {
+  .item {
+    min-width: 0;
+    @include ellipsis;
+  }
+}
+
+.tabPanel {
+  width: 100%;
+  max-height: 315px;
+}

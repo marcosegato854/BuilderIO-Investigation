@@ -1,0 +1,151 @@
+@import 'styles/main';
+
+.loginForm {
+  @include applyThemes() {
+    color: t('primary-11');
+  }
+  width: 346px;
+
+  .forgotHeader {
+    padding-top: 24px;
+
+    &Title {
+      @include flexAlign(center, space-between);
+      margin-bottom: 24px;
+
+      h5 {
+        @include testi('Heading5');
+      }
+
+      .helpIcon {
+        // width: 13px;
+        // height: 13px;
+
+        //margin-right: 13px;
+        width: 28px;
+        height: 28px;
+        padding: 4px;
+        @include applyThemes() {
+          path {
+            fill: t('primary-11');
+          }
+        }
+      }
+    }
+
+    p {
+      @include testi('Body1');
+    }
+  }
+
+  .form {
+    flex: 1;
+    @include flexAlign('center', 'space-between');
+    flex-direction: column;
+    position: relative;
+
+    .textFields {
+      @include big-tablet {
+        margin-top: 32px;
+      }
+
+      &SvgVisibility {
+        svg {
+          @include applyThemes() {
+            path:nth-child(1) {
+              fill: t('primary-24');
+            }
+            path:nth-child(2) {
+              stroke: t('primary-24');
+            }
+          }
+        }
+      }
+
+      &SvgVisibilityOff {
+        svg {
+          @include applyThemes() {
+            path {
+              fill: t('primary-24');
+            }
+          }
+        }
+      }
+    }
+
+    .keepMe {
+      margin-top: 8px;
+      label {
+        font-size: 1.4rem;
+        margin-left: 0;
+        @include applyThemes() {
+          color: t('primary-24');
+        }
+
+        & > * {
+          font-size: inherit;
+        }
+      }
+    }
+
+    .loginBtn {
+      margin-top: 16px;
+      text-transform: capitalize;
+      border-radius: 10px;
+      @include big-tablet {
+        margin-top: 24px;
+      }
+    }
+
+    .forgot {
+      margin-top: 12px;
+      text-align: center;
+      @include testi('Body1');
+      @include applyThemes() {
+        color: t('primary-24');
+      }
+
+      &Container {
+        margin-top: 24px;
+      }
+
+      &BtnBack {
+        text-transform: capitalize;
+        border-radius: 6px;
+        width: 100%;
+      }
+
+      &BtnLog {
+        border-radius: 6px;
+        width: 100%;
+      }
+    }
+
+    .loading {
+      position: absolute;
+      align-self: center;
+      margin-top: 50%;
+    }
+  }
+
+  .divider {
+    @include flexAlign(center, space-between);
+    flex-basis: 100%;
+
+    .line {
+      height: 1px;
+      @include applyThemes() {
+        background-color: t('primary-13');
+      }
+      flex: 1 1 auto;
+    }
+
+    .dividerText {
+      padding: 6px 16px;
+      @include testi('Body1');
+      @include big-tablet {
+        padding: 16px;
+      }
+    }
+  }
+}

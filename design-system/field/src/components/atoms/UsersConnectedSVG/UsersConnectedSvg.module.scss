@@ -1,0 +1,24 @@
+@import 'styles/main';
+/* styles.module.css */
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    translate: -8px -4px  ;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.avatar {
+    @include applyThemes() {
+      fill: t(primary-11);
+    }
+}

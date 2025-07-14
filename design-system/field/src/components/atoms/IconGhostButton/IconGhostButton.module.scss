@@ -1,0 +1,12 @@
+@import 'styles/main';
+
+.button {
+  svg {
+    @include pathDimension(20px);
+    @include applyThemes() {
+      path {
+        fill: t(primary-11);
+      }
+    }
+  }
+}

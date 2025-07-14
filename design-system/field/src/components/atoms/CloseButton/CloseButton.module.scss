@@ -1,0 +1,16 @@
+@import 'styles/main';
+
+.container {
+  svg {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 50%;
+    @include applyThemes() {
+      background-color: rgba(t(primary-11), 0.5);
+      path {
+        fill: t(primary-10);
+      }
+    }
+  }
+}

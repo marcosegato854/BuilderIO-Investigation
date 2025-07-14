@@ -1,0 +1,35 @@
+@import 'styles/main';
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  > div + div {
+    margin-left: 8px;
+  }
+}
+.camera {
+  flex: 1;
+  position: relative;
+  &:nth-child(1) {
+    .cameraName {
+      right: 12px;
+    }
+  }
+  &:nth-child(2) {
+    .cameraName {
+      left: 12px;
+    }
+  }
+}
+.cameraName {
+  position: absolute;
+  bottom: 12px;
+  border-radius: 5px;
+  padding: 0 8px;
+  @include testi('Caption');
+  @include applyThemes() {
+    background-color: rgba(t(primary-11), 0.5);
+    color: t(primary-1);
+  }
+}

@@ -1,0 +1,81 @@
+@import 'styles/main';
+
+.recordingButton {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  @include applyThemes {
+    border: 2px solid t(primary-18);
+  }
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &Rec {
+    @include applyThemes {
+      border: none;
+    }
+  }
+}
+
+.recordingButtonPCU {
+  width: 100px;
+  height: 100px;
+  .innerShape {
+    width: 86px;
+    height: 86px;
+    font-size: 18px;
+    &Rec {
+       width: 40px;
+    height: 40px;
+    }
+    }
+}
+
+.innerShape {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  @include applyThemes {
+    background-color: t(secondary-5);
+  }
+
+  &Rec {
+    height: 26px;
+    width: 26px;
+    border-radius: 2px;
+    animation: pulse 3s infinite;
+  }
+}
+
+.recordingProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@include applyThemes {
+  @keyframes pulse {
+    0% {
+      // @include applyThemes {
+      background-color: t(secondary-5);
+      // }
+      // background-color: red;
+    }
+    50% {
+      // @include applyThemes {
+      background-color: t(primary-1);
+      // }
+      // background-color: white;
+    }
+    100% {
+      // @include applyThemes {
+      background-color: t(secondary-5);
+      // }
+      // background-color: red;
+    }
+  }
+}
+

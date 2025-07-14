@@ -1,0 +1,12 @@
+@import 'styles/main';
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 0 36px;
+  padding-bottom: 10px;
+  > div + div {
+    margin-left: 16px;
+  }
+}

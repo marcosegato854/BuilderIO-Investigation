@@ -1,0 +1,102 @@
+@import 'styles/main';
+
+.rtkConnectionInfo {
+  border-radius: 10px;
+  @include applyThemes() {
+    background-color: t(primary-10);
+    color: t(primary-11);
+  }
+  padding: 7px;
+  position: relative;
+}
+
+.header {
+  padding: 3px;
+  display: flex;
+  justify-content: flex-start;
+
+  margin-bottom: 7px;
+}
+
+.serverInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .title {
+    @include testi('Body1');
+
+    .name {
+      text-transform: uppercase;
+    }
+  }
+
+  .ipAddress {
+    @include testi('Body1');
+    font-size: 1.3rem;
+  }
+}
+
+.body {
+  border-radius: 10px;
+  @include applyThemes() {
+    background-color: t(primary-4);
+  }
+  padding: 9px 7px 27px 7px;
+  @include testi('Body1');
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  flex: 0.6;
+}
+
+// label that is in a sub-row
+.subLabel {
+  flex: 0.6;
+  // move the text a bit to the right
+  margin-left: 35px;
+  // at the same time reduce the right margin so the value column doesn't move
+  margin-right: -35px;
+  position: relative;
+
+  // to create the "sub-row icon"
+  &::before {
+    content: '';
+    height: 12.5px;
+    width: 10px;
+    // background-color: green;
+    @include applyThemes() {
+      border-bottom: 1px solid t(primary-11);
+      border-left: 1px solid t(primary-11);
+    }
+
+    position: absolute;
+    transform: translateX(-15px) translateY(3px);
+  }
+}
+
+.value {
+  flex: 0.4;
+  position: relative;
+
+  &::before {
+    content: ':';
+    left: -15px;
+    position: absolute;
+  }
+
+  &Empty {
+    &::before {
+      display: none;
+    }
+  }
+}

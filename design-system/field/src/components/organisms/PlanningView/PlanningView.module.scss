@@ -1,0 +1,194 @@
+@import 'styles/main';
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &.busy {
+    pointer-events: none;
+  }
+}
+.myVRCanvas {
+  height: 100%;
+  width: 100%;
+  display: block;
+  cursor: default;
+  &.DRAW_PATH {
+    cursor: crosshair;
+  }
+  &.DRAW_POLYGON {
+    cursor: crosshair;
+  }
+  &.DELETE_POLYGON {
+  }
+  &.DELETE_PATH {
+  }
+  &.CUT {
+    cursor: crosshair;
+  }
+  &.CUT_INTERNAL {
+    cursor: crosshair;
+  }
+  &.MOVE_POINT {
+    cursor: move;
+  }
+  &.SELECT {
+  }
+  &.SELECT_INTERNAL {
+  }
+  &.INITIAL_POINT {
+    cursor: crosshair;
+  }
+  &.FINAL_POINT {
+    cursor: crosshair;
+  }
+}
+.hidden {
+  visibility: hidden;
+}
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-bottom: 10px;
+  z-index: 1405;
+  @include blurBg();
+  @include applyThemes {
+    background-color: rgba(t(primary-1), 0.3);
+  }
+}
+.bottomControls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 4;
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 13px;
+  }
+}
+.topLeftControls {
+  position: absolute;
+  right: 0;
+  top: 110px;
+  left: 18px;
+  pointer-events: none;
+  .row1 {
+    > * {
+      pointer-events: all;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    padding-top: 13px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+  }
+  @include big-tablet {
+    top: 120px;
+  }
+}
+
+.backToJobs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @include applyThemes() {
+    color: t(primary-11);
+    path {
+      fill: t(primary-11);
+    }
+  }
+  @include testi('Body1');
+
+  cursor: pointer;
+  span {
+    margin-left: 16px;
+  }
+}
+.backToProjects {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @include applyThemes() {
+    color: t(primary-11);
+    path {
+      fill: t(primary-11);
+    }
+  }
+  @include testi('Body1');
+
+  cursor: pointer;
+  span {
+    margin-left: 16px;
+  }
+}
+
+.sidePanel {
+  position: absolute;
+  top: 110px;
+  right: 18px;
+  z-index: 2;
+  height: calc(100% - 210px);
+
+  @include big-tablet {
+    top: 120px;
+    height: calc(100% - 220px);
+  }
+}
+
+.draggingPoint {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transform: translateX(-24px) translateY(-28px);
+  pointer-events: none;
+}
+
+.submitButton {
+  pointer-events: all;
+  min-width: 200px;
+}
+
+.userHints {
+  position: absolute;
+  top: 110px;
+  right: 328px;
+  @include big-tablet {
+    top: 120px;
+  }
+}
+
+.hereCopy {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+
+  .copyText {
+    color: rgba(map-deep-get($themes, 'dark', 'primary-1'), 1);
+    @include testi('Caption');
+    @include testi('Bold');
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding: 0px 8px;
+    a {
+      color: inherit;
+      margin: 0px 8px;
+      text-decoration: none;
+      pointer-events: all;
+    }
+  }
+}

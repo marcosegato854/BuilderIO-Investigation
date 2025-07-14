@@ -1,0 +1,236 @@
+@import 'styles/main';
+
+// According to the mockups the nav color is always the same
+$nav-color: map-deep-get($themes, 'dark', 'primary-11');
+$nav-bg-color: map-deep-get($themes, 'dark', 'primary-3');
+$nav-active-color: map-deep-get($themes, 'dark', 'secondary-3');
+
+.menu {
+  position: relative;
+  z-index: 2;
+  height: 20px;
+  width: 24px;
+  cursor: pointer;
+
+  &--open {
+    // @include applyThemes() {
+    //   background: t(dropdown);
+    // }
+  }
+
+  &__burger {
+    position: absolute;
+    right: 0;
+
+    width: 100%;
+    height: 2px;
+    // transition: all 0.5s ease-in-out;
+
+    &--first {
+      top: 0;
+    }
+
+    &--second {
+      top: 12px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        width: 100%;
+        height: 2px;
+        // transition: all 0.5s ease-in-out;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        width: 100%;
+        height: 2px;
+        // transition: all 0.5s ease-in-out;
+      }
+    }
+
+    &--update {
+      position: relative;
+      top: -8px;
+      left: 20px;
+      width: 12px;
+      height: 12px;
+      @include applyThemes() {
+        background-color: t('secondary-5') !important;
+      }
+      border-radius: 50%;
+    }
+
+    &,
+    &::before,
+    &::after {
+      @include applyThemes() {
+        background-color: t('primary-11');
+      }
+    }
+
+    &--open {
+      transform: rotate(360deg);
+      background: transparent !important; // hides the central burger
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
+}
+
+.menu__nav {
+  z-index: 1;
+  position: relative;
+  background-color: rgba($nav-bg-color, 0.5);
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  padding: 5px 0 25px 0;
+  max-width: 400px;
+  @include blurBg();
+
+  & ul {
+    list-style-type: none;
+    @include testi('Body1');
+  }
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &Item {
+    padding: 7px 25px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    min-height: 48px;
+    color: $nav-color;
+
+    &:active {
+      color: $nav-active-color;
+    }
+
+    &Icon {
+      display: flex;
+      margin-right: 10px;
+      svg {
+        width: 28px;
+        path {
+          fill: $nav-color;
+        }
+      }
+    }
+
+    &Id {
+      margin-left: 30px;
+    }
+
+    &Label {
+      max-width: 300px;
+      @include ellipsis();
+
+      &Select {
+        max-width: 150px;
+      }
+
+      &Update,
+      &RebootDisabled {
+        display: block;
+        position: absolute;
+        left: 38px;
+        top: 19px;
+        cursor: pointer;
+        font-size: 1.4rem;
+        white-space: nowrap;
+      }
+
+      &Update {
+        color: map-deep-get($themes, 'dark', 'secondary-8');
+        &::after {
+          content: '';
+          position: relative;
+          width: 100%;
+          height: 2px;
+          display: block;
+          background-color: map-deep-get($themes, 'dark', 'secondary-8');
+        }
+      }
+
+      &RebootDisabled {
+        color: map-deep-get($themes, 'dark', 'secondary-10');
+      }
+    }
+
+    &Left {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &Alert {
+      path {
+        @include applyThemes() {
+          fill: t('secondary-5');
+        }
+      }
+    }
+  }
+
+  &Close {
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    fill: $nav-color;
+  }
+
+  &Header {
+    @include testi('Heading5');
+    padding: 5px 23px;
+    color: $nav-color;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.select {
+  margin-left: 25px;
+  position: relative;
+
+  &Font {
+    color: $nav-color;
+  }
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.version {
+  padding: 7px 25px;
+  @include testi('Caption');
+  color: $nav-color;
+}

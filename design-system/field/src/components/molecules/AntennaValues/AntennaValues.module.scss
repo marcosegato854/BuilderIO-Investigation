@@ -1,0 +1,50 @@
+@import 'styles/main';
+
+.noError {
+  p:global(.Mui-error) {
+    display: none;
+  }
+}
+.antennaValues {
+  display: flex;
+  justify-content: space-between;
+  > div {
+    white-space: nowrap;
+  }
+}
+.insideIcon {
+  margin-right: 15px;
+  vertical-align: super;
+  stroke: map-deep-get($themes, 'dark', 'primary-11');
+}
+.field {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  @include testi('Body1');
+  // text-transform: uppercase;
+  & + .field {
+    margin-left: 10px;
+  }
+  &.hidden {
+    display: none;
+  }
+  .textField {
+    width: 60px;
+    &Distance {
+      width: 60px;
+    }
+    input {
+      padding: 6px 0 2px;
+      text-align: center;
+    }
+  }
+  .label {
+    font-weight: 400;
+    margin-top: 16px;
+    display: inline-block;
+    &Inner {
+      margin: 0;
+    }
+  }
+}

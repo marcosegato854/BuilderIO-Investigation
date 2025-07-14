@@ -1,0 +1,19 @@
+@import 'styles/main';
+
+$swiper_height: 32px;
+$swiper_height_iPad: 42px;
+.container {
+  height: $swiper_height;
+  width: 100%;
+  opacity: 1;
+  @include blurBg();
+  text-align: center;
+  @include testi('Body1');
+  @include applyThemes() {
+    color: t(primary-11);
+  }
+  font-size: 1.8em;
+  &.iPad {
+    height: $swiper_height_iPad;
+  }
+}

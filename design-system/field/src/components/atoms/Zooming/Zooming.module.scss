@@ -1,0 +1,67 @@
+@import 'styles/main';
+
+.zooming {
+  display: flex;
+  flex-direction: column;
+  width: 52px;
+  height: 104px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 0 rgba(map-deep-get($themes, 'dark', 'primary-1'), 0.05);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  height: 50%;
+  border: 0;
+  position: relative;
+  outline: none;
+  // add animation when background changes color
+  transition: background-color 0.2s;
+
+  @include applyThemes() {
+    background-color: rgba(t(primary-10), 0.85);
+
+    &:active {
+      background-color: t(primary-11);
+    }
+  }
+
+  // Upper button
+  &Up {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @include applyThemes() {
+      border-bottom: 1px solid rgba(t(primary-11), 0.3);
+    }
+  }
+
+  // Lower button
+  &Down {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.icon {
+  svg {
+    @include pathDimension(14px);
+    transition: all 0.2s;
+
+    // in order to color a <svg> we need to select all the elements inside of it such  as <path>
+    & * {
+      @include applyThemes() {
+        fill: t(primary-11);
+      }
+    }
+
+    // color svg when the parent button is in active state
+    .button:active > & * {
+      @include applyThemes() {
+        fill: t(primary-1);
+      }
+    }
+  }
+}

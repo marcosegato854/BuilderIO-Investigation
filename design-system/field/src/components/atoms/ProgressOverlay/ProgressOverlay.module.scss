@@ -1,0 +1,14 @@
+@import 'styles/main';
+.loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  @include flexAlign();
+  flex-direction: column;
+  @include testi('Caption');
+  @include applyThemes() {
+    background-color: rgba(t(primary-5), 0.5);
+  }
+}

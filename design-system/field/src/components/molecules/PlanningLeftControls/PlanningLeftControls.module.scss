@@ -1,0 +1,22 @@
+@import 'styles/main';
+
+.controls {
+  display: flex;
+  gap: 13px;
+  > div {
+    pointer-events: all;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-self: flex-end;
+}

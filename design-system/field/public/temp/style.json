@@ -1,0 +1,55 @@
+{
+  "navigationTrack": {
+    "color": {
+      "goodAccuracy": "green",
+      "averageAccuracy": "yellow",
+      "badAccuracy": "red"
+    },
+    "thickness": 5
+  },
+  "picturePlaceholder": {
+    "color": "red",
+    "size": 10
+  },
+  "scanningRange": {
+    "color": "transparentGrey",
+    "diameter": 200
+  },
+  "path": {
+    "color": "blue",
+    "thickness": 5,
+    "vertex": {
+      "border": {
+        "color": "blue"
+      },
+      "innerArea": {
+        "color": "white"
+      },
+      "size": 15
+    }
+  },
+  "polygon": {
+    "border": {
+      "color": "yellow",
+      "thickness": 20
+    },
+    "innerArea": {
+      "color": "transparentBlue"
+    },
+    "temporaryVertex": {
+      "border": {
+        "color": "yellow"
+      },
+      "innerArea": {
+        "color": "white"
+      },
+      "size": 50
+    }
+  },
+  "distanceLabel": {
+    "text": {
+      "color": "ocher",
+      "size": 4
+    }
+  }
+}

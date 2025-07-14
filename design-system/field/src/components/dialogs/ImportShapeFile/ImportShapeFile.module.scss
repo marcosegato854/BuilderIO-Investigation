@@ -1,0 +1,117 @@
+@import 'styles/main';
+
+.container {
+  box-shadow: 0px 50px 80px 2px rgba(0, 0, 0, 0.15);
+  @include blurBg();
+  width: 440px;
+  max-height: 376px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  overflow: hidden;
+  @include flexAlign(flex-start, center);
+  flex-direction: column;
+  @include applyThemes() {
+    color: t('primary-11');
+    background-color: rgba(t('primary-19'), 0.75);
+  }
+}
+
+.footer {
+  padding-top: 16px;
+  @include flexAlign(flex-end, flex-end);
+  align-self: flex-end;
+}
+
+.buttonsContainer {
+  @include flexAlign();
+  gap: 15px;
+}
+
+.header {
+  svg {
+    @include pathDimension(30px);
+    @include applyThemes() {
+      path {
+        fill: t('primary-11');
+      }
+    }
+  }
+  .title {
+    padding-left: 4px;
+    @include testi('Heading5');
+    font-weight: 900;
+    @include applyThemes() {
+      color: t('primary-11');
+    }
+  }
+  .subtitle {
+    padding-left: 4px;
+    @include testi('Body1');
+    @include applyThemes() {
+      color: t('primary-11');
+    }
+  }
+}
+
+.border {
+  border-radius: 10px;
+  border: 1px solid white;
+  @include applyThemes() {
+    border-color: t('primary-11');
+  }
+  max-height: 200px;
+  position: relative;
+  @include flexAlign();
+  overflow: hidden;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 4px 8px 4px 4px;
+  width: 100%;
+
+  .scrollable {
+    padding: 2px;
+    flex-grow: 1;
+    overflow: auto;
+    min-height: 2em;
+    width: 100%;
+    @include customScrollbar();
+
+    .shpRow {
+      @include flexAlign(center, space-between);
+      @include testi('ButtonLabel');
+      line-height: 1.2;
+      padding: 4px 6px;
+      gap: 4px;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &:hover,
+      &Selected {
+        @include applyThemes() {
+          background-color: rgba(t('primary-21'), 0.75);
+        }
+        border-radius: 6px;
+        // cursor: default;
+      }
+
+      .shpName {
+        width: 70%;
+        span {
+          display: block;
+        }
+      }
+
+      .shpDate {
+        width: 30%;
+        text-align: right;
+      }
+    }
+  }
+}
+.spinner {
+  width: 100%;
+  @include flexAlign(center, center);
+}

@@ -1,0 +1,104 @@
+@import 'styles/main';
+
+.popover {
+  position: relative;
+  background-color: rgba(map-deep-get($themes, 'dark', 'primary-14'), 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.pcuadaptation {
+  position: sticky;
+  height: '100%';
+  width: 'auto';
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.container {
+  @include testi('Body1');
+  color: map-deep-get($themes, 'dark', 'primary-11');
+  border-radius: 10px;
+  padding: 12px;
+  @include blurBg();
+
+  &Close {
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgba(map-deep-get($themes, 'dark', 'primary-1'), 0.5);
+    border-radius: 50%;
+    @include flexAlign();
+
+    svg {
+      fill: currentColor;
+      @include pathDimension(10px);
+    }
+  }
+
+  .header,
+  .footer {
+    color: inherit;
+    text-align: center;
+    padding: 12px;
+
+    svg {
+      @include pathDimension(32px);
+      fill: currentColor;
+    }
+  }
+
+  .header {
+    @include testi('Heading5');
+  }
+
+  .footer {
+    @include testi('ButtonLabel');
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  .text {
+    line-height: 2rem;
+  }
+
+  .content {
+    background-color: map-deep-get($themes, 'dark', 'primary-3');
+    border-radius: 6px;
+    padding: 0 2px;
+    overflow: hidden;
+
+    .item {
+      min-width: 0;
+      @include ellipsis;
+    }
+
+    .scrollable {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      max-height: 200px;
+      width: 100%;
+      padding: 4px;
+      @include customScrollbar();
+
+      .typography {
+        line-height: 1.8rem;
+        @include testi('Body1');
+
+        a {
+          &:link,
+          &:visited,
+          &:hover,
+          &:active {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}

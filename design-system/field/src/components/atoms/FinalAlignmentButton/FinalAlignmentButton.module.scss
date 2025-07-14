@@ -1,0 +1,91 @@
+@import 'styles/main';
+
+.button {
+  height: 44px;
+  /* width: 195px; */
+  position: relative;
+  padding-right: 36px;
+  border-radius: 6px;
+  border: 1px solid map-deep-get($themes, 'dark', 'primary-1');
+  color: map-deep-get($themes, 'dark', 'primary-1');
+  background-color: map-deep-get($themes, 'dark', 'primary-11');
+  @include testi('Body1');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   gap: 10px;
+
+  // text-transform: capitalize;
+  svg.rightIcon {
+    // margin-left: 4px;
+
+    path {
+      fill: map-deep-get($themes, 'dark', 'primary-1');
+    }
+
+    &Up {
+      transform: rotate(180deg);
+    }
+
+    &Down {
+      transform: rotate(0deg);
+    }
+  }
+
+  .mainIcon {
+    margin-right: 15px;
+
+    * {
+      fill: map-deep-get($themes, 'dark', 'primary-1');
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.mainButton,
+.secondaryButton {
+  @include flexAlign();
+  cursor: pointer;
+  height: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  // help long texts to shrink a little
+  line-height: 1;
+}
+
+.secondaryButton {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid map-deep-get($themes, 'dark', 'primary-1');
+}
+
+.innerButton {
+  height: 33px;
+  width: auto;
+  padding: 0 18px;
+  position: absolute;
+  right: 0;
+  top: -36px;
+  border-radius: 6px;
+  border: 1px solid map-deep-get($themes, 'dark', 'primary-1');
+  color: map-deep-get($themes, 'dark', 'primary-1');
+  background-color: map-deep-get($themes, 'dark', 'primary-11');
+  @include testi('Body1');
+  text-transform: capitalize;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.busy {
+  margin-right: 15px;
+  circle {
+    stroke: map-deep-get($themes, 'dark', 'primary-1');
+  }
+}

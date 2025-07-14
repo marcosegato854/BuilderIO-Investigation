@@ -1,0 +1,250 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react'
+import {
+  fireEvent,
+  queries,
+  RenderResult,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react'
+import NewJobForm from 'components/dialogs/NewJobForm/NewJobForm'
+import { DialogManager } from 'components/organisms/DialogManager/DialogManager'
+import moxios from 'moxios'
+import { dropRepeats, prop } from 'ramda'
+import { store } from 'store'
+import { mkNewJob } from 'store/features/dataStorage/mockApi'
+import {
+  dataStorageJobTypesActions,
+  dataStorageProjectDetailActions,
+  selectDataStorageTempJob,
+} from 'store/features/dataStorage/slice'
+import { resetStoreAction } from 'store/features/global/slice'
+import {
+  scannerInfoActions,
+  scannerSupportedSettingsActions,
+  selectScannerModel,
+  selectScannerSupportedSettings,
+} from 'store/features/scanner/slice'
+import { SettingsRow } from 'store/features/scanner/types'
+import { mockStore } from 'store/mock/mockStoreTests'
+import apiClient from 'store/services/apiClientBackend'
+import { renderWithProvider } from 'utils/test'
+import { relevant } from 'utils/jobs'
+import { getRangesForCoordinateSystem } from 'components/dialogs/NewJobForm/ranges'
+import { t } from 'i18n/config'
+
+// REMOVED AFTER IPLEMENTING THE NEW SCANNER SETTINGS
+const trk100SettingsTable = {
+  settings: [
+    {
+      rps: 250,
+      pts: 500000,
+      mr: 100,
+    },
+  ],
+}
+
+let component: RenderResult<typeof queries>
+let mockDispatchRealStore: jest.SpyInstance<any, [action: any]>
+let mockedSaveJobApi: jest.SpyInstance<any>
+const mockedLocalStorageGet: jest.Mock<any> = jest.fn(() => null)
+const mockedLocalStorageSet: jest.Mock<any> = jest.fn(() => null)
+const prepareMocks = async () => {
+  mockDispatchRealStore = jest.spyOn(store, 'dispatch')
+  jest.spyOn(global, 'fetch').mockResolvedValue({
+    text: jest.fn().mockResolvedValue(''),
+  } as any)
+  mockedSaveJobApi = mkNewJob()
+  jest.useFakeTimers()
+  moxios.install(apiClient)
+  // moxios.install(mockApiClientDiskManagement)
+  moxios.stubRequest('/datastorage/projects/p/Project002/jobs', {
+    status: 200,
+    response: { jobs: mockStore.dataStorageService.jobs },
+  })
+  moxios.stubRequest('/datastorage/jobtype', {
+    status: 200,
+    response: {
+      jobtype: mockStore.dataStorageService.jobTypes,
+    },
+  })
+  moxios.stubRequest('/position/supportedsatellites', {
+    status: 200,
+    response: {
+      satellites: mockStore.positionService.supportedSatellites,
+    },
+  })
+  // prepare the store
+  await waitFor(
+    () => {
+      store.dispatch(
+        dataStorageProjectDetailActions.success(
+          mockStore.dataStorageService.currentProject!
+        )
+      )
+      store.dispatch(
+        dataStorageJobTypesActions.success({
+          jobtype: mockStore.dataStorageService.jobTypes,
+        })
+      )
+      store.dispatch(
+        scannerInfoActions.success({
+          scanner: [
+            {
+              manufacturer: 'Velodyne',
+              name: 'FrontSLAM',
+              position: 'Front',
+              model: 'VLP-16-A',
+              serial: '11206202860533',
+              firmware: '3.0.41.1',
+            },
+            {
+              manufacturer: 'Velodyne',
+              name: 'RearSLAM',
+              position: 'Rear',
+              model: 'VLP-16-A',
+              serial: '11206203451120',
+              firmware: '3.0.41.1',
+            },
+          ],
+          softwareversion: '0',
+        })
+      )
+      store.dispatch(
+        scannerSupportedSettingsActions.success(
+          mockStore.scanner.supportedSettings
+        )
+      )
+    },
+    { timeout: 500 }
+  )
+  jest.advanceTimersByTime(500)
+  // render
+  await waitFor(
+    () => {
+      component = renderWithProvider(
+        <div>
+          <DialogManager />
+          <NewJobForm />
+        </div>
+      )(store)
+    },
+    { timeout: 500 }
+  )
+  jest.advanceTimersByTime(500)
+}
+
+describe('NewJobForm Optech Scanner (Store)', () => {
+  beforeEach(async () => {
+    Object.defineProperty(window, 'localStorage', {
+      value: {
+        getItem: mockedLocalStorageGet,
+        setItem: mockedLocalStorageSet,
+      },
+      writable: true,
+    })
+    await prepareMocks()
+  })
+
+  afterEach(() => {
+    jest.restoreAllMocks()
+    mockedSaveJobApi.mockClear()
+    mockDispatchRealStore.mockClear()
+    mockedLocalStorageGet.mockClear()
+    mockedLocalStorageSet.mockClear()
+    moxios.uninstall(apiClient)
+    // moxios.uninstall(mockApiClientDiskManagement)
+    store.dispatch(resetStoreAction())
+    jest.useRealTimers()
+  })
+
+  test('scanner model should be Velodyne', async () => {
+    const state = await store.getState()
+    const scannerModel = await selectScannerModel(state)
+    expect(scannerModel).toBe('Velodyne')
+  })
+
+  test('should NOT display profiler rotation speed field', async () => {
+    const showDetailsButton = component.getByTestId('show-details')
+    fireEvent.click(showDetailsButton)
+    expect(
+      component.getByTestId('profiler-rotation-speed').getAttribute('class')
+    ).toContain('hidden')
+  })
+
+  test('should NOT display the max scanner range as a editable value', async () => {
+    const showDetailsButton = component.getByTestId('show-details')
+    fireEvent.click(showDetailsButton)
+    expect(
+      screen.queryByTestId('max-scanner-range-radonly')
+    ).not.toBeInTheDocument()
+    expect(screen.queryByTestId('max-scanner-range')).not.toBeInTheDocument()
+  })
+
+  test('current job type should be Road', async () => {
+    const state = await store.getState()
+    const tempJob = await selectDataStorageTempJob(state)
+    expect(tempJob!.type).toBe('Road')
+  })
+
+  test('should keep the relevant settings from the job type', async () => {
+    const state = await store.getState()
+    const tempJob = await selectDataStorageTempJob(state)
+    expect(relevant(tempJob!)).toEqual(
+      relevant(mockStore.dataStorageService.jobTypes[0])
+    )
+  })
+
+  test('scanner range max value should be related to the scanner', () => {
+    const ranges = getRangesForCoordinateSystem(trk100SettingsTable)
+    expect(ranges.scannerRange.max).toBe(100)
+  })
+
+  test('scanner points per second should be related to the scanner', () => {
+    const ranges = getRangesForCoordinateSystem(trk100SettingsTable)
+    expect(ranges.scannerRotationSpeed.max).toBe(250)
+  })
+
+  test('should set driving speed with camera on', async () => {
+    const showDetailsButton = component.getByTestId('show-details')
+    await waitFor(
+      () => {
+        fireEvent.click(showDetailsButton)
+      },
+      { timeout: 500 }
+    )
+    jest.advanceTimersByTime(500)
+    //
+    expect(
+      component.getByTestId('driving-speed').getAttribute('class')
+    ).not.toContain('hidden')
+  })
+
+  test('should set driving speed to 200kmh with camera off', async () => {
+    const state = await store.getState()
+    const tempJob = await selectDataStorageTempJob(state)
+    expect(tempJob!.drivingspeed).toBe(75)
+    //
+    const showDetailsButton = component.getByTestId('show-details')
+    fireEvent.click(showDetailsButton)
+    const cameraEnabledField = component.getByTestId('camera-enable-field')
+    const offButton = within(cameraEnabledField).getByText(
+      t('new_job_form.option.camera.off', 'wrong') as string
+    )
+    await waitFor(
+      () => {
+        fireEvent.click(offButton)
+      },
+      { timeout: 500 }
+    )
+    jest.advanceTimersByTime(500)
+    //
+    const stateAfter = await store.getState()
+    const tempJobAfter = await selectDataStorageTempJob(stateAfter)
+    expect(tempJobAfter!.drivingspeed).toBe(130)
+    expect(
+      component.getByTestId('driving-speed').getAttribute('class')
+    ).not.toContain('hidden')
+  })
+})

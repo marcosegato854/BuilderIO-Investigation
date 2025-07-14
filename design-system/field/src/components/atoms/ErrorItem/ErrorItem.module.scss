@@ -1,0 +1,23 @@
+@import 'styles/main';
+
+.erroritem {
+  svg {
+    @include pathDimension(24px);
+    @include applyThemes() {
+      path {
+        fill: t(secondary-5);
+      }
+    }
+  }
+}
+
+.warningitem {
+  svg {
+    @include pathDimension(28px);
+    @include applyThemes() {
+      path {
+        fill: t(secondary-10);
+      }
+    }
+  }
+}
