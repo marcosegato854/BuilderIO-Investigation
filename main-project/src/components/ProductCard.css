@@ -87,6 +87,9 @@
   font-weight: 400;
   line-height: 20px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-category {
@@ -100,6 +103,9 @@
   font-weight: 400;
   line-height: 18px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-price {
