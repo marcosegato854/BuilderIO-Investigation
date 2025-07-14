@@ -1,9 +1,0 @@
-@import 'styles/themes/index';
-
-body {
-  .scrollable-popover {
-    .MuiPaper-root {
-      @include customScrollbar();
-    }
-  }
-}
