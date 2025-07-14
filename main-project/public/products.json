@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone XYZ",
+    "description": "Uno smartphone avanzato con una fotocamera da 48 MP, display AMOLED e batteria da 4000mAh.",
+    "price": 499.99,
+    "category": "Elettronica",
+    "image": "/smartphone.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Cuffie Wireless",
+    "description": "Cuffie Bluetooth con cancellazione del rumore e autonomia di 30 ore.",
+    "price": 89.99,
+    "category": "Accessori",
+    "image": "/cuffie.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tavolo da pranzo in legno",
+    "description": "Un elegante tavolo da pranzo in legno massello, perfetto per famiglie fino a 6 persone.",
+    "price": 299.0,
+    "category": "Arredamento",
+    "image": "/tavolo.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Orologio da polso Elegante",
+    "description": "Orologio da polso in acciaio inox, con design minimal e movimento al quarzo.",
+    "price": 119.99,
+    "category": "Gioielli",
+    "image": "/orologio.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Set di Tazze in Porcellana",
+    "description": "Set di 6 tazze in porcellana fine, con motivo floreale delicato.",
+    "price": 35.0,
+    "category": "Casa",
+    "image": "/tazze.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Zaino da Viaggio",
+    "description": "Zaino da viaggio con scomparti per laptop, tenda da campeggio e attrezzatura da trekking.",
+    "price": 79.99,
+    "category": "Accessori",
+    "image": "/zaino.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Macbook Pro 13\"",
+    "description": "Laptop Apple con display Retina, chip M1, 8 GB di RAM e 256 GB di SSD.",
+    "price": 1299.99,
+    "category": "Elettronica",
+    "image": "/macbook.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Lampada da Tavolo LED",
+    "description": "Lampada da tavolo a LED con dimmer regolabile e design moderno.",
+    "price": 45.0,
+    "category": "Illuminazione",
+    "image": "/lampada.jpg"
+  }
+]
