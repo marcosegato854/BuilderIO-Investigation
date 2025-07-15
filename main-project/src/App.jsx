@@ -14,13 +14,11 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
+      <main className="app-main">
         <SearchBar
           onSearch={handleSearch}
           placeholder="What are you looking for?"
         />
-      </header>
-      <main className="app-main">
         <ProductsList searchQuery={searchQuery} />
       </main>
     </div>
