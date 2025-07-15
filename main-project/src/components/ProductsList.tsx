@@ -77,7 +77,11 @@ const ProductsList: React.FC = () => {
       <div className="products-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={handleProductClick}
+            />
           ))
         ) : searchQuery ? (
           <div className="no-results">
@@ -86,6 +90,12 @@ const ProductsList: React.FC = () => {
           </div>
         ) : null}
       </div>
+
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };
