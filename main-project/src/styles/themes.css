@@ -1,0 +1,91 @@
+/* Theme Variables */
+:root,
+[data-theme="light"] {
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --bg-overlay: rgba(36, 36, 36, 0.4);
+
+  /* Text colors */
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-on-overlay: #ffffff;
+  --text-muted: rgba(36, 36, 36, 0.4);
+
+  /* Surface colors */
+  --surface-primary: #ffffff;
+  --surface-secondary: #f9f9f9;
+  --surface-elevated: #ffffff;
+
+  /* Border colors */
+  --border-primary: #e0e0e0;
+  --border-secondary: #f0f0f0;
+
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-heavy: rgba(0, 0, 0, 0.2);
+
+  /* Modal colors */
+  --modal-bg: #c4c4c4;
+  --modal-backdrop: rgba(0, 0, 0, 0.5);
+
+  /* Button colors */
+  --button-close-bg: transparent;
+  --button-close-color: #000000;
+  --button-close-hover: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Background colors */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --bg-overlay: rgba(255, 255, 255, 0.15);
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #999999;
+  --text-on-overlay: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.4);
+
+  /* Surface colors */
+  --surface-primary: #1e1e1e;
+  --surface-secondary: #2d2d2d;
+  --surface-elevated: #2d2d2d;
+
+  /* Border colors */
+  --border-primary: #3d3d3d;
+  --border-secondary: #2d2d2d;
+
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-heavy: rgba(0, 0, 0, 0.5);
+
+  /* Modal colors */
+  --modal-bg: #3d3d3d;
+  --modal-backdrop: rgba(0, 0, 0, 0.7);
+
+  /* Button colors */
+  --button-close-bg: transparent;
+  --button-close-color: #ffffff;
+  --button-close-hover: rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Disable transitions during theme change to prevent flash */
+.theme-transitioning * {
+  transition: none !important;
+}

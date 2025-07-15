@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
 import fetchProducts from "../api/products";
-import ProductCard from "./ProductCard";
+import ProductCard, { Product } from "./ProductCard";
+import ProductModal from "./ProductModal";
 import "./ProductsList.css";
 import SearchBar from "./SearchBar";
-
-// Definiamo un tipo per il prodotto
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  image: string;
-}
 
 const ProductsList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]); // Stato per la lista dei prodotti
   const [loading, setLoading] = useState<boolean>(true); // Stato per il caricamento
   const [error, setError] = useState<string | null>(null); // Stato per gli errori
   const [searchQuery, setSearchQuery] = useState<string>(""); // Stato per la ricerca
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Stato per il prodotto selezionato
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // Stato per il modal
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -40,14 +33,24 @@ const ProductsList: React.FC = () => {
     setSearchQuery(query);
   };
 
+  // Function to handle product click
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   // Filter products based on search query
   const filteredProducts = products.filter((product) => {
     if (!searchQuery.trim()) return true;
 
     const query = searchQuery.toLowerCase();
-    return (
-      product.name.toLowerCase().includes(query)
-    );
+    return product.name.toLowerCase().includes(query);
   });
 
   if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
@@ -60,9 +63,9 @@ const ProductsList: React.FC = () => {
         {searchQuery && (
           <span className="search-results-info">
             {filteredProducts.length > 0
-              ? 
-              filteredProducts.length > 1 ? ` - ${filteredProducts.length} risultati per "${searchQuery}"` : ` - ${filteredProducts.length} risultato per "${searchQuery}"`
-              
+              ? filteredProducts.length > 1
+                ? ` - ${filteredProducts.length} risultati per "${searchQuery}"`
+                : ` - ${filteredProducts.length} risultato per "${searchQuery}"`
               : ` - Nessun risultato per "${searchQuery}"`}
           </span>
         )}
@@ -74,7 +77,11 @@ const ProductsList: React.FC = () => {
       <div className="products-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={handleProductClick}
+            />
           ))
         ) : searchQuery ? (
           <div className="no-results">
@@ -83,6 +90,12 @@ const ProductsList: React.FC = () => {
           </div>
         ) : null}
       </div>
+
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };

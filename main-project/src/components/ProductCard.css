@@ -1,27 +1,21 @@
-:root {
-  --card-title-color: rgba(36, 36, 36, 0.4);
-  --light-grey-1: #fafafa;
-  --white: #fff;
-  --dark-primary11: #fff;
-}
-
 .product-card {
   width: 100%;
   max-width: 360px;
   height: 270px;
   border-radius: 10px;
-  background: var(--white);
+  background: var(--surface-primary);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-light);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .product-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px var(--shadow-medium);
 }
 
 .card-image-container {
@@ -49,7 +43,7 @@
   left: 0;
   right: 0;
   height: 65px;
-  background: rgba(36, 36, 36, 0.4);
+  background: var(--bg-overlay);
   backdrop-filter: blur(22.5px);
   border-radius: 0 0 10px 10px;
   display: flex;
@@ -76,7 +70,7 @@
 }
 
 .product-name {
-  color: var(--light-grey-1);
+  color: var(--text-on-overlay);
   font-family:
     "Roboto",
     -apple-system,
@@ -92,7 +86,7 @@
 }
 
 .product-category {
-  color: var(--white);
+  color: var(--text-on-overlay);
   font-family:
     "Roboto",
     -apple-system,
@@ -108,7 +102,7 @@
 }
 
 .product-price {
-  color: var(--white);
+  color: var(--text-on-overlay);
   font-family:
     "Roboto",
     -apple-system,

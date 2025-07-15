@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   description: string;
@@ -12,11 +12,18 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  onClick?: (product: Product) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick(product);
+    }
+  };
+
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={handleClick}>
       <div className="card-image-container">
         <img
           src={product.image}

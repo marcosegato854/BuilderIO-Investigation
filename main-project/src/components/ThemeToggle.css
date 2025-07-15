@@ -1,0 +1,106 @@
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--surface-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.theme-toggle-label {
+  font-family:
+    "Roboto",
+    -apple-system,
+    system-ui,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.theme-toggle-options {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-secondary);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family:
+    "Roboto",
+    -apple-system,
+    system-ui,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  min-width: 70px;
+  justify-content: center;
+}
+
+.theme-option:hover {
+  background: var(--button-close-hover);
+  color: var(--text-primary);
+}
+
+.theme-option.active {
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  box-shadow: 0 1px 3px var(--shadow-light);
+  font-weight: 500;
+}
+
+.theme-option-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.theme-option-label {
+  line-height: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 12px;
+  }
+
+  .theme-option {
+    padding: 6px 8px;
+    min-width: 60px;
+  }
+
+  .theme-option-label {
+    font-size: 11px;
+  }
+
+  .theme-option-icon {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle-options {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .theme-option {
+    justify-content: flex-start;
+    min-width: auto;
+    width: 100%;
+  }
+}
