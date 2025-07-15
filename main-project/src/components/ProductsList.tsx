@@ -44,7 +44,7 @@ const ProductsList: React.FC<ProductsListProps> = ({ searchQuery = "" }) => {
     const query = searchQuery.toLowerCase();
     return (
       product.name.toLowerCase().includes(query)
-          );
+      );
   });
 
   if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
