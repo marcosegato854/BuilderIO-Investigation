@@ -70,7 +70,7 @@
 }
 
 .product-name {
-  color: var(--light-grey-1);
+  color: var(--text-on-overlay);
   font-family:
     "Roboto",
     -apple-system,
@@ -86,7 +86,7 @@
 }
 
 .product-category {
-  color: var(--white);
+  color: var(--text-on-overlay);
   font-family:
     "Roboto",
     -apple-system,
@@ -102,7 +102,7 @@
 }
 
 .product-price {
-  color: var(--white);
+  color: var(--text-on-overlay);
   font-family:
     "Roboto",
     -apple-system,
