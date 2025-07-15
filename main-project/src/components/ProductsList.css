@@ -38,7 +38,7 @@
     system-ui,
     sans-serif;
   font-size: 18px;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .error {
@@ -48,7 +48,7 @@
 .search-results-info {
   font-size: 18px;
   font-weight: 400;
-  color: #666;
+  color: var(--text-secondary);
   margin-left: 8px;
 }
 
