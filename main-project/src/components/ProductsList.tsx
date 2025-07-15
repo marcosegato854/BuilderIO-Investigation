@@ -4,7 +4,6 @@ import ProductCard from "./ProductCard";
 import "./ProductsList.css";
 import SearchBar from "./SearchBar";
 
-
 // Definiamo un tipo per il prodotto
 interface Product {
   id: number;
@@ -15,14 +14,11 @@ interface Product {
   image: string;
 }
 
-interface ProductsListProps {
-  searchQuery?: string;
-}
-
-const ProductsList: React.FC<ProductsListProps> = ({ searchQuery = "" }) => {
+const ProductsList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]); // Stato per la lista dei prodotti
   const [loading, setLoading] = useState<boolean>(true); // Stato per il caricamento
   const [error, setError] = useState<string | null>(null); // Stato per gli errori
+  const [searchQuery, setSearchQuery] = useState<string>(""); // Stato per la ricerca
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -44,9 +40,7 @@ const ProductsList: React.FC<ProductsListProps> = ({ searchQuery = "" }) => {
     if (!searchQuery.trim()) return true;
 
     const query = searchQuery.toLowerCase();
-    return (
-      product.name.toLowerCase().includes(query)
-      );
+    return product.name.toLowerCase().includes(query);
   });
 
   if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
