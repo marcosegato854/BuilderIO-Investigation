@@ -60,9 +60,9 @@ const ProductsList: React.FC = () => {
         {searchQuery && (
           <span className="search-results-info">
             {filteredProducts.length > 0
-              ? {
-                filteredProducts.length = 1 ? ` - ${filteredProducts.length} risultato per "${searchQuery}"` : ` - ${filteredProducts.length} risultati per "${searchQuery}"`
-              }
+              ? 
+              filteredProducts.length > 1 ? ` - ${filteredProducts.length} risultati per "${searchQuery}"` : ` - ${filteredProducts.length} risultato per "${searchQuery}"`
+              
               : ` - Nessun risultato per "${searchQuery}"`}
           </span>
         )}
