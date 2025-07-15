@@ -73,7 +73,7 @@
 .modal-image-container {
   flex-shrink: 0;
   width: 299px;
-  //height: 251px;
+  height: 50%;
   margin-top: 61px;
 }
 
