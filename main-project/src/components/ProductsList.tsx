@@ -35,12 +35,21 @@ const ProductsList: React.FC = () => {
     loadProducts();
   }, []); // Il vuoto array significa che questo effetto verrà eseguito solo una volta (all'inizio)
 
+  // Function to handle search
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+  };
+
   // Filter products based on search query
   const filteredProducts = products.filter((product) => {
     if (!searchQuery.trim()) return true;
 
     const query = searchQuery.toLowerCase();
-    return product.name.toLowerCase().includes(query);
+    return (
+      product.name.toLowerCase().includes(query) ||
+      product.description.toLowerCase().includes(query) ||
+      product.category.toLowerCase().includes(query)
+    );
   });
 
   if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
