@@ -43,7 +43,7 @@
   left: 0;
   right: 0;
   height: 65px;
-  background: rgba(36, 36, 36, 0.4);
+  background: var(--bg-overlay);
   backdrop-filter: blur(22.5px);
   border-radius: 0 0 10px 10px;
   display: flex;
