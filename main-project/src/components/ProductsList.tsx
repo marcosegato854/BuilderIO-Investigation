@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
 import fetchProducts from "../api/products";
-import ProductCard from "./ProductCard";
+import ProductCard, { Product } from "./ProductCard";
+import ProductModal from "./ProductModal";
 import "./ProductsList.css";
 import SearchBar from "./SearchBar";
-
-// Definiamo un tipo per il prodotto
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  image: string;
-}
 
 const ProductsList: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]); // Stato per la lista dei prodotti
@@ -45,9 +36,7 @@ const ProductsList: React.FC = () => {
     if (!searchQuery.trim()) return true;
 
     const query = searchQuery.toLowerCase();
-    return (
-      product.name.toLowerCase().includes(query)
-    );
+    return product.name.toLowerCase().includes(query);
   });
 
   if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
@@ -60,9 +49,9 @@ const ProductsList: React.FC = () => {
         {searchQuery && (
           <span className="search-results-info">
             {filteredProducts.length > 0
-              ? 
-              filteredProducts.length > 1 ? ` - ${filteredProducts.length} risultati per "${searchQuery}"` : ` - ${filteredProducts.length} risultato per "${searchQuery}"`
-              
+              ? filteredProducts.length > 1
+                ? ` - ${filteredProducts.length} risultati per "${searchQuery}"`
+                : ` - ${filteredProducts.length} risultato per "${searchQuery}"`
               : ` - Nessun risultato per "${searchQuery}"`}
           </span>
         )}
