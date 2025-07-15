@@ -1,16 +1,29 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import ProductsList from './components/ProductsList';
+import { useState } from "react";
+import "./App.css";
+import ProductsList from "./components/ProductsList";
+import SearchBar from "./components/SearchBar";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    console.log("Searching for:", query);
+    // Add your search logic here
+  };
 
   return (
-    <>
-      <ProductsList />
-    </>
+    <div className="app">
+      <header className="app-header">
+        <SearchBar
+          onSearch={handleSearch}
+          placeholder="What are you looking for?"
+        />
+      </header>
+      <main className="app-main">
+        <ProductsList searchQuery={searchQuery} />
+      </main>
+    </div>
   );
 }
 
