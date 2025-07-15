@@ -37,16 +37,44 @@ const ProductsList: React.FC<ProductsListProps> = ({ searchQuery = "" }) => {
     loadProducts();
   }, []); // Il vuoto array significa che questo effetto verrà eseguito solo una volta (all'inizio)
 
+  // Filter products based on search query
+  const filteredProducts = products.filter((product) => {
+    if (!searchQuery.trim()) return true;
+
+    const query = searchQuery.toLowerCase();
+    return (
+      product.name.toLowerCase().includes(query) ||
+      product.description.toLowerCase().includes(query) ||
+      product.category.toLowerCase().includes(query)
+    );
+  });
+
   if (loading) return <div className="loading">Loading...</div>; // Mostra "Loading..." mentre carica
   if (error) return <div className="error">Error: {error}</div>; // Mostra l'errore
 
   return (
     <div className="products-container">
-      <h1 className="products-title">Lista Prodotti</h1>
+      <h1 className="products-title">
+        Lista Prodotti
+        {searchQuery && (
+          <span className="search-results-info">
+            {filteredProducts.length > 0
+              ? ` - ${filteredProducts.length} risultati per "${searchQuery}"`
+              : ` - Nessun risultato per "${searchQuery}"`}
+          </span>
+        )}
+      </h1>
       <div className="products-grid">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        ) : searchQuery ? (
+          <div className="no-results">
+            <p>Nessun prodotto trovato per la ricerca "{searchQuery}"</p>
+            <p>Prova con termini diversi o controlla l'ortografia.</p>
+          </div>
+        ) : null}
       </div>
     </div>
   );
