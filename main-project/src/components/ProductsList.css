@@ -2,6 +2,8 @@
   padding: 24px;
   max-width: 1600px;
   margin: 0 auto;
+  background: var(--bg-primary);
+  min-height: 100vh;
 }
 
 .products-title {
@@ -12,7 +14,7 @@
     sans-serif;
   font-size: 32px;
   font-weight: 500;
-  color: #242424;
+  color: var(--text-primary);
   margin-bottom: 32px;
   text-align: center;
 }
