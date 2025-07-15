@@ -7,6 +7,10 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  /* CSS Variables for theme consistency */
+  --header-bg: rgba(36, 36, 36, 0.95);
+  --border-color: rgba(255, 255, 255, 0.1);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
