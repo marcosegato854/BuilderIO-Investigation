@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import fetchProducts from "../api/products";
 import ProductCard from "./ProductCard";
 import "./ProductsList.css";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "./SearchBar";
 
 
 // Definiamo un tipo per il prodotto
