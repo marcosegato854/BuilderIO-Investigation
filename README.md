@@ -12,19 +12,6 @@ This project aims to evaluate the **capabilities and limitations of Builder.io**
 
 ---
 
-## 📁 Project Structure
-
-├── design-system/ # Reusable React + TypeScript components
-│   └── components/
-├── main-project/ # Main application using Builder.io
-│   ├── src/
-│   ├── public/
-│   └── vite.config.js
-├── package.json
-└── README.md
-
----
-
 ## ⚙️ Tech Stack
 
 - [Builder.io](https://www.builder.io/) (including **Fusion**)
