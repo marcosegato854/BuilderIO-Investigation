@@ -60,7 +60,7 @@
   justify-content: center;
   padding: 48px 24px;
   text-align: center;
-  color: #666;
+  color: var(--text-secondary);
   font-family:
     "Roboto",
     -apple-system,
@@ -76,22 +76,7 @@
 .no-results p:first-child {
   font-size: 18px;
   font-weight: 500;
-  color: #333;
-}
-
-/* Dark mode support for search elements */
-@media (prefers-color-scheme: dark) {
-  .search-results-info {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .no-results {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .no-results p:first-child {
-    color: rgba(255, 255, 255, 0.87);
-  }
+  color: var(--text-primary);
 }
 
 /* Responsive design */
