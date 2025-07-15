@@ -13,7 +13,11 @@ interface Product {
   image: string;
 }
 
-const ProductsList: React.FC = () => {
+interface ProductsListProps {
+  searchQuery?: string;
+}
+
+const ProductsList: React.FC<ProductsListProps> = ({ searchQuery = "" }) => {
   const [products, setProducts] = useState<Product[]>([]); // Stato per la lista dei prodotti
   const [loading, setLoading] = useState<boolean>(true); // Stato per il caricamento
   const [error, setError] = useState<string | null>(null); // Stato per gli errori
