@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
   };
 
   return (
-    <div className="product-card" onClick={handleClick}
+    <div className="product-card" onClick={handleClick}>
       <div className="card-image-container">
         <img
           src={product.image}
