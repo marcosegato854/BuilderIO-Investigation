@@ -33,6 +33,18 @@ const ProductsList: React.FC = () => {
     setSearchQuery(query);
   };
 
+  // Function to handle product click
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   // Filter products based on search query
   const filteredProducts = products.filter((product) => {
     if (!searchQuery.trim()) return true;
