@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Smartphone XYZ",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl odio, aliquam non laoreet eget, ullamcorper at nibh. Nunc in porta massa. Nam pharetra dui metus, sed finibus orci pellentesque quis. Aliquam molestie, nulla sed porttitor pellentesque, lacus ante suscipit nibh, at tempus eros mauris et purus. Sed luctus leo malesuada fringilla consequat. Duis varius feugiat tellus, vel tincidunt massa sodales quis. Aliquam facilisis orci metus, et ornare sem vulputate at. Fusce eget ex euismod, tempus lectus a, elementum lectus. Aenean vel neque vitae enim elementum efficitur a tempus ante. Nulla eget eleifend velit. Duis sit amet purus in ante consectetur pellentesque. In vitae metus sit amet odio pretium porta. Maecenas quis odio leo. Nam urna mauris, auctor eget risus vitae, condimentum pellentesque erat. Nulla vel justo orci",
+    "description": "Uno smartphone avanzato con una fotocamera da 48 MP, display AMOLED e batteria da 4000mAh.",
     "price": 499.99,
     "category": "Elettronica",
     "image": "/smartphone.jpg"
