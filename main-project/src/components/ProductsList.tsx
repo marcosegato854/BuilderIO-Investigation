@@ -10,6 +10,8 @@ const ProductsList: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true); // Stato per il caricamento
   const [error, setError] = useState<string | null>(null); // Stato per gli errori
   const [searchQuery, setSearchQuery] = useState<string>(""); // Stato per la ricerca
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Stato per il prodotto selezionato
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // Stato per il modal
 
   useEffect(() => {
     const loadProducts = async () => {
