@@ -64,6 +64,10 @@ const ProductsList: React.FC<ProductsListProps> = ({ searchQuery = "" }) => {
           </span>
         )}
       </h1>
+      <SearchBar
+        onSearch={handleSearch}
+        placeholder="What are you looking for?"
+      />
       <div className="products-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
