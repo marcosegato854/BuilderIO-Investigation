@@ -1,22 +1,16 @@
-:root {
-  --card-title-color: rgba(36, 36, 36, 0.4);
-  --light-grey-1: #fafafa;
-  --white: #fff;
-  --dark-primary11: #fff;
-}
-
 .product-card {
   width: 100%;
   max-width: 360px;
   height: 270px;
   border-radius: 10px;
-  background: var(--white);
+  background: var(--surface-primary);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-light);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .product-card:hover {
